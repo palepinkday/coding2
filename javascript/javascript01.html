@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>자바스크립트 데이터저장하기</title>
-   
+
+    <link rel="stylesheet" href="assets/css/dracula.css">
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script> 
-
+    
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             font-family: 'GmarketSans';
         }
-        a{
+        a {
            text-decoration: none; 
            color: #000;
         }
@@ -27,24 +28,22 @@
             border-bottom: 1px dashed #cdcdcd;
         }
         #header h1 {
-            font-size: 8vw;
+            font-size: 4vw;
             margin-bottom: 2vw;
         }
         #header nav ul li {
             display: inline-block;
         }
-        #header nav ul li {
+        #header nav ul li a {
             border: 1px solid #000;
-            padding: 0.7vw 1vw  0.3vw 1vw;
+            padding: 0.3vw 1vw  0.3vw 1vw;
             transition: all 0.3s;
             margin-bottom: 0.7vw;
             display: inline-block;
-
         }
         #header nav ul li a:hover  {
             background-color: #000;
             color:#fff;
-
         }
         #main {
             padding: 2vw;  
@@ -52,48 +51,46 @@
         }
         #main .list {
             font-size: 18px;
-            line
-            padding: 2vw;  
+            line-height: 1.8;;
             border-bottom: 1px dashed #cdcdcd;
+            padding-bottom: 16px;  
+            margin-bottom: 4vw;
         }
-      
         #plist{
-            padding: 2vw;
+            padding: 4vw 2vw;
             border-bottom: 1px dashed #cdcdcd;
         }
         #plist ul li a {
-        background-color: #000;
-        color: #fff;
-        padding: 5px 10px;
-        font-size: 18px;
+            background-color: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 18px;
         }
-    .script {
-
-    }
-    .sample {
-
-    }
-    .sample h2 {
-    font-weight: normal;
-    background-color: #f5f5f5;
-    font-size: 20px;
-    padding: 15px 20px;
-    border-radius: 10px 10px 0 0;
-}
-    .sample .code {
-      
-        width: 100;
-        background: #000;
-    }
+        .sample {
+            margin-bottom: 40px;
+        }
+        .sample h2 {
+            font-weight: normal;
+            background-color: #f5f5f5;
+            font-size: 20px;
+            padding: 15px 20px;
+            border-radius: 10px 10px 0 0;
+        }
+        .sample .code {
+            width: 100;
+            background: #000;
+            border-radius: 0 0 10px 10px;
+            color: #fff;
+        }
 
         @media (max-width : 800px){
             #header {
-             padding: 16px;
+                padding: 16px;
             }   
             #header h1 {
                 font-size: 40px;
             }
-            #header nav ul li a{
+            #header nav ul li a {
                 padding: 5px 10px;
                 font-size: 18px;
             }
@@ -107,7 +104,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id="header">
         <h1>javascript</h1> 
         <nav>
          <ul>
@@ -126,72 +123,77 @@
     </section>
     <main id="main">
         <div class="list">
-          <li>변수 : 데이터저장</li>
-          <li>변수 : 데이터저장 데이터변경</li>
-          <li>변수 : 데이터 저장 데이터변경 데이터추가</li>
-          <li>변수 :지역면수 전역변수 매개변수 </li>
-          <li>상수 : 데이터저장 데이터변경</li>
-          <li>배열 : 여러개의 데이터저장: 표현방법1</li>
-          <li>배열 : 여러개의 데이터저장: 표현방법2</li>
-          <li>배열 : 여러개의 데이터저장: 표현방법3</li>
-          <li>배열 : 여러개의 데이터저장: 표현방법4</li>
-          <li>객체 : 데이터저장(키와 값): 표현방법1</li>
-          <li>객체 : 데이터저장(키와 값): 표현방법2</li>
-          <li>객체 : 데이터저장(키와 값): 표현방법3</li>
-          <li>객체 : 데이터저장(키와 값): 표현방법4</li>
-          <li>객체 : 데이터저장(키와 값): 표현방법5</li>
-          <li>객체 : 데이터저장(키와 값): 표현방법6</li>
-          <li>객체 : 데이터저장(키와 값): 표현방법7</li>
-          <li>객체 : 데이터저장(키와 값): 표현방법8</li>
-      
-        </div class = "script
-        <div id = "sample01" class="sample">
-            <h2>01.변수 : 데이터저장</h2>
-        <div class="code">
-
-<pre><code class = "language-js">
-
-        {
-            var x = 100;   //변수x 저장소에 숫자 100을 저장함
-            var y = 200;   //변수y 저장소에 숫자 200을 저장함
-            var z = "javascript";   //변수z 저장소에 문자열 "javascript"을 저장함
-
-            document.write("01.변수");
-            document.write(x);
-            document.write(y);
-            document.write(z);
-        }
- </code></pre>
- </div>
+            <ul>
+                <li>변수 : 데이터저장</li>
+                <li>변수 : 데이터저장 데이터변경</li>
+                <li>변수 : 데이터 저장 데이터변경 데이터추가</li>
+                <li>변수 :지역면수 전역변수 매개변수 </li>
+                <li>상수 : 데이터저장 데이터변경</li>
+                <li>배열 : 여러개의 데이터저장: 표현방법1</li>
+                <li>배열 : 여러개의 데이터저장: 표현방법2</li>
+                <li>배열 : 여러개의 데이터저장: 표현방법3</li>
+                <li>배열 : 여러개의 데이터저장: 표현방법4</li>
+                <li>객체 : 데이터저장(키와 값): 표현방법1</li>
+                <li>객체 : 데이터저장(키와 값): 표현방법2</li>
+                <li>객체 : 데이터저장(키와 값): 표현방법3</li>
+                <li>객체 : 데이터저장(키와 값): 표현방법4</li>
+                <li>객체 : 데이터저장(키와 값): 표현방법5</li>
+                <li>객체 : 데이터저장(키와 값): 표현방법6</li>
+                <li>객체 : 데이터저장(키와 값): 표현방법7</li>
+                <li>객체 : 데이터저장(키와 값): 표현방법8</li>
+            </ul>
         </div>
-        </div>
-        </main>
-        //02 변수 : 데이터저장 변경
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
 
-             x = 300;  //변수에 x값이 300으로 변경 
-             y = 400;  //변수에 y값이 400으로 변경 
-             z = "jquery"  //변수에 z값이 "jquery"으로 변경 
+        <div class = "script">
+            <div id="sample01" class="sample">
+                <h2>01.변수 : 데이터저장</h2>
+                <div class="code">
+<pre><code class = "language-js"> {
+    var x = 100;   //변수x 저장소에 숫자 100을 저장함
+    var y = 200;   //변수y 저장소에 숫자 200을 저장함
+    var z = "javascript";   //변수z 저장소에 문자열 "javascript"을 저장함
 
+    document.write("01.변수");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+</code></pre>
+                </div>
+            </div>
 
-            document.write("<br>02.변수 <br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
+            <div id="sample01" class="sample">
+                <h2>01.변수 : 데이터저장</h2>
+                <div class="code">
+<pre><code class = "language-js"> {
+    var x = 100;   //변수x 저장소에 숫자 100을 저장함
+    var y = 200;   //변수y 저장소에 숫자 200을 저장함
+    var z = "javascript";   //변수z 저장소에 문자열 "javascript"을 저장함
 
-        }
-        //03 변수 :데이터 저장 변경 추가
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript"
+    document.write("01.변수");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+</code></pre>
+                </div>
+            </div>
+       </div>
 
-            x +="300"; // 300문자로 인식
-            y += 400;
-            z += "jquery";
+    </div>
+</main>
+
+    
+      <script>hljs.highlightAll();</script>
+      <script>
+      {
+            let x = 100; //변수 x저장소에 숫자 100을 저장함 
+            let y = 200; //변수 y저장소에 숫자 100을 저장함 
+            let z = "javascript"; //변수 z저장소에 문자열"javascript"를 저장함 
+
+           // x +="300"; // 300문자로 인식
+           // y += 400;
+            //z += "jquery";
 
             document.write("<br>03.변수 <br>");
             document.write(x, "<br>");
@@ -199,7 +201,38 @@
             document.write(z, "<br>");
 
         }
-        //04 변수 : 종류(지역변수 전역변수)
+        //02.변수 : 데이터저장 데이터 변경
+        {
+            let x = 100; 
+            let y = 200;
+            let z = "javascript";
+
+            x = 300; //변수 x값이 100에서 300으로 변경 
+            y = 400; //변수 y값이 300에서 400으로 변경
+            z = "jquery" //변수 z 값이 javascript에서 jquery로 변경
+
+            document.write("<br>02.변수<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+        }
+        //03.변수 : 데이터저장변경추가
+        {
+            let x = 100;
+            let y = 200;
+            let z = "javascript";
+
+            x += 300;   // x = x + 300
+            y += 400;   // y = y + 400
+            z += "jquery";  
+
+            document.write("<br>03. 변수<br>");
+            document.write(x, "<br>");
+            document.write(y, "<br>");
+            document.write(z, "<br>");
+        }
+       
+
+       //04.변수 : 종류(지역변수 전역변수)
         //변수 배열 객체 --실행-->함수 (실행문)
         {
             let x =100; //전역변수
@@ -222,28 +255,9 @@
             document.write(y, "<br>");
 
         }
-        {
-            let x =100; //전역변수
-            let y =200;
-
-            function func(){
-            let z =100;  //지역변수
-            let y =200;
-
-            x = 300;  //전역변수의 x의값이 100에서 300으로 변경
-
-            document.write("<br>04.변수 : 함수안<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            }
-            func();
-
-            document.write("<br>04.변수 :함수밖<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-
-        }
+      
         //05.상수 : 데이터저장 /데이터변경x
+        {
             var x = 100;   
             var y = 200;   
             var z = "javascript";   
@@ -253,6 +267,7 @@
             document.write(y, "<br>");
             document.write(z, "<br>");
 
+        }
         //06.배열 : 여러개의 데이터저장: 표현방법1
         {
             const arr = new Array();
