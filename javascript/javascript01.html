@@ -7,6 +7,8 @@
     <title>자바스크립트 데이터저장하기</title>
    
     <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script> 
+
     <style>
         *{
             margin: 0;
@@ -20,18 +22,18 @@
         li {
             list-style: none;
         }
-        header {
+        #header {
             padding: 2vw;
             border-bottom: 1px dashed #cdcdcd;
         }
-        header h1 {
+        #header h1 {
             font-size: 8vw;
             margin-bottom: 2vw;
         }
-        header nav ul li {
+        #header nav ul li {
             display: inline-block;
         }
-        header nav ul li {
+        #header nav ul li {
             border: 1px solid #000;
             padding: 0.7vw 1vw  0.3vw 1vw;
             transition: all 0.3s;
@@ -39,7 +41,7 @@
             display: inline-block;
 
         }
-        header nav ul li a:hover  {
+        #header nav ul li a:hover  {
             background-color: #000;
             color:#fff;
 
@@ -48,10 +50,13 @@
             padding: 2vw;  
             border-bottom: 1px dashed #cdcdcd;
         }
-        .list {
-            font-size: 18;
-            line-height: 1.8;
+        #main .list {
+            font-size: 18px;
+            line
+            padding: 2vw;  
+            border-bottom: 1px dashed #cdcdcd;
         }
+      
         #plist{
             padding: 2vw;
             border-bottom: 1px dashed #cdcdcd;
@@ -62,15 +67,41 @@
         padding: 5px 10px;
         font-size: 18px;
         }
-    
+    .script {
+
+    }
+    .sample {
+
+    }
+    .sample h2 {
+    font-weight: normal;
+    background-color: #f5f5f5;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+}
+    .sample .code {
+      
+        width: 100;
+        background: #000;
+    }
 
         @media (max-width : 800px){
-            header h1{
+            #header {
+             padding: 16px;
+            }   
+            #header h1 {
                 font-size: 40px;
             }
-            header nav ul li {
+            #header nav ul li a{
                 padding: 5px 10px;
                 font-size: 18px;
+            }
+            #plist {
+                padding: 16px;
+            }
+            #main {
+                padding: 16px;
             }
         }
     </style>
@@ -113,20 +144,28 @@
           <li>객체 : 데이터저장(키와 값): 표현방법7</li>
           <li>객체 : 데이터저장(키와 값): 표현방법8</li>
       
-        </div>
-    </main>
-    <script>
-        //01 변수 : 데이터저장
+        </div class = "script
+        <div id = "sample01" class="sample">
+            <h2>01.변수 : 데이터저장</h2>
+        <div class="code">
+
+<pre><code class = "language-js">
+
         {
             var x = 100;   //변수x 저장소에 숫자 100을 저장함
             var y = 200;   //변수y 저장소에 숫자 200을 저장함
             var z = "javascript";   //변수z 저장소에 문자열 "javascript"을 저장함
 
-            document.write("01.변수 <br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
+            document.write("01.변수");
+            document.write(x);
+            document.write(y);
+            document.write(z);
         }
+ </code></pre>
+ </div>
+        </div>
+        </div>
+        </main>
         //02 변수 : 데이터저장 변경
         {
             let x = 100;
