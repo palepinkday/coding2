@@ -86,10 +86,6 @@
             font-weight: normal;
             margin-bottom: 10px;
         }
-        .article h3{
-            font-weight: normal;
-            margin-bottom: 10px;
-        }
         .article p {
             margin-bottom: 10px;
         }
@@ -139,55 +135,26 @@
             </ul>
         </nav>
         <article class="article">
-            <h2>마크업 기본문법 규칙</h2>
-            <P>마크업을 항때 기본적으로 알고 있어야 하는 문법들</P>
-            <h3>1. 요소는 시작태그와 종료 태그가 있어야 합니다.</h3>
-            <p class="box">
-                &lt;p&gt;요소는 시작 태그와종료 태그가 있어야 한다.  &lt;/p&gt; (o) <br>
-                &lt;p&gt;요소는 시작 태그와종료 태그가 있어야 한다.(x)
-            </p>
-            <p>
-                태그 중에는 종료 태그가 없는 요소들이 있습니다.이러한 요소를 '빈 요소(empty element)'라고 하는데
-                자주 사용하는 빈 요소에는 &lt;br&gt;,&lt;hr&gt;,&lt;img&gt;,&lt;input&gt;,&lt;meta&gt;,&lt;link&gt;등이 있습니다.
-            </p>
-            <h3>2. 요소는 제대로 중첩되어야 합니다.</h3>
-            <p class="box">
-                &lt;p&gt;중첩된 요소가 있을때는  &lt;strong&gt; 바르게 &lt;/strong&gt; 표현해야 한다.&lt;/p&gt; (o) <br>
-                &lt;p&gt;중첩된 요소가 있을때는  &lt;strong&gt; 바르게 &lt;/p&gt;표현해야 한다.&lt;/strong&gt; (x)
-            </p>
-            <p>
-                마지막에 정의한 태그를 가장 먼저 닫아야 한다는 뜻인데,이러한 중첩관계를 부모와 자식의 관계라고 합니다.
-                여기에서는 &lt;p&gt;태그가 부모의 요소가 되고, &lt;strong&gt; 태그가 자식의 요소가 됩니다.
-            </p>
-            <h3>3.img태그에는 alt속성이 있어야 한다.</h3>
-            <p class = "box">
-                &lt;img src = "image/today,gif" alt="오늘"&gt;(o)
-                &lt;img src = "image/today,gif"&gt;(x)
-            </p>
-            <p>
-            &lt;img&gt;태그에 alt속성을 지칭해야하는 이유는 문법적으로 필요하지만,
-            이미지를 볼 수 없는 환경에서도 그 이미지네 대한 정보를 충분히 제공해 주어야하기 때문입니다. 
-            이에 대한  설명은 이미지에서 자세히 설명하도록 하겠습니다.
-            </P>
-            <h3>4. 권장하는 사항도 있습니다.</h3> 
-            <p class="box">
-                &lt;p&gt;태그나 속성은 소문자로 마크업 하는 것을 권장한다.&lt;/p&gt; 권장 <br>
-                &lt;p&gt;태그나 속성은 소문자로 마크업하는 것을 권장한다.&lt;/p&gt;
-                &lt;ptitle="속성값" &gt;속성의 값에는 따옴표 처리를 권장한다.&lt;/p&gt; 권장 <br>
-                &lt;ptitle=속성값&gt;속성의 값에는 따옴표 처리를 권장한다..&lt;/p&gt;
-            </p>
-            <p>
-                HTM5는 대소문자를 구분하지 않지만 가급적 소문자로 통일해서 마크업하는 것과 속성에 대한 값에 따옴표 처리하는 것을 권장한다.
-            </p>
-            <h3>5. 주석처리하는 방법</h3>
-            <p>
-                주석은 일반적으로 협업(공동작업)시 다음 작업자가 현재 작업한 내용을 쉽게 알아볼 수 있도록 도와주는 설명문이라고 보시면 됩니다.
-                주석 내용은 브라우저 화면에 출력되지 않으며 처리방법은 다음과 같습니다.
-            </p>
-            <p>
-             &lt;!--header--&gt;<br>
-             &lt;!--여기부터 공지사항입니다.--&gt;
-            </p>
+            <h2>시멘틱 마크업(semantic markup)</h2>
+           <p>시멘틱의 사전적 뜻은 '의미론적'정도로 해석할 수 있는데, 
+            이것은 마크업을 할때 의미에 부합하는 태그를 사용하라는 뜻입니다.<br>
+            HTML문서들은 시각적인 방법으로 정보를 전달하지만 모든 사람이 정보를 동일하게 받아들이지는 못합니다.
+            시각장애인의 경우 HTML문서의 콘텐츠 정보를 음성으로 전달해 주어야 하는데 이런 경우 전달하려는 태그의 의미가 적절해야 합니다.
+         </p>
+         <P class="box">
+            &lt;!DOCTYLE html&gt;<br>
+            &lt;html lang="ko"&gt;<br>
+            &lt;head&gt;<br>
+            &lt;meta charset="UTF="8"&gt;<br>
+            &lt;title&gt;시멘틱 마크업&lt;/title&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            반응형웹<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;<br>
+         </P>
+            <p>만약 반응형웹이 HTML문서에서 제목으로 사용된다고 가장할 경우 마크업을 하면 스크린 리더에서는 반응형웹이라고 읽어주기 때문에 그것이 제목인지 알 수가 없습니다. 그래서 제목을 의미하는 태그   &lt;h1&gt;반응형웹&lt;/h1&gt;로 바꾸어 마크업해야 합니다
+                         </p>
         </article>
     </section>    
 </body>
