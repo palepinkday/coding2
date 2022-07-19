@@ -1,320 +1,419 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>자바스크립트 데이터저장하기</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 데이터 저장하기</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
-    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script> 
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'GmarketSans';
-        }
-        a {
-           text-decoration: none; 
-           color: #000;
-        }
-        li {
-            list-style: none;
-        }
-        #header {
-            padding: 2vw;
-            border-bottom: 1px dashed #cdcdcd;
-        }
-        #header h1 {
-            font-size: 4vw;
-            margin-bottom: 2vw;
-        }
-        #header nav ul li {
-            display: inline-block;
-        }
-        #header nav ul li a {
-            border: 1px solid #000;
-            padding: 0.3vw 1vw  0.3vw 1vw;
-            transition: all 0.3s;
-            margin-bottom: 0.7vw;
-            display: inline-block;
-        }
-        #header nav ul li a:hover  {
-            background-color: #000;
-            color:#fff;
-        }
-        #main {
-            padding: 2vw;  
-            border-bottom: 1px dashed #cdcdcd;
-        }
-        #main .list {
-            font-size: 18px;
-            line-height: 1.8;;
-            border-bottom: 1px dashed #cdcdcd;
-            padding-bottom: 16px;  
-            margin-bottom: 4vw;
-        }
-        #plist{
-            padding: 4vw 2vw;
-            border-bottom: 1px dashed #cdcdcd;
-        }
-        #plist ul li a {
-            background-color: #000;
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 18px;
-        }
-        .sample {
-            margin-bottom: 40px;
-        }
-        .sample h2 {
-            font-weight: normal;
-            background-color: #f5f5f5;
-            font-size: 20px;
-            padding: 15px 20px;
-            border-radius: 10px 10px 0 0;
-        }
-        .sample .code {
-            width: 100;
-            background: #000;
-            border-radius: 0 0 10px 10px;
-            color: #fff;
-        }
-
-        @media (max-width : 800px){
-            #header {
-                padding: 16px;
-            }   
-            #header h1 {
-                font-size: 40px;
-            }
-            #header nav ul li a {
-                padding: 5px 10px;
-                font-size: 18px;
-            }
-            #plist {
-                padding: 16px;
-            }
-            #main {
-                padding: 16px;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header id="header">
-        <h1>javascript</h1> 
-        <nav>
-         <ul>
-             <li><a href="javascript01.html">데이터 저장하기</a></li>
-             <li><a href="javascript02.html">데이터 출력하기</a></li>
-             <li><a href="javascript03.html">데이터 실행하기</a></li>
-             <li><a href="javascript04.html">데이터 제어하기</a></li>
-         </ul>
-        </nav>
-    </header>
-
-    <section id="plist">
+  <header id="header">
+    <h1>
+        javascript
+    </h1>
+    <nav class="header_nav">
         <ul>
-            <li><a href="basic.html">기본규칙</a></li>
+            <li><a href="javascript01.html">데이터 저장하기</a></li>
+            <li><a href="javascript02.html">데이터 불러오기</a></li>
+            <li><a href="javascript03.html">데이터 실행하기</a></li>
+            <li><a href="javascript.04.html">데이터 제어하기</a></li>
         </ul>
-    </section>
-    <main id="main">
-        <div class="list">
-            <ul>
-                <li>변수 : 데이터저장</li>
-                <li>변수 : 데이터저장 데이터변경</li>
-                <li>변수 : 데이터 저장 데이터변경 데이터추가</li>
-                <li>변수 :지역면수 전역변수 매개변수 </li>
-                <li>상수 : 데이터저장 데이터변경</li>
-                <li>배열 : 여러개의 데이터저장: 표현방법1</li>
-                <li>배열 : 여러개의 데이터저장: 표현방법2</li>
-                <li>배열 : 여러개의 데이터저장: 표현방법3</li>
-                <li>배열 : 여러개의 데이터저장: 표현방법4</li>
-                <li>객체 : 데이터저장(키와 값): 표현방법1</li>
-                <li>객체 : 데이터저장(키와 값): 표현방법2</li>
-                <li>객체 : 데이터저장(키와 값): 표현방법3</li>
-                <li>객체 : 데이터저장(키와 값): 표현방법4</li>
-                <li>객체 : 데이터저장(키와 값): 표현방법5</li>
-                <li>객체 : 데이터저장(키와 값): 표현방법6</li>
-                <li>객체 : 데이터저장(키와 값): 표현방법7</li>
-                <li>객체 : 데이터저장(키와 값): 표현방법8</li>
-            </ul>
+        <ul>
+            <li><a href="#">문자열 객체</a></li>
+            <li><a href="#">배열 객체</a></li>
+            <li><a href="#">수학 객체</a></li>
+            <li><a href="#">숫자객체</a></li>
+            <li><a href="#">브라우저 객체 </a></li>
+            <li><a href="#">요소 객체</a></li>
+            <li><a href="#">이벤트 객체</a></li>
+        </ul>
+        <ul class="study">
+            <li><a href="#">기본규칙</a></li>
+            <li><a href="#">기본명령어</a></li>
+        </ul>
+    </nav>
+  </header>  
+  <!-- //header -->
+  <main id="main">
+    <div class="main_menu"></div>
+    <ul>
+        <li><a href="#sample1">01.변수:데이터 저장</a></li>
+        <li><a href="#sample2">02.변수:데이터저장 데이터변경</a></li>
+        <li><a href="#sample3">03.변수:데이터저장 데이터변경 데이터추가</a></li>
+        <li><a href="#sample4">04.변수:지역변수 전역변수 매개변수</a></li>
+        <li><a href="#sample5">05.상수:데이터저장 데이터변경x</a></li>
+        <li><a href="#sample6">06.배열:데이터저장(여러개):표현방법1</a></li>
+        <li><a href="#sample7">07.배열:데이터저장(여러개):표현방법2</a></li>
+        <li><a href="#sample8">08.배열:데이터저장(여러개):표현방법3</a></li>
+        <li><a href="#sample9">09.배열:데이터저장(여러개):표현방법4</a></li>
+        <li><a href="#sample10">10.객체 : 데이터 저장(키와 값) : 표현 방법1</a></li>
+        <li><a href="#sample11">11.객체 : 데이터 저장(키와 값) : 표현 방법2</a></li>
+        <li><a href="#sample12">12.객체 : 데이터 저장(키와 값) : 표현 방법3</a></li>
+        <li><a href="#sample13">13.객체 : 데이터 저장(키와 값) : 표현 방법4</a></li>
+        <li><a href="#sample14">14.객체 : 데이터 저장(키와 값) : 표현 방법5</a></li>
+        <li><a href="#sample15">15.객체 : 데이터 저장(키와 값) : 표현 방법6</a></li>
+        <li><a href="#sample16">16.객체 : 데이터 저장(키와 값) : 표현 방법7</a></li>
+        <li><a href="#sample17">17.객체 : 데이터 저장(키와 값) : 표현 방법8</a></li>
+    </ul>
+
+    <div class="main_sample">
+        <div id="sample01" class="sample">
+            <h3>
+                01.변수:데이터 저장
+            </h3>
+            <p>
+                변수는 데이터를 저장하는 장소입니다.
+                이저장소에는 숫자, 문자, 함수, 객체 등을 저장할 수 있습니다.
+            </p>
+            <div class="script">
+<pre><code class="language-js">{ 
+    var x = 100;  //변수x에 숫자 100을 저장함
+    var y = 200;  //변수y에 숫자 200을 저장함
+    var z = "javascript"; //변수z에 숫자 javascript를 저장함
+
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample01_result">
+
+                    </div>
+                </details>
+            </div>
         </div>
+        <!-- //sample01  -->
 
-        <div class = "script">
-            <div id="sample01" class="sample">
-                <h2>01.변수 : 데이터저장</h2>
-                <div class="code">
-<pre><code class = "language-js"> {
-    var x = 100;   //변수x 저장소에 숫자 100을 저장함
-    var y = 200;   //변수y 저장소에 숫자 200을 저장함
-    var z = "javascript";   //변수z 저장소에 문자열 "javascript"을 저장함
+        <div id="sample02" class="sample">
+            <h3>
+                02.변수:데이터저장 변경
+            </h3>
+            <p>
+                변수는 데이터 저장도 하고 변경도 합니다.
+            </p>
+            <div class="script">
+<pre><code class="language-js">{ 
+    let x = 100;  //변수x에 숫자 100을 저장함
+    let y = 200;  //변수y에 숫자 200을 저장함
+    let z = "javascript"; //변수z에 문자 javascript를 저장함
 
-    document.write("01.변수");
     document.write(x);
     document.write(y);
     document.write(z);
 }
 </code></pre>
-                </div>
             </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample02_result">
 
-            <div id="sample01" class="sample">
-                <h2>01.변수 : 데이터저장</h2>
-                <div class="code">
-<pre><code class = "language-js"> {
-    var x = 100;   //변수x 저장소에 숫자 100을 저장함
-    var y = 200;   //변수y 저장소에 숫자 200을 저장함
-    var z = "javascript";   //변수z 저장소에 문자열 "javascript"을 저장함
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample02  -->
 
-    document.write("01.변수");
+        <div id="sample03" class="sample">
+            <h3>
+                03.변수
+            </h3>
+            <p>
+                변수는
+            </p>
+            <div class="script">
+<pre><code class="language-js">{
+    let x = 100;
+    let y = 200;
+    let z = "javascript";
+
+    x += 300;   // x = x + 300
+    y += 400;   // y = y + 400
+    z += "jquery";  
+
     document.write(x);
     document.write(y);
     document.write(z);
 }
 </code></pre>
-                </div>
             </div>
-       </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample03_result">
+
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample03  -->
+
+        <div id="sample04" class="sample">
+            <h3>
+                04.변수
+            </h3>
+            <p>
+                변수는
+            </p>
+            <div class="script">
+<pre><code class="language-js">{
+    let x =100; //전역변수
+    let y =200;
+
+    function func(){
+    let x =100;  //지역변수
+    let z ="javascript";
+
+    x = 200;  //지역변수 x의값이 100에서 300으로 변경
+    y = 300;
+
+    document.write("함수안");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+   
+    func();
+
+    document.write("함수밖");
+    document.write(x);
+    document.write(y);
+    document.write(z);
+}
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample04_result">
+
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample04  -->
+
+        <div id="sample05" class="sample">
+            <h3>
+                05.상수
+            </h3>
+            <p>
+                상수는
+            </p>
+            <div class="script">
+<pre><code class="language-js">{
+        var x = 100;   
+        var y = 200;   
+        var z = "javascript";   
+
+        document.write(x);
+        document.write(y);
+        document.write(z);
+
+    }
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample05_result">
+
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample05  -->
+
+        <div id="sample06" class="sample">
+            <h3>
+                06.배열
+            </h3>
+            <p>
+                배열은
+            </p>
+            <div class="script">
+<pre><code class="language-js">{
+        var x = 100;   
+        var y = 200;   
+        var z = "javascript";   
+
+        document.write(x);
+        document.write(y);
+        document.write(z);
+
+    }
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample06_result">
+
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample06  -->
+
+        <div id="sample07" class="sample">
+            <h3>
+                07.배열
+            </h3>
+            <p>
+                배열은
+            </p>
+            <div class="script">
+<pre><code class="language-js">{
+    const arr = new Array( 100, 200,"javascript");
+
+    document.write( arr[0]);
+    document.write( arr[1]);
+    document.write( arr[2]);
+}
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample07_result">
+
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample07  -->
+
 
     </div>
-</main>
-
     
-      <script>hljs.highlightAll();</script>
-      <script>
-      {
-            let x = 100; //변수 x저장소에 숫자 100을 저장함 
-            let y = 200; //변수 y저장소에 숫자 100을 저장함 
-            let z = "javascript"; //변수 z저장소에 문자열"javascript"를 저장함 
+  </main>
 
-           // x +="300"; // 300문자로 인식
-           // y += 400;
-            //z += "jquery";
+  <!-- //main -->
 
-            document.write("<br>03.변수 <br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
+  <footer id="footer">
+    <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
+  </footer>
 
-        }
-        //02.변수 : 데이터저장 데이터 변경
-        {
-            let x = 100; 
-            let y = 200;
-            let z = "javascript";
+<!-- footer -->
 
-            x = 300; //변수 x값이 100에서 300으로 변경 
-            y = 400; //변수 y값이 300에서 400으로 변경
-            z = "jquery" //변수 z 값이 javascript에서 jquery로 변경
+<script src="assets/js/highlight.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+<script>
+    //01
+    { 
+        var x = 100; 
+        var y = 200;
+        var z = "javascript";
 
-            document.write("<br>02.변수<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-        }
-        //03.변수 : 데이터저장변경추가
-        {
-            let x = 100;
-            let y = 200;
-            let z = "javascript";
+        //document.write(x);
+        //document.write(y);
+        //document.write(z);
 
-            x += 300;   // x = x + 300
-            y += 400;   // y = y + 400
-            z += "jquery";  
-
-            document.write("<br>03. 변수<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-        }
-       
-
-       //04.변수 : 종류(지역변수 전역변수)
-        //변수 배열 객체 --실행-->함수 (실행문)
-        {
-            let x =100; //전역변수
-            let y =200;
-
-            function func(){
-            let x =100;  //지역변수
-            let y =200;
-
-            x = 300;  //지역변수 x의값이 100에서 300으로 변경
-
-            document.write("<br>04.변수 : 함수안<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            }
-            func();
-
-            document.write("<br>04.변수 :함수밖<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-
-        }
-      
-        //05.상수 : 데이터저장 /데이터변경x
-        {
-            var x = 100;   
-            var y = 200;   
-            var z = "javascript";   
-
-            document.write("<br>05.상수 <br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-
-        }
-        //06.배열 : 여러개의 데이터저장: 표현방법1
-        {
-            const arr = new Array();
-            arr[0] =100;
-            arr[1] =200;
-            arr[2] ="javascript";
-
-            document.write("<br>06.배열 <br>");
-            document.write( arr[0], "<br>");
-            document.write( arr[1], "<br>");
-            document.write( arr[2], "<br>");
-
-        }
-        //07.배열 : 여러개의 데이터저장: 표현방법2
-        {
-            const arr = new Array( 100, 200,"javascript");
-
-            document.write("<br>07.배열 <br>");
-            document.write( arr[0], "<br>");
-            document.write( arr[1], "<br>");
-            document.write( arr[2], "<br>");
-        }
-        //08.배열 : 여러개의 데이터저장: 표현방법3
-       {
-        const arr =[];
-        arr[0] = 100;
-        arr[1] = 200;
-        arr[2] ="javascript" ;
-
-        document.write("<br>08.배열 <br>");
-        document.write( arr[0], "<br>");
-        document.write( arr[1], "<br>");
-        document.write( arr[2], "<br>");
-
-
-       }
-        //09.배열 : 여러개의 데이터저장: 표현방법4
-       { 
-        const arr = [100,200, "javascript"];
-
-        document.write("<br>09.배열 <br>");
-        document.write( arr[0], "<br>");
-        document.write( arr[1], "<br>");
-        document.write( arr[2], "<br>");
+        document.querySelector(".sample01_result").innerHTML = x + "<br>" + y + "<br>" + z;
     }
 
-    </script>
+    //02 
+    {
+        let x = 100; 
+        let y = 200;
+        let z = "javascript";
 
+        x = 300;
+        y = 400;
+        z = "jquery";
+
+        //document.write(x);
+        //document.write(y);
+        //document.write(z);
+
+        document.querySelector(".sample02_result").innerHTML = x + "<br>" + y + "<br>" + z;
+    }
+
+    //03
+    {
+     
+
+    document.querySelector(".sample03_result").innerHTML = x + "<br>" + y + "<br>" + z;
+    }
+
+    //04
+    {
+        let x =100; //전역변수
+        let y =200;
+
+        function func(){
+        let x =100;  //지역변수
+        let z ="javascript";
+
+        x = 200;  //지역변수 x의값이 100에서 300으로 변경
+        y = 300;
+
+        //document.write("함수안");
+        //document.write(x);
+        //document.write(y);
+        //document.write(z);
+        }
+    
+        func();
+
+        //document.write("함수밖");
+        //document.write(x);
+        //document.write(y);
+        //document.write(z);
+
+        document.querySelector(".sample04_result").innerHTML = x + "<br>" + y + "<br>" + z;
+    }
+
+    //05
+    {
+        var x = 100;   
+        var y = 200;   
+        var z = "javascript";   
+
+        //document.write(x);
+        //document.write(y);
+        //document.write(z);
+
+        document.querySelector(".sample05_result").innerHTML = x + "<br>" + y + "<br>" + z;
+
+    }
+
+    //06
+    {
+        const arr = new Array();
+        arr[0] =100;
+        arr[1] =200;
+        arr[2] ="javascript";
+
+        //document.write( arr[0]);
+        //document.write( arr[1]);
+        //document.write( arr[2]);
+
+        document.querySelector(".sample06_result").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+
+    }
+
+    //07
+    {
+        const arr = new Array( 100, 200,"javascript");
+
+        //document.write( arr[0]);
+        //document.write( arr[1]);
+        //document.write( arr[2]);
+
+        document.querySelector(".sample07_result").innerHTML = arr[0] + "<br>" +  arr[1] + "<br>" + arr[2];
+    }
+
+
+</script>
+        
 </body>
 </html>
