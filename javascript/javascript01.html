@@ -564,28 +564,24 @@
             </div>
         </div>
         <!-- //sample15  -->
-        <div id="sample15" class="sample">
+        <div id="sample16" class="sample">
             <h3>
-                15.객체: 객체 속의 배열
+                16.객체:객체속의 변수
             </h3>
             <p>
                객체는
             </p>
             <div class="script">
 <pre><code class="language-js">  {
-    const obj = {
-        a: 100,
-        b: [200, 300],
-        c: {x:400, y:500},
-        d: "javascript"
-    }
+    const a = 100;
+    const b = 200;
+    const c = "javascript";
 
-    document.write( obj.a);
-    document.write( obj.b[0]);
-    document.write( obj.b[1]); 
-    document.write( obj.c.x);
-    document.write( obj.c.y);
-    document.write( obj.d); 
+    const obj = { a, b, c }
+
+        document.write(obj.a);
+        document.write(obj.b);
+        document.write(obj.c);
 
 }
 </code></pre>
@@ -593,13 +589,62 @@
             <div class="result">
                 <details>
                     <summary>결과보기</summary>
-                    <div class="sample15_result">
+                    <div class="sample16_result">
 
                     </div>
                 </details>
             </div>
         </div>
-        <!-- //sample15  -->
+        <!-- //sample16  -->
+        <div id="sample76" class="sample">
+            <h3>
+                17 객체: 객체속의 함수
+            </h3>
+            <p>
+               객체는
+            </p>
+            <div class="script">
+<pre><code class="language-js"> {
+    const obj = {
+        a : 100,
+        b : [200, 300],
+        c : {x:400, y:500},
+        d : "javascript",
+            e : function(){
+                document.write("자바스크립트가 실행되었습니다.");
+            },
+            f : function(){
+                document.write( obj.d + "가 실행되었습니다.");
+            },
+            g : function(){
+                document.write( this.d + "가 실행되었습니다.");
+            }
+        }
+
+        document.write(obj.a);
+        document.write(obj.b[0]);
+        document.write(obj.b[1]);
+        document.write(obj.b);
+        document.write(obj.c.x);
+        document.write(obj.c.y);
+        document.write(obj.c);
+        document.write(obj.d);
+        obj.e();
+        obj.f();
+        obj.g();
+    }
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample17_result">
+
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample17  -->
 
     </div>
 
@@ -852,7 +897,8 @@
         //document.write( obj.c.y);
         //document.write( obj.d); 
 
-        document.querySelector(".sample15_result").innerHTML =  obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>"+ obj.c.x +"<br>"+ obj.c.y + "<br>"+obj.d+"<br>"
+        document.querySelector(".sample15_result").innerHTML 
+        =  obj.a + "<br>" + obj.b[0] + "<br>" + obj.b[1] + "<br>"+ obj.c.x +"<br>"+ obj.c.y + "<br>"+obj.d+"<br>"
 
     }
     //16 객체:객체속의 변수
@@ -863,9 +909,12 @@
 
         const obj = { a, b, c }
 
-            document.write(obj.a);
-            document.write(obj.b);
-            document.write(obj.c);
+            //document.write(obj.a);
+            //document.write(obj.b);
+            //document.write(obj.c);
+
+            document.querySelector(".sample15_result").innerHTML 
+            =  obj.a + "<br>" + obj.b + "<br>" + obj.c 
 
     }
     //17 객체: 객체속의 함수
@@ -886,17 +935,17 @@
                 }
             }
 
-            document.write(obj.a);
-            document.write(obj.b[0]);
-            document.write(obj.b[1]);
-            document.write(obj.b);
-            document.write(obj.c.x);
-            document.write(obj.c.y);
-            document.write(obj.c);
-            document.write(obj.d);
-            obj.e();
-            obj.f();
-            obj.g();
+            //document.write(obj.a);
+            //document.write(obj.b[0]);
+            //document.write(obj.b[1]);
+            //document.write(obj.b);
+            //document.write(obj.c.x);
+            //document.write(obj.c.y);
+            //document.write(obj.c);
+            //document.write(obj.d);
+            //obj.e();
+            //obj.f();
+            //obj.g();
         }
     
    
