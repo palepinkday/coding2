@@ -109,14 +109,30 @@
 <script>
     //01
     {
+        // let x = 100;
+        // let y = 200;
+        // let z = "javascript";
 
+        let x = 100, 
+        y = 200, 
+        z = "javascript";
+
+        document.write(x)
+        document.write(y)
+        document.write(z)   
     }
-    document.wirite("<br><br>")
+    document.wirite("<br><br>");
     //02
     {
+        const x = 100,
+        y = 200,
+        z = "javascript";
 
+        document.write(x)
+        document.write(y)
+        document.write(z)
     }
-    document.wirite("<br><br>")
+    document.wirite("<br><br>");
     //03
     {
         const arr = [100, 200, "javascript"];
@@ -136,49 +152,50 @@
         //document.wirite(arr[2][0]);
         //document.wirite(arr[2][1]);
     }
-    document.wirite("<br><br>")
+    document.wirite("<br><br>");
     //05
     {
         const arr = [100, 200, "javaacript"] 
 
         //document.wirite(arr.length);
     }
+    document.wirite("<br><br>");
     //06
     {
-        const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+        const arr = [100, 200, 300, 400, 500];
+
+        // document.write(arr[0]);
+        // document.write(arr[1]);
+        // document.write(arr[2]);
+        // document.write(arr[3]);
+        // document.write(arr[4]);
 
         //for(초기값,조건식,증감식)
         for(let i = 0; i<arr.length; i++){
-            document.wirite(arr[i])
+            document.wirite(arr[i]);
         }
     }
     document.wirite("<br><br>")
 
-    //07 forEach
+    //07 forEach()
     {
         const num = [100, 200, 300, 400, 500]
         //for문을 이용해서 출력
-        for( num i = 0; i<num.length; i++){
-            document.wirite(num.length); 
+        for( let i = 0; i<num.length; i++){
+            document.wirite(num.length);
         }
         //forEash()를 이용해서 출력-실행문<에 실행문:콜백함수
         num.forEach(function(el){
             document.wirite(el);
         });
-
-        document.wirite("<br><br>")
+     document.wirite("<br><br>")
+     
         //forEach()3가지 인자(parameter)값
         num.forEach(function(element,index,array){
             document.wirite(element,"<br>");
             document.wirite(index,"<br>");   
             document.wirite(array,"<br>");
-
-
-
-       
-
-
-
+        });
     }
 
 

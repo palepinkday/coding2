@@ -564,6 +564,42 @@
             </div>
         </div>
         <!-- //sample15  -->
+        <div id="sample15" class="sample">
+            <h3>
+                15.객체: 객체 속의 배열
+            </h3>
+            <p>
+               객체는
+            </p>
+            <div class="script">
+<pre><code class="language-js">  {
+    const obj = {
+        a: 100,
+        b: [200, 300],
+        c: {x:400, y:500},
+        d: "javascript"
+    }
+
+    document.write( obj.a);
+    document.write( obj.b[0]);
+    document.write( obj.b[1]); 
+    document.write( obj.c.x);
+    document.write( obj.c.y);
+    document.write( obj.d); 
+
+}
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample15_result">
+
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample15  -->
 
     </div>
 
@@ -825,6 +861,12 @@
         const b = 200;
         const c = "javascript";
 
+        const obj = { a, b, c }
+
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.c);
+
     }
     //17 객체: 객체속의 함수
     {
@@ -832,8 +874,31 @@
             a : 100,
             b : [200, 300],
             c : {x:400, y:500},
+            d : "javascript",
+                e : function(){
+                    document.write("자바스크립트가 실행되었습니다.");
+                },
+                f : function(){
+                    document.write( obj.d + "가 실행되었습니다.");
+                },
+                g : function(){
+                    document.write( this.d + "가 실행되었습니다.");
+                }
+            }
+
+            document.write(obj.a);
+            document.write(obj.b[0]);
+            document.write(obj.b[1]);
+            document.write(obj.b);
+            document.write(obj.c.x);
+            document.write(obj.c.y);
+            document.write(obj.c);
+            document.write(obj.d);
+            obj.e();
+            obj.f();
+            obj.g();
         }
-    }
+    
    
 </script>
         
