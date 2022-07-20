@@ -98,7 +98,7 @@ body {
 
 /* 티스토리용 문서 */
 .document {
-
+padding: 400 !important;
 }
 .document i {
     font-style: normal;
@@ -182,7 +182,7 @@ body {
     color: #666;
 }
 .document .t_table.ce{
-    
+
 }
     
     
