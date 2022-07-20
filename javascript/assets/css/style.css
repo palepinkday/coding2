@@ -54,7 +54,11 @@ h1h2h3h4h5 {
     display: inline-block;
     margin-bottom: 7px;
 }
-.header_nav ul li a :hover {
+.header_nav ul li .active .a {
+
+}
+
+.header_nav ul li :hover {
     background-color: #000;
     color: #fff;
 }
