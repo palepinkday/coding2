@@ -31,9 +31,8 @@
         </ul>
         <ul class="study">
             <li><a href="#">기본규칙</a></li>
-            <li><a href="#">기본명령어</a></li>
             <li><a href="#">연산자</a></li>
-            <li><a href="#">기본명령어</a></li>
+            <li><a href="#">for문</a></li>
         </ul>
     </nav>
   </header>  
@@ -60,32 +59,103 @@
         <li><a href="#sample17">17.객체 : 데이터 저장(키와 값) : 표현 방법8</a></li>
     </ul>
 
-    <div class="main_sample">
-        <div id="sample06" class="sample">
-            <h3>
-                06.
-            </h3>
-            <p>
-               0
+    <div class ="main">
+        <div class ="document">
+            <h2 class ="t_tit">
+            06.for문  
+            </h2>
+            <p class = "t_desc">
+
             </p>
-            <div class="script">
-<pre><code class="language-js"> {
-    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-
-   
-
-</code></pre>
+            <p class ="t_box">
+               
+            </p>
+            <hr>
+           
+            <h3 class="t_tit2">1부터100까지출력하기</h3>
+            <p class = "t_desc">  </p>
+            <div class = "t_code"></div>
+            <pre><code>
+                //1부터 100까지
+                for(let i=0; i<100; i++){
+                    document.write(i,"<br>");
+                }
+            </code></pre>
             </div>
+            <h3 class="t_tit2">1부터100까지 짝수 출력하기</h3>
+            <p class = "t_desc">  </p>
+            <div class = "t_code"></div>
+            <pre><code>
+                //1부터 100까지(짝수) i=i+2
+                for(let i=2; i<100; i+=2){
+                   document.write(i,"<br>");
+               } 
+            </code></pre>
+            </div>
+
+            <h3 class="t_tit2">0부터9까지 출력하기</h3>
+            
+            <p class = "t_desc">  </p>
+            <div class = "t_code"></div>
+            <pre><code>
+                //0부터 99까지
+                for(let i=0; i<100; i++){
+                   document.write(i,"<br>");
+               } 
+            </code></pre>
+            </div>
+
+            let table = "<table>";
+                //    table += "<tr>";
+                //    table += "<td>1</td>"; 
+                //    table += "<td>2</td>";          
+                //    table += "</tr>";
+                //    table += "</table>";
+                    
+                    for( let i=0; i<10; i++ ){
+                        table += "<tr>";  
+                            for( let j=0; j<10; j++ ){
+                                table += "<td>*</td>";   
+                            } 
+        
+                        table += "</tr>";
+                    }
+        
+                    table += "</table>";
+        
+                document.write(table);
+
             <div class="result">
                 <details>
                     <summary>결과보기</summary>
-                    <div class="sample06_result">
-
+                    <div class="sample16_result">
                     </div>
                 </details>
+            <style>
+                .testTable tr td {
+                    border: 1px solid #000;
+                }
+            </style>
+            <script>    
+            <h3 class="t_tit2">1부터100까지출력하기</h3>
+            <p class = "t_desc">  </p>
+            <div class = "t_code"></div>
+            <pre><code>
+                //1부터 100까지
+                for(let i=0; i<100; i++){
+                    document.write(i,"<br>");
+                }
+            </code></pre>
             </div>
+            <h3 class="t_tit2"></h3>
+            <p class = "t_desc">  </p>
+            <div class = "t_code"></div>
+            <pre><code>
+               
+            </code></pre>
+            </div>
+
         </div>
-        <!-- //sample06  -->
 
     </div>
 
@@ -103,99 +173,6 @@
 <script>
     hljs.highlightAll();
 </script>
-
-<script>
-    //01
-    {
-        // let x = 100;
-        // let y = 200;
-        // let z = "javascript";
-
-        let x = 100, 
-        y = 200, 
-        z = "javascript";
-
-        document.write(x)
-        document.write(y)
-        document.write(z)   
-    }
-    document.wirite("<br><br>");
-    //02
-    {
-        const x = 100,
-        y = 200,
-        z = "javascript";
-
-        document.write(x)
-        document.write(y)
-        document.write(z)
-    }
-    document.wirite("<br><br>");
-    //03
-    {
-        const arr = [100, 200, "javascript"];
-
-        //document.wirite(arr[0]);
-        //document.wirite(arr[1]);
-        //document.wirite(arr[2]);
-
-    }
-    document.wirite("<br><br>")
-    //04
-    {
-        const arr = [100, 200, ["javascript", "jquery"]]
-
-        //document.wirite(arr[0]);
-        //document.wirite(arr[1]);
-        //document.wirite(arr[2][0]);
-        //document.wirite(arr[2][1]);
-    }
-    document.wirite("<br><br>");
-    //05
-    {
-        const arr = [100, 200, "javaacript"] 
-
-        //document.wirite(arr.length);
-    }
-    document.wirite("<br><br>");
-    //06
-    {
-        const arr = [100, 200, 300, 400, 500];
-
-        // document.write(arr[0]);
-        // document.write(arr[1]);
-        // document.write(arr[2]);
-        // document.write(arr[3]);
-        // document.write(arr[4]);
-
-        //for(초기값,조건식,증감식)
-        for(let i = 0; i<arr.length; i++){
-            document.wirite(arr[i]);
-        }
-    }
-    document.wirite("<br><br>")
-
-    //07 forEach()
-    {
-        const num = [100, 200, 300, 400, 500]
-        //for문을 이용해서 출력
-        for( let i = 0; i<num.length; i++){
-            document.wirite(num.length);
-        }
-        //forEash()를 이용해서 출력-실행문<에 실행문:콜백함수
-        num.forEach(function(el){
-            document.wirite(el);
-        });
-     document.wirite("<br><br>")
-     
-        //forEach()3가지 인자(parameter)값
-        num.forEach(function(element,index,array){
-            document.wirite(element,"<br>");
-            document.wirite(index,"<br>");   
-            document.wirite(array,"<br>");
-        });
-    }
-
 
 
 </script>
