@@ -97,17 +97,9 @@ body {
 }
 
 /* 티스토리용 문서 */
-.document {
-padding: 400 !important;
-}
 .document i {
     font-style: normal;
     position: relative;
-}
-.document hr {
-    border: 0;
-    border-top: 1px dashed #dcdcdc;
-    margin-top: 45px;
 }
 .document i::before {
     content: '';
@@ -118,6 +110,11 @@ padding: 400 !important;
     left: 0;
     bottom: 0;
     border-radius: 20px;
+}
+.document hr {
+    border: 0;
+    border-top: 1px dashed #dcdcdc;
+    margin-top: 45px;
 }
 .document .t_tit {
     font-size: 30px;
@@ -143,72 +140,44 @@ padding: 400 !important;
     font-size: 16px;
     line-height: 1.6;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
 }
 .document .t_desc2 {
     font-size: 16px;
     line-height: 1.6;
     color: #666;
-    margin-bottom: 10px;
-    padding: 15px !important;
+    margin-bottom: 10px !important;
+    padding: 15px 20px !important;
     border-left: 4px solid #0243f1;
     background-color: #f9f9f9;
 }
-.document .t_box{
+.document .t_box {
     padding: 20px !important;
-    padding: 10px;
     background-color: #f9f9f9;
     margin-bottom: 10px;
     color: #666;
     border-radius: 5px;
-
 }
-
-
-.document .t_table{
-    border: ipx solid #dcdcdc;
+.document .t_table {
+    border: 1px solid #dcdcdc;
     width: 100%;
-    border-spacing: 0ch;
+    border-spacing: 0;
     border-collapse: collapse;
 }
-
-.document .t_table tr th{
+.document .t_table tr th {
     background-color: #f9f9f9;
 }
 .document .t_table tr th,
-.document .t_table tr td{
-    border: ipx solid #dcdcdc;
-    font-weight: normal; 
+.document .t_table tr td {
+    border: 1px solid #dcdcdc;
+    font-weight: normal;
     padding: 8px 10px;
     color: #666;
 }
-.document .t_table.ce{
-
+.document .t_table .ce {
+    text-align: center;
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
-    
-    
-    
-    
-    
-  
 
 
 @media (max-width: 800px){
