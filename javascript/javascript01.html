@@ -67,7 +67,9 @@
                     이 저장소에는 숫자, 문자, 함수, 객체 등을 저장할 수 있습니다.
                 </p>
                 <div class="script">
-<pre><code class="language-js">{var x = 100;            //변수 x에 숫자 100을 저장함
+<pre><code class="language-js">
+{
+var x = 100;            //변수 x에 숫자 100을 저장함
 var y = 200;            //변수 y에 숫자 200을 저장함
 var z = "javascript";       //변수 z에 문자열 "javascript"를 저장함
 
@@ -94,7 +96,9 @@ document.write(z);
                     변수는 데이터를 저장하는 저장소이지만 변경도 가능합니다.
                 </p>
                 <div class="script">
-<pre><code class="language-js">{let x = 100;
+<pre><code class="language-js">
+{
+let x = 100;
 let y = 200;
 let z = "javascript";
 
@@ -125,7 +129,9 @@ document.write(z);
                     변수는 데이터를 저장하는 저장소이고, 데이터를 변경 또는 추가 할 수 있습니다.
                 </p>
                 <div class="script">
-<pre><code class="language-js">{let x = 100;
+<pre><code class="language-js">
+{
+let x = 100;
 let y = 200;
 let z = "javascript";
 
@@ -155,7 +161,9 @@ document.write(z);
                     지역변수는 함수 블록{} 내에서만 사용 할 수 있습니다.
                 </p>
                 <div class="script">
-<pre><code class="language-js">{let x = 100;    //전역변수
+<pre><code class="language-js">    
+{
+let x = 100;    //전역변수
 let y = 200;    //전역변수
 
 function func(){
@@ -205,7 +213,9 @@ document.write(z);
                     상수의 값은 재지정할 수도 없습니다.
                 </p>
                 <div class="script">
-<pre><code class="language-js">{const x = 100;
+<pre><code class="language-js">
+{
+const x = 100;
 const y = 200;
 const z = "javascript";
 
@@ -234,7 +244,9 @@ document.write(z);
                     
                 </p>
                 <div class="script">
-<pre><code class="language-js">{const arr = new Array();
+<pre><code class="language-js">
+{
+const arr = new Array();
 arr[0] = 100;
 arr[1] = 200;
 arr[2] = "javascript";
@@ -260,7 +272,9 @@ document.write(arr[2]);
                     
                 </p>
                 <div class="script">
-<pre><code class="language-js">{const arr = new Array(100, 200, "javascript");
+<pre><code class="language-js">
+{
+const arr = new Array(100, 200, "javascript");
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -283,7 +297,9 @@ document.write(arr[2]);
                     
                 </p>
                 <div class="script">
-<pre><code class="language-js">{const arr = [];
+<pre><code class="language-js">
+{
+const arr = [];
 arr[0] = 100;
 arr[1] = 200;
 arr[2] = "javascript";
@@ -307,7 +323,9 @@ document.write(arr[2]);
                 <h3>09. 배열</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">{const arr = [100, 200, "javascript"];
+<pre><code class="language-js">
+{
+const arr = [100, 200, "javascript"];
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -328,7 +346,9 @@ document.write(arr[2]);
                 <h3>10. 객체</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">{const obj = new Object(); 
+<pre><code class="language-js">
+{
+const obj = new Object(); 
 
 obj[0] = 100;
 obj[1] = 200;
@@ -353,7 +373,9 @@ document.write(obj[2]);
                 <h3>11. 객체</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">{const obj = new Object();
+<pre><code class="language-js">
+{
+const obj = new Object();
 
 obj.a = 100;
 obj.b = 200;
@@ -378,7 +400,9 @@ document.write(obj.c);
                 <h3>12. 객체</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">{const obj = {};
+<pre><code class="language-js">
+{
+const obj = {};
 
 obj.a = 100;
 obj.b = 200;
@@ -403,7 +427,9 @@ document.write(obj.c);
                 <h3>13. 객체</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">{const obj = {a:100, b:200, c:"javascript"};
+<pre><code class="language-js">
+{
+const obj = {a:100, b:200, c:"javascript"};
 
 document.write(obj.a);
 document.write(obj.b);
@@ -424,7 +450,9 @@ document.write(obj.c);
                 <h3>14. 객체</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js"{}>{const obj = [
+<pre><code class="language-js"{}>
+{
+    const obj = [
     {a:100, b:200},
     {c:"javascript"}
 ];
@@ -448,7 +476,9 @@ document.write(obj[1].c);
                 <h3>15. 객체</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js">{const obj = {
+<pre><code class="language-js">
+{
+    const obj = {
     a: 100,
     b: [200, 300],
     c: {x: 400, y: 500},
@@ -477,7 +507,9 @@ document.write(obj.d)
                 <h3>16. 객체 : 객체 속의 변수</h3>
                 <p>객체안의 변수를 넣으면 편하게 초기화 할 수 있다.</p>
                 <div class="script">
-<pre><code class="lanauage-js">{const a = 100;
+<pre><code class="lanauage-js">
+{
+    const a = 100;
 const b = 200;
 const c = 'javascript';
 
@@ -503,7 +535,9 @@ document.write(obj.c);
                 <h3>17. 객체 : 객체 속의 배열</h3>
                 <p>객체는 함수 또한 원소로 갖는데, 호출시 객체.함수() 방식으로 호출한다.</p>
                 <div class="script">
-<pre><code class="lanauage-js">const obj = {
+<pre><code class="lanauage-js"> 
+{
+    const obj = {
     a : 100,
     b: [200, 300],
     c : {x : 100, y : 400},
@@ -630,7 +664,7 @@ obj.g();
             const y = 200;
             const z = 'javascript';
 
-            // x = 200; // error : 값 변경 불가
+            // x = 200; // error : 값 변경 x
             // y = 400;
             // z = jquery;
 
@@ -643,10 +677,10 @@ obj.g();
 
         // 06배열
         {
-            const arr = new Array(); // 
+            const arr = new Array(); 
             arr[0] = 100;
             arr[1] = 200;
-            arr[2] = 'javascript'; // 
+            arr[2] = 'javascript'; 
 
             // document.write(arr[0] + "<br>");
             // document.write(arr[1] + "<br>");
@@ -657,7 +691,7 @@ obj.g();
 
         // 07배열
         {
-            const arr = new Array(100, 200, 'javascript');  // 
+            const arr = new Array(100, 200, 'javascript');  
 
             // document.write(arr[0] + "<br>");
             // document.write(arr[1] + "<br>");
@@ -668,7 +702,7 @@ obj.g();
 
         // 08배열
         {
-            const arr = []; // 
+            const arr = []; 
             arr[0] = 100;
             arr[1] = 200;
             arr[2] = 'javascript';
@@ -682,7 +716,7 @@ obj.g();
 
         // 09배열
         {
-            const arr = [100, 200, 'javascript']; // 한번에 값 할당
+            const arr = [100, 200, 'javascript']; 
 
             // document.write(arr[0] + "<br>");
             // document.write(arr[1] + "<br>");
@@ -708,7 +742,7 @@ obj.g();
         // 11객체
         {
             const obj = new Object();
-            obj.a = 100; // 객체만의 새로운 할당법
+            obj.a = 100; 
             obj.b = 200;
             obj.c = 'javascript';
 
@@ -721,7 +755,7 @@ obj.g();
 
         // 12객체
         {
-            const obj = {}; // 객체 리터럴 이용
+            const obj = {}; 
             
             obj.a = 100;
             obj.b = 200;
@@ -740,7 +774,7 @@ obj.g();
                 a : 100,
                 b : 200,
                 c : 'javascript',
-            }; // 선언과 동시에 할당
+            }; 
 
             // document.write(obj.a);
             // document.write(obj.b);
@@ -775,7 +809,7 @@ obj.g();
             // document.write(obj.a);
             // document.write(obj.b[0]);
             // document.write(obj.b[1]);
-            // document.write(obj.c.x); // 키 c의 값의 값
+            // document.write(obj.c.x); 
             // document.write(obj.c.y);
             // document.write(obj.d);
 
