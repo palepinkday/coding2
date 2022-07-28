@@ -1,24 +1,23 @@
- <!DOCTYPE html>
-  <html lang="ko">
-  <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>자바스크립트 데이터 저장하기</title>
-  
-      <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/css/dracula.css">
-  </head>
-  <body>
-      <header id="header">
-          <h1><a href="index.html">Javascript</a></h1>
-          <nav class="header_nav">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : 데이터 실행하기</title>
+   
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav class="header_nav">
             <ul>
                 <li><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li class="active"><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
-            </ul>
+            </ul>    
             <ul>
                 <li><a href="javascript05.html">문자열 객체</a></li>
                 <li><a href="javascript06.html">배열 객체</a></li>
@@ -30,92 +29,62 @@
             </ul>
             <ul class="study">
                 <li><a href="study/basic.html">기본 규칙</a></li>
-                <li><a href="study/operator.html">연산자</a></li>
-                <li><a href="study/for.html">반목문</a></li>
-                <li><a href="study/if.html">조건문</a></li>
-                <li><a href="study/type.html">데이터타입</a></li>
-                <li><a href="study/fuction.html">함수</a></li>
-                <li><a href="study/var.html">지역변수/전역변수</a></li>
+                <li><a href="study/calculation.html">연산자</a></li>
+                <li><a href="study/for.html">for문</a></li>
+                <li><a href="study/if.html">조건문</a></li>  
+                <li><a href="study/type.html">데이터 타입</a></li> 
+                <li><a href="study/function.html">함수</a></li> 
+                <li><a href="study/var.html">지역변수/전역변수</a></li> 
             </ul>
-          </nav>
-      </header>
-      <!-- //header --> 
-  <!-- //header -->
-  <main id="main">
-    <div class="main_menu"></div>
-    <ul>
-        <li><a href="#sample01">01. 선언적 함수</a></li>
-        <li><a href="#sample02">02. 익명 함수</a></li>
-        <li><a href="#sample03">03. 매개변수 함수</a></li>
-        <li><a href="#sample04">04. 리턴값 함수</a></li>
-        <li><a href="#sample05">05. 화살표 함수 : 선언적 함수</a></li>
-        <li><a href="#sample06">06. 화살표 함수 : 익명 함수</a></li>
-        <li><a href="#sample07">07. 화살표 함수 : 매개변수 함수</a></li>
-        <li><a href="#sample08">08. 화살표 함수 : 리턴값 함수</a></li>
-        <li><a href="#sample09">09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
-        <li><a href="#sample10">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
-        <li><a href="#sample11">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-        <li><a href="#sample12">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-        <li><a href="#sample13">13. 내부 함수</a></li>
-        <li><a href="#sample14">14. 즉시 실행 함수</a></li>
-        <li><a href="#sample15">15. 파라미터 함수</a></li>
-        <li><a href="#sample16">16. 아규먼트 함수</a></li>
-        <li><a href="#sample17">17. 재귀함수</a></li>
-        <li><a href="#sample18">18. 콜백함수</a></li>
-        <li><a href="#sample19">19. 콜백함수 : 반복문</a></li>
-        <li><a href="#sample20">20. 콜백함수 : 동기/비동기</a></li>
-        <li><a href="#sample21">21. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
-        <li><a href="#sample22">22. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
-        <li><a href="#sample23">23. 함수 유형 : 함수와 배열,객체를 이용한 형태</a></li>
-        <li><a href="#sample24">24. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태</a></li>
-        <li><a href="#sample25">25. 함수 유형 : 객체 생성자 함수</a></li>
-        <li><a href="#sample26">26. 함수 유형 : 프로토타입 함수</a></li>
-        <li><a href="#sample27">27. 함수 유형 : 객체 리터럴 함수</a></li>
-        <li><a href="#sample28">28. 클래스</a></li>
-        <li><a href="#sample29">29. 클래스 상속</a></li> 
-    </ul>
-</div>
+        </nav>
+    </header>
+    <!-- //header --> 
 
+    <main id="main">
+        <div class="main_menu"></div>
+            <ul>
+                <li><a href="#sample01">01. 선언적 함수</a></li>
+                <li><a href="#sample02">02. 익명 함수</a></li>
+                <li><a href="#sample03">03. 매개변수 함수</a></li>
+                <li><a href="#sample04">04. 리턴값 함수</a></li>
+                <li><a href="#sample05">05. 화살표 함수 : 선언적 함수</a></li>
+                <li><a href="#sample06">06. 화살표 함수 : 익명 함수</a></li>
+                <li><a href="#sample07">07. 화살표 함수 : 매개변수 함수</a></li>
+                <li><a href="#sample08">08. 화살표 함수 : 리턴값 함수</a></li>
+                <li><a href="#sample09">09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</a></li>
+                <li><a href="#sample10">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
+                <li><a href="#sample11">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+                <li><a href="#sample12">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
+                <li><a href="#sample13">13. 내부 함수</a></li>
+                <li><a href="#sample14">14. 즉시 실행 함수</a></li>
+                <li><a href="#sample15">15. 파라미터 함수</a></li>
+                <li><a href="#sample16">16. 아규먼트 함수</a></li>
+                <li><a href="#sample17">17. 재귀 함수</a></li>
+                <li><a href="#sample18">18. 콜백 함수</a></li>
+                <li><a href="#sample19">19. 콜백 함수 : 반복문</a></li>
+                <li><a href="#sample20">20. 콜백 함수 : 동기/비동기</a></li>
+                <li><a href="#sample21">21. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
+                <li><a href="#sample22">22. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
+                <li><a href="#sample23">23. 함수 유형 : 함수와 배열, 객체를 이용한 형태</a></li>
+                <li><a href="#sample24">24. 함수 유형 : 객체 안에 변수와 함수를 이용한 형태</a></li>
+                <li><a href="#sample25">25. 함수 유형 : 객체 생성자 함수</a></li>
+                <li><a href="#sample26">26. 함수 유형 : 프로토타입 함수</a></li>
+                <li><a href="#sample27">27. 함수 유형 : 객체 리터럴 함수</a></li>
+                <li><a href="#sample28">28. 클래스</a></li>
+                <li><a href="#sample29">29. 클래스 상속</a></li>
+            </ul>
+        <div class="main_script"></div>
+        <div class="main_desc"></div>
+    </main>
+    <!-- //main --> 
 
-<div class="main_script"></div>
-<div class="main_desc"></div>
-<h3>01.선언적 함수</h3>
-                <p>
-                변수(데이터 저장), 배열(데이터 저장), 객체(데이터 저장) --> 함수(실행문)(제어문)<br>
-                선언적 함수-사용자 정의 함수,프로그램에서 필요한 기능을 사용자가 직접 정의해서 사용
-                </p>
-                <div class="script">
-<pre><code class="language-js">{
-    function func(){
-        document.write("함수가 실행되었습니다.1<br>");
-    }
-    func();
-}
-</code></pre>
-                </div>
-                <div class="result">
-                    <details>
-                        <summary>결과보기</summary>
-                        <div class="sample01_result">
-                            
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample01 -->
-</main>
-<!-- //main -->
+    <footer id="footer">
+        <a href="mailto:piowm123@gmail.com">piowm123@gmail.com</a>
+    </footer>
+    <!-- //footer --> 
 
-<footer id="footer">
-<a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
-</footer>
-<!-- //footer -->
-<script src="assets/js/highlight.min.js"></script>
     <script>
-        hljs.highlightAll();
-    </script>
-<script>
-    // //교제 353pg
+        // //교제 353pg
         // //내장 객체 : 자바스크립트 자체에서 저장되어 있는 것
         // //변수, 배열, 객체(데이터 저장, 내장 객체) --> 함수(실행문)(제어문)
         // //01. 선언적 함수   //가장 기본이 되는 함수
@@ -317,24 +286,6 @@
             
             document.write(func("함수가 실행되었습니다.12<br>"));
         }
-
-
-        //01. 선언적 함수
-        //02. 익명 함수
-        //03. 매개변수 함수
-        //04. 리턴값 함수
-        //05. 화살표함수(선언적 함수)
-        //06. 화살표함수(익명 함수)
-        //07. 화살표함수(매개변수 함수)
-        //08. 화살표함수(리턴값 함수)
-        //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
-        //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
-        //11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
-        //12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
-
-
-
-</script>
+    </script>
 </body>
 </html>
-    
