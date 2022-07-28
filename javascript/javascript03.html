@@ -13,25 +13,30 @@
       <header id="header">
           <h1><a href="index.html">Javascript</a></h1>
           <nav class="header_nav">
-              <ul>
-                  <li><a href="javascript01.html">데이터 저장하기</a></li>
-                  <li><a href="javascript02.html">데이터 불러오기</a></li>
-                  <li class="active"><a href="javascript03.html">데이터 실행하기</a></li>
-                  <li><a href="javascript04.html">데이터 제어하기</a></li>
-              </ul>
-              <ul>
-                  <li><a href="javascript05.html">문자열 객체</a></li>
-                  <li><a href="javascript06.html">배열 객체</a></li>
-                  <li><a href="javascript07.html">수학 객체</a></li>
-                  <li><a href="javascript08.html">숫자 객체</a></li>
-                  <li><a href="javascript09.html">브라우저 객체</a></li>
-                  <li><a href="javascript10.html">요소 객체</a></li>
-                  <li><a href="javascript11.html">이벤트 객체</a></li>
-              </ul>
-              <ul class="study">
-                  <li><a href="study/basic.html">기본 규칙</a></li>
-                  <li><a href="study/operator.html">연산자</a></li>
-              </ul>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li class="active"><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="study/basic.html">기본 규칙</a></li>
+                <li><a href="study/operator.html">연산자</a></li>
+                <li><a href="study/for.html">반목문</a></li>
+                <li><a href="study/if.html">조건문</a></li>
+                <li><a href="study/type.html">데이터타입</a></li>
+                <li><a href="study/fuction.html">함수</a></li>
+                <li><a href="study/var.html">지역변수/전역변수</a></li>
+            </ul>
           </nav>
       </header>
       <!-- //header --> 
@@ -79,6 +84,126 @@
 <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
 </footer>
 <!-- //footer -->
+<script>
+    //변수(데이터 저장), 배열(데이터 저장), 객체(데이터 저장) --> 함수(실행문)(제어문)
+        //01. 선언적 함수
+        {
+            function func(){
+                document.write("함수가 실행되었습니다.1<br>");
+            }
+            func();
+        }
+
+        //02. 익명 함수
+        {
+            const func = function(){
+                document.write("함수가 실행되었습니다.2<br>");
+            }
+            func();
+        }
+        //03. 매개변수 함수
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.3<br>");
+        }
+        //04. 리턴값 함수
+        {
+            function func(){
+                const str = "함수가 실행되었습니다.4<br>";
+                return str; //결과값 종료값
+            }
+            document.write(func());
+        }
+
+        //ECMAscript6(es6) 화살표 함수, let, const
+
+        //05. 화살표 함수(선언적 함수)
+        {
+            // function func(){
+            //     document.write("함수가 실행되었습니다.1<br>");
+            // }
+            // func();
+
+            // func = () => {
+            //     document.write("함수가 실행되었습니다.5<br>");
+            // }
+
+            func = () => document.write("함수가 실행되었습니다.5<br>");
+            
+            func();
+        }
+        //06. 화살표 함수(익명 함수)
+        {
+            // const func = function(){
+            //     document.write("함수가 실행되었습니다.6<br>");
+            // }
+
+            // const func = () => {
+            //     document.write("함수가 실행되었습니다.6<br>");
+            // }
+
+            const func = () => document.write("함수가 실행되었습니다.6<br>");
+
+            func();
+        }
+        //07. 화살표 함수(매개변수 함수)
+        {
+            // function func(str){
+            //     document.write(str);
+            // }
+            
+            // func = (str) => {
+            //     document.write(str);
+            // }
+
+            //func = (str) => document.write(str);
+
+            func = str => document.write(str);
+
+            func("함수가 실행되었습니다.7<br>");
+        }
+        //08. 화살표 함수(리턴값 함수)
+        {
+            // function func(){
+            //     const str = "함수가 실행되었습니다.8<br>";
+            //     return str;
+            // }
+
+            func = () => {
+                const str = "함수가 실행되었습니다.8<br>";
+                return str;
+            }
+
+            document.write(func());
+        }
+        //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+
+        //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
+
+        //11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
+        
+        //12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
+
+
+
+        //01. 선언적 함수
+        //02. 익명 함수
+        //03. 매개변수 함수
+        //04. 리턴값 함수
+        //05. 화살표함수(선언적 함수)
+        //06. 화살표함수(익명 함수)
+        //07. 화살표함수(매개변수 함수)
+        //08. 화살표함수(리턴값 함수)
+        //09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
+        //10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
+        //11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
+        //12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
+
+
+
+</script>
 </body>
 </html>
     

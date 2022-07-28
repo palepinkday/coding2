@@ -31,6 +31,11 @@
             <ul class="study">
                 <li><a href="study/basic.html">기본 규칙</a></li>
                 <li><a href="study/operator.html">연산자</a></li>
+                <li><a href="study/for.html">반목문</a></li>
+                <li><a href="study/if.html">조건문</a></li>
+                <li><a href="study/type.html">데이터타입</a></li>
+                <li><a href="study/fuction.html">함수</a></li>
+                <li><a href="study/var.html">지역변수/전역변수</a></li>
             </ul>
         </nav>
     </header>
@@ -361,7 +366,24 @@ num.map(function(element, index, array){
         hljs.highlightAll();
     </script>
     <script>
-        
+       //for문 이용해서 하나씩 출력 
+       const arr = [1,2,3,4,5,6,7,8,9];
+       for( let i=0; arr<9; i++ ){
+        document.write(arr[i]);
+    }
+       //forEach 이용해서 하나씩 출력
+       const num = [1,2,3,4,5,6,7,8,9];
+        num.forEach(function(el){
+        document.write(el);
+        });
+       
+       //map() 이용해서 하나씩 출력
+        map()
+        num.map(functionel(el){
+            document.write(el);
+        });
+       //for in 이용해서 하나씩 출력
+       //for of 이용해서 하나씩 출력
     </script>
 </body>
 </html>
