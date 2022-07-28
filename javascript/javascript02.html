@@ -370,7 +370,7 @@ num.map(function(element, index, array){
        const arr = [1,2,3,4,5,6,7,8,9];
        for( let i=0; arr<9; i++ ){
         document.write(arr[i]);
-    }
+        }
        //forEach 이용해서 하나씩 출력
        const num = [1,2,3,4,5,6,7,8,9];
         num.forEach(function(el){
@@ -378,12 +378,23 @@ num.map(function(element, index, array){
         });
        
        //map() 이용해서 하나씩 출력
+       const num = [1,2,3,4,5,6,7,8,9];
         map()
         num.map(functionel(el){
             document.write(el);
         });
+
        //for in 이용해서 하나씩 출력
+       const num = [1,2,3,4,5,6,7,8,9];
+       for( let i in num ){
+        document.write(i);
+        }
+
        //for of 이용해서 하나씩 출력
+       const num = [1,2,3,4,5,6,7,8,9];
+       for( let i of num ){
+        document.write(i);
+        }
     </script>
 </body>
 </html>
