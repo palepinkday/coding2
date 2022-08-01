@@ -61,13 +61,24 @@
     height: 100px;
     background-color: #0288D1;
     }
+    /* clearfix */
+    .clearfix::before,
+    .clearfix::after{
+        content: "";
+        display: block;
+        line-height: 0;
+    }
+    .clearfix::after{
+        clear:both
+    }
+       
 </style>
 </head>
 <body>
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="main">
+        <div id="main" class="clearfix">
             <div id="aside"></div>
             <div id="article1"></div>
             <div id="article2"></div>
