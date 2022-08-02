@@ -33,32 +33,40 @@
             margin: 0 auto; 
         }
         .contents {
-            display: flex;
-            flex-wrap: wrap;
+         
+        }
+        .contents .left{
+            width: 100%;
+            height: 100px;
         }
 
-        .contents .con1{
+        .contents .left .con1{
             width: 100%;
             height: 100px;
             background-color:#74574A;
-            margin: 0 auto; 
-        
+         
         }
-        .contents .con2{
+        .contents .right{
+            width: 100%;
+            height: 680px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .contents .right .con2{
             width: 100%;
             height: 200px;
             background-color:#684D43; 
-            margin: 0 auto; 
+        
        
         }
-        .contents .con3{
+        .contents .right .con3{
             width: 50%;
             height: 480px;
             background-color:#594139; 
             margin: 0 auto; 
    
         }
-        .contents .con4{
+        .contents .right .con4{
             width: 50%;
             height: 480px;
             background-color:#6a534c; 
@@ -83,7 +91,7 @@
             clearfix
 
         */
-        .clearfix::before{
+        /* .clearfix::before{
             zoom: 1;
         }
         .clearfix::before,
@@ -94,31 +102,39 @@
         }
         .clearfix::after{
             clear: both;
-        }
+        } */
         @media (max-width: 1220px){
             .container{
                 width: 96%;
             }
             .contents {
             display: flex;
-            flex-wrap: wrap;
             }
-
-            .contents .con1{
+            .contents .left{
                 width: 30%;
                 height: 780px;
             }
-            .contents .con2{
+            .contents .left .con1{
+                width: 100%;
+                height: 780px;
+            }
+            .contents .right{
                 width: 70%;
-                height:390px;
+                height: 780px;
+                display: flex;
+                flex-wrap: wrap;
             }
-            .contents .con3{  
-                width: 35%;
-                height:390px;
+            .contents .right .con2{
+                width: 100%;
+                height: 390px;
             }
-            .contents .con4{
-                width: 35%;
-                height:390px;
+            .contents .right .con3{  
+                width: 50%;
+                height: 390px;
+            }
+            .contents .right .con4{
+                width: 50%;
+                height: 390px;
             }
 
         }                                   
@@ -126,39 +142,54 @@
             .container{
                 width: 100%;
             }
-            .contents .con1{
+            .contents .left{
                 width: 30%;
                 height: 780px;
             }
-            .contents .con2{
-                width: 70%;
-                height:260px;
+            .contents .left .con1{
+                width: 100%;
+                height: 780px;
             }
-            .contents .con3{  
-                width: 70%;
-                height:260px;
+            .contents .right .con2{
+                width: 100%;
+                height: 260px;
             }
-            .contents .con4{
-                width: 70%;
-                height:260px;
+            .contents .right .con3{  
+                width: 100%;
+                height: 260px;
+            }
+            .contents .right .con4{
+                width: 100%;
+                height: 260px;
             }
         }
         @media (max-width: 480px){
-            .contents .con1{
+            .contents{
+                flex-wrap: wrap;
+            }
+            .contents .left{
                 width: 100%;
                 height: 150px;
             }
-            .contents .con2{
+            .contents .left .con1{
                 width: 100%;
-                height:210px;
+                height: 150px;
             }
-            .contents .con3{  
+            .contents .right{
                 width: 100%;
-                height:210px;
+                height: 630px;
             }
-            .contents .con4{
+            .contents .right .con2{
                 width: 100%;
-                height:210px;
+                height: 210px;
+            }
+            .contents .right .con3{  
+                width: 100%;
+                height: 210px;
+            }
+            .contents .right .con4{
+                width: 100%;
+                height: 210px;
             }
         }
        
@@ -175,13 +206,16 @@
         </div>
 
         <div id="main">
-            <div class="contents container clearfix">
-                <div class="con1"></div>
-                <div class="con2"></div>
-                <div class="con3"></div>
-                <div class="con4"></div>
+            <div class="contents container">
+                <div class="left">
+                    <div class="con1"></div>
+                </div>
+                <div class="right"> 
+                    <div class="con2"></div>
+                    <div class="con3"></div>
+                    <div class="con4"></div>
+                </div>  
             </div>
-           
         </div>
         <div id="footer">
             <div class="container"></div>
