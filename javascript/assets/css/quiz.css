@@ -93,6 +93,10 @@
             width: 100%;
             box-sizing: border-box;
             margin-top: 150px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            z-index: 10000;
         }
 
         #footer a {
@@ -110,6 +114,7 @@
             align-items: center;
             justify-content: center;
             margin-top: 50px;
+            margin-bottom: 150px;
         }
 
         .quiz {
@@ -195,6 +200,7 @@
             height: 120px;
             line-height: 120px;
             background-color: #F5534F;
+            color: #fff;
             border-radius: 50%;
             text-align: center;
             position: absolute;
