@@ -76,7 +76,7 @@
         <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
     </footer>
     <!-- //footer -->
-    
+
     <script>
         //선택자
         const quizType = document.querySelector(".quiz__type"); //퀴즈종류
@@ -90,33 +90,33 @@
 
     //문제정보
         const answerType = "웹디자인기능사";
-        const answerNum = "2";
+        const answerNum = "2"; 
         const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 케뮤니케이션 시스템을 의도적, 계획적으로 만들어 내는 기업이미지 통합전략은 무엇인가요?";
         let answerResult = "CIP";
     //문제 출력
         quizType.textContent = answerType;
-        quizNumber.textContent = answerNum; +"."
+        quizNumber.textContent = answerNum +".";
         quizAsk.textContent = answerAsk;
-        quizResult.textContent = answerResult
+        quizResult.textContent = answerResult;
 
      //숨기기   
-     quizResult.style.display = "none";
+        quizResult.style.display = "none";
 
      //정답확인
-        quizConfirm.addEventListener("click",() => {
+        quizConfirm.addEventListener("click",() =>{
         quizInput.style.display = "none";
         quizResult.style.display = "block";
         quizConfirm.style.display = "none";
 
         const userWord = quizInput.value.toLowerCase().trim();
-        answerResult = answerResult.value.toLowerCase().trim();
+        answerResult = answerResult.toLowerCase().trim();
 
         if(userWord == answerResult){
             quizView.classList.add("like");
         }else{
             quizView.classList.add("dislike");
         }
-     });
+    });
         
     </script>
 
