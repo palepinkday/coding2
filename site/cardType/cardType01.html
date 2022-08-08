@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드유형01</title>
+    <style>
+        /* 폰트 */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+        .nexon {
+            font-family: 'NexonLv2Gothic';
+            font-weight: 400;
+        }
+        /* resest */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        img {
+            width: 100%;
+        }
+        
+        /* common */
+        .container {
+            width: 1160;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            line-height: 1;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section > p {
+            font-size: 22px;
+            font-weight: 300;
+            color: #666;
+            text-align: center;
+            margin-bottom: 70px;
+       
+        }
+        /* cardType */
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card {
+            width: 32%;
+            background-color: #f5f5f5;
+        }
+        .card__body {
+            padding: 24px;
+        }
+        .card__body .tit {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .card__body .desc {
+            font-style: 18px;
+            line-height: 1.4;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        .card__body .btn {
+
+        }
+    </style>
+</head>
+<body>
+    <section id="cardType" class="card__warp nexon section">
+        <h2>프론트앤드 강의</h2>
+        <p>강의리스트입니다. </p>
+        <div class="card__inner container">
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg01.jpg" alt="웹표준 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">웹표준 사이트 만들기</h3>
+                <p class="desc"> 사이트를 만들기 위한 기초 강의입니다. 기
+                    본코팅에 대한 감각을 익히고, 웹표준을 준
+                    수하면서 코딩하는 방법을 익힙니다. 다양
+                    한 예제를 통해 사이트를 만드는 기본...  </p>
+                <a class ="btn" href="/">더 자세히보기</a>
+                </div> 
+            </article> 
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg02.jpg" alt="웹표준 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">웹표준 사이트 만들기</h3>
+                <p class="desc"> 사이트를 만들기 위한 기초 강의입니다. 기
+                    본코팅에 대한 감각을 익히고, 웹표준을 준
+                    수하면서 코딩하는 방법을 익힙니다. 다양
+                    한 예제를 통해 사이트를 만드는 기본...  </p>
+                <a class ="btn" href="/">더 자세히보기</a>
+                </div> 
+            </article> 
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card_bg03.jpg" alt="웹표준 사이트 만들기">
+                </figure>
+                <div class="card__body">
+                    <h3 class="tit">웹표준 사이트 만들기</h3>
+                <p class="desc"> 사이트를 만들기 위한 기초 강의입니다. 기
+                    본코팅에 대한 감각을 익히고, 웹표준을 준
+                    수하면서 코딩하는 방법을 익힙니다. 다양
+                    한 예제를 통해 사이트를 만드는 기본...  </p>
+                <a class ="btn" href="/">더 자세히보기</a>
+                </div> 
+            </article> 
+        </div>
+       
+    </section>
+    
+</body>
+</html>
