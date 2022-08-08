@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 기본 규칙</title>
+    <title>자바스크립트: 요소선택 </title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
@@ -29,14 +29,14 @@
                 <li><a href="../javascript11.html">이벤트 객체</a></li>
             </ul>
             <ul class="study">
-                <li><a href="study/basic.html">기본 규칙</a></li>
-                <li><a href="study/operator.html">연산자</a></li>
-                <li><a href="study/for.html">반복문</a></li>
-                <li><a href="study/if.html">조건문</a></li>
-                <li><a href="study/type.html">데이터타입</a></li>
-                <li><a href="study/fuction.html">함수</a></li>
-                <li><a href="study/var.html">지역변수/전역변수</a></li>
-                <li><a href="study/element.html">요소선택</a></li>
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
+                <li><a href="fuction.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소선택</a></li>
             </ul>
         </nav>
     </header>
@@ -44,27 +44,23 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">기본 규칙</h2>
+            <h2 class="t_tit">DOM(Document Object Model)</h2>
             <p class="t_desc">
-                자바스크립트를 다루기 위해서는 기초적인 특징과 기본 문법이 있습니다.
+                DOM을 '문서 객체 모델'이라고 하며 document 객체를 의미합니다. 
+                DOM은 HTML요소(element)의 선택,생성, 삭제 등을 위해 사용됩니다.
             </p>
 
-            <h3 class="t_tit2">자바스크립트란?</h3>
+            <h3 class="t_tit2">HTML문서를 작성했을 때 DOM의 구조</h3>
             <p class="t_desc2">
-                JavaScript는 웹 페이지에서 복잡한 기능을 구현할 수 있도록 하는 스크립트 <i>프로그래밍 언어</i>입니다.
-                HTML은 정적인 레이아웃을 표현한다면, 자바스크립트는 동적인 기능을 표현합니다.
+                HTML요소들은 노드(node)와 노드(node)가 연결된 Tree구조로 만들어 줍니다.
+                html, head, meta, title, body, h1, p와 같ㅇ느 태그 요소들을 '요소 노드'라고 하고 텍스트를 '텍스트 노드'라고 합니다.     
             </p>
-            <p class="t_desc">
-                자바스크립트는 1995년 넷스케이프 커뮤니케이션의 브렌던 아이크가 개발하였스며 Netscape Navigsator2.0에 구현되었습니다. 
-                1996년에는 마이크로소프트사의 Internet Explorer3.0 탑재되었으며 java 애플릿으로 구현된 웹 브라우저의 지지부진한 보급과 맞물려 빠르게 보급되었습니다. 1997년부터 ESMAScript를 따르는 표준화 작업을 통해 현재는 모든 브라우저에서 지원됩니다.
-            </p>
+           
+            <h3 class="t_tit2">요소선택</h3>
+            <h4 class="t_tit3"> &lt;요소를 직접 선택하는 메서드&gt;</h4>
 
-            <h3 class="t_tit2">자바스크립트 기본 규칙</h3>
-            <h4 class="t_tit3">1. 세미콜론(;)</h4>
-            <p class="t_desc">
-                하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다.
-                세미콜론(;)을 붙여 주지 않아도 상관은 없습니다.
-            </p>
+            
+
             <div class ="t_box">
                 var num = 5;<i>;</i><br>
                 doccument.write(num)<i>;</i><br>
