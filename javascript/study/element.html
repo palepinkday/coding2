@@ -46,8 +46,8 @@
         <div class="document">
             <h2 class="t_tit">DOM(Document Object Model)</h2>
             <p class="t_desc">
-                DOM을 '문서 객체 모델'이라고 하며 document 객체를 의미합니다. 
-                DOM은 HTML요소(element)의 선택,생성, 삭제 등을 위해 사용됩니다.
+                DOM을 <i>'문서 객체 모델'</i>이라고 하며 <i>document 객체</i>를 의미합니다. 
+                DOM은 HTML요소(element)의 <i>선택, 생성, 삭제</i> 등을 위해 사용됩니다.
             </p>
 
             <h3 class="t_tit2">HTML문서를 작성했을 때 DOM의 구조</h3>
@@ -69,123 +69,88 @@
                 <tbody>
                 <tr>
                     <td class="ce">getElementById( )</td>
-                    <td class="ce">document.getElementById('content')일 경우 HTML요소 중 id속성이 'content'인 요소를 선택</td>
+                    <td class="ce">document.getElementBy<i>Id</i>('content')일 경우 HTML요소 중 <i>id속성</i>이 'content'인 요소를 선택</td>
                 </tr>
                 <tr>
                     <td class="ce">getElementByClassName( )</td>
-                    <td class="ce">document.getElementByClassName('menu')일 경우 HTML요소 중 class명이 'menu'인 요소를 선택 </td>
+                    <td class="ce">document.getElementBy<i>Class</i>Name('menu')일 경우 HTML요소 중 <i>class명</i>이 'menu'인 요소들을 선택 </td>
                 </tr>
                 <tr>
                     <td class="ce">getElementByTagName( )</td>
-                    <td class="ce">document.getElementByTagName('ul')일 경우 HTML요소 중 태그명이 'ul'인 요소를 선택</td>
+                    <td class="ce">document.getElementBy<i>Tag</i>Name('ul')일 경우 HTML요소 중 <i>태그명</i>이 'ul'인 요소들을 선택</td>
                 </tr>
                 <tr>
-                    <td class="ce"></td>
-                    <td class="ce"></td>
+                    <td class="ce">getElementByName( )</td>
+                    <td class="ce">document.getElementBy<i>Name</i>('txt')일 경우 HTML요소 중 <i>name명</i>이 'txt'인 요소들을 선택</td>
                 </tr>
                 <tr>
-                    <td class="ce"></td>
-                    <td class="ce"></td>
+                    <td class="ce">querySelector( )</td>
+                    <td class="ce">요소의 선택방법이 css의 선택방법과 같습니다. 선택된 요소 중 <i>첫번째 요소</i>만 선택<br>
+                                    document.querySelector('.lnb')<br>
+                                    document.querySelector(div)<br>
+                                    document.querySelector('#gnb li')  
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ce">querySelectorALl( )</td>
+                    <td class="ce">querySelector( )는 선택된 요소 중 첫 번째 요소만 선택하는 반면 querySelectorALl( )는 <i>모든 요소</i>를 선택</td>
                 </tr>
                 </tbody>
             </table>
-
-            <div class ="t_box">
-                var num = 5;<i>;</i><br>
-                doccument.write(num)<i>;</i><br>
-            </div>
-
-            <h4 class="t_tit3">2. 대소문자</h4>
-            <p class="t_desc">
-                자바스크립트는 명령어는 대소문자를 구별합니다.
-                console와 Console은 각각 다른 문자열로 처리됩니다.
-            </p>
-
-            <h4 class="t_tit3">3. 들여쓰기</h4>
-            <p class="t_desc">
-                자바스크립트는 가독성을 위하여 <i>들여쓰기</i>를 사용합니다.
-            </p>
-
-            <h4 class="t_tit3">4. 주석</h4>
-            <p class="t_desc">
-                자바스크립트 주석은 일반적으로 특정 코드에 대한 설명을 입력하거나
-                특정한 부분의 코드가 실행되지 않도록 사용합니다.
-                주석 표시는 프로그램에 영향을 미치지 않습니다.
-            </p>
-            <hr>
-            <h3 class="t_tit2">출력하는 방법</h3>
-            <h4 class="t_tit3"> 1.HTML문서 내부에서 적용할 수 있습니다.</h4>
-            <h4 class="t_tit3"> 1.HTML문서 외부에서 적용할 수 있습니다.</h4>
-
-            <h3 class ="t_tit2">적용 위치</h3>
-            <h4 class="t_tit3">
-               1.&lt;head&gt;태그 내에 위치할 수 있다.
-            </h4>
-            <h4 class="t_tit3">
-                2.&lt;/body&gt;태그위에 위치할 수 있다.
-            </h4>
-            <h3 class ="t_tit2">기본 명령어</h3>
-            <table class="t_table">
-                <thead>
-                    <tr>
-                    <td class="ce">분류</td>
-                    <td class="ce">메서드</td>
-                   </tr>
-                </thead>
-                 <tbody> 
-                    <tr>
-                        <td class="ce">입력</td>
-                        <td class="ce">prompt()</td>
-                    </tr>
-                    <tr>
-                        <td class="ce" rowspan="3">출력</td>
-                        <td class="ce">document.write()</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">alert()</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">console.log()</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">확인</td>
-                        <td class="ce">confirm()</td>
-                    </tr>   
-                </tbody>    
-            </table>
-
+            <br>
+            <br>
+            [예제]
+            <div class="t_code">
+<pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;요소를 직접 선택하는 메서드&lt;/title&gt;
+        &lt;script&gt;
+            window.onload = function(){
+                var list1 = document.querySelector('#box1&gt;ul&gt;li');
+                var list2 = document.querySelectorAll('#box2&gt;ul&gt;li');
+                console. log(list1);
+                console. log(list2);
+                //list1.style.backgroud = "#ff6600";
+                //list2[0].style.backgroud = "#ccc";
+                //list2.item(1).style.backgroud = "#ddd";
+            };
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id = "box1"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;내용1&lt;/li&gt;
+                &lt;li&gt;내용2&lt;/li&gt;
+                &lt;li&gt;내용3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div id="box2"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;내용4&lt;/li&gt;
+                &lt;li&gt;내용5&lt;/li&gt;
+                &lt;li&gt;내용6&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<div class="t_box">
+[결과]<br>
+var list1 = document.querySelector ("#box1 > ul > li")는 첫 번째 요소만 선택<br>
+:내용1<br>
+var list1 = document.querySelectorAll ("#box2 > ul > li")는 모든 요소 선택<br>
+:내용4<br>
+ 내용5<br>
+ 내용6<br>
+</div>
+  
+       
                 
 
-            <hr>
-            <h3 class ="t_tit2">자바스크립트 사용 방법</h3>
-            <p class="t_desc">
-                자바스크립트 사용방법은 
-                1. 외부파일 연결하는 방법
-                2. 스크립트 태그에 사용하는 방법
-                3.태그에 직접 기술하는 방법
-            </p>
-<div class="t_code">
-    <pre><code>
-        &lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Javasript&lt;/title&gt;
-    &lt;!-- 1. 외부 파일로 로드하는 방법 --&gt;
-    &lt;script type="text/Javasript" src="js/script.js"&gt;&lt;/script&gt;
-    &lt;!-- 2. script 태그 사이에 기술하는 방법 --&gt;
-    &lt;script&gt;
-        document.write("Javasript");
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- 3. 태그에 직접 기술하는 방법 --&gt;
-    &lt;a href="#" onclick="alert('Javasript')"&gt;&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-    </code></pre>
-</div>
-        </div>
+        
     </main>
     <!-- //main -->
 
