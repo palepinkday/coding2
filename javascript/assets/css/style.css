@@ -171,6 +171,9 @@ body {
     border-spacing: 0;
     border-collapse: collapse;
 }
+.document .t_table thead{
+    background-color: #dde7f6;
+}
 .document .t_table tr th {
     background-color: #f9f9f9;
 }
