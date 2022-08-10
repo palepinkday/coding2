@@ -55,27 +55,118 @@
     <main id="main">
         <div class="main_menu"></div>
         <ul>
-            <li><a href="#sampe">01. if문</a></li>
+            <li><a href="#sampe">01. 문자열 : 문자열 결합/템플릿 문자열</a></li>
             <li><a href="#sampe">02. </a></li>
-            <li><a href="#sampe">03</a></li>
-            <li><a href="#sampe">04</a></li>
-            <li><a href="#sampe">05</a></li>
-            <li><a href="#sampe">06</a></li>
-            <li><a href="#sampe">07</a></li>
-            <li><a href="#sampe">08</a></li>
-            <li><a href="#sampe">09</a></li>
-            <li><a href="#sampe">10</a></li>
-            <li><a href="#sampe">11. break문</a></li>
-            <li><a href="#sampe">12. continue문</a></li>
+            <li><a href="#sampe">03. </a></li>
+            <li><a href="#sampe">04. </a></li>
+            <li><a href="#sampe">05. </a></li>
+            <li><a href="#sampe">06. </a></li>
+            <li><a href="#sampe">07. </a></li>
+            <li><a href="#sampe">08. </a></li>
+            <li><a href="#sampe">09. </a></li>
+            <li><a href="#sampe">10. </a></li>
+            <li><a href="#sampe">11. </a></li>
+            <li><a href="#sampe">12. </a></li>
         </ul>
         <div class="main_script"></div>
         <div class="main_desc"></div>
     </main>
     <!-- //main -->
+    <div class="main_sample">
+        <div id="sample01" class="sample">
+            <h3>01. 문자열 : 문자열 결합/템플릿 문자열</h3>
+            <p>문자열 결합/템플릿 문자열 </p>
+            <div class="table">
+                <table>
+                    <colgroup>
+                    <col style="width: 5%;">
+                    <col style="width: 32%;">
+                    <col style="width: 22%;">
+                    <col style="width: 42%;">
+                </colgroup>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>기본값</th>
+                    <th>메서드</th>
+                    <th>리턴값</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="sample01_N1"></td>
+                    <td class="sample01_Q1"></td>
+                    <td class="sample01_M1"></td>
+                    <td class="sample01_P1"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N2"></td>
+                    <td class="sample01_Q2"></td>
+                    <td class="sample01_M2"></td>
+                    <td class="sample01_P2"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N3"></td>
+                    <td class="sample01_Q3"></td>
+                    <td class="sample01_M3"></td>
+                    <td class="sample01_P3"></td>
+                </tr>
+                <tr>
+                    <td class="sample01_N4"></td>
+                    <td class="sample01_Q4"></td>
+                    <td class="sample01_M4"></td>
+                    <td class="sample01_P4"></td>
+                </tr>
+            </tbody>
+                </table>
+            </div>
+            <div class="script">
+<pre><code class="language-js">
+</code></pre>
+            </div>
+            <div class="result">
+                <details>
+                    <summary>결과보기</summary>
+                    <div class="sample01_result">
+                        
+                    </div>
+                </details>
+            </div>
+        </div>
+        <!-- //sample01 -->
+</div>
 
     <footer id="footer">
         <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
     </footer>
     <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+      //01
+      {
+        const str1 = "자바스크립트";
+        const str2 = "제이쿼리";
+
+        document.querySelector(".sample01_N1").innerHTML = "1";
+        document.querySelector(".sample01_Q1").innerHTML = "자바스크립트,제이쿼리";
+        document.querySelector(".sample01_M1").innerHTML = "문자열(string) 결합";
+        document.querySelector(".sample01_P1").innerHTML = "str1 + str2";
+
+        const num1 = 100;
+        const num2 = 200;
+
+        document.querySelector(".sample01_N2").innerHTML = "2";
+        document.querySelector(".sample01_Q2").innerHTML = "100,200";
+        document.querySelector(".sample01_M2").innerHTML = "숫자(number) 결합";
+        document.querySelector(".sample01_P2").innerHTML = "num1 + num2";
+
+        //자바스크립트제이쿼리
+      }
+    
+
+    </script>
 </body>
 </html>
