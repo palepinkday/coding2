@@ -44,20 +44,62 @@
 
     <main id="main">
         <div class="document">
-            <h2 class="t_tit">기본 규칙</h2>
+            <h2 class="t_tit">함수</h2>
             <p class="t_desc">
-                자바스크립트를 다루기 위해서는 기초적인 특징과 기본 문법이 있습니다.
+                함수는 프로그램에서 반복적으로 사용되는 기능을 만들어내기 위한 코드의 집합입니다.
             </p>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                    <td class="ce">분류</td>
+                    <td class="ce">종류</td>
+                    <td class="ce">설명</td>
+                   </tr>
+                </thead>
+                 <tbody> 
+                    <tr>
+                        <td class="ce">사용자 정의 함수</td>
+                        <td class="ce">선언적 함수<br>익명적 함수<br></td>
+                        <td class="ce">프로그램에서 필요한 기능을 <i>사용자가 직접 정의해서 사용하는 함수</i> </td>
+                       </tr>
+                       <tr>
+                        <td class="ce">내장 함수</td>
+                        <td class="ce">인코딩, 디코딩함수<br>숫자 판별 함수<br>유·무한값 판별함수<br>
+                        숫자변환 함수<br>문자 변환 함수<br>자바스크립트 문자 변경 함수 </td>
+                        <td class="ce">프로그램 개발에서 자주 사용되느 기능들을 <i>자바스크립트 내부적으로 제공해주는 함수</i>입니다.</td>
+                       </tr>
+                </tbody>    
+            </table>
 
-            <h3 class="t_tit2">자바스크립트란?</h3>
+
+            <h3 class="t_tit2">선언적함수</h3>
+            <h4 class="t_tit3">선언적 함수의 형식</h4>
             <p class="t_desc2">
-                JavaScript는 웹 페이지에서 복잡한 기능을 구현할 수 있도록 하는 스크립트 <i>프로그래밍 언어</i>입니다.
-                HTML은 정적인 레이아웃을 표현한다면, 자바스크립트는 동적인 기능을 표현합니다.
+                function 함수( ){
+                    실행문;
+                }
             </p>
-            <p class="t_desc">
-                자바스크립트는 1995년 넷스케이프 커뮤니케이션의 브렌던 아이크가 개발하였스며 Netscape Navigsator2.0에 구현되었습니다. 
-                1996년에는 마이크로소프트사의 Internet Explorer3.0 탑재되었으며 java 애플릿으로 구현된 웹 브라우저의 지지부진한 보급과 맞물려 빠르게 보급되었습니다. 1997년부터 ESMAScript를 따르는 표준화 작업을 통해 현재는 모든 브라우저에서 지원됩니다.
+            <p class="t_desc2">
+                function compute( ){
+                    console.log('선언적 함수');
+                }
             </p>
+            <h4 class="t_tit3">선언적 함수의 호출</h4>
+            <p>'선언적 함수'는 함수를 호출할 때 <i>함수의 앞 또는 뒤에서 호출 가능</i></p>
+            </p>
+            <p class="t_box">
+             function comput(){<br>
+                console.log('선언적 함수');<br>
+             }<br>
+             <i>compute();</i><br>
+            </p>
+            <p class="t_box">
+                <i>compute();</i><br>
+                function comput(){<br>
+                   console.log('선언적 함수');<br>
+                }<br>
+               </p>
+               <p>var로 선언한 변수와 선언적 함수는 변수, 함수 선언 이전에 호출하여도 에러를 발생시키지 않습니다</p>
 
             <h3 class="t_tit2">자바스크립트 기본 규칙</h3>
             <h4 class="t_tit3">1. 세미콜론(;)</h4>
@@ -100,34 +142,7 @@
                 2.&lt;/body&gt;태그위에 위치할 수 있다.
             </h4>
             <h3 class ="t_tit2">기본 명령어</h3>
-            <table class="t_table">
-                <thead>
-                    <tr>
-                    <td class="ce">분류</td>
-                    <td class="ce">메서드</td>
-                   </tr>
-                </thead>
-                 <tbody> 
-                    <tr>
-                        <td class="ce">입력</td>
-                        <td class="ce">prompt()</td>
-                    </tr>
-                    <tr>
-                        <td class="ce" rowspan="3">출력</td>
-                        <td class="ce">document.write()</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">alert()</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">console.log()</td>
-                    </tr>
-                    <tr>
-                        <td class="ce">확인</td>
-                        <td class="ce">confirm()</td>
-                    </tr>   
-                </tbody>    
-            </table>
+           
 
                 
 
