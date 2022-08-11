@@ -72,18 +72,18 @@
             </table>
 
 
-            <h3 class="t_tit2">선언적함수</h3>
+            <h3 class="t_tit2">1. 선언적 함수</h3><br>
             <h4 class="t_tit3">선언적 함수의 형식</h4>
             <p class="t_desc2">
-                function 함수( ){
-                    실행문;
-                }
+                function 함수( ){<br>
+                    실행문;<br>
+                }<br>
             </p>
             <p class="t_desc2">
-                function compute( ){
-                    console.log('선언적 함수');
-                }
-            </p>
+                function compute( ){<br>
+                    console.log('선언적 함수');<br>
+                }<br>
+            </p><br>
             <h4 class="t_tit3">선언적 함수의 호출</h4>
             <p>'선언적 함수'는 함수를 호출할 때 <i>함수의 앞 또는 뒤에서 호출 가능</i></p>
             </p>
@@ -101,81 +101,176 @@
                </p>
                <p>var로 선언한 변수와 선언적 함수는 변수, 함수 선언 이전에 호출하여도 에러를 발생시키지 않습니다</p>
 
-            <h3 class="t_tit2">자바스크립트 기본 규칙</h3>
-            <h4 class="t_tit3">1. 세미콜론(;)</h4>
-            <p class="t_desc">
-                하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다.
-                세미콜론(;)을 붙여 주지 않아도 상관은 없습니다.
-            </p>
-            <div class ="t_box">
-                var num = 5;<i>;</i><br>
-                doccument.write(num)<i>;</i><br>
-            </div>
 
-            <h4 class="t_tit3">2. 대소문자</h4>
-            <p class="t_desc">
-                자바스크립트는 명령어는 대소문자를 구별합니다.
-                console와 Console은 각각 다른 문자열로 처리됩니다.
-            </p>
+               <h3 class="t_tit2">2. 익명 함수</h3><br>
 
-            <h4 class="t_tit3">3. 들여쓰기</h4>
-            <p class="t_desc">
-                자바스크립트는 가독성을 위하여 <i>들여쓰기</i>를 사용합니다.
-            </p>
-
-            <h4 class="t_tit3">4. 주석</h4>
-            <p class="t_desc">
-                자바스크립트 주석은 일반적으로 특정 코드에 대한 설명을 입력하거나
-                특정한 부분의 코드가 실행되지 않도록 사용합니다.
-                주석 표시는 프로그램에 영향을 미치지 않습니다.
-            </p>
-            <hr>
-            <h3 class="t_tit2">출력하는 방법</h3>
-            <h4 class="t_tit3"> 1.HTML문서 내부에서 적용할 수 있습니다.</h4>
-            <h4 class="t_tit3"> 1.HTML문서 외부에서 적용할 수 있습니다.</h4>
-
-            <h3 class ="t_tit2">적용 위치</h3>
-            <h4 class="t_tit3">
-               1.&lt;head&gt;태그 내에 위치할 수 있다.
-            </h4>
-            <h4 class="t_tit3">
-                2.&lt;/body&gt;태그위에 위치할 수 있다.
-            </h4>
-            <h3 class ="t_tit2">기본 명령어</h3>
-           
-
-                
-
-            <hr>
-            <h3 class ="t_tit2">자바스크립트 사용 방법</h3>
-            <p class="t_desc">
-                자바스크립트 사용방법은 
-                1. 외부파일 연결하는 방법
-                2. 스크립트 태그에 사용하는 방법
-                3.태그에 직접 기술하는 방법
-            </p>
+               <h4 class="t_tit3">익명 함수의 형식</h4>
+               <p>'익명 함수'는 <i>변수에 함수 데이터를 저장</i>하여 <i>변수를 마치 함수처럼</i> 사용 할 수 있도록 만들어 줍니다.</p>
+               <p class="t_desc2">
+                   var 변수 = function()function {<br>
+                       실행문;<br>
+                   };<br>
+               </p>
+               <p class="t_desc2">
+                   var compute = function( ){<br>
+                       console.log('익명 함수');<br>
+                   };<br>
+               </p>
+               <h4 class="t_tit3">익명 함수의 호출</h4>
+               <p>'익명 함수'는 <i>변수 선언 이후에 호출</i>해야 합니다.</p>
+               <p class="t_box">
+                var comput = function(){<br>
+                   console.log('선언적 함수');<br>
+                }<br>
+                <i>compute();</i><br>
+               </p>
+               <br>
+               <h4 class="t_tit3"><즉시 실행 함수(Immediately-invoked function expression)></h4>
+               <p>익명 함수 중에는 필요에 따라 일회성으로 사용되는 함수도 있습니다. 
+                '즉시 실행 함수'는 선언과 동시에 함수가 실행되며 함수명이 없기 때문에 재호출 할 수 없습니다.
+                (처음 한번만 실행되는 초기화 코드에 사용)</p>
+               <p class="t_desc2">
+               function(){<br>
+                   실행문;<br>
+                })();<br>
+               </p>
+               <p class="t_desc2">
+               (function(){<br>
+                    var sum = 10;<br>
+                    cosole.log(sum);<br>
+               })();<br>
+               </p>
+               [예제]
 <div class="t_code">
-    <pre><code>
-        &lt;!DOCTYPE html&gt;
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="co"&gt;
+&lt;head&gt;
+    &lt;meta charset = "UTF-8"&gt;
+    &lt;title&gt;즉시 실행 함수&lt;/title&gt;
+    &lt;script&gt;
+        (function(){
+            life();
+        })();
+        function life(){
+            console.log('즉시 실행 함수1');
+        }
+        var instant = (function(){
+            console.log('즉시 실행 함수2');
+        })();
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;/html&gt;
+</code></pre>
+</div>
+<div class="t_box">
+    [결과]<br>
+    즉시 실행 함수1<br>
+    즉시 실행 함수2<br>
+</div>
+<h3 class="t_tit2">3. return함수, 매개변수 함수</h3><br>
+<h4 class="t_tit3">3-1. return함수</h4>
+<p>return은 함수를 통해 처리된 <i>결과를 반환시켜주는 명령어 </i></p>
+[예제]
+<div class="t_code">
+<pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Javasript&lt;/title&gt;
-    &lt;!-- 1. 외부 파일로 로드하는 방법 --&gt;
-    &lt;script type="text/Javasript" src="js/script.js"&gt;&lt;/script&gt;
-    &lt;!-- 2. script 태그 사이에 기술하는 방법 --&gt;
+    &lt;meta charset = "UTF-8"&gt;
+    &lt;title&gt;RETRUN함수&lt;/title&gt;
     &lt;script&gt;
-        document.write("Javasript");
+        function process(){
+          var kor = 100;
+          var eng = 90;
+          var avg = (kor + eng)/2;
+          return avg;
+        }
+        console.log(process());
     &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;!-- 3. 태그에 직접 기술하는 방법 --&gt;
-    &lt;a href="#" onclick="alert('Javasript')"&gt;&lt;/a&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-    </code></pre>
+</code></pre>
 </div>
-        </div>
+<div class="t_box">
+    [결과]<br>
+    95<br>  
+</div>
+<p>return은 함수를 호출한 곳으로 결과 데이터를 반환하고 함수는 종료됩니다.</p><br>
+
+<h4 class="t_tit3">3-2. 매개변수 함수</h4>
+<p>함수를 호출할 때 전달하는 변수 - 매개변수 </i></p>
+<h4 class="t_tit3">매개변수가 있는 함수의 형식</h4>
+<p class="t_desc2">
+    function 함수명(맥변수1.매개변수2...){<br>
+        실행문;<br>
+    }<br>
+    함수명(매개변수1값, 매개변수2값...)<br>
+</p>
+
+<div class="t_box">
+    function getAvg(s1, s2){<br>
+        var avg = (s1, s2)/2;<br>
+        feturn avg;<br>
+    }<br>
+    console.log(getAvg(90,80));//85<br>
+</div>
+<p class="t_desc2">
+    var 변수명 = function(매개변수1, 매개변수2...){<br>
+        실행문;<br>
+    };<br>
+    변수명(매개변수1값, 매개변수2값...);<br>   
+</p>
+
+<div class ="t_box">
+    var getAvg = function(s1, s2){<br>
+        var avg = (s1 + s2)/2;<br>
+        return avg;<br>
+    };<br>
+    console.log(getAvg(90, 80));//85<br>
+</div>
+<p class ="t_desc2">
+    (function(매개변수1, 매개변수2...){<br>
+        실행문;<br>
+    }<br>
+    )(매개변수1값, 매개변수2값);<br>
+</p>
+
+<div class ="t_box">
+    (function(s1, s2){<br>
+        var avg = (s1+s2)/2;<br>
+        console.log(avg);//85<br>
+    }<br>
+    )(90, 80);<br>
+</div>
+</div>
+<br>
+<h4 class ="t_tit3"><매개변수의 갯수가 정해지지 않은 함수></h4>
+<p class ="t_desc">매개변수가 있는 함수의 경우 매개변수의 갯수가 정해져 있습니다.<br>
+    매개변수의 갯수를 정할 수 없는 함수를 만들어야 하는 경우 발생시 함수에 전달되는 매개 변수 값을 저장해주는 
+    argugment객체를 사용하여 함수를 만들 수 있다.</p>
+    <p>함수 안에서 argument객체를 사용하면 매개변수를 배열이라는 형태로 저장<br>
+        arguments.length는 arguments에 저장되어있는 배열의 개수</p>
+<p class ="t_desc2">
+<br>
+<br>
+</p>
+<h4 class ="t_tit3">3-3. 화살표 함수</h4>
+<p><i>=>를 이용하여 함수를 간결하게 표현할 때 사용</i></p><br>
+<p>화살표 함수는 function 키워드를 생략하고 부등호'='과'>'을 합쳐 코딩하며 항상 익명함수 형식으로 표현합니다<br>
+<i>단일 명령문일 경우에는 함수의 중괄호{}와 return을 생략가능</i></p><br>
+    <div class ="t_box">
+    var doMultiplicstion = (s1, s2) => s1*s2;<br>
+    concole.log(doMultiplicstion(2, 5)); //10<br>
+    </div>
+    <div class ="t_box">
+    var doMultiplicstion = (s1, s2) =>{<br>
+        var avg =  (s1+s2)/2;<br>
+        retrun avg;<br>
+    }<br>
+    concole.log(doMultiplicstion(2, 5)); //3.5<br>
+    </div>
+
     </main>
     <!-- //main -->
 

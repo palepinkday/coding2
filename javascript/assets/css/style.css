@@ -103,30 +103,44 @@ body {
     margin-bottom: 80px;
 }
 /* sample */
-.sampe {
+.sample {
     margin-bottom: 80px;
 }
-.sample .table{
+.sample .table table {
     margin-bottom: 10px;
 }
 .sample .table table {
     width: 100%;
-    border: 1px solid#e6e6e6;
-    text-align: center;
+    border: 1px solid #E6E6E6;
 }
-.sample .table table tr th{
+.sample .table table tr th {
     font-weight: normal;
-    border: 1px solid #f5f5f5;
+    background-color: #F5F5F5;
     padding: 3px;
 }
-.sample .table table tr td{
-    border: 1px solid #e6e6e6;
-    padding: 3px;
+.sample .table table tr td {
+    border: 1px solid #E6E6E6;
+    text-align: center;
+    padding-bottom: 6px;
 }
-.sample .table table tr td[class*="_P"] {
-    background: #000;
+.sample .table table tr td[Class*=“_P”] { /*속성 선택자*/
+    color: #fff;
 }
-
+.sample .table table tr td[Class*=“_P”]:hover { /*속성 선택자*/
+    color: #000;
+    cursor: help;
+}
+@media (max-width: 800px) {
+    .sample .table {
+        overflow-x: scroll;
+    }
+    .sample .t_box table {
+        width: 780px;
+    }
+    .sample .table table tr td[Class*=“_P”] { /*속성 선택자*/
+        color: #000;
+    }
+}
 
 /* 티스토리용 문서 */
 .document i {
