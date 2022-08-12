@@ -34,14 +34,13 @@
                 <li><a href="for.html">반복문</a></li>
                 <li><a href="if.html">조건문</a></li>
                 <li><a href="type.html">데이터타입</a></li>
-                <li><a href="fuction.html">함수</a></li>
+                <li><a href="function.html">함수</a></li>
                 <li><a href="var.html">지역변수/전역변수</a></li>
                 <li><a href="element.html">요소선택</a></li>
             </ul>
         </nav>
     </header>
     <!-- //header -->
-
     <main id="main">
         <div class="document">
             <h2 class="t_tit">함수</h2>
@@ -243,18 +242,22 @@
     }<br>
     )(90, 80);<br>
 </div>
-</div>
+
 <br>
 <h4 class ="t_tit3"><매개변수의 갯수가 정해지지 않은 함수></h4>
-<p class ="t_desc">매개변수가 있는 함수의 경우 매개변수의 갯수가 정해져 있습니다.<br>
+<p class ="t_desc2">매개변수가 있는 함수의 경우 매개변수의 갯수가 정해져 있습니다.<br>
     매개변수의 갯수를 정할 수 없는 함수를 만들어야 하는 경우 발생시 함수에 전달되는 매개 변수 값을 저장해주는 
-    argugment객체를 사용하여 함수를 만들 수 있다.</p>
-    <p>함수 안에서 argument객체를 사용하면 매개변수를 배열이라는 형태로 저장<br>
+    argugment객체를 사용하여 함수를 만들 수 있다.<br>
+    함수 안에서 argument객체를 사용하면 매개변수를 배열이라는 형태로 저장<br>
         arguments.length는 arguments에 저장되어있는 배열의 개수</p>
-<p class ="t_desc2">
+<div class ="t_box">
+    function showSubject(){<br>
+        console.log(argugments[0] + ',' + argugments[1]); // html, css<br>
+        console.log(argugments.length); //2<br>
+    }<br>
+    showSubject('html', 'css');<br>
+</div>
 <br>
-<br>
-</p>
 <h4 class ="t_tit3">3-3. 화살표 함수</h4>
 <p><i>=>를 이용하여 함수를 간결하게 표현할 때 사용</i></p><br>
 <p>화살표 함수는 function 키워드를 생략하고 부등호'='과'>'을 합쳐 코딩하며 항상 익명함수 형식으로 표현합니다<br>
@@ -270,7 +273,7 @@
     }<br>
     concole.log(doMultiplicstion(2, 5)); //3.5<br>
     </div>
-
+</div>
     </main>
     <!-- //main -->
 
