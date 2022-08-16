@@ -1,3 +1,9 @@
+:root {
+    --htmlColor: #223547;
+    --cssColor: #472222;
+    --javascriptColor: #224736;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -50,8 +56,8 @@ li {
 
 #header nav li .sub {
     position: absolute;
-    left: 0;
-    top: 35px;
+    left: 20px;
+    top: 55px;
     width: 400%;
 }
 
