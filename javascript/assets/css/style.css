@@ -22,7 +22,12 @@ li {
 }
 
 /* 제목 초기화 */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: normal;
 }
 
@@ -30,18 +35,22 @@ h1, h2, h3, h4, h5, h6 {
 body {
     padding: 40px;
 }
+
 #header {
     border-bottom: 1px dashed #dcdcdc;
     padding-bottom: 40px;
 }
+
 #main {
     padding: 40px 0;
     border-bottom: 1px dashed #dcdcdc;
 }
+
 #footer {
     padding: 40px 0;
     text-align: center;
 }
+
 #footer a:hover {
     text-decoration: underline;
 }
@@ -51,33 +60,40 @@ body {
     font-size: 60px;
     font-weight: 700;
 }
+
 .header_nav ul li {
     display: inline;
 }
+
 .header_nav ul li.active a {
     background-color: #000;
     color: #fff;
 }
+
 .header_nav ul li a {
     border: 1px solid #222;
     padding: 8px 25px;
     display: inline-block;
     margin-bottom: 7px;
 }
+
 .header_nav ul li a:hover {
     background-color: #000;
     color: #fff;
 }
+
 .header_nav .study {
     margin-top: 10px;
 }
+
 .header_nav .study li a {
     border-radius: 50px;
     padding: 6px 30px;
     background-color: #000;
     color: #fff;
 }
-.header_nav .effect{
+
+.header_nav .effect {
     margin-top: 10px;
 }
 
@@ -91,53 +107,74 @@ body {
     border-top: 1px dashed #dcdcdc;
     padding-top: 40px;
 }
+
 .main_sample h3 {
     font-size: 18px;
     margin-bottom: 5px;
-} 
+}
+
 .main_sample p {
     margin-bottom: 10px;
     color: #666;
 }
+
 .main_sample .result {
     margin-bottom: 80px;
 }
+
 /* sample */
 .sample {
     margin-bottom: 80px;
 }
-.sample .table table {
+
+.sample .table {
     margin-bottom: 10px;
 }
+
 .sample .table table {
     width: 100%;
-    border: 1px solid #E6E6E6;
+    border: 1px solid #e6e6e6;
+    text-align: center;
 }
+
 .sample .table table tr th {
     font-weight: normal;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
     padding: 3px;
 }
+
 .sample .table table tr td {
-    border: 1px solid #E6E6E6;
-    text-align: center;
-    padding-bottom: 6px;
+    border: 1px solid #e6e6e6;
+    padding: 6px;
 }
-.sample .table table tr td[Class*=“_P”] { /*속성 선택자*/
+
+.sample .table table tr td[class*="_P"] {
     color: #fff;
 }
-.sample .table table tr td[Class*=“_P”]:hover { /*속성 선택자*/
+
+.sample .table table tr td[class*="_P"]:hover {
     color: #000;
     cursor: help;
 }
+
+.sample .box {
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
 @media (max-width: 800px) {
     .sample .table {
         overflow-x: scroll;
     }
-    .sample .t_box table {
+
+    .sample .table table {
         width: 780px;
     }
-    .sample .table table tr td[Class*=“_P”] { /*속성 선택자*/
+
+    .sample .table table tr td[class*="_P"] {
         color: #000;
     }
 }
@@ -147,6 +184,7 @@ body {
     font-style: normal;
     position: relative;
 }
+
 .document i::before {
     content: '';
     background-color: #0242f136;
@@ -157,17 +195,20 @@ body {
     bottom: 0;
     border-radius: 20px;
 }
+
 .document hr {
     border: 0;
     border-top: 1px dashed #dcdcdc;
     margin-top: 45px;
 }
+
 .document .t_tit {
     font-size: 30px;
     line-height: 1.6;
     margin-bottom: 5px;
     font-weight: 400;
 }
+
 .document .t_tit2 {
     font-size: 22px;
     line-height: 1.6;
@@ -175,6 +216,7 @@ body {
     margin-bottom: 5px;
     font-weight: 400;
 }
+
 .document .t_tit3 {
     font-size: 16px;
     line-height: 1.6;
@@ -182,12 +224,14 @@ body {
     margin-bottom: 5px;
     font-weight: 400;
 }
+
 .document .t_desc {
     font-size: 16px;
     line-height: 1.6;
     color: #666;
     margin-bottom: 10px !important;
 }
+
 .document .t_desc2 {
     font-size: 16px;
     line-height: 1.6;
@@ -197,6 +241,7 @@ body {
     border-left: 4px solid #0243f1;
     background-color: #f9f9f9;
 }
+
 .document .t_box {
     padding: 20px !important;
     background-color: #f9f9f9;
@@ -204,18 +249,18 @@ body {
     color: #666;
     border-radius: 5px;
 }
+
 .document .t_table {
     border: 1px solid #dcdcdc;
     width: 100%;
     border-spacing: 0;
     border-collapse: collapse;
 }
-.document .t_table thead{
-    background-color: #dde7f6;
-}
+
 .document .t_table tr th {
     background-color: #f9f9f9;
 }
+
 .document .t_table tr th,
 .document .t_table tr td {
     border: 1px solid #dcdcdc;
@@ -223,23 +268,27 @@ body {
     padding: 8px 10px;
     color: #666;
 }
+
 .document .t_table .ce {
     text-align: center;
 }
+
 .document .t_iframe {
     position: relative;
     padding-top: 56%;
     width: 100%;
     height: 0;
 }
+
 .document .t_iframe iframe {
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
+
 .document .t_link a {
     display: block;
     width: 200px;
@@ -250,12 +299,14 @@ body {
     padding: 10px;
     transition: all 0.3s;
 }
+
 .document .t_link a:hover {
     background: #d6d6d6;
 }
 
 
-@media (max-width: 800px){
+
+@media (max-width: 800px) {
     body {
         padding: 20px;
     }
