@@ -79,7 +79,7 @@
                 <li><a href="#sample05">10. 문자열 메서드 : 검색:lastIndexOf() : 문자열 특정문자의 위치를 찾음:반환 (숫자)</a></li>
                 <li><a href="#sample06">06. 문자열 메서드 : 검색: search():문자열을 검색 정규식:반환 (숫자)</a></li>
                 <li><a href="#sample07">07. 문자열 메서드 : 검색: match():문자열을 검색 정규식:반환 (배열)</a></li>
-                <li><a href="#sample08">08. 문자열 메서드 : 검색: includes():문자열 포함여부 검색:반환 불린</a></li>
+                <li><a href="#sample08">11. 문자열 메서드 : 검색: includes():문자열 포함여부 검색:반환 불린</a></li>
                 <li><a href="#sample05">05. 문자열 메서드 : 검색: charAt() : 지정한 인텍스의 문자를 추출 :반환 (문자열)</a></li>
                 <li><a href="#sample05">05. 문자열 메서드 : 검색: charCodeAt() : 지정한 인텍스의 문자를 추출 :반환 (숫자)</a></li>
                 <li><a href="#sample09">09. 문자열 메서드 : 검색: starsWith():문자열 포함여부 검색:반환 (불린)</a></li>
@@ -408,6 +408,103 @@ const currentStr17 = str4.split('').reverse().join('/'); //e/c/n/e/r/e/f/e/r/ /t
                                                                         </code></pre>
             </div>
             <!-- //sample05 -->
+            <div id="sample01" class="sample">
+                <h3>01. 문자열 : 문자열 결합 / 템플릿 문자열</h3>
+                <p>문자열 부분 </p>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col style="width: 5%">
+                            <col style="width: 32%">
+                            <col style="width: 22%">
+                            <col style="width: 42%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>기본값</th>
+                                <th>메서드</th>
+                                <th>리턴값</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sample01_N1"></td>
+                                <td class="sample01_Q1"></td>
+                                <td class="sample01_M1"></td>
+                                <td class="sample01_P1"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N2"></td>
+                                <td class="sample01_Q2"></td>
+                                <td class="sample01_M2"></td>
+                                <td class="sample01_P2"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N3"></td>
+                                <td class="sample01_Q3"></td>
+                                <td class="sample01_M3"></td>
+                                <td class="sample01_P3"></td>
+                            </tr>
+                            <tr>
+                                <td class="sample01_N4"></td>
+                                <td class="sample01_Q4"></td>
+                                <td class="sample01_M4"></td>
+                                <td class="sample01_P4"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="script">0
+                    <pre><code class="language-js">//01
+            const str1 = "자바스크립트";
+            const str2 = "제이쿼리";
+            
+            document.querySelector(".sample01_N1").innerHTML = "1";
+            document.querySelector(".sample01_Q1").innerHTML = "자바스크립트, 제이쿼리";
+            document.querySelector(".sample01_M1").innerHTML = "문자열(string) 결합";
+            document.querySelector(".sample01_P1").innerHTML = str1 + str2;
+            
+            //02
+            const num1 = 100;
+            const num2 = 200;
+            
+            document.querySelector(".sample01_N2").innerHTML = "2";
+            document.querySelector(".sample01_Q2").innerHTML = "100, 200";
+            document.querySelector(".sample01_M2").innerHTML = "숫자(number) 결합";
+            document.querySelector(".sample01_P2").innerHTML = num1 + num2;
+            
+            //03
+            const text1 = "모던";
+            const text2 = "자바스크립트";
+            const text3 = "핵심";
+            
+            document.querySelector(".sample01_N3").innerHTML = "3";
+            document.querySelector(".sample01_Q3").innerHTML = "모던, 자바스크립트, 핵심";
+            document.querySelector(".sample01_M3").innerHTML = "문자열(string) 결합";
+            document.querySelector(".sample01_P3").innerHTML = "나는 " + text1 + "(modern) " + text2 + "(javascript) " + text3 + "을 배우고 싶다.";
+            
+            //04
+            document.querySelector(".sample01_N4").innerHTML = "4";
+            document.querySelector(".sample01_Q4").innerHTML = "모던, 자바스크립트, 핵심";
+            document.querySelector(".sample01_M4").innerHTML = "템플릿 문자열";
+            document.querySelector(".sample01_P4").innerHTML = `나는 ${text1}(modern) ${text2}(javascript) ${text3}을 배우고 싶다.`;
+            </code></pre>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+
+
+
+
+
+
+
+
+
+
+
             <div id="sample10" class="sample">
                 <h3>10. 문자열 메서드 : 검색:indexOf() : 문자열 특정문자의 위치를 찾음:반환 (숫자)<br>
                     10. 문자열 메서드 : 검색:lastIndexOf() : 문자열 특정문자의 위치를 찾음:반환 (숫자)</h3>
@@ -627,10 +724,103 @@ const currentStr13 = str1.indexOf("reference", 12); //-1
             const currentStr16 = str4.split('').reverse().join();       //e,c,n,e,r,e,f,e,r, ,t,p,i,r,c,s,a,v,a,j
             const currentStr17 = str4.split('').reverse().join('/');    //e/c/n/e/r/e/f/e/r/ /t/p/i/r/c/s/a/v/a/j
         }
+        //06
+        //String.prototype.replace() 
+        {
+
+            //"문자열".replace()("찾을 문자열", "변경할 문자열")
+            //"문자열".replace()
+            //"문자열".replace()
+
+            const str1 = "javascript reference";//자바스크립트 reference
+            const cirrentStr1 = str1.replace("javascript", "자바스크립트");//javascript reference
+            const cirrentStr2 = str1.replace("j", "j");//javascript reference
+            const cirrentStr3 = str1.replace("e", "E");//javascript reference
+            const cirrentStr4 = str1.replaceAll("e", "E");//javascript reference
+            const cirrentStr5 = str1.replace(/e/g, "E");//javascript reference
+            const cirrentStr6 = str1.replace(/e/gi, "E");//javascript reference
+
+            const str2 = "http://www.naver.com/img01.jpg";
+            const cirrentStr7 = str2.replace("img01.jpg", "img01.jpg");
+
+            const str3 = "010-2000-1000";
+            const cirrentStr8 = str3.replace("-", "");//01020001000
+            const cirrentStr9 = str3.replaceAll("-", "");//01020001000
+            const cirrentStr10 = str3.replaceAll(/-/g, "");//01020001000
+            const cirrentStr11 = str3.replaceAll(/-/g, " ");//010 2000 1000
+            const cirrentStr12 = str3.replaceAll(/[1-9]/g, "*");//000*000*00
+
+        }
+
+
+        //07
+        {
+            //"문자열".concat(문자열)
+            //"문자열".concat(문자열, 문자열...)
+
+            const str1 = "javascript";
+            const cirrentStr1 = str1.concat("reference");//javascriptreference
+            const cirrentStr2 = str1.concat(" ", "reference");//javascript reference
+            const cirrentStr3 = str1.concat(",", "reference");//javascript, reference
+            const cirrentStr4 = str1.concat(",", "reference", ",", "book");//javascript, reference, book
+            const cirrentStr5 = str1.concat(",", ["reference", "book"]);//javascript,reference,book 
+
+            //console.log(cirrentStr5)
+
+        }
+
+        //08
+        // repeat() 문자열을 복사하여 새로운 문자열을 반환
+        {
+            const str1 = "javascript";
+            const cirrentStr1 = str1.repeat()
+            const cirrentStr2 = str1.repeat()
+            const cirrentStr3 = str1.repeat()
+        }
+
+
+        //09
+        //주어진 길이에 맞게 앞/뒤 문자열 채우고 새로운 문자열 반환
+        //길이
+        //길이,문자열
+        {
+            const str1 = "456";
+            const currentStr1 = str1.padStart(1, "0");//456
+            const currentStr1 = str1.padStart(2, "0");//456
+            const currentStr1 = str1.padStart(3, "0");//456
+            const currentStr1 = str1.padStart(4, "0");//0456
+            const currentStr1 = str1.padStart(5, "0");//00456
+            const currentStr1 = str1.padStart(6, "0");//000456
+            const currentStr1 = str1.padStart(6, "1")//111456
+            const currentStr1 = str1.padStart(6, "12")//121456
+            const currentStr1 = str1.padStart(6, "123")//123456
+            const currentStr1 = str1.padStart(6, "1234")//123456
+            const currentStr1 = str1.padStart(6, "1")//456
+
+            const currentStr1 = str1.padEnd(1, "0");//456
+            const currentStr1 = str1.padEnd(2, "0");//456
+            const currentStr1 = str1.padEnd(3, "0");//456
+            const currentStr1 = str1.padEnd(4, "0");//4560
+            const currentStr1 = str1.padEnd(5, "0");//45600
+            const currentStr1 = str1.padEnd(6, "0");//456000
+            const currentStr1 = str1.padEnd(6, "1")//456111  
+            const currentStr1 = str1.padEnd(6, "12")//456121
+            const currentStr1 = str1.padEnd(6, "123")//456123
+            const currentStr1 = str1.padEnd(6, "1234")//4561234
+            const currentStr1 = str1.padEnd(6)//456
+
+
+
+
+        }
+
+
         //10
         {
             // "문자열".indexOf(검색값)
             // "문자열".indexOf(검색값, 위치값)
+            // "문자열".lastIndexOf(검색값)
+            // "문자열".lastIndexOf(검색값, 위치값)
             const str1 = "javascript reference";
             const currentStr1 = str1.indexOf("javascript");        //0
             const currentStr2 = str1.indexOf("reference");         //11
@@ -645,6 +835,37 @@ const currentStr13 = str1.indexOf("reference", 12); //-1
             const currentStr11 = str1.indexOf("reference", 1);     //11
             const currentStr12 = str1.indexOf("reference", 11);    //11
             const currentStr13 = str1.indexOf("reference", 12);    //-1
+
+            const str2 = "javascript reference";
+
+            const currentStr14 = str1.lastIndexOf("javascript"); //0 
+            const currentStr15 = str1.lastIndexOf("reference"); //11   
+            const currentStr16 = str1.lastIndexOf("j"); //0  
+            const currentStr17 = str1.lastIndexOf("a"); //3
+            const currentStr18 = str1.lastIndexOf("v"); //2  
+            const currentStr19 = str1.lastIndexOf("jquery"); //-1        
+            const currentStr20 = str1.lastIndexOf("b"); //-1              
+            const currentStr21 = str1.lastIndexOf("javascript", 0); //0
+            const currentStr22 = str1.lastIndexOf("javascript", 1); //0
+            const currentStr23 = str1.lastIndexOf("reference", 0); //-1
+            const currentStr24 = str1.lastIndexOf("reference", 1); //-1
+            const currentStr25 = str1.lastIndexOf("reference", 11);//11
+            const currentStr26 = str1.lastIndexOf("reference", 12);//11
+        }
+
+
+        //11
+        //includes() 문자열 포함여부 검색, 불린을 반환
+        {
+            const str1 = "javascript reference";
+            const currentStr14 = str1.includes("javascript");//true
+            const currentStr16 = str1.includes("j"); //true
+            const currentStr19 = str1.includes("jquery");
+            const currentStr20 = str1.includes("b");  //true            
+            const currentStr15 = str1.includes("reference");  //true
+            const currentStr24 = str1.includes("reference", 1); //true
+            const currentStr25 = str1.includes("reference", 11);//true
+            const currentStr26 = str1.includes("reference", 12);//false
         }
     </script>
 </body>

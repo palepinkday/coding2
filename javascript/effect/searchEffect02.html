@@ -19,11 +19,6 @@
         <nav>
             <ul>
                 <li class="active"><a href="searchEffect01.html">1</a>
-                    <!-- <ul class="sub">
-                        <li><a href="searchEffect01.html">HTML</a></li>
-                        <li><a href="searchEffect01_css.html">CSS</a></li>
-                        <li><a href="searchEffect01_javascript.html">JAVASCRIPT</a></li>
-                    </ul> -->
                 </li>
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
@@ -37,7 +32,7 @@
 
     <main id="main">
         <div class="search__wrap">
-            <span>indexOf()를 이용하여 검색하기</span>
+            <span>includes()를 이용하여 검색하기</span>
             <h1>CSS 속성 검색하기</h1>
             <div class="search__box">
                 <label for="search">검색하기</label>
@@ -122,8 +117,6 @@
                             이미지 및 배경 속성을 설정합니다..</li>
                         <li data-name="background-origin"><strong>background-origin</strong>:background-origin 속성은 백그라운드
                             이미지의 위치 기준점을 설정하기 위한 속성입니다..</li>
-                        <li data-name="background-blend-mode"><strong>background-blend-mode</strong>:.</li>
-                        <li data-name="animation-direction"><strong>animation-delay</strong>:.</li>
                         <li data-name="animation-direction"><strong>animation-delay</strong>:.</li>
                         <li data-name="animation-direction"><strong>animation-delay</strong>:.</li>
                         <li data-name="animation-direction"><strong>animation-delay</strong>:.</li>
@@ -152,21 +145,18 @@
     <!-- //footer -->
     <script>
         //선택자
-        //선택자
-        const searchBox = document.querySelector(".search__box"); //검색영역
+        const searchBox = document.querySelector(".search__box input"); //검색영역
         const searchList = document.querySelectorAll(".search__list ul li");//목록리스트
-        const searchInfo = document.querySelector(".search__info .num")
 
         searchInfo.textContent = searchList.length; //전체갯수
-
 
         searchBox.addEventListener("keyup", () => {
             const searchWord = searchBox.vaule; //사용자가 입력한 키워드
 
             searchList.forEach(el => {
-                const cssName = el.dataset.name;
+                const cssName = el.dataset.name;//css속성모든값
 
-                if (cssName.indexOf(searchWord)) {
+                if (cssName.includes(searchWord)) {
                     el.classList.remove("hide");
                 } else {
                     el.classList.add("hide"); //보임 indexOf()값이 0(false)이되는 값만 지움
@@ -175,8 +165,6 @@
                 // console.log(el.dataset.name)
             });
         });
-
-
 
 
 
