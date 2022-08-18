@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>이미지 유형2</title>
     <style>
         @import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 
@@ -19,9 +19,7 @@
         }
 
 
-        body {
-            background-color: #ccc;
-        }
+        body {}
 
         .section {
             width: 1160px;
@@ -29,7 +27,7 @@
             padding: 120px 20px 20px 20px;
             margin: 0 auto;
             min-width: 1160px;
-            background-color: #fff;
+
         }
 
         section>h2 {
@@ -74,25 +72,83 @@
 
         .content {
             width: 32%;
+            position: relative;
+            overflow: hidden;
+
         }
 
         .blure {
             width: 100%;
             height: 100px;
-            background-color: aqua;
             text-align: center;
             margin: auto;
-            line-height: 1.5;
+            backdrop-filter: blur(5px);
+            box-sizing: border-box;
+            position: absolute;
+            transition: all 0.3s ease-in;
+            left: 0;
+            bottom: 0px;
+        }
 
 
 
+        .image img {
+            vertical-align: top;
+            transition: all 0.5s ease-in;
+        }
 
+        .img1 .blure {
+            background: rgba(236, 236, 234, 0.1);
+        }
 
+        .img1 .blure .tit {
+            color: #555;
+        }
 
+        .img1 .blure .more {
+            color: #555;
+        }
 
+        .img2 .blure {
+            background: rgba(196, 196, 196, 0.1);
+        }
 
+        .img2 .blure .tit {
+            color: #888;
+        }
 
+        .img2 .blure .more {
+            color: #888;
+        }
 
+        .img3 .blure {
+            background: rgba(214, 213, 219, 0.1);
+        }
+
+        .img3 .blure .tit {
+            color: #555;
+        }
+
+        .img3 .blure .more {
+            color: #555;
+        }
+
+        .image {}
+
+        .image img:hover .blure {
+            bottom: 100px;
+        }
+
+        .content:hover .image img {
+            transform: scale(1.03);
+        }
+
+        .more :hover {
+            text-decoration: underline;
+        }
+
+        .content .blure .more {
+            /* display: inline-block; */
         }
     </style>
 </head>
@@ -102,25 +158,25 @@
         <h2>자기소개</h2>
         <p>배우들의 프로필 공간입니다</p>
         <div class="img__inner">
-            <article class="content">
-                <figure class="img1"><img src="img/img01-01.jpg"></figure>
+            <article class="content img1">
+                <figure class="image"><img src="img/img01-01.jpg"></figure>
                 <div class="blure">
                     <P class="tit">배우 수잔</P>
-                    <a class="more" href="">자세히 보기</a>
+                    <a class="more" href="/">자세히 보기</a>
                 </div>
             </article>
-            <article class="content">
-                <figure class="img2"><img src="img/img01-02.jpg"></figure>
+            <article class="content img2">
+                <figure class="image"><img src="img/img01-02.jpg"></figure>
                 <div class="blure">
                     <P class="tit">배우 앤디</P>
-                    <a class="more" href="">자세히 보기</a>
+                    <a class="more" href="/">자세히 보기</a>
                 </div>
             </article>
-            <article class="content">
-                <figure class="img3"><img src="img/img01-03.jpg"></figure>
+            <article class="content img3">
+                <figure class="image"><img src="img/img01-03.jpg"></figure>
                 <div class="blure">
                     <P class="tit">배우 헤일리</P>
-                    <a class="more" href="">자세히 보기</a>
+                    <a class="more" href="/">자세히 보기</a>
                 </div>
             </article>
         </div>
