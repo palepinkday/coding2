@@ -82,14 +82,14 @@
 
         </p>
         <div class="script">
-            <pre><code class="language-js">{   
-    //false, 0, undefined, null, " "
-    //true, 1, "0", "1", 0<10, [ ], { }
-    if(0){
-        document.write("실행되었습니다(true).");
-    } else {
-        document.write("실행되었습니다(false).");
-    }
+            <pre><code class="language-js">{
+//false, 0, undefined, null,""
+//true, 1, "0", "1", 0<10, [], {}
+if (0) {
+    document.write("실행되었습니다(true).");
+} else {
+    document.write("실행되었습니다(false).");
+}
 }
 </code></pre>
         </div>
@@ -202,7 +202,8 @@
         <h3>(제어문 : 조건문, 반복문, 중지, 건너뛰기)</h3>
         <h3>05. 조건부 연산자(삼항 연산자)</h3>
         <p>
-
+            삼항연산자는 조건식의 결과(true, false)에 따라 결과값을 다르게 나오게 해주는 연산자<br>
+            조건식 ? 실행문1(조건식이 true 일때) : 실행문2(조건식이 false 일때)
         </p>
         <div class="script">
             <pre><code class="language-js">{
@@ -235,7 +236,9 @@
         <h3>(제어문 : 조건문, 반복문, 중지, 건너뛰기)</h3>
         <h3>06 switch문</h3>
         <p>
-
+            switch의 값과 case의 값을 비교하여 일치하는 case 실행
+            특정조건 만족시 {}를 빠져나지 못함, break 명령어를 주어야 빠져나옴<br>
+            default: switch의 값과 일치 안하면 실행
         </p>
         <div class="script">
             <pre><code class="language-js">{

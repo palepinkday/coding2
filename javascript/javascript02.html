@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">Javascript</a></h1>
@@ -84,7 +86,7 @@
                 <h3>01. 변수 : 데이터 불러오기</h3>
                 <p>변수에 값을 불러옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">let x = 100, 
+                    <pre><code class="language-js">let x = 100, 
      y = 200, 
      z = "javascript";
 
@@ -108,7 +110,7 @@ document.write(z);
                 <h3>02. 상수 : 데이터 불러오기</h3>
                 <p>상수에 값을 불러옵니다. 상수는 const라고 표기합니다.</p>
                 <div class="script">
-<pre><code class="language-js">const x = 100, 
+                    <pre><code class="language-js">const x = 100, 
          y = 200, 
          z = "javascript";
 
@@ -132,7 +134,7 @@ document.write(z);
                 <h3>03. 배열 : 데이터 불러오기</h3>
                 <p>배열에 데이터 값을 불러옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">const arr = [100, 200, "javascript"];
+                    <pre><code class="language-js">const arr = [100, 200, "javascript"];
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -154,7 +156,7 @@ document.write(arr[2]);
                 <h3>04. 배열 : 데이터 불러오기 : 2차 배열</h3>
                 <p>배열 속에 배열이 있는 2차 구조에서 데이터를 불러옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">const arr = [100, 200, ["javascript", "jquery"]];
+                    <pre><code class="language-js">const arr = [100, 200, ["javascript", "jquery"]];
 
 document.write(arr[0]);
 document.write(arr[1]);
@@ -182,7 +184,7 @@ document.write(arr[2][1]);
                 <h3>05. 배열 : 데이터 불러오기 : 갯수 구하기</h3>
                 <p>배열 데이터 값의 갯수를 가져옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">const arr = [100, 200, "javascript"];
+                    <pre><code class="language-js">const arr = [100, 200, "javascript"];
 
 document.write(arr.length);
 </code></pre>
@@ -202,13 +204,13 @@ document.write(arr.length);
                 <h3>06. 배열 : 데이터 불러오기 : for()문</h3>
                 <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
+                    <pre><code class="language-js">const arr = [100, 200, 300, 400, 500];
 
-// document.write(arr[0])
-// document.write(arr[1])
-// document.write(arr[2])
-// document.write(arr[3])
-// document.write(arr[4])
+ document.write(arr[0])
+ document.write(arr[1])
+ document.write(arr[2])
+ document.write(arr[3])
+ document.write(arr[4])
 
 //for(초기값, 조건식, 증감식)
 for( let i=0; i&lt;arr.length; i++ ){
@@ -235,7 +237,7 @@ for( let i=0; i&lt;arr.length; i++ ){
                 <h3>07. 배열 : 데이터 불러오기 : forEach()</h3>
                 <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
+                    <pre><code class="language-js">const num = [100, 200, 300, 400, 500];
 
 document.write(num[0]);
 document.write(num[1]);
@@ -283,7 +285,7 @@ num.forEach(function(element, index, array){
                 <h3>08. 배열 : 데이터 불러오기 : for of</h3>
                 <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
+                    <pre><code class="language-js">const num = [100, 200, 300, 400, 500];
 
 for( let i of num ){
     document.write(i);
@@ -305,7 +307,7 @@ for( let i of num ){
                 <h3>09. 배열 : 데이터 불러오기 : for in</h3>
                 <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
+                    <pre><code class="language-js">const num = [100, 200, 300, 400, 500];
 
 for( let i in num ){
     document.write(i);
@@ -332,7 +334,7 @@ for( let i in num ){
                 <h3>10. 배열 : 데이터 불러오기 : map()</h3>
                 <p>배열 데이터 값을 반복문을 사용하여 가져옵니다.</p>
                 <div class="script">
-<pre><code class="language-js">const num = [100, 200, 300, 400, 500];
+                    <pre><code class="language-js">const num = [100, 200, 300, 400, 500];
 
 //map()
 num.map(function(el){
@@ -366,7 +368,7 @@ num.map(function(element, index, array){
                 <h3>11. 배열 : 데이터 불러오기 : 펼침연산자</h3>
                 <p></p>
                 <div class="script">
-<pre><code class="language-js"> {
+                    <pre><code class="language-js"> {
     const num= [100,200,300,400,500];
     document.write(num)//100200300400500
     document.write(num[0],num[1],num[2],num[3],num[4]);//100,200,300,400,500
@@ -378,7 +380,7 @@ num.map(function(element, index, array){
                     <details>
                         <summary>결과보기</summary>
                         <div class="result">
-                          
+
                         </div>
                     </details>
                 </div>
@@ -398,60 +400,60 @@ num.map(function(element, index, array){
         hljs.highlightAll();
     </script>
     <script>
-       //for문 이용해서 하나씩 출력 
-       const arr = [1,2,3,4,5,6,7,8,9];
-       for( let i=0; arr<9; i++ ){
-        //document.write(arr[i]);
+        //for문 이용해서 하나씩 출력 
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        for (let i = 0; arr < 9; i++) {
+            //document.write(arr[i]);
         };
-       //forEach 이용해서 하나씩 출력
-       const num = [1,2,3,4,5,6,7,8,9];
-        num.forEach(function(el){
-        //document.write(el);
+        //forEach 이용해서 하나씩 출력
+        const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        num.forEach(function (el) {
+            //document.write(el);
         });
 
-        const arr = [1,2,3,4,5,6,7,8,9]  //const obj =[{},{},{}]
-      for(let i=0; i<9; i++){
-        // i=0; i<arr.length;
-        //document. write(arr[i]);
-      }
-      const arr = [1,2,3,4,5,6,7,8,9] 
-      arr. forEach(function(e,i,a){
-        //document.write(e);
-    });
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]  //const obj =[{},{},{}]
+        for (let i = 0; i < 9; i++) {
+            // i=0; i<arr.length;
+            //document. write(arr[i]);
+        }
+        const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        arr.forEach(function (e, i, a) {
+            //document.write(e);
+        });
 
-       
-       //map() 이용해서 하나씩 출력
-       const num = [1,2,3,4,5,6,7,8,9];
+
+        //map() 이용해서 하나씩 출력
+        const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
         map()
         num.map(functionel(el){
             //document.write(el);
         });
 
-       //for in 이용해서 하나씩 출력
-       const num = [1,2,3,4,5,6,7,8,9];
-       for( let i in num ){
-       // document.write(i);
+        //for in 이용해서 하나씩 출력
+        const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        for (let i in num) {
+            // document.write(i);
         }
 
-       //for of 이용해서 하나씩 출력
-       const num = [1,2,3,4,5,6,7,8,9];
-       for( let i of num ){
-        //document.write(i);
+        //for of 이용해서 하나씩 출력
+        const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        for (let i of num) {
+            //document.write(i);
         }
 
         //11. 배열 : 데이터 불러오기 : 펼침연산자
         {
-            const num= [100,200,300,400,500];
-            document.write(num,"<br>")//100200300400500
-            document.write(num[0],num[1],num[2],num[3],num[4],"<br>");//100,200,300,400,500
+            const num = [100, 200, 300, 400, 500];
+            document.write(num, "<br>")//100200300400500
+            document.write(num[0], num[1], num[2], num[3], num[4], "<br>");//100,200,300,400,500
             document.write(...num);//100200300400500
 
         }
 
         //12. 배열 : 데이터 불러오기 : 배열구조분해할당
         {
-            let a,b,c;
-            [a,b,c] = [100,200, "j"];
+            let a, b, c;
+            [a, b, c] = [100, 200, "j"];
             document.write(a);//100200j
             document.write(b);
             document.write(c);
@@ -497,46 +499,51 @@ num.map(function(element, index, array){
 
         }
         //16. 객체 : 데이터 불러오기 : for in
-            const obj = {
-                a: 100,
-                a: 200,
-                a: "j"
-            }
-            for( let key in obj ){
-                document.write(obj[key]);
-            }
-        
-       //17. 객체 : 데이터 불러오기 : map()
-       {
-        const obj = [
-            {a: 100, b: 200, c: "j"}
-        ];
-        obj. map((el)) => {
-            document.write(el.a)
-            document.write(el.b)
-            document.write(el.c)
-        }
-       }
-       //18. 객체 : 데이터 불러오기 : hasOwnProperty()
-       {
         const obj = {
             a: 100,
-            b: 200,
-            c: "j"
+            a: 200,
+            a: "j"
         }
-        document.write(obj.hasOwnproperty("a"));//true
-        document.write(obj.hasOwnproperty("b"));
-        document.write(obj.hasOwnproperty("c"));
-        document.write(obj.hasOwnproperty("d"));//false
+        for (let key in obj) {
+            document.write(obj[key]);
+        }
 
-        document.write("a"in obj);
-        document.write("b"in obj);
-        document.write("c"in obj);
-        document.write("d"in obj);
+        //17. 객체 : 데이터 불러오기 : map()
+        {
+            const obj = [
+                { a: 100, b: 200, c: "j" }
+            ];
+            obj.map((el)) => {
+                document.write(el.a)
+                document.write(el.b)
+                document.write(el.c)
+            }
+        }
+        //18. 객체 : 데이터 불러오기 : hasOwnProperty()
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "j"
+            }
+            document.write(obj.hasOwnproperty("a"));//true
+            document.write(obj.hasOwnproperty("b"));//true
+            document.write(obj.hasOwnproperty("c"));//true
+            document.write(obj.hasOwnproperty("d"));//false
 
-       }
-      
+            document.write("a" in obj);//true
+            document.write("b" in obj);//true
+            document.write("c" in obj);//true
+            document.write("d" in obj);//false
+
+        }
+
+
+
+
+
 
     </script>
 </body>
+
 </html>
