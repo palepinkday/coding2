@@ -100,14 +100,14 @@
         .image img1 {}
 
         .image.img1 {
-            background: url(img/dog1.jpg) no-repeat center / cover;
+            background: url(img/img01_01.jpg) no-repeat center / cover;
             /* background **단축 속성은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다. */
             /* .image img1을 .image.img1로 해줌 주의!!*/
             /* no-repeat : 배경이미지를 반복없이 한 번만 표시합니다. */
         }
 
         .image.img2 {
-            background: url(img/dog2.jpg) no-repeat center / cover;
+            background: url(img/img01_02.jpg) no-repeat center / cover;
         }
 
         .img__title {
@@ -121,7 +121,7 @@
             margin-bottom: 10px;
             line-height: 1.4;
             font-weight: 300;
-            padding-right: 100px;
+            padding-right: 5px;
 
             /* 두줄효과 */
             overflow: hidden;
@@ -135,32 +135,36 @@
         .img__btn {
             font-style: 16px;
             font-weight: 300;
-            color: #fff;
-            background-color: #B45a30;
+            color: #000;
+            background-color: #FFD14A;
             padding: 10px 20px;
             display: inline-block;
         }
 
-        .img__btn.yellow {
-            background-color: #B59140;
+        .img__btn.orange {
+            background-color: #FFAB3C;
         }
     </style>
 </head>
 
 <body>
     <section id="imgType" class="img__wrap nexon section">
-        <h2>포트폴리오가 실력이다</h2>
-        <p>웹 디자이너, 웹 퍼블리셔, 프입니다론트앤드를 위한 포트폴리오 .</p>
+        <h2>포트폴리오 구경하기</h2>
+        <p>국내 현대미술 작가들의 포트폴리오 공간입니다.</p>
         <div class="image__inner container">
             <article class="image img1">
-                <h3 class="img__title">강아지</h3>
-                <p class="img__desc">프입니다론트앤드를 위한 포트다론트앤드를 위한 포다론트앤드를 위한 포다론트앤드를 위한 포</p>
+                <h3 class="img__title">포트폴리오 구경하기</h3>
+                <p class="img__desc">참가한 작가들의 작품수가 기존 전시회 보다는 풍부해 한 자리에서
+                    작가의 작품세계에 좀더 다가 설 수 있을 뿐만 아니라, 현대미술의
+                    흐름을 한눈에 살펴볼 수 있는 공간입니다.</p>
                 <a class="img__btn" href="/">자세히 보기</a>
             </article>
             <article class="image img2">
-                <h3 class="img__title">강아지</h3>
-                <p class="img__desc">프입니다론트앤드를 위한 포다론트앤드를 위한 포다론트앤드를 위한 포다론트앤드를 위한 포트</p>
-                <a class="img__btn yellow" href="/">자세히 보기</a>
+                <h3 class="img__title">포트폴리오 구경하기</h3>
+                <p class="img__desc">프참가한 작가들의 작품수가 기존 전시회 보다는 풍부해 한 자리에서
+                    작가의 작품세계에 좀더 다가 설 수 있을 뿐만 아니라, 현대미술의
+                    흐름을 한눈에 살펴볼 수 있는 공간입니다.</p>
+                <a class="img__btn orange" href="/">자세히 보기</a>
             </article>
         </div>
     </section>
