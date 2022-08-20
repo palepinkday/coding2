@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="../index.html">Javascript</a></h1>
@@ -46,7 +48,7 @@
         <div class="document">
             <h2 class="t_tit">연산자</h2>
             <p class="t_desc">
-             '3+5','3&lt;5'등과 같이 프로그램에 필요한 수식을 만드는 것이 연산자 입니다.
+                '3+5','3&lt;5'등과 같이 프로그램에 필요한 수식을 만드는 것이 연산자 입니다.
             </p>
             <h3 class="t_tit2">산술 연산자</h3>
             <h4 class="t_tit3"></h4>&lt;산술 연산자의 종류&gt;</h4>
@@ -59,13 +61,13 @@
 
                /          몫을 구할 때 사용
 
-               %          나머지를 구하때 사용
+               %          나머지를 구할 때 사용
 
-               ++         1씩 증가시킬때 사용
+               ++         1씩 증가 시킬 때 사용
 
-               --         1씩 감소시킬때 사용
+               --         1씩 감소 시킬 때 사용
            </p></pre>
-           <h3 class="t_tit2">대입 연산자</h3>
+            <h3 class="t_tit2">대입 연산자</h3>
             <h4 class="t_tit3"></h4>&lt;대입 연산자의 종류&gt;</h4>
             <pre><p class="t_desc2">
                =          num = 1은 우변의 1값을 좌변의 num변수에 대입(저장)합니다.
@@ -81,11 +83,11 @@
                %=         num %= 2는 num = num % 2와 같습니다.
            </p></pre>
             <p class="t_desc">
-             대입 연산자 '='는 '같다'의 의미가 아니라 변수에 대입(저장)을 의미합니다.
-           </p>
-           <h3 class="t_tit2">비교 연산자</h3>
-           <h4 class="t_tit3"></h4>&lt;비교 연산자의 종류&gt;</h4>
-           <pre><p class="t_desc2">
+                대입 연산자 '='는 '같다'의 의미가 아니라 변수에 대입(저장)을 의미합니다.
+            </p>
+            <h3 class="t_tit2">비교 연산자</h3>
+            <h4 class="t_tit3"></h4>&lt;비교 연산자의 종류&gt;</h4>
+            <pre><p class="t_desc2">
               >         a > b 가 참이면 true, 거짓이면 false가 됩니다. 
 
               <         a < b 가 참이면 true, 거짓이면 false가 됩니다. 
@@ -94,7 +96,7 @@
 
               <=        a >= b 가 참이면 true, 거짓이면 false가 됩니다. 
 
-              ==        a == b, a와 br가 같으면 true, 같지 않으면 false가 됩니다.
+              ==        a == b, a와 b가 같으면 true, 같지 않으면 false가 됩니다.
                         === 연산자의 경우 데이터 타입은 비교하지 않습니다.
                         -> ex) 5 == '5'는 true가 나옵니다.
 
@@ -106,22 +108,41 @@
               !==       a !== b, a와 b가 같지 않거나 데이터 타입이 같지 않으면 true, 
                         같으면 false가 됩니다. 
           </p></pre>
-          <h3 class="t_tit2">논리 연산자</h3>
-           <h4 class="t_tit3"></h4>&lt;논리 연산자의 종류&gt;</h4>
-           <pre><p class="t_desc2">
-              =          더하기 연산을 할 때 사용, 문자와 문자, 문자와 변수 등을 연결할 때 사용
 
-              +=          빼기 연산을 할 때 사용
-
-              -=          곱하기 연산을 할 때 사용
-
-              *=         몫을 구할 때 사용
-
-              /=         나머지를 구하때 사용
-
-              %=         1씩 증가시킬때 사용
-          </p></pre>
-          
+            <h3 class="t_tit2">논리 연산자</h3>
+            <h4 class="t_tit3"></h4>&lt;논리 연산자의 종류&gt;</h4>
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <td>논리 연산자 종류</td>
+                        <td>설 명</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&&(AND연산자)</td>
+                        <td>a&&b : a와 b 모두 true(참)일때 true(참)이 됩니다.<br>
+                            true&&true=true<br>
+                            true&&false=false<br>
+                            false&&true=false<br>
+                            false&&false=false<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>||(OR연산자)</td>
+                        <td>a||b : a와b 중 하나만 true(참)이면 true(참)이 됩니다.<br>
+                            true||true=true<br>
+                            true||false=true<br>
+                            false||true=true<br>
+                            false||false=false<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>!(NOT연산자)</td>
+                        <td>!a : a가 true이면false, false이면 true로 바꾸어 줍니다.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
     <!-- //main -->
@@ -136,4 +157,5 @@
         hljs.highlightAll();
     </script>
 </body>
+
 </html>
