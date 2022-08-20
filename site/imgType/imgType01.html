@@ -95,11 +95,15 @@
             box-sizing: border-box;
             color: #fff;
 
-
         }
+
+        .image img1 {}
 
         .image.img1 {
             background: url(img/dog1.jpg) no-repeat center / cover;
+            /* background **단축 속성은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다. */
+            /* .image img1을 .image.img1로 해줌 주의!!*/
+            /* no-repeat : 배경이미지를 반복없이 한 번만 표시합니다. */
         }
 
         .image.img2 {
@@ -118,6 +122,7 @@
             line-height: 1.4;
             font-weight: 300;
             padding-right: 100px;
+
             /* 두줄효과 */
             overflow: hidden;
             text-overflow: ellipsis;
