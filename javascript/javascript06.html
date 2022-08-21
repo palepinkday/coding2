@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="index.html">Javascript</a></h1>
@@ -57,7 +59,7 @@
                 <li><a href="#sample01">01. 배열 속성 : length : 배열 길이 구하기 : 반환(숫자)</a></li>
                 <li><a href="#sample02">02. 배열 메서드 : join() : 배열 요소 문자열을 결합 : 반환(문자열) : ★★★</a></li>
                 <li><a href="#sample03">03. 배열 메서드 : push() : 배열 마지막 요소에 추가 : 반환(숫자) : ★★</a></li>
-                <li><a href="#sample03">04. 배열 메서드 : pop() : 배열 마지막 요소를 삭제 : 반환(삭제된 요소) </a></li>
+                <li><a href="#sample03">03. 배열 메서드 : pop() : 배열 마지막 요소를 삭제 : 반환(삭제된 요소) </a></li>
                 <li><a href="#sample">05. 배열 : </a></li>
                 <li><a href="#sample">06. 배열 : </a></li>
                 <li><a href="#sample">07. 배열 : </a></li>
@@ -111,7 +113,7 @@
                     </table>
                 </div>
                 <div class="script">
-<pre><code class="language-js">//01
+                    <pre><code class="language-js">//01
 const arrNum = [100, 200, 300, 400, 500];
 
 document.querySelector(".sample01_N1").innerHTML = "1";
@@ -187,7 +189,7 @@ document.querySelector(".sample01_P3").innerHTML = arr.length;
                     </table>
                 </div>
                 <div class="script">
-<pre><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
+                    <pre><code class="language-js">const arrNum = [100, 200, 300, 400, 500];
 const text1 = arrNum.join('');
 const text2 = arrNum.join(' ');
 const text3 = arrNum.join('★');
@@ -199,7 +201,8 @@ const text4 = arrNum.join('-');
 
             <div id="sample03" class="sample">
                 <h3>03. 배열 메서드 : push() / pop()</h3>
-                <p>push() 메서드 배열 마지막 요소에 추가 하고, pop() 메서드는 배열 마지막 요소를 삭제합니다.</p>
+                <p>push() 메서드 배열 마지막 요소에 추가 하고, pop() 메서드는 배열 마지막 요소를 삭제합니다.
+                </p>
                 <div class="table">
                     <table>
                         <colgroup>
@@ -237,7 +240,7 @@ const text4 = arrNum.join('-');
                     </table>
                 </div>
                 <div class="script">
-<pre><code class="language-js">//01
+                    <pre><code class="language-js">//01
 const arrNum = [100, 200, 300, 400, 500];
 const arrPush = arrNum.push(600);
 
@@ -259,93 +262,94 @@ document.querySelector(".sample03_A2").innerHTML = arrNum2;  //100,200,300,400
 </code></pre>
                 </div>
             </div>
-            <!-- //sample02 -->
+            <!-- //sample03 -->
 
 
         </div>
         <!-- //main_sample -->
     </main>
 
-<footer id="footer">
-    <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
-</footer>
-<!-- //footer -->
-<script src="assets/js/highlight.min.js"></script>
-<script>
-    hljs.highlightAll();
-</script>
-<script>
-    //01 
-    {
-        const arrNum = [100, 200, 300, 400, 500];
+    <footer id="footer">
+        <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+        //01 
+        {
+            const arrNum = [100, 200, 300, 400, 500];
 
-        document.querySelector(".sample01_N1").innerHTML = "1";
-        document.querySelector(".sample01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample01_M1").innerHTML = "length";
-        document.querySelector(".sample01_P1").innerHTML = arrNum.length;
+            document.querySelector(".sample01_N1").innerHTML = "1";
+            document.querySelector(".sample01_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample01_M1").innerHTML = "length";
+            document.querySelector(".sample01_P1").innerHTML = arrNum.length;
 
-        const arrTxt = ['a', 'b', 'c', 'd', 'f'];
+            const arrTxt = ['a', 'b', 'c', 'd', 'f'];
 
-        document.querySelector(".sample01_N2").innerHTML = "2";
-        document.querySelector(".sample01_Q2").innerHTML = "['a', 'b', 'c', 'd', 'f']";
-        document.querySelector(".sample01_M2").innerHTML = "length";
-        document.querySelector(".sample01_P2").innerHTML = arrTxt.length;
+            document.querySelector(".sample01_N2").innerHTML = "2";
+            document.querySelector(".sample01_Q2").innerHTML = "['a', 'b', 'c', 'd', 'f']";
+            document.querySelector(".sample01_M2").innerHTML = "length";
+            document.querySelector(".sample01_P2").innerHTML = arrTxt.length;
 
-        const arr = [1, 2, ['a', 'b']];
+            const arr = [1, 2, ['a', 'b']];
 
-        document.querySelector(".sample01_N3").innerHTML = "3";
-        document.querySelector(".sample01_Q3").innerHTML = "[1, 2, ['a', 'b']]";
-        document.querySelector(".sample01_M3").innerHTML = "length";
-        document.querySelector(".sample01_P3").innerHTML = arr.length;
-    }
-    // 02
-    {
-        const arrNum = [100, 200, 300, 400, 500];
-        const text1 = arrNum.join('');
-        const text2 = arrNum.join(' ');
-        const text3 = arrNum.join('★');
-        const text4 = arrNum.join('-');
+            document.querySelector(".sample01_N3").innerHTML = "3";
+            document.querySelector(".sample01_Q3").innerHTML = "[1, 2, ['a', 'b']]";
+            document.querySelector(".sample01_M3").innerHTML = "length";
+            document.querySelector(".sample01_P3").innerHTML = arr.length;
+        }
+        // 02
+        {
+            const arrNum = [100, 200, 300, 400, 500];
+            const text1 = arrNum.join('');
+            const text2 = arrNum.join(' ');
+            const text3 = arrNum.join('★');
+            const text4 = arrNum.join('-');
 
-        document.querySelector(".sample02_N1").innerHTML = "1";
-        document.querySelector(".sample02_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample02_M1").innerHTML = "join('')";
-        document.querySelector(".sample02_P1").innerHTML = text1;
+            document.querySelector(".sample02_N1").innerHTML = "1";
+            document.querySelector(".sample02_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M1").innerHTML = "join('')";
+            document.querySelector(".sample02_P1").innerHTML = text1;
 
-        document.querySelector(".sample02_N2").innerHTML = "2";
-        document.querySelector(".sample02_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample02_M2").innerHTML = "join(' ')";
-        document.querySelector(".sample02_P2").innerHTML = text2;
+            document.querySelector(".sample02_N2").innerHTML = "2";
+            document.querySelector(".sample02_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M2").innerHTML = "join(' ')";
+            document.querySelector(".sample02_P2").innerHTML = text2;
 
-        document.querySelector(".sample02_N3").innerHTML = "3";
-        document.querySelector(".sample02_Q3").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample02_M3").innerHTML = "join('★')";
-        document.querySelector(".sample02_P3").innerHTML = text3;
+            document.querySelector(".sample02_N3").innerHTML = "3";
+            document.querySelector(".sample02_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M3").innerHTML = "join('★')";
+            document.querySelector(".sample02_P3").innerHTML = text3;
 
-        document.querySelector(".sample02_N4").innerHTML = "4";
-        document.querySelector(".sample02_Q4").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample02_M4").innerHTML = "join('-')";
-        document.querySelector(".sample02_P4").innerHTML = text4;
-    }
+            document.querySelector(".sample02_N4").innerHTML = "4";
+            document.querySelector(".sample02_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample02_M4").innerHTML = "join('-')";
+            document.querySelector(".sample02_P4").innerHTML = text4;
+        }
 
-    //03
-    {
-        const arrNum = [100, 200, 300, 400, 500];
-        const arrPush = arrNum.push(600);
+        //03
+        {
+            const arrNum = [100, 200, 300, 400, 500];
+            const arrPush = arrNum.push(600);
 
-        document.querySelector(".sample03_N1").innerHTML = "1";
-        document.querySelector(".sample03_Q1").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample03_M1").innerHTML = "push(600)";
-        document.querySelector(".sample03_P1").innerHTML = arrPush; //6
-        document.querySelector(".sample03_A1").innerHTML = arrNum;  //100,200,300,400,500,600
+            document.querySelector(".sample03_N1").innerHTML = "1";
+            document.querySelector(".sample03_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample03_M1").innerHTML = "push(600)";
+            document.querySelector(".sample03_P1").innerHTML = arrPush; //6
+            document.querySelector(".sample03_A1").innerHTML = arrNum;  //100,200,300,400,500,600
 
-        const arrNum2 = [100, 200, 300, 400, 500];
-        const arrPush2 = arrNum2.pop();
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrPush2 = arrNum2.pop();
 
-        document.querySelector(".sample03_N2").innerHTML = "2";
-        document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
-        document.querySelector(".sample03_M2").innerHTML = "pop()";
-        document.querySelector(".sample03_P2").innerHTML = arrPush2; //500
-        document.querySelector(".sample03_A2").innerHTML = arrNum2;  //100,200,300,400
-    }
-</script>
+            document.querySelector(".sample03_N2").innerHTML = "2";
+            document.querySelector(".sample03_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample03_M2").innerHTML = "pop()";
+            document.querySelector(".sample03_P2").innerHTML = arrPush2; //500
+            document.querySelector(".sample03_A2").innerHTML = arrNum2;  //100,200,300,400
+        }
+    </script>
+
 </html>
