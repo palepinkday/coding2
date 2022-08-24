@@ -20,7 +20,7 @@
         <nav>
             <ul>
                 <li><a href="quizEffect01">1</a></li>
-                <li ><a href="quizEffect02">2</a></li>
+                <li><a href="quizEffect02">2</a></li>
                 <li><a href="quizEffect03">3</a></li>
                 <li class="active"><a href="quizEffect04">4</a></li>
                 <li><a href="quizEffect05">5</a></li>
@@ -37,7 +37,7 @@
                 <h2 class="quiz__question">
                     <span class="number"></span>
                     <div class="ask">
-                      
+
                     </div>
                 </h2>
                 <div class="quiz__view">
@@ -63,30 +63,30 @@
                     </div>
                 </div>
                 <div class="quiz__answer">
-                   <div class="quiz__selects">
-                    <label for="select1"> 
-                        <input type="radio" id="select1" class="select" name="select" value="1">
-                        <span class="choice"></span>
-                    </label>
-                    <label for ="select2"> 
-                        <input type="radio" id="select2" class="select" name="select" value="2">
-                        <span class="choice"></span>
-                    </label>
-                    <label for ="select3"> 
-                        <input type="radio" id="select3" class="select" name="select" value="3">
-                        <span class="choice"></span>
-                    </label>
-                    <label for ="select4"> 
-                        <input type="radio" id="select4" class="select" name="select" value="4">
-                        <span class="choice"></span>
-                    </label>
+                    <div class="quiz__selects">
+                        <label for="select1">
+                            <input type="radio" id="select1" class="select" name="select" value="1">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select2">
+                            <input type="radio" id="select2" class="select" name="select" value="2">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select3">
+                            <input type="radio" id="select3" class="select" name="select" value="3">
+                            <span class="choice"></span>
+                        </label>
+                        <label for="select4">
+                            <input type="radio" id="select4" class="select" name="select" value="4">
+                            <span class="choice"></span>
+                        </label>
 
-                </div>
-                <button class="confirm">정답확인</button>
-                <div class="result"></div>
+                    </div>
+                    <button class="confirm">정답확인</button>
+                    <div class="result"></div>
                 </div>
             </div>
-         </div>
+        </div>
     </main>
     <!-- //main -->
 
@@ -102,6 +102,7 @@
         const quizConfirm = document.querySelector(".quiz__answer .confirm");    //정답 확인 버튼
         const quizResult = document.querySelector(".quiz__answer .result");      //정답 결과
         const quizView = document.querySelector(".quiz__view");     //강아지
+
         const quizSelects = document.querySelector("quiz__selects");   //객관식 보기
         const quizChoice = document.querySelectorAll(".choice");   //객관식 보기
         const quizSelect = document.querySelectorAll(".select");   //객관식 보기
@@ -112,54 +113,54 @@
                 answerType: "웹디자인기능사 2020년 01회",
                 answerNum: "1",
                 answerAsk: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 뜻하는 인터넷 용어는? ",
-                answerChoice: ["아바타","쿠키","포털","허브"],
-                answerResult:"1",
-                answerEx:"분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 아바타라고 합니다"
-              
+                answerChoice: ["아바타", "쿠키", "포털", "허브"],
+                answerResult: "1",
+                answerEx: "분신, 화신이라는 의미로 채팅, 온라인 게임 등 네트워크 환경에서 자신을 대신하여 커뮤니케이션에 참여하는 가상의 그림 또는 아이콘을 아바타라고 합니다"
+
             },
- 
         ];
-    //문제 출력
-    function updateQuiz(){
-        quizType.textContent = quizInfo[0].answerType;
-        quizNumber.textContent = quizInfo[0].answerNum; + ".";
-        quizAsk.textContent = quizInfo[0].answerAsk;
-        quizResult.textContent = quizInfo[0].answerEx;
+        //문제 출력
+        function updateQuiz() {
+            quizType.textContent = quizInfo[0].answerType;
+            quizNumber.textContent = quizInfo[0].answerNum; + ".";
+            quizAsk.textContent = quizInfo[0].answerAsk;
+            quizResult.textContent = quizInfo[0].answerEx;
 
-        //보기출력
-         //for문
-         for(let i=0; i<quizSelect.length; i++){
-        quizChoice[i].textContent = quizInfo[0].answerChoice[i];
-        };
-        //해설숨기기
-        quizResult.style.display ="none"
-   
-}
-updateQuiz();
+            //보기출력
+            //for문
+            for (let i = 0; i < quizSelect.length; i++) {
+                quizChoice[i].textContent = quizInfo[0].answerChoice[i];
+            };
+            //해설숨기기
+            quizResult.style.display = "none"
 
-// 정답확인
-function answerQuiz(){
-    //사용자 선택한 정답== 문제정답
-    //사용자가 클릭한 input-->checked
-    for ( let i=0; i<quizSelect.length; i++){
-        if(quizSelect[i].checked == true){//보기에 체크된 상태
-            //체크된 번호==문제번호
-            if(quizSelect[i].value == quizInfo[0].answerResult){
-                //alert("정답")
-                quizView.classList.add("like");
-            }else{
-                //alert("오답")
-                quizView.classList.add("dislike");
-                quizResult.style.display ="block";
-                quizConfirm.style.display ="none";
+        }
+        updateQuiz();
+
+        // 정답확인
+        function answerQuiz() {
+            //사용자 선택한 정답== 문제정답
+            //사용자가 클릭한 input-->checked
+            for (let i = 0; i < quizSelect.length; i++) {
+                if (quizSelect[i].checked == true) {//보기에 체크된 상태
+                    //체크된 번호==문제번호
+                    if (quizSelect[i].value == quizInfo[0].answerResult) {
+                        //alert("정답")
+                        quizView.classList.add("like");
+                    } else {
+                        //alert("오답")
+                        quizView.classList.add("dislike");
+                        quizResult.style.display = "block";
+                        quizConfirm.style.display = "none";
+                    }
+                } else {
+                    //alert("정답과 일치하지 않습니다.")
+                }
             }
-        }else{
-            //alert("정답과 일치하지 않습니다.")
-        }    
-    }
-}
-//정답클릭
-quizConfirm.addEventListener("click",answerQuiz);
+        }
+        //정답클릭
+        quizConfirm.addEventListener("click", answerQuiz);
     </script>
 </body>
+
 </html>

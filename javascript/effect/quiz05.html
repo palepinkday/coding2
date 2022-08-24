@@ -35,7 +35,7 @@
 
         </div>
     </main>
-    </main>
+
     <!-- //main -->
 
     <footer id="footer">
@@ -43,15 +43,15 @@
     </footer>
     <!-- //footer -->
     <script>
-     //const num = [100,200,300,400,500];
-     //num.forEach((el)=>{
-     //   console.log(el)//100, 200 , 300, 400, 500
-     //   document.querySelector("quiz__wrap").textContent += el;
-     //});
+        //const num = [100,200,300,400,500];
+        //num.forEach((el)=>{
+        //   console.log(el)//100, 200 , 300, 400, 500
+        //   document.querySelector("quiz__wrap").textContent += el;
+        //});
 
-   
-//문제정보
-    const quizInfo = [
+
+        //문제정보
+        const quizInfo = [
             {
                 answerType: "웹디자인기능사 2015년 05회",
                 answerNum: "1",
@@ -402,7 +402,7 @@
                 },
                 answerResult: "1",
                 answerEx: ""
-            },           
+            },
             {
                 answerType: "웹디자인기능사 2015년 05회",
                 answerNum: "30",
@@ -793,7 +793,7 @@
                 answerResult: "2",
                 answerEx: ""
             },
-             {
+            {
                 answerType: "웹디자인기능사 2015년 05회",
                 answerNum: "60",
                 answerAsk: "일반적인 좋은 웹사이트 레이아웃에 대한 설명으로 맞는 것은?",
@@ -808,14 +808,14 @@
             },
 
 
-            
-        
-        ];
-//선택자
-    const quizWrap = document.querySelector(".quiz__wrap");
 
-   //문제 출력
-   function updateQuiz() {
+
+        ];
+        //선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+
+        //문제 출력
+        function updateQuiz() {
             const exam = [];
             quizInfo.forEach((question, number) => {
                 exam.push(`
@@ -880,8 +880,8 @@
             //push해준 태그를 인식하기 위해 innerHTML을 사용합니다.
         }
         updateQuiz();
-//정답 확인
-function answerQuiz(){
+        //정답 확인
+        function answerQuiz() {
             const quizSelects = document.querySelectorAll(".quiz__selects");    //보기
             const quizView = document.querySelectorAll(".quiz__view");          //강아지
             //사용자가 체크한 라디오 박스  == 문제 정답
@@ -891,7 +891,7 @@ function answerQuiz(){
                 const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value
                 const quizView = document.querySelectorAll(".quiz__view");
                 console.log(quizSelects)
-                if(userAnswer == question.answerResult){
+                if (userAnswer == question.answerResult) {
                     console.log("정답")
                     quizView[number].classList.add("like");
                 } else {
@@ -914,4 +914,5 @@ function answerQuiz(){
     </script>
     <!-- //script -->
 </body>
+
 </html>
