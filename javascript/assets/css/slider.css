@@ -11,43 +11,43 @@ body {
 }
 
 body.img01 {
-    background: #000 url(../img/effect_bg01-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg01-min-min.jpg) no-repeat center / cover;
 }
 
 body.img02 {
-    background: #000 url(../img/effect_bg02-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg02-min-min.jpg) no-repeat center / cover;
 }
 
 body.img03 {
-    background: #000 url(../img/effect_bg03-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg03-min-min.jpg) no-repeat center / cover;
 }
 
 body.img04 {
-    background: #000 url(../img/effect_bg04-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg04-min-min.jpg) no-repeat center / cover;
 }
 
 body.img05 {
-    background: #000 url(../img/effect_bg05-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg05-min-min.jpg) no-repeat center / cover;
 }
 
 body.img06 {
-    background: #000 url(../img/effect_bg06-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg06-min-min.jpg) no-repeat center / cover;
 }
 
 body.img07 {
-    background: #000 url(../img/effect_bg07-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg07-min-min.jpg) no-repeat center / cover;
 }
 
 body.img08 {
-    background: #000 url(../img/effect_bg08-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg08-min-min.jpg) no-repeat center / cover;
 }
 
 body.img09 {
-    background: #000 url(../img/effect_bg09-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg09-min-min.jpg) no-repeat center / cover;
 }
 
 body.img10 {
-    background: #000 url(../img/effect_bg10-min.jpg) no-repeat center / cover;
+    background: #000 url(../img/effect_bg10-min-min.jpg) no-repeat center / cover;
 }
 
 body::after {
@@ -88,8 +88,12 @@ a {
 
 /* header */
 #header {
+
     color: #fff;
     padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 #header h1 {
@@ -118,6 +122,11 @@ a {
     font-size: 14px;
 }
 
+#header li.active a {
+    background-color: #fff;
+    color: #33377d;
+}
+
 /* footer */
 #footer .source {
     position: absolute;
@@ -141,12 +150,19 @@ a {
     position: absolute;
     right: 20px;
     bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.modal__btn:hover {
+    background-color: #fff;
+    color: #3b3d63;
 }
 
 .modal__cont {
     width: 100%;
     height: 100vh;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     left: 0;
     top: 0;
@@ -157,20 +173,10 @@ a {
     transform: scale(0);
 }
 
-/* 요소를 안보이게 하는 방법
-    1. display: none;       (애니메이션X, 영역X)
-    2. opacity: 0;          (애니메이션O, 영역O)
-    3. visibility: hidden;  (애니메이션X, 영역X)
-    4. transform: scale(0); (애니메이션O, 영역X)
-    5. width: 0; height: 0; (애니메이션X, 영역X) : blind
-*/
-
 .modal__box {
     width: 70%;
-
-    margin: 0 auto;
     height: 70vh;
-    border-radius: 5px;
+    border-radius: 0.6rem;
     box-shadow: 0 10px 20px -5px hsl(180deg 2% 10%);
     transform: scale(0);
 }
@@ -297,67 +303,66 @@ a {
     color: #fff;
 }
 
-/* 모달 애니 */
+/* 모달 애니메이션 */
 .modal__cont.show {
+    /* 전체 배경 */
     animation: foldOut 1s ease forwards;
-    /* 전체배경 */
 }
 
 .modal__cont.show.hide {
-    animation: foldin 0.3s 0.5s ease backwards;
     /* 스크립트 박스 */
+    animation: foldIn 0.3s 0.5s ease backwards;
 }
 
 .modal__cont.show .modal__close {
-
-    /* 닫기버튼 */
+    /* 닫기 버튼 */
+    animation: opacityOut 0.5s 1s ease backwards;
 }
 
 .modal__cont.show .modal__box {
-
     animation: zoomOut 0.5s 1s ease forwards;
 }
 
 .modal__cont.show.hide .modal__box {
-
-    animation: zoomin 0.5s ease forwards;
+    animation: zoomIn 0.5s ease forwards;
 }
 
 .modal__cont.show.hide .modal__close {
-    display: none;
+    animation: opacityOut 0.5s ease backwards;
 }
+
 
 @keyframes foldOut {
     0% {
-        transform: scalex(0) scaley(0.001);
+        transform: scaleX(0) scaleY(0.001);
     }
 
     50% {
-        transform: scale(1) scaley(0.001);
+        transform: scaleX(1) scaleY(0.001);
     }
 
     100% {
-        transform: scale(1) scaley(1);
+        transform: scaleX(1) scaleY(1);
     }
 }
 
-@keyframes foldin {
+@keyframes foldIn {
     0% {
-        transform: scalex(0) scaley(0.001);
+        transform: scaleX(1) scaleY(1);
     }
 
     50% {
-        transform: scale(1) scaley(0.001);
+        transform: scaleX(1) scaleY(0.001);
     }
 
     100% {
-        transform: scale(1) scaley(1);
+        transform: scaleX(0) scaleY(0.001);
     }
 }
 
 @keyframes zoomOut {
     0% {
-        transform: scalex(0);
+        transform: scale(0);
     }
 
     100% {
@@ -365,9 +370,9 @@ a {
     }
 }
 
-@keyframes zoomin {
+@keyframes zoomIn {
     0% {
-        transform: scalex(1);
+        transform: scale(1);
     }
 
     100% {
@@ -375,11 +380,45 @@ a {
     }
 }
 
+@media (max-width: 1100px) {
+    .modal__box .title {
+        overflow: hidden;
+    }
 
-@media(max-width:1100px) {}
+    .modal__box .title .dot {
+        display: none;
+    }
 
-@media(max-width:600px) {
+    .modal__box .title .tabs {
+        margin-left: 0;
+    }
+
+    .modal__box .title .tabs>div .close {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #header {
+        width: 100%;
+        text-align: center;
+    }
+
+    #header h1 {
+        line-height: 1.4;
+    }
+
     .modal__box {
         width: 96%;
     }
 }
+
+
+
+/* 요소를 안보이게 하는 방법
+    1. display: none;       (애니메이션X, 영역X)
+    2. opacity: 0;          (애니메이션O, 영역O)
+    3. visibility: hidden;  (애니메이션X, 영역X)
+    4. transform: scale(0); (애니메이션O, 영역X)
+    5. width: 0; height: 0; (애니메이션X, 영역X) : blind
+*/

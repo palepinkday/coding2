@@ -11,6 +11,60 @@
     <link rel="stylesheet" href="../assets/css/dracula.css">
 
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+
+    <style>
+        .slider__wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+
+        .slider__img {
+            position: relative;
+            width: 800px;
+            height: 450px;
+
+        }
+
+        .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgb(0004);
+            counter-reset: #fff;
+
+        }
+
+        .slider:nth-child(1) {
+            z-index: 5;
+        }
+
+        .slider:nth-child(2) {
+            z-index: 4;
+        }
+
+        .slider:nth-child(3) {
+            z-index: 3;
+        }
+
+        .slider:nth-child(4) {
+            z-index: 2;
+        }
+
+        .slider:nth-child(5) {
+            z-index: 1;
+        }
+    </style>
 </head>
 
 <body class="img07">
@@ -30,7 +84,17 @@
     <!-- //header -->
 
     <main id="main">
-
+        <section id="sliderType01">
+            <div class="slider__wrap">
+                <div class="slider__img">
+                    <div class="slider"><img src="../assets/img/effect_bg01-min.jpg" alt=""></div>
+                    <div class="slider"><img src="../assets/img/effect_bg02-min.jpg" alt=""></div>
+                    <div class="slider"><img src="../assets/img/effect_bg03-min.jpg" alt=""></div>
+                    <div class="slider"><img src="../assets/img/effect_bg04-min.jpg" alt=""></div>
+                    <div class="slider"><img src="../assets/img/effect_bg05-min.jpg" alt=""></div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- //main -->
 
@@ -312,6 +376,7 @@ updateQuiz();
 
 
     <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/common.js"></script>
     <script>
         hljs.highlightAll();
 
@@ -322,9 +387,10 @@ updateQuiz();
 
         modalBtn.addEventListener("click", () => {
             modalCont.classList.add("show");
+            modalCont.classList.remove("hide");
         });
         modalClose.addEventListener("click", () => {
-            modalCont.classList.remove("show");
+            modalCont.classList.add("hide");
         });
 
 
@@ -348,6 +414,31 @@ updateQuiz();
                 tabCont[index].style.display = "block";
             });
         });
+
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderimg = sliderWrap.querySelector(".slider__img");
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        let currentIndex = 0; //현재보이는 이미지
+        let sliderCount = slider.length; //이미지 갯수
+
+        setInterval(() => {
+            let nextIndex = (currentIndex + 1) % 5; //다음 이미지
+
+            slider[currentIndex].style.opacity = "0"; //첫번째 이미지 안보이게
+            slider[nextIndex].style.opacity = "1"; //두번째 이미지 보이게
+
+            currentIndex = nextIndex;
+        }, 3000);
+
+
+
+
+
+
+
+        //첫번째이미지 안보이게
+        //두번째 이미지 보이게
     </script>
 </body>
 
