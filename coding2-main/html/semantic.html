@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 기초</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'GmarketSans';
+        }
+        #header {
+            padding: 2vw;
+            border-bottom: 1px dashed #dedede;
+        }
+        #header h1 {
+            font-size: 4vw;
+            margin-bottom: 2vw ;
+        }
+        #header nav ul li {
+            list-style: none;
+            display: inline;
+        }
+        #header nav ul li a {
+            text-decoration: none;
+            color: #000;
+            border: 1px solid #000;
+            padding: 0.3vw 1vw;
+            display: inline-block;
+       
+        }
+        #header nav ul li a:hover{
+            background-color: #000;
+            color: #fff;
+        }
+
+        /*미디어 쿼리*/
+        @media (max-width:800px){
+            #header{
+                padding: 16px;
+            }
+            #header h1 {
+                font-size: 40px;
+            }
+            #header nav ul a {
+                padding: 5px 10px;
+                font-size: 18px;
+            }
+            #contents {
+                padding: 16px;
+            }
+        }
+
+        /*컨텐츠*/
+        #contents {
+            padding: 2vw;
+        }
+        #contents .menu {
+            border-bottom:  1px dashed #dedede;
+            padding-bottom: 2vw;
+        }
+        #contents .menu ul li {
+            list-style: none;
+            display: inline;
+        }
+        #contents .menu ul li a {
+            text-decoration: none;  
+            color:#000;
+            border: 1px solid #000;
+            background-color: #000;
+            color: #fff;
+            padding: 0.3vw 1vw 0.3vw 1vw; 
+            word-break:keep-all; /*단어끊기 :깔끔하게 떨어지게 함*/
+            margin-top: 0.7vw;
+            margin-bottom: 0.7vw ;
+            display: inline-block;
+        }
+        .article {
+            padding: 2vw 0;
+            line-height: 1.6;
+        }
+        .article h2{
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+        .article p {
+            margin-bottom: 10px;
+        }
+        .article .table {
+            width: 100%;
+            border-spacing:0;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .article .table tr th {
+            border : 1px solid #dedede;
+            padding: 10px;
+
+        }
+        .article .table tr td {
+            border : 1px solid #dedede;
+            padding: 10px;
+        }
+        .article .table .center {
+            text-align: center;
+        }
+        .article .box {
+            background-color: #f5f5f5;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>HTML</h1>
+        <nav>
+            <ul>
+                <li><a href="#">기초</a></li>
+                <li><a href="#">주제</a></li>
+                <li><a href="#">알파벳</a></li>
+            </ul>   
+        </nav>
+    </header>
+    <section id="contents">
+        <nav class="menu">
+            <ul>
+                <li><a href="basic.html">HTML기본구성</a></li>
+                <li><a href="w3c.html">웹표준/웹접근성/웹호완성</a></li>
+                <li><a href="markup.html">마크업 기본 문법 규칙</a></li>
+                <li><a href="semantic.html">시멘틱 마크업</a></li>
+                <li><a href="blockinline.html">블록/ 인라인 요소</a></li>
+            </ul>
+        </nav>
+        <article class="article">
+            <h2>시멘틱 마크업(semantic markup)</h2>
+           <p>시멘틱의 사전적 뜻은 '의미론적'정도로 해석할 수 있는데, 
+            이것은 마크업을 할때 의미에 부합하는 태그를 사용하라는 뜻입니다.<br>
+            HTML문서들은 시각적인 방법으로 정보를 전달하지만 모든 사람이 정보를 동일하게 받아들이지는 못합니다.
+            시각장애인의 경우 HTML문서의 콘텐츠 정보를 음성으로 전달해 주어야 하는데 이런 경우 전달하려는 태그의 의미가 적절해야 합니다.
+         </p>
+         <P class="box">
+            &lt;!DOCTYLE html&gt;<br>
+            &lt;html lang="ko"&gt;<br>
+            &lt;head&gt;<br>
+            &lt;meta charset="UTF="8"&gt;<br>
+            &lt;title&gt;시멘틱 마크업&lt;/title&gt;<br>
+            &lt;/head&gt;<br>
+            &lt;body&gt;<br>
+            반응형웹<br>
+            &lt;/body&gt;<br>
+            &lt;/html&gt;<br>
+         </P>
+            <p>만약 반응형웹이 HTML문서에서 제목으로 사용된다고 가장할 경우 마크업을 하면 스크린 리더에서는 반응형웹이라고 읽어주기 때문에 그것이 제목인지 알 수가 없습니다. 그래서 제목을 의미하는 태그   &lt;h1&gt;반응형웹&lt;/h1&gt;로 바꾸어 마크업해야 합니다
+                         </p>
+        </article>
+    </section>    
+</body>
+</html>

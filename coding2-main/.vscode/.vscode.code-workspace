@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\assets"
+		},
+		{
+			"path": "..\\class"
+		},
+		{
+			"path": "..\\css"
+		},
+		{
+			"path": "..\\html"
+		},
+		{
+			"path": "..\\javascript"
+		},
+		{
+			"path": "..\\layout"
+		},
+		{
+			"path": "..\\site"
+		}
+	]
+}

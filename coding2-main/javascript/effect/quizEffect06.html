@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트</title>
+
+    <link rel="stylesheet" href="../assets/css/quiz.css">
+
+    <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Cafe24Dangdanghae/Cafe24Dangdanghae.css" rel="stylesheet">
+
+</head>
+<!--  -->
+
+<body>
+    <header id="header">
+        <h1><a href="../javascript01.html"></a>Quiz <em>객관식(여러문제)</em></h1>
+        <nav>
+            <ul>
+                <li><a href="quizEffect01">1</a></li>
+                <li><a href="quizEffect02">2</a></li>
+                <li><a href="quizEffect03">3</a></li>
+                <li><a href="quizEffect06">4</a></li>
+                <li><a href="quizEffect05">5</a></li>
+                <li class="active"><a href="quizEffect04">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="quiz__wrap">
+            <!-- <div class="quiz">
+                <span class="quiz__type"></span> 
+                <h2 class="quiz__question">
+                    <span class="number"></span>
+                    <div class="ask">
+                    </div>
+                </h2>
+                <div class="quiz__view">
+                    <div class="true">정답입니다</div>
+                    <div class="false">틀렸습니다</div>
+                    <div class="dog">
+                        <div class="head">
+                            <div class="ears"></div>
+                            <div class="face"></div>
+                            <div class="eyes">
+                                <div class="teardrop"></div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth">
+                                <div class="tongue"></div>
+                            </div>
+                            <div class="chin"></div>
+                        </div>
+                        <div class="body">
+                            <div class="tail"></div>
+                            <div class="legs"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                   <div class="quiz__selects">
+                    <label for="select1"> 
+                        <input type="radio" id="select1" class="select" name="select" value="1">
+                        <span class="choice"></span>
+                    </label>
+                    <label for ="select2"> 
+                        <input type="radio" id="select2" class="select" name="select" value="2">
+                        <span class="choice"></span>
+                    </label>
+                    <label for ="select3"> 
+                        <input type="radio" id="select3" class="select" name="select" value="3">
+                        <span class="choice"></span>
+                    </label>
+                    <label for ="select4"> 
+                        <input type="radio" id="select4" class="select" name="select" value="4">
+                        <span class="choice"></span>
+                    </label>
+
+                </div>
+                <div class="result"></div>
+                <button class="confirm">다음문제보기</button>
+              
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <!-- //main -->
+
+
+    <footer id="footer">
+        <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script>
+
+        //문제정보
+        const quizInfo = [
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "1",
+                answerAsk: "유채색에서 볼 수 있는 대비로 연속대비라고도 하며, 잔상 효과와 가장 밀접한 관련이 있는 것은? ",
+                answerChoice: [
+                    1: "색상대비",
+                    2: "계시대비",
+                    3: "채도대비",
+                    4: "명도대비",
+                ],
+                answerResult: "계시대비",
+                answerEx: ""
+            },
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "2",
+                answerAsk: "팽창이동패턴? ",
+                answerChoice: [
+                    1: "색상대비",
+                    2: "계시대비",
+                    3: "채도대비",
+                    4: "명도대비",
+                ],
+                answerResult: "3",
+                answerEx: ""
+            },
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "3",
+                answerAsk: "기계화와 대량 생산에 의한 생활 용품의 품질 저하에 반대하여 월리엄 모리스를 중심으로 영국에서 일어난 것은?",
+                answerChoice: [
+                    1: "산업혁명",
+                    2: "아르 누보",
+                    3: "미술공예운동",
+                    4: "대규모생산운동",
+                ],
+                answerResult: "미술공예운동",
+                answerEx: ""
+            },
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "4",
+                answerAsk: "다음 색체계열 중 피를 많이 보는 수술실과 같은 공간에 가장 알맞은 것은? ",
+                answerChoice: {
+                    1: "갈색계열",
+                    2: "흰색계열",
+                    3: "녹색계열",
+                    4: "보라색계열",
+                },
+                answerResult: "녹색계열",
+                answerEx: ""
+            },
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "5",
+                answerAsk: "다음의 관용색명 중 성격이 다른 것은? ",
+                answerChoice: [
+                    1: "살구색	",
+                    2: "밤색",
+                    3: "레몬색	",
+                    4: "상아색",
+                ],
+                answerResult: "상아색",
+                answerEx: ""
+            },
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "6",
+                answerAsk: "태양광선이 투사되는 위치에 프리즘을 놓아 굴절된 광선을 스크린에 투사하여 나타난 여러 가지 색의 띠를 무엇이라 하는가? ",
+                answerChoice: [
+                    1: "색상대비전자파	",
+                    2: "감마선",
+                    3: "스펙트럼	",
+                    4: "자외선",
+                ],
+                answerResult: "스펙트럼",
+                answerEx: ""
+            },
+        ];
+
+        //선택자
+        const quizType = document.querySelector(".quiz__type");                  //퀴즈 종류
+        const quizQuestion = document.querySelector(".quiz__question");    //퀴즈 번호
+        const quizSelects = document.querySelector("quiz__selects");   //객관식 보기
+        const quizResult = document.querySelector(".quiz__answer .result");      //정답 결과
+        const quizConfirm = document.querySelector(".quiz__answer .confirm");    //정답 확인 버튼
+        const quizView = document.querySelector(".quiz__view");     //강아지
+
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizScore = document.querySelector("quiz__selects");
+
+        let quizCount = 0;
+
+        //문제출력
+        const updateQuiz = () => {
+            const questionTag = `
+            <span class = "number">${quizInfo[0].answerNum}.</span>
+            <div class ="ask">${quizInfo[0].answerAsk}</div>
+            `
+
+            const choiceTag = `
+           <label for="select1"> 
+                        <input type="radio" id="select1" class="select" name="select" value="1">
+                        <span class="choice">${quizInfo[0].answerChoice[0]}</span>
+                    </label>
+                    <label for ="select2"> 
+                        <input type="radio" id="select2" class="select" name="select" value="2">
+                        <span class="choice">${quizInfo[0].answerChoice[1]}</span>
+                    </label>
+                    <label for ="select3"> 
+                        <input type="radio" id="select3" class="select" name="select" value="3">
+                        <span class="choice">${quizInfo[0].answerChoice[2]}</span>
+                    </label>
+                    <label for ="select4"> 
+                        <input type="radio" id="select4" class="select" name="select" value="4">
+                        <span class="choice">${quizInfo[0].answerChoice[3]}</span>
+                    </label>
+                    `;
+
+            quizType.innerHTML = quizInfo[0].answerType;
+            quizQuestion.innerHTML = queestionTag;
+            quizSelects.innerHTML = choiceTag;
+            quizResult.innerHTML = quizInfo[index].answerEx;
+
+            const quizChoice = quizSelects.querySelectorAll(".choice")
+
+            for (let i = 0; i < quizchoice.length; i++) {
+                quizchoice[i].setAttribute("onclick", "choiceSelected(this)")
+            }
+            quizResult.stye.display = "none";
+            quizConfirm.stye.display = "none";
+        }
+        updateQuiz(quizCounter);
+
+        const choiceSelected = (answer) => {
+            let userAnswer = answer.textContent;
+            let currentAnswer = quizInfo[quizCount].answerResult;
+            if (userAnswer == currentAnswer) {
+                console.log("정답");
+                quizView.classList.add("like");
+            } else {
+                console.log("오답")
+                quizView.classList.add("dislike");
+                quizResult.style.display = "block";
+                // arlert(answer.textContent);
+            }
+            quizConfirm.style.display = "block";
+        }
+
+
+        const answerQuiz = () => {
+            quizCount++;
+            updateQuiz(quizCount);
+            quizView.classList.remove("like", "dislike")
+        }
+
+        //마지막 문제
+        if
+
+
+
+            quizConfirm.addEventlistener("click", answerQuiz);
+
+    </script>
+
+</body>
+
+</html>
