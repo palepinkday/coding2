@@ -132,6 +132,54 @@
             background-color: #f5f5f5;
             padding: 15px;
         }
+
+        /* 구조태그 이용 */
+        #wrap {
+            font-size: 18px;
+        }
+
+        #header1 {
+            width: 1200px;
+            height: 120px;
+            background-color: rgb(95, 207, 119);
+            display: flex;
+
+        }
+
+        #header1 h1 {
+            text-decoration: none;
+            list-style: none;
+        }
+
+
+
+        #header1 li {
+            list-style: none;
+            display: inline;
+
+
+
+        }
+
+        #header1 li a {
+            text-decoration: none;
+            color: #ddd;
+            border: 1px solid #000;
+            padding: 0.3vw 1vw;
+            display: inline-block;
+        }
+
+        #container {
+            width: 1200px;
+            height: 480px;
+            background-color: rgb(95, 207, 119);
+        }
+
+        #footer {
+            width: 1200px;
+            height: 120px;
+            background-color: rgb(95, 207, 119);
+        }
     </style>
 </head>
 
@@ -202,52 +250,50 @@
                     </tr>
                     <tr>
                         <td>&lt;footer&gt;&lt;/footer&gt;</td>
-                        <td>푸터 영역을 의미하는 태그, 섹션 작성자나 저작권에 대한 정보, 관련되 ㄴ문서의 링크를 포함<br>
+                        <td>푸터 영역을 의미하는 태그, 섹션 작성자나 저작권에 대한 정보, 관련된 문서의 링크를 포함<br>
                             텍스트, 인란인요소, 즐록레벨요소를 포함, &lt;header&gt;, &lt;footer&gt;태그는 포함할 수 없음</td>
                     </tr>
                 </tbody>
             </table>
         </article>
 
-
-        <header>
-            <h1></h1>
-            <nav>
-                <div>menu1</div>
-                <div>menu2</div>
-                <div>menu3</div>
-                <div>menu4</div>
-                <div>menu5</div>
-            </nav>
-        </header>
-        <div>
-            <section>
-                <h2>section 콘텐츠그룹01</h2>
-            </section>
-            <section>
-                <h2>section 콘텐츠그룹02</h2>
-            </section>
-            <article>
-                <h2>article 주요기사</h2>
-            </article>
-            <article>
-                <h2>article 광고</h2>
-            </article>
-        </div>
-        <footer>
-            <div>
+        <div id="wrap">
+            <header id="header1">
+                <h1><a href="#">반응형웹</a></h1>
+                <nav>
+                    <ul>
+                        <li><a href="#">menu01</a></li>
+                        <li><a href="#">menu02</a></li>
+                        <li><a href="#">menu03</a></li>
+                        <li><a href="#">menu04</a></li>
+                        <li><a href="#">menu05</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <section class="section">
+                    <h2>콘텐츠그룹01</h2>
+                </section>
+                <section class="section">
+                    <h2>콘텐츠그룹02</h2>
+                </section>
+                <article class="artticle1">
+                    <h2>주요기사</h2>
+                </article>
+                <aside class="aside">
+                    광고
+                </aside>
+            </div>
+            <footer id="footer">
                 <address>
                     palepinkday@gmail.com
                 </address>
-            </div>
-            <div>
                 <p>
                     copyright ⓒ All right revered
                 </p>
-            </div>
+            </footer>
+        </div>
 
-
-        </footer>
 
 </body>
 

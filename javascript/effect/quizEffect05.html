@@ -115,12 +115,12 @@
             {
                 answerType: "웹디자인기능사 2015년 05회",
                 answerNum: "2",
-                answerAsk: "팽창이동패턴? ",
+                answerAsk: "점점 이동하면서 도형이 커지며 팽창하는 패턴은? ",
                 answerChoice: {
-                    1: "색상대비",
-                    2: "계시대비",
-                    3: "채도대비",
-                    4: "명도대비",
+                    1: "반사 운용",
+                    2: "회전 운용",
+                    3: "팽창 이동 패턴",
+                    4: "조화 패턴",
                 },
                 answerResult: "3",
                 answerEx: ""
@@ -166,22 +166,62 @@
             },
             {
                 answerType: "웹디자인기능사 2015년 05회",
-                answerNum: "6",
+                answerNum: "7",
+                answerAsk: " 다음 중 나머지 세 가지와 성격이 다른 디자인 분야는? ",
+                answerChoice: {
+                    1: "인테리어 디자인",
+                    2: "광고 디자인",
+                    3: "편집 디자인",
+                    4: "시각 디자인",
+                },
+                answerResult: "1",
+                answerEx: ""
+            },
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "8",
                 answerAsk: "태양광선이 투사되는 위치에 프리즘을 놓아 굴절된 광선을 스크린에 투사하여 나타난 여러 가지 색의 띠를 무엇이라 하는가? ",
                 answerChoice: {
-                    1: "색상대비전자파	",
-                    2: "감마선",
-                    3: "스펙트럼	",
-                    4: "자외선",
+                    1: "유기적인 선은 정확하고 긴장되며 기계적인 느낌을 준다.",
+                    2: "수직선은 세로로 된 선으로 숭고한 느낌을 준다.",
+                    3: "수평선은 가로로 된 선으로 편안한 느낌을 준다.",
+                    4: "사선은 비스듬한 선으로 동적인 움직임과 불안한 느낌을 준다.",
+                },
+                answerResult: "1",
+                answerEx: ""
+            },
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "9",
+                answerAsk: "시각적 질감의 예로 성격이 다른 하나는?",
+                answerChoice: {
+                    1: "사진의 망점",
+                    2: "인쇄상의 스크린 톤",
+                    3: " 대리석 무늬",
+                    4: "모니터 주사선",
                 },
                 answerResult: "3",
                 answerEx: ""
             },
+            {
+                answerType: "웹디자인기능사 2015년 05회",
+                answerNum: "10",
+                answerAsk: "체계적인 국가 정책을 기반으로 공학적이며, 기능적인 디자인이 특징인 국가는? ",
+                answerChoice: {
+                    1: "중국",
+                    2: "프랑스",
+                    3: "스칸디나비아",
+                    4: "독일",
+                },
+                answerResult: "4",
+                answerEx: ""
+            }
         ];
 
         //선택자
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizScore = document.querySelector
+
         //문제출력
         const updateQuiz = () => {
             const exam = [];
@@ -234,17 +274,16 @@
                         <input type="radio" id="select4${number}" class="select" name="select${number}" value="4">
                         <span class="choice">${question.answerChoice[4]}</span>
                     </label>
-
-                </div>
-                <button class="confirm">정답확인</button>
-                <div class="result"></div>
-                </div>
-            </div>`);
-
+                    </div>
+                        </div>
+                    </div>
+                `);
             });
+
+
             exam.push(`
             <div class="quiz__confirm">
-                <button class = "check">정답확인</button>
+                <button class = "check">정답확인하기</button>
                 <div class = "ex"></div>
                 </div>
             `);
@@ -252,23 +291,31 @@
         }
         updateQuiz();
 
+        let quizScore = 0;
+
+
         //정답확인
         const answerQuiz = () => {
-            const quizSelects = document.querySelectorAll("quiz__selects");
-            const quizView = document.querySelectorAll(".quiz__view");
+            const quizSelects = document.querySelectorAll("quiz__selects"); //선택보기
+            const quizView = document.querySelectorAll(".quiz__view"); //강아지
         }
+
+        btn.style.display = "none";
+
         //사용자체크 문제정답
         quizInfo.forEach((question, number) => {
-            const quizSelectsWrap = quizSelects[number];
-            const userSelector = `input[name=select${number}]:checked`;
-            const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value;
-            const quizView = document.querySelectorAll("quiz__view")
+            const quizSelectsWrap = quizSelects[number]; //전체보기박스
+            const userSelector = `input[name=select${number}]:checked`; //사용자가 클릭한 라디오 박스
+            const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value; //체크 된 것 또는  안된것의 값
+            const quizView = document.querySelectorAll("quiz__view"); //강아지
 
             if (userAnswer == question.answerResult) {
-                console.log("정답")
+                //console.log("정답")
                 quizView[number].classList.add("like");
+                quizScore++
+
             } else {
-                console.log("오답")
+                //console.log("오답")
                 quizView[number].classList.add("dislike");
                 const divBox = document.createElement("div");
                 quizSelectsWrap.appendchild(divBox).innerHTML = `<p class="result">${question.answerEx}</p >`
