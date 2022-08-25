@@ -1,8 +1,10 @@
+@import url('https://webfontworld.github.io/knps/KNPSKkomi.css');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'NexonLv1Gothic';
+    font-family: 'KNPSKkomi';
 }
 
 body {
@@ -11,43 +13,43 @@ body {
 }
 
 body.img01 {
-    background: #000 url(../img/effect_bg01@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg01@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img02 {
-    background: #000 url(../img/effect_bg02@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg02@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img03 {
-    background: #000 url(../img/effect_bg03@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg03@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img04 {
-    background: #000 url(../img/effect_bg04@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg04@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img05 {
-    background: #000 url(../img/effect_bg05@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg05@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img06 {
-    background: #000 url(../img/effect_bg06@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg06@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img07 {
-    background: #000 url(../img/effect_bg07@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg07@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img08 {
-    background: #000 url(../img/effect_bg08@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg08@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img09 {
-    background: #000 url(../img/effect_bg09@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg09@2x-min.jpg) no-repeat center / cover;
 }
 
 body.img10 {
-    background: #000 url(../img/effect_bg10@2x-min.jpg) no-repeat center / cover;
+    background: url(../img/effect_bg10@2x-min.jpg) no-repeat center / cover;
 }
 
 body::after {
@@ -57,7 +59,7 @@ body::after {
     top: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(23, 20, 88, 0.386);
+    background: rgba(214, 81, 81, 0.2);
     z-index: -1;
 }
 
@@ -85,7 +87,7 @@ a {
 }
 
 #header p {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 #header li {
@@ -99,8 +101,8 @@ a {
     width: 30px;
     height: 30px;
     text-align: center;
-    line-height: 30px;
-    font-size: 14px;
+    line-height: 33px;
+    font-size: 16px;
 }
 
 /* footer */
@@ -110,16 +112,23 @@ a {
     bottom: 20px;
     border: 1px solid #fff;
     border-radius: 40px;
-    padding: 10px 30px;
+    padding: 10px 20px 5px;
     font-size: 14px;
 }
 
 /* modal__wrap */
 .modal__wrap {}
 
-.modal__btn {}
-
-.modal__btn .btn {}
+.modal__btn {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 15px 20px 10px 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
 
 .modal__cont {
     width: 100%;
@@ -132,14 +141,24 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
 }
 
+.modal__cont.show {
+    visibility: visible;
+}
+
+/*  요소를 안보이게 하는 방법
+        1. display: none;       (애니메이션X, 영억X)
+        2. opacity: 0;          (애니메이션O, 영역O)
+        3. visibility: hidden;  (애니메이션X, 영억X)
+        4. width: 0; height: 0; (애니메이션X, 영억X) : blind
+*/
 .modal__box {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     height: 600px;
-
     background-color: #fff;
     border-radius: 0.5rem;
     background-color: #fff;
@@ -149,23 +168,25 @@ a {
 .modal__box .title {
     padding-inline: 1rem;
     cursor: grab;
-    background-color: #1B1C2E;
+    background-color: #36110E;
     display: flex;
     align-items: center;
     color: #fff;
     height: 50px;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    left: 0;
+    top: 0;
 }
 
 .modal__box .title .dot {
     width: 15px;
     height: 15px;
-    background-color: #3B3D63;
+    background-color: #F3EC2F;
     display: inline-block;
     border-radius: 50%;
     position: relative;
-    margin-left: 2rem;
+    margin-left: 30px;
 }
 
 .modal__box .title .dot::before {
@@ -175,7 +196,7 @@ a {
     top: 0;
     width: 15px;
     height: 15px;
-    background-color: #3B3D63;
+    background-color: #F32525;
     border-radius: 50%;
 }
 
@@ -186,15 +207,14 @@ a {
     top: 0;
     width: 15px;
     height: 15px;
-    background-color: #3B3D63;
+    background-color: #51EC46;
     border-radius: 50%;
 }
 
 .modal__box .title .plus {
-    background: #282936;
-    padding: 0.5rem 0.5rem 0.3rem 0.5rem;
+    background-color: #705A58;
+    padding: 0.5rem 0.5rem 0 0.5rem;
     border-radius: 0.5rem;
-    color: #7A7D9D;
 }
 
 .modal__box .title .tabs {
@@ -203,28 +223,31 @@ a {
 }
 
 .modal__box .title .tabs>div {
-    color: #7A7D9D;
-    background-color: #282936;
-    padding: 0.35rem 0.8rem 0.25rem 0.8rem;
+    color: hsl(39, 33%, 66%);
+    background-color: hsl(0, 0%, 20%);
+    padding: 0.35rem 0.8rem 0rem 0.8rem;
     margin-right: 0.5rem;
     display: flex;
     align-items: center;
     border-radius: 0.4rem;
     text-transform: uppercase;
-    cursor: pointer;
+}
+
+.modal__box .title .tabs>div.active {
+    background-color: #C9685F;
 }
 
 .modal__box .title .tabs>div em {
-    font-style: normal;
+    font-style: normal
 }
 
 .modal__box .title .tabs>div .favicon {
     margin-right: 0.4rem;
-    margin-top: 0.2rem;
+    margin-top: 0.3rem;
 }
 
 .modal__box .title .tabs>div .close {
-    margin-left: 4rem;
+    margin-left: 5rem;
 }
 
 .modal__box .cont {
@@ -238,4 +261,28 @@ a {
 
 .modal__box .cont>div {
     display: none;
+}
+
+.modal__box .cont>div.active {
+    display: block;
+}
+
+.modal__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: #F32525;
+    padding: 1rem 1rem 0.4rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 7px -5px hsl(180deg 2% 10%);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.modal__close:hover {
+    background-color: #C9685F;
+}
+
+.modal__close svg {
+    color: #fff;
 }

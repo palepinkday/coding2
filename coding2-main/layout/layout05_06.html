@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+           
+        #header{
+            width: 100%;
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav{
+            width: 100%;
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #main{
+            width: 100%;
+            height: 780px;
+            background-color: #886F65;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container{
+            width: 1200px;
+            height: inherit;    
+            margin: 0 auto;
+            background-color: rgba(0,0,0,0.1);
+        }
+        .contents{
+            display: grid;
+            grid-template-areas:
+            "con1 con1"
+            "con2 con2"
+            "con3 con4";
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100px 200px 480px;
+        }
+        .contents .con1{
+           background-color: #74574A;
+           grid-area: con1;
+        }
+        .contents .con2{
+            background-color: #684D43;
+            grid-area: con2;
+        }
+        .contents .con3{
+            background-color: #594139;
+            grid-area: con3;
+        }
+        .contents .con4{
+            background-color: #4A352F;
+            grid-area: con4;
+        }
+      @media(max-width:1300px){
+        .container{
+            width: 96%;
+        }
+        .contents{
+            grid-template-areas:
+            "con1 con2 con2"
+            "con1 con3 con4";
+            grid-template-columns: 33.3333% 33.3333% 33.3333%; 
+            grid-template-rows: 390px 390px;
+        }
+      }
+      /* 1fr 1fr 1fr */
+      /* repeat(3,33.3333%) */
+      /* repeat(3,1fr) */
+
+      /* 390px 390px */
+      /* repeat(2,1fr) */
+      
+      @media(max-width:768px){
+        .container{
+            width: 100%;
+        }
+        .contents{
+            grid-template-areas:
+            "con1 con2" 
+            "con1 con3" 
+            "con1 con4";
+            grid-template-columns: 30% 70%;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+      }
+      @media(max-width:480px){
+        .contents{
+            grid-template-areas:
+            "con1" 
+            "con2" 
+            "con3"
+            "con4";
+            grid-template-columns: 100%;
+            grid-template-rows: 150px 210px 210px 210px;  
+        }
+      }
+        
+     
+    </style>
+</head>
+<body>
+    <div id="wrap">
+    <header id="header">
+        <div class="container"></div>
+    </header>
+    <nav id="nav">
+        <div class="container"></div>
+    </nav>
+    <main id="main">
+        <div class="contents container">
+            <div class="con1"></div>
+            <div class="con2"></div>
+            <div class="con3"></div>
+            <div class="con4"></div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="container"></div>
+    </footer>
+    </div>
+</body>
+</html>
+<!-- layout05_01 float 방식 레이아웃 
+     layout05_02 float 방식 반응형 레이아웃
+     layout05_03 flex 방식 레이아웃
+     layout05_04 flex 방식 반응형 레이아웃
+     layout05_05 grid 방식 레이아웃
+     layout05_06 grid 방식 반응형 레이아웃   -->
