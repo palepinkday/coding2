@@ -1,0 +1,34 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\javascript"
+		},
+		{
+			"path": "..\\layout"
+		},
+		{
+			"path": "..\\site"
+		},
+		{
+			"path": "..\\.git"
+		},
+		{
+			"path": "..\\.vscode"
+		},
+		{
+			"path": "..\\assets"
+		},
+		{
+			"path": "..\\class"
+		},
+		{
+			"path": "..\\coding2-main"
+		},
+		{
+			"path": "..\\css"
+		}
+	]
+}
