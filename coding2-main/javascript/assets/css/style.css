@@ -131,9 +131,8 @@ body {
 }
 
 /* 인트로 */
-.iintro_menu {
-    width: 50vw;
-    height: 50vw;
+.intro_menu {
+
     position: absolute;
     left: 50%;
     top: 50%;
@@ -143,15 +142,27 @@ body {
     border-radius: 1vw;
     font-size: 1vw;
     text-align: center;
+    color: rgb(38, 0, 255);
 }
 
-.iintro_menu li {
-    font-size: 20px;
+.intro_menu ul li a {
+    color: rgb(38, 0, 255);
+    font-size: 1vw;
 }
 
-.iintro_menu li a {
-    color: #9b1fa7;
-    font-size: 20px;
+@media (max-width: 600px) {
+    .intro_menu {
+        width: 90%;
+        padding: 14px;
+    }
+
+    .intro_menu li {
+        font-size: 16px;
+    }
+
+    .intro_menu li a {
+        font-size: 16px;
+    }
 }
 
 @media (max-width:600) {}
