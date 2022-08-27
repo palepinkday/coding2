@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
 </head>
+
 <body>
     <header id="header">
         <h1><a href="../index.html">Javascript</a></h1>
@@ -27,6 +29,15 @@
                 <li><a href="../javascript09.html">브라우저 객체</a></li>
                 <li><a href="../javascript10.html">요소 객체</a></li>
                 <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="effect">
+                <li><a href="effect/searchEffect.html">검색효과</a></li>
+                <li><a href="effect/quizEffect.html">퀴즈효과</a></li>
+                <li><a href="effect/detaEffect.html">데이터 효과</a></li>
+                <li><a href="effect/mouseEffect01.html">마우스효과</a></li>
+                <li><a href="effect/sliderEffect01.html">슬라이스효과</a></li>
+                <li><a href="effect/parallaxEffect01.html">패렐랙스효과</a></li>
+                <li><a href="effect/gameEffect01.html">게임효과</a></li>
             </ul>
             <ul class="study">
                 <li><a href="basic.html">기본 규칙</a></li>
@@ -55,8 +66,9 @@
                 HTML은 정적인 레이아웃을 표현한다면, 자바스크립트는 동적인 기능을 표현합니다.
             </p>
             <p class="t_desc">
-                자바스크립트는 1995년 넷스케이프 커뮤니케이션의 브렌던 아이크가 개발하였스며 Netscape Navigsator2.0에 구현되었습니다. 
-                1996년에는 마이크로소프트사의 Internet Explorer3.0 탑재되었으며 java 애플릿으로 구현된 웹 브라우저의 지지부진한 보급과 맞물려 빠르게 보급되었습니다. 1997년부터 ESMAScript를 따르는 표준화 작업을 통해 현재는 모든 브라우저에서 지원됩니다.
+                자바스크립트는 1995년 넷스케이프 커뮤니케이션의 브렌던 아이크가 개발하였스며 Netscape Navigsator2.0에 구현되었습니다.
+                1996년에는 마이크로소프트사의 Internet Explorer3.0 탑재되었으며 java 애플릿으로 구현된 웹 브라우저의 지지부진한 보급과 맞물려 빠르게 보급되었습니다. 1997년부터
+                ESMAScript를 따르는 표준화 작업을 통해 현재는 모든 브라우저에서 지원됩니다.
             </p>
 
             <h3 class="t_tit2">자바스크립트 기본 규칙</h3>
@@ -65,7 +77,7 @@
                 하나의 실행문이 끝나면 마지막에 세미콜론(;)을 붙여 줍니다.
                 세미콜론(;)을 붙여 주지 않아도 상관은 없습니다.
             </p>
-            <div class ="t_box">
+            <div class="t_box">
                 var num = 5;<i>;</i><br>
                 doccument.write(num)<i>;</i><br>
             </div>
@@ -92,22 +104,22 @@
             <h4 class="t_tit3"> 1.HTML문서 내부에서 적용할 수 있습니다.</h4>
             <h4 class="t_tit3"> 1.HTML문서 외부에서 적용할 수 있습니다.</h4>
 
-            <h3 class ="t_tit2">적용 위치</h3>
+            <h3 class="t_tit2">적용 위치</h3>
             <h4 class="t_tit3">
-               1.&lt;head&gt;태그 내에 위치할 수 있다.
+                1.&lt;head&gt;태그 내에 위치할 수 있다.
             </h4>
             <h4 class="t_tit3">
                 2.&lt;/body&gt;태그위에 위치할 수 있다.
             </h4>
-            <h3 class ="t_tit2">기본 명령어</h3>
+            <h3 class="t_tit2">기본 명령어</h3>
             <table class="t_table">
                 <thead>
                     <tr>
-                    <td class="ce">분류</td>
-                    <td class="ce">메서드</td>
-                   </tr>
+                        <td class="ce">분류</td>
+                        <td class="ce">메서드</td>
+                    </tr>
                 </thead>
-                 <tbody> 
+                <tbody>
                     <tr>
                         <td class="ce">입력</td>
                         <td class="ce">prompt()</td>
@@ -125,22 +137,22 @@
                     <tr>
                         <td class="ce">확인</td>
                         <td class="ce">confirm()</td>
-                    </tr>   
-                </tbody>    
+                    </tr>
+                </tbody>
             </table>
 
-                
+
 
             <hr>
-            <h3 class ="t_tit2">자바스크립트 사용 방법</h3>
+            <h3 class="t_tit2">자바스크립트 사용 방법</h3>
             <p class="t_desc">
-                자바스크립트 사용방법은 
+                자바스크립트 사용방법은
                 1. 외부파일 연결하는 방법
                 2. 스크립트 태그에 사용하는 방법
                 3.태그에 직접 기술하는 방법
             </p>
-<div class="t_code">
-    <pre><code>
+            <div class="t_code">
+                <pre><code>
         &lt;!DOCTYPE html&gt;
 &lt;html lang="ko"&gt;
 &lt;head&gt;
@@ -159,7 +171,7 @@
 &lt;/body&gt;
 &lt;/html&gt;
     </code></pre>
-</div>
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -174,4 +186,5 @@
         hljs.highlightAll();
     </script>
 </body>
+
 </html>
