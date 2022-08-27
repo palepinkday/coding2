@@ -1,3 +1,9 @@
+pre {
+    height: 100%;
+}
+
+
+
 pre code.hljs {
     display: block;
     overflow-x: auto;

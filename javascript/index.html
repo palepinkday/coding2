@@ -31,6 +31,7 @@
             border: 8px solid #0243f1;
             box-sizing: border-box;
             border-radius: 20px;
+            position: relative;
         }
 
         main::before {
@@ -39,10 +40,10 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: calc(100% - 16px);
+            width: 100%;
+            height: calc(100vw - 16px);
             box-sizing: border-box;
-            height: calc(100vw - 32px);
-            border-radius: 20px;
+            border-radius: 12px;
             z-index: -1;
         }
 
@@ -67,12 +68,13 @@
             margin: 6px 3px;
             border-radius: 50px;
             font-size: 18px;
-            transition: all 0.3s;
+
         }
 
         nav ul li a:hover {
             background-color: #0243f1;
             color: #fff;
+            transition: all 0.3s;
         }
 
         /* dog */
@@ -191,7 +193,16 @@
             box-shadow: 15px 0 0 #010101;
         }
 
-        
+        .dog .body .spots {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 40px 40px 0 0;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            transform: translateZ(2px);
+        }
+
         .dog .body .head {
             position: absolute;
             width: 150px;
@@ -449,21 +460,22 @@
             border-radius: 50%;
         }
 
-        @media (max-height: 700px){
+        @media (max-height: 700px) {
             main::before {
                 display: none;
             }
         }
-            
+
         @media (max-width: 800px) {
-            main{
+            main {
                 min-height: 700px;
             }
 
-            h1{
+            h1 {
                 font-size: 40px;
             }
-            nav ul:nth-child(2){
+
+            nav ul:nth-child(2) {
                 display: none;
             }
         }
