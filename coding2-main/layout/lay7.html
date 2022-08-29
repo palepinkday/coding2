@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 100%;
+            margin: 0 auto;
+        }
+        #header{
+            width: 1200px;
+            height: 200px;
+            background-color: rgb(207, 237, 237);
+            margin: 0 auto;
+        }
+        #header .container1{
+            width: 1200px;
+            height: 200px;
+            background-color: rgb(207, 237, 237);
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #header .container1 .header1{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(198, 143, 200); 
+            float: left; 
+        }
+        #header .container1 .header2{
+            width: 1000px;
+            height: 100px;
+            background-color: rgb(140, 65, 125); 
+            float: left;    
+        }
+        #header .container1 .header3{
+            width: 1000px;
+            height: 100px;
+            background-color: rgb(69, 9, 57); 
+            float: left;    
+        }
+
+        
+        #nav{
+            width: 1200px;
+            height: 600px;
+            background-color: aqua;
+            margin: 0 auto;
+        }
+        #nav .container2{
+            width: 1200px;
+            height: 200px;
+            background-color: aqua;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #nav .container2 .nav1{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(233, 221, 89);
+            margin: 0 auto;
+            float: left;
+        }
+        #nav .container2 .nav2{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(179, 151, 41);
+            margin: 0 auto;
+            float: left;
+        }
+        #nav .container2 .nav3{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(106, 99, 20);
+            margin: 0 auto;
+            float: left;
+        }
+        #nav .container2 .nav4{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(50, 52, 3);
+            margin: 0 auto;
+            float: left;
+        }
+
+        #nav .container3{
+            width: 1200px;
+            height: 400px;
+            background-color: aqua;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #nav .container3 .nav1{
+            width:1200px;
+            height: 100px;
+            background-color: rgb(163, 116, 233);
+            margin: 0 auto;
+            float: left;
+        }
+        #nav .container3 .nav2{
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(131, 77, 185);
+            margin: 0 auto;
+            float: left;
+        }
+        #nav .container3 .nav3{
+            width: 1200px;
+            height: 100px;
+            background-color: rgb(115, 35, 146);
+            margin: 0 auto;
+            float: left;
+        }
+        #nav .container3 .nav4{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(86, 16, 99);
+            margin: 0 auto;
+            float: left;
+        }
+        #nav .container3 .nav5{
+            width: 600px;
+            height: 100px;
+            background-color: rgb(14, 1, 19);
+            margin: 0 auto;
+            float: left;
+        }
+
+
+        #content{
+            width: 1200px;
+            height: 400px;
+            background-color: rgb(41, 103, 103);
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        #content .section1{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(241, 146, 105);
+            margin: 0 auto;  
+            float: left;
+        }
+        #content .section2{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(213, 120, 54);
+            margin: 0 auto; 
+            float: left;    
+        }
+        #content .section3{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(171, 74, 9);
+            margin: 0 auto; 
+            float: left;   
+        }
+        #content .section4{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(213, 72, 16);
+            margin: 0 auto; 
+            float: left;  
+        }
+        #content .section5{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(145, 37, 4);
+            margin: 0 auto; 
+            float: left; 
+        }
+        #content .section6{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(55, 18, 2);
+            margin: 0 auto; 
+            float: left;  
+        }
+        #content .section7{
+            width: 600px;
+            height: 200px;
+            background-color: rgb(48, 202, 120);
+            margin: 0 auto; 
+            float: left; 
+        }
+        #content .section8{
+            width: 600px;
+            height: 200px;
+            background-color: rgb(13, 125, 28);
+            margin: 0 auto; 
+            float: left; 
+         
+        }
+      
+        #footer{
+            width:1200px;
+            height: 100px;
+            background-color: rgb(3, 34, 34);
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container1">
+                <div class="header1"></div>
+                <div class="header2"></div>
+                <div class="header3"></div>
+            </div>
+        </div>
+        <div id="nav">
+            <div class="container2">
+                <div class="nav1"></div>
+                <div class="nav2"></div>
+                <div class="nav3"></div>
+                <div class="nav4"></div>
+            </div>
+            <div class="container3">
+                <div class="nav1"></div>
+                <div class="nav2"></div>
+                <div class="nav3"></div>
+                <div class="nav4"></div>
+                <div class="nav5"></div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="section1"></div>
+            <div class="section2"></div>
+            <div class="section3"></div>
+            <div class="section4"></div>
+            <div class="section5"></div>
+            <div class="section6"></div>
+            <div class="section7"></div>
+            <div class="section8"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+    
+    
+</body>
+</html>
