@@ -10,24 +10,33 @@
     <style>
         body {
             padding: 0;
-            width: 100px;
+            width: 100%;
             height: 100vh;
             background: #0f0ff0;
+            color: #FFF;
         }
 
         .intro_menu {
-            background: ;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .intro_menu ul li {
+            color: #fff;
+        }
+
+        .intro_menu ul li a {
+            color: #fff;
         }
     </style>
 </head>
 
 <body>
     <main>
-        <div class="intro_menu">
+        <div class="intro_menu white">
             <ul>
-                <li>01.서치이펙트-include()<a href="searchEffect01.html"></a></li>
-                <li>01.서치이펙트-include()<a href="searchEffect02.html"></a></li>
-                <li>01.서치이펙트-include()<a href="searchEffect03.html"></a></li>
+                <li>01. 서치 이펙트 : include() / search() : 속성 검색 <a href="searchEffect01.html">GO</a></li>
+                <li>01. 서치 이펙트 : indexOf() : 속성 검색 <a href="searchEffect02.html">GO</a></li>
+                <li>01. 서치 이펙트 : charAt() : 첫 글자 검색 <a href="searchEffect03.html">GO</a></li>
             </ul>
         </div>
     </main>
@@ -237,10 +246,10 @@
             gl_Position = projectionMatrix * modelViewMatrix * vec4(newPos, 1.0);
         }
         </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
-
     <script>
         const fragment = document.querySelector("#fragment").textContent;
         const vertex = document.querySelector("#vertex").textContent;
@@ -265,7 +274,7 @@
             }
             setup() {
                 this.scene = new THREE.Scene();
-                this.renderer = new THREE.WebGLRenderer({ antialias: alpha: true });
+                this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
                 this.renderer.setSize(this.viewport.width, this.viewport.height);
                 this.renderer.setPixelRatio = window.devicePixelRatio;
                 this.container.appendChild(this.renderer.domElement);
