@@ -1,0 +1,37 @@
+{
+	"folders": [
+		{
+			"path": "class"
+		},
+		{
+			"path": "coding2-main"
+		},
+		{
+			"path": "css"
+		},
+		{
+			"path": "html"
+		},
+		{
+			"path": "javascript"
+		},
+		{
+			"path": "layout"
+		},
+		{
+			"path": "site"
+		},
+		{
+			"path": ".git"
+		},
+		{
+			"path": ".vscode"
+		},
+		{
+			"path": "assets"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "coding2-main"
+	}
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트: 요소선택 </title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="effect">
+                <li><a href="effect/searchEffect.html">검색효과</a></li>
+                <li><a href="effect/quizEffect.html">퀴즈효과</a></li>
+                <li><a href="effect/detaEffect.html">데이터 효과</a></li>
+                <li><a href="effect/mouseEffect01.html">마우스효과</a></li>
+                <li><a href="effect/sliderEffect01.html">슬라이스효과</a></li>
+                <li><a href="effect/parallaxEffect01.html">패렐랙스효과</a></li>
+                <li><a href="effect/gameEffect01.html">게임효과</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소선택</a></li>
+                <li><a href="laytag.html">구조관련요소</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">DOM(Document Object Model)</h2>
+            <p class="t_desc">
+                DOM을 <i>'문서 객체 모델'</i>이라고 하며 <i>document 객체</i>를 의미합니다.
+                DOM은 HTML요소(element)의 <i>선택, 생성, 삭제</i> 등을 위해 사용됩니다.
+            </p>
+
+            <h3 class="t_tit2">HTML문서를 작성했을 때 DOM의 구조</h3>
+            <p class="t_desc2">
+                HTML요소들은 노드(node)와 노드(node)가 연결된 Tree구조로 만들어 줍니다.
+                html, head, meta, title, body, h1, p와 같ㅇ느 태그 요소들을 '요소 노드'라고 하고 텍스트를 '텍스트 노드'라고 합니다.
+            </p>
+
+            <h3 class="t_tit2">요소선택</h3>
+            <h4 class="t_tit3"> &lt;요소를 직접 선택하는 메서드&gt;</h4>
+
+            <table class="t_table">
+                <thead>
+                    <tr>
+                        <td class="ce">메서드</td>
+                        <td class="ce">설명</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="ce">getElementById( )</td>
+                        <td class="ce">document.getElementBy<i>Id</i>('content')일 경우 HTML요소 중 <i>id속성</i>이 'content'인
+                            요소를 선택</td>
+                    </tr>
+                    <tr>
+                        <td class="ce">getElementByClassName( )</td>
+                        <td class="ce">document.getElementBy<i>Class</i>Name('menu')일 경우 HTML요소 중 <i>class명</i>이 'menu'인
+                            요소들을 선택 </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">getElementByTagName( )</td>
+                        <td class="ce">document.getElementBy<i>Tag</i>Name('ul')일 경우 HTML요소 중 <i>태그명</i>이 'ul'인 요소들을 선택
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">getElementByName( )</td>
+                        <td class="ce">document.getElementBy<i>Name</i>('txt')일 경우 HTML요소 중 <i>name명</i>이 'txt'인 요소들을 선택
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">querySelector( )</td>
+                        <td class="ce">요소의 선택방법이 css의 선택방법과 같습니다. 선택된 요소 중 <i>첫번째 요소</i>만 선택<br>
+                            document.querySelector('.lnb')<br>
+                            document.querySelector(div)<br>
+                            document.querySelector('#gnb li')
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="ce">querySelectorALl( )</td>
+                        <td class="ce">querySelector( )는 선택된 요소 중 첫 번째 요소만 선택하는 반면 querySelectorALl( )는 <i>모든 요소</i>를 선택
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            [예제]
+            <div class="t_code">
+                <pre><code>&lt;!DOCTYPE HTML&gt;
+&lt;html lang="ko"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;요소를 직접 선택하는 메서드&lt;/title&gt;
+        &lt;script&gt;
+            window.onload = function(){
+                var list1 = document.querySelector('#box1&gt;ul&gt;li');
+                var list2 = document.querySelectorAll('#box2&gt;ul&gt;li');
+                console. log(list1);
+                console. log(list2);
+                //list1.style.backgroud = "#ff6600";
+                //list2[0].style.backgroud = "#ccc";
+                //list2.item(1).style.backgroud = "#ddd";
+            };
+        &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id = "box1"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;내용1&lt;/li&gt;
+                &lt;li&gt;내용2&lt;/li&gt;
+                &lt;li&gt;내용3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div id="box2"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;내용4&lt;/li&gt;
+                &lt;li&gt;내용5&lt;/li&gt;
+                &lt;li&gt;내용6&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </div>
+            <div class="t_box">
+                [결과]<br>
+                var list1 = document.querySelector ("#box1 > ul > li")는 첫 번째 요소만 선택<br>
+                :내용1<br>
+                var list1 = document.querySelectorAll ("#box2 > ul > li")는 모든 요소 선택<br>
+                :내용4<br>
+                내용5<br>
+                내용6<br>
+            </div>
+
+
+
+
+
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+</body>
+
+</html>

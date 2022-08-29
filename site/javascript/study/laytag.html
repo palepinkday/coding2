@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구조관련요소</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    <style>
+        /* 구조태그 이용 */
+        #wrap {
+            font-size: 18px;
+            width: 1200px;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+            color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #header1 {
+            width: 100%;
+            height: 100px;
+            background-color: rgb(95, 207, 119);
+            padding: 40px 20px 30px 20px;
+            display: flex;
+            box-sizing: border-box;
+
+
+        }
+
+        #header1 h1 a {
+            text-decoration: none;
+            color: #fff;
+            padding-right: 100px;
+        }
+
+        #header1 .box {
+            color: #fff;
+        }
+
+        #nav {
+            padding-left: 30px;
+            color: #fff;
+        }
+
+        #nav ul li {
+            width: 100%;
+            list-style: none;
+            display: inline;
+            padding: 30px 30px 30px 30px;
+
+        }
+
+        #header1 li a {
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 0.3vw 1vw;
+            display: inline-block;
+
+        }
+
+        #container {
+            display: flex;
+            height: 480px;
+            background-color: rgb(95, 207, 119);
+        }
+
+        .container1 {
+            display: flex;
+            width: 80%;
+
+        }
+
+        .container1 .section1 {
+            border: 1px solid #fff;
+            width: 50%;
+            height: 480px;
+            padding-top: 20px;
+            box-sizing: border-box;
+
+
+        }
+
+        .container1 .section2 {
+            border: 1px solid #fff;
+            width: 50%;
+            height: 480px;
+            padding-top: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .container2 {
+            width: 20%;
+            height: 480px;
+
+        }
+
+        .container2 .artticle1 {
+            border: 1px solid #fff;
+            width: 100%;
+            height: 240px;
+            padding-top: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .container2 .aside {
+            border: 1px solid #fff;
+            height: 240px;
+            text-align: center;
+            color: #fff;
+            padding-top: 20px;
+            box-sizing: border-box;
+
+
+        }
+
+        #footer {
+            width: 100%;
+            height: 120px;
+            background-color: rgb(95, 207, 119);
+            text-align: center;
+            color: #fff;
+            line-height: 2;
+            padding-top: 20px;
+            box-sizing: border-box;
+
+        }
+
+        .table {}
+
+        .document>h2 {
+            color: #000;
+            font-size: 25px;
+            text-align-last: left;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="../index.html">Javascript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="effect">
+                <li><a href="effect/searchEffect.html">검색효과</a></li>
+                <li><a href="effect/quizEffect.html">퀴즈효과</a></li>
+                <li><a href="effect/detaEffect.html">데이터 효과</a></li>
+                <li><a href="effect/mouseEffect01.html">마우스효과</a></li>
+                <li><a href="effect/sliderEffect01.html">슬라이스효과</a></li>
+                <li><a href="effect/parallaxEffect01.html">패렐랙스효과</a></li>
+                <li><a href="effect/gameEffect01.html">게임효과</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수/전역변수</a></li>
+                <li><a href="element.html">요소선택</a></li>
+                <li><a href="laytag.html">구조관련요소</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+
+        <div class="document">
+            <h2>&lt;구조관련요소&gt;</h2>
+            <table class="t_table">
+                <colgroup>
+                    <col style="width: 5%">
+                    <col style="width: 5%">
+                    <col style="width: 37%">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td>요소유형</td>
+                        <td>태그명</td>
+                        <td>태그의 의미 및 특징</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="6">블록레벨요소</td>
+                        <td>&lt;header&gt;&lt;/header&gt;</td>
+                        <td>헤더 영역을 의미하는 태그, 제목이나 내비게이션, 검색등의 내용들을 포함<br>
+                            텍스트, 인라인 요소, 블록레벨 요소를 포함, &lt;header&gt;, &lt;footer&gt;태그는 포함할 수 없음</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt;&lt;/nav&gt;</td>
+                        <td>메뉴나 목차등을 정의해 주는 태그<br>
+                            텍스트, 인라인 요소, 블록레벨요소를 포함
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;section&gt;&lt;/section&gt;</td>
+                        <td>맥락이 같은 요소들을 주제별로 그룹화 해주는 태그, 섹션 주제에 대한 제목요소 &lt;h2&gt;~&lt;h6&gt;를 포함하는 것이 좋음<br>
+                            텍스트, 인라인요소, 블록레벨 요소 포함</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;article&gt;&lt;/article&gt;</td>
+                        <td>독립적으로 배포, 재사용 가능한 게시물, 뉴스기사, 블로그 포스팅등을 의미하는 태그, 제목요소 &lt;h2&gt;~&lt;h6&gt;를 포함하는 것이 좋음<br>
+                            텍스트, 인라인요소, 블록 레벨요소를 포함</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;aside&gt;&lt;/aside&gt;</td>
+                        <td>메인 콘텐츠와 직접적으로 관련이 없는 영역을 의미하는 태그, 오른쪽이나 왼쪽의 사이드 메뉴나 광고등의 영역으로 사용<br>
+                            텍스트, 인라인요소, 블록레벨 요소를 포함</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt;&lt;/footer&gt;</td>
+                        <td>푸터 영역을 의미하는 태그, 섹션 작성자나 저작권에 대한 정보, 관련된 문서의 링크를 포함<br>
+                            텍스트, 인란인요소, 즐록레벨요소를 포함, &lt;header&gt;, &lt;footer&gt;태그는 포함할 수 없음</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <br>
+        <div id="wrap">
+            <header id="header1">
+                <h1><a href="#">header 반응형웹</a></h1>
+                <div class="box">nav</div>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="#">menu01</a></li>
+                        <li><a href="#">menu02</a></li>
+                        <li><a href="#">menu03</a></li>
+                        <li><a href="#">menu04</a></li>
+                        <li><a href="#">menu05</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div class="container1">
+                    <section class="section1">
+                        <h2>section 콘텐츠그룹01</h2>
+                    </section>
+                    <section class="section2">
+                        <h2>section 콘텐츠그룹02</h2>
+                    </section>
+                </div>
+                <div class="container2">
+                    <article class="artticle1">
+                        <h2>article 주요기사</h2>
+                    </article>
+                    <aside class="aside">
+                        aside 광고
+                    </aside>
+                </div>
+
+            </div>
+
+            <footer id="footer">
+                <div>footer</div>
+                <address>
+                    palepinkday@gmail.com
+                </address>
+                <p>
+                    copyright ⓒ All right revered
+                </p>
+            </footer>
+        </div>
+    </main>
+
+</body>
+
+</html>
