@@ -13,7 +13,7 @@
         /* 구조태그 이용 */
         #wrap {
             font-size: 18px;
-            width: 1200px;
+            width: 100%;
             margin: 0;
             padding: 0;
 
@@ -41,7 +41,10 @@
             display: flex;
             box-sizing: border-box;
 
+        }
 
+        .h__1 {
+            width: 400px;
         }
 
         #header1 h1 a {
@@ -55,6 +58,7 @@
         }
 
         #nav {
+            width: 100%;
             padding-left: 30px;
             color: #fff;
         }
@@ -254,7 +258,9 @@
         <br>
         <div id="wrap">
             <header id="header1">
-                <h1><a href="#">header 반응형웹</a></h1>
+                <div class="h__1">
+                    <h1><a href="#">header 반응형웹</a></h1>
+                </div>
                 <div class="box">nav</div>
                 <nav id="nav">
                     <ul>
