@@ -86,6 +86,21 @@ a {
     border-radius: 20px;
 }
 
+/* layout */
+#header {
+    z-index: 2000;
+}
+
+#main {
+    position: relative;
+    z-index: 1000;
+}
+
+#footer {
+    position: relative;
+    z-index: 3000;
+}
+
 /* header */
 #header {
 
@@ -380,6 +395,26 @@ a {
     }
 }
 
+@keyframes opacityOut {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacityIn {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 1100px) {
     .modal__box .title {
         overflow: hidden;
@@ -398,7 +433,7 @@ a {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #header {
         width: 100%;
         text-align: center;
