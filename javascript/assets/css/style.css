@@ -203,6 +203,12 @@ body {
     cursor: help;
 }
 
+.sample .table .left tr td {
+    text-align: left;
+}
+
+
+
 .sample .box {
     background: #f5f5f5;
     padding: 10px;
