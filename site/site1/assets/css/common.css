@@ -9,18 +9,18 @@
     color: #fff;
     position: absolute;
     padding: 20px 40px;
-    left: -400;
+    left: -400px;
     top: 5px;
 }
 
-#skip a :active,
-#skip a :focus {
+#skip a:active,
+#skip a:focus {
     left: 5px;
 }
 
 /* 컨테이너*/
 .container {
-    width: 1160;
+    width: 1160px;
     padding: 0 20px;
     margin: 0 auto;
     min-width: 1160px;

@@ -86,7 +86,7 @@ address {
 
 /* 이미지 초기화 */
 img {
-    width: 0;
+    width: 100%;
     vertical-align: top;
 }
 

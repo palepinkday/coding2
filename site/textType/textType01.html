@@ -163,47 +163,74 @@
             text-underline-position: under;
             color: #666;
         }
+
+        .text__top {
+            display: flex;
+        }
+
+        .text__bottom {
+            display: flex;
+        }
+
+        .section>h2 {
+            margin-bottom: 60px;
+        }
     </style>
 
 </head>
 
 <body>
-    <section id="textTyp" class="text__wrap nexon section">
-        <span>텍스트유형</span>
-        <h2>스크립트 익히는 방법</h2>
+    <section id="textType" class="text__wrap nexon section">
+        <span>미술관 나들이</span>
+        <h2>유명한 국내 국외 미술관</h2>
         <div class="text__inner container">
-            <div class="text t1">
-                <h3 class="text__title">검색 이펙트</h3>
-                <p class="text__desc">자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들 수 있습니다.</p>
-                <a class="text_btn" href="/">더보기</a>
+            <div class="text__top">
+                <div class="text t1">
+                    <h3 class="text__title">경기도 미술관 </h3>
+                    <p class="text__desc">경기도의 주요 정치, 사회, 문화 이슈를 주제로
+                        한 <경기 아트 프로젝트전>, 현대미술의 다양
+                            한 형식과 내용을 조명하는 <동시대 현장>, 미</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">국립현대미술관</h3>
+                    <p class="text__desc">국립현대미술관은 미술작품 및 자료의 수집·
+                        보존·전시·조사 및 연구와 이에 관한 국제교
+                        류 및 미술활동의 보급을 통한 국민의 미술문</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">K현대미술관</h3>
+                    <p class="text__desc">조명이 반짝이는 인더스트리얼풍의 미술관으
+                        로 다양한 현대 예술 전시가 정기적으로 열립
+                        니다.</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
             </div>
-            <div class="text t2">
-                <h3 class="text__title">퀴즈 이펙트</h3>
-                <p class="text__desc">자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들 수 있습니다.</p>
-                <a class="text_btn" href="/">더보기</a>
-            </div>
-            <div class="text t3">
-                <h3 class="text__title">마우스 이펙트</h3>
-                <p class="text__desc">자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들 수 있습니다.</p>
-                <a class="text_btn" href="/">더보기</a>
-            </div>
-            <div class="text t4">
-                <h3 class="text__title">슬라이드 이펙트</h3>
-                <p class="text__desc">자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들 수 있습니다.</p>
-                <a class="text_btn" href="/">더보기</a>
-            </div>
-            <div class="text t5">
-                <h3 class="text__title">패럴랙스 이펙트</h3>
-                <p class="text__desc">자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들 수 있습니다.</p>
-                <a class="text_btn" href="/">더보기</a>
-            </div>
-            <div class="text t6">
-                <h3 class="text__title">게임 이펙트</h3>
-                <p class="text__desc">자바스크립트의 기본 메서드를 통해 검색 스크립트를 완성하는 튜토리얼입니다. 메서드를 통해 쉽게 검색을 만들 수 있습니다.</p>
-                <a class="text_btn" href="/">더보기</a>
+            <div class="text__bottom">
+                <div class="text t4">
+                    <h3 class="text__title">리움미술관</h3>
+                    <p class="text__desc">리움미술관은 서울특별시 용산구 한남동에 위
+                        치한 사립미술관으로 2004년 10월 19일 개
+                        관했다. 삼성그룹의 창립자 이병철의 수집품에</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">호암미술관</h3>
+                    <p class="text__desc">호암미술관 은 대한민국 경기도 용인시 처인
+                        구 포곡읍 에버랜드로 562번길 38에 있는 미
+                        술관이다. 삼성그룹의 창업자인 이병철이 수집</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">서울시립 남서울미술관</h3>
+                    <p class="text__desc">남서울미술관은 역사의 정취가 가득한, 오래
+                        머물고 싶은 미술관입니다. 미술관이 둥지를
+                        튼 이곳은 대한제국(1897~1910) 시절 벨</p>
+                    <a class="text_btn" href="/">더보기</a>
+                </div>
             </div>
         </div>
-
     </section>
 </body>
 

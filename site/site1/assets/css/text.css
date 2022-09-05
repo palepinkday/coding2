@@ -81,3 +81,17 @@
     text-underline-position: under;
     color: #666;
 }
+
+
+
+.text__top {
+    display: flex;
+}
+
+.text__bottom {
+    display: flex;
+}
+
+.section>h2 {
+    margin-bottom: 60px;
+}

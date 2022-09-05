@@ -38,13 +38,14 @@
 }
 
 .image__btn {
-    font-size: 16px;
-    color: #fff;
-    background-color: #b45a30;
+    font-style: 16px;
+    font-weight: 300;
+    color: #000;
+    background-color: #FFD14A;
     padding: 10px 20px;
     display: inline-block;
 }
 
-.image__btn.yellow {
-    background-color: #b59140;
+.image__btn.orange {
+    background-color: #c5740a;
 }
