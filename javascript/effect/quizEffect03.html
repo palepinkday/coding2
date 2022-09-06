@@ -342,6 +342,7 @@
             <div class="result"></div>
           </div>
         </div>
+
         <div class="quiz">
           <span class="quiz__type"></span>
           <h2 class="quiz__question">
@@ -393,6 +394,7 @@
       const quizResult = document.querySelectorAll(".quiz__answer .result"); //정답 결과
       const quizInput = document.querySelectorAll(".quiz__answer .input"); //사용자 정답
       const quizView = document.querySelectorAll(".quiz__view"); //강아지
+
       //문제정보   const obj =[{},{},{}]
       const quizInfo = [
         {
@@ -466,6 +468,7 @@
         },
       ];
       //문제 출력
+      //   const obj =[{},{},{},{}]
       //quizType[0].textContent = quizInfo[0].answerType;
       //quizType[1].textContent = quizInfo[1].answerType;
       //quizType[2].textContent = quizInfo[2].answerType;
@@ -484,7 +487,7 @@
       //quizResult[3].textContent = quizInfo[3].answerResult;
 
       //for문
-      //for(let i=0; i<4; i++){ //i<quizInfo.length;
+      //for(let i=0; i<4; i++)//i<quizInfo.length;{
       //    quizType[i].textContent = quizInfo[i].answerType;
       //    quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
       //    quizAsk[i].textContent = quizInfo[i].answerAsk;
@@ -532,7 +535,7 @@
       quizConfirm.forEach((btn, num) => {
         btn.addEventListener("click", () => {
           //사용자정답
-          const userWord = quizInput[num].value.toLowerCase().trim();
+          const userWord = quizInput[num].value.toLowerCase().trim(); //사용자 정답input값,소문자 공백제거
           //console.log(userWord)
           //console.log(quizInfo[num].answerResult)
 
@@ -540,15 +543,15 @@
           if (userWord == quizInfo[num].answerResult) {
             //정답
             //alert("정답")
-            quizView[num].classList.add("like");
-            quizConfirm[num].style.display = "none";
+            quizView[num].classList.add("like"); //읽어서 더해줌
+            quizConfirm[num].style.display = "none"; //버튼없애기
           } else {
             //오답
             //alert("오답")
-            quizView[num].classList.add("dislike");
-            quizConfirm[num].style.display = "none";
-            quizResult[num].style.display = "block";
-            quizInput[num].style.display = "block";
+            quizView[num].classList.add("dislike"); //강아지보이고
+            quizConfirm[num].style.display = "none"; //버튼없애기
+            quizResult[num].style.display = "block"; //정답결과가 보이고
+            quizInput[num].style.display = "block"; //입력한input박스도 보임
           }
         });
       });
