@@ -13,7 +13,7 @@
 /* layout */
 #wrap {
   width: 1000px;
-  height: 1000px;
+
   margin: 0 auto;
 }
 /* header */
@@ -27,15 +27,23 @@
 #header h1 img {
   width: 130px;
 }
-
+/* nav */
 #header .nav {
   float: right;
+  width: 600px;
+  margin-top: 25px;
+  background-color: #fff;
 }
 #header .nav ul {
+  background-color: #fff;
 }
 #header .nav li {
   list-style: none;
   float: left;
+  width: 25%;
+  text-align: center;
+  position: relative;
+  background-color: #fff;
 }
 
 #header .nav li a {
@@ -44,13 +52,53 @@
   font-size: 17px;
   font-weight: 600;
   color: #333;
-  padding: 40px 20px;
+  padding: 10px;
+  background-color: #fff;
 }
-
+#header .nav li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#header .nav li ul.submenu {
+  position: absolute;
+  background-color: #fff;
+  display: none;
+}
+#header .nav li ul.submenu li {
+  width: 100%;
+  background-color: #fff;
+}
+#header .nav li ul.submenu li a {
+  background-color: #fff;
+}
+#header .nav li ul.submenu li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 #slider {
+  width: 1000px;
+  height: 300px;
+  text-align: center;
+  overflow: hidden;
 }
-
-#slider img {
+.slideList {
+  position: relative;
+  width: 1000px;
+  height: 300px;
+}
+.slideList .slideImg {
+  width: 100%;
+  position: relative;
+}
+.slideList .slideImg h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px 30px;
+  border-radius: 25px;
+}
+.slideList .slideImg img {
+  display: block;
   width: 100%;
 }
 #content1 {

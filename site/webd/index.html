@@ -14,17 +14,63 @@
         </h1>
         <nav class="nav" class="clearfix">
           <ul>
-            <li><a href="#">즐길거리</a></li>
-            <li><a href="#">요금/우대혜택</a></li>
-            <li><a href="#">참여프로그램</a></li>
-            <li><a href="#">이용가이드</a></li>
-            <li><a href="#">소통서비스</a></li>
+            <!-- li에 float left를 썼을 경우 
+              ul과 nav중 clearfix주는 위치 확인필요-->
+            <li>
+              <a href="#">즐길거리</a>
+              <ul class="submenu">
+                <li><a href="#">submenu-1</a></li>
+                <li><a href="#">submenu-2</a></li>
+                <li><a href="#">submenu-3</a></li>
+                <li><a href="#">submenu-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">요금/우대혜택</a>
+              <ul class="submenu">
+                <li><a href="#">submenu-1</a></li>
+                <li><a href="#">submenu-2</a></li>
+                <li><a href="#">submenu-3</a></li>
+                <li><a href="#">submenu-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">참여프로그램</a>
+              <ul class="submenu">
+                <li><a href="#">submenu-1</a></li>
+                <li><a href="#">submenu-2</a></li>
+                <li><a href="#">submenu-3</a></li>
+                <li><a href="#">submenu-4</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">이용가이드</a>
+              <ul class="submenu">
+                <li><a href="#">submenu-1</a></li>
+                <li><a href="#">submenu-2</a></li>
+                <li><a href="#">submenu-3</a></li>
+                <li><a href="#">submenu-4</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </header>
       <!-- header -->
       <section id="slider">
-        <img src="1111/img/lo_1.jpg" alt="메리크리스마스" />
+        <div class="slideList">
+          <div class="slideImg">
+            <h2>이미지1</h2>
+            <img src="1111/img/lo_1.jpg" alt="메리크리스마스" />
+          </div>
+          <div class="slideImg">
+            <h2>이미지2</h2>
+            <img src="1111/img/lo_1_1.jpg" alt="금주의 공연" />
+          </div>
+          <div class="slideImg">
+            <h2>이미지3</h2>
+            <img src="1111/img/lo_1_2.jpg" alt="페스티벌" />
+          </div>
+        </div>
       </section>
 
       <section id="content1" class="clearfix">
@@ -71,7 +117,29 @@
         </address>
       </footer>
     </div>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/custom.js"></script>
+    <script>
+      $(".nav>ul>li").mouseover(function () {
+        $(this).find(".submenu").stop().slideDown(200);
+        // $(this).find(".submenu").stop().show();
+      });
+      $(".nav>ul>li").mouseout(function () {
+        $(this).find(".submenu").stop().slideUp(200);
+        // $(this).find(".submenu").stop().hide();
+      });
+    </script>
+    <script>
+      var currentIndex = 0;
+      setInterval(function () {
+        if (currentIndex < 2) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        var slidePosition = currentIndex * -300 + "px";
+        $(".slideList").animate({ top: slidePosition }, 400);
+      }, 3000);
+    </script>
   </body>
 </html>
