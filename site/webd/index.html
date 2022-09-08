@@ -74,9 +74,73 @@
       </section>
 
       <section id="content1" class="clearfix">
-        <article class="notice">????</article>
+        <article class="notice">
+          <ul>
+            <li class="active">
+              <a href="#">롯데월드 소식</a>
+              <ul class="'clearfix">
+                <li>
+                  <a href="#"
+                    >1. 첫번째 목록입니다.첫번째 목록입니다.첫번째
+                    목록입니다.</a
+                  ><span>2019.05.03</span>
+                </li>
+                <li>
+                  <a href="#"
+                    >1. 첫번째 목록입니다.첫번째 목록입니다.첫번째
+                    목록입니다.</a
+                  ><span>2019.05.03</span>
+                </li>
+                <li>
+                  <a href="#"
+                    >1. 첫번째 목록입니다.첫번째 목록입니다.첫번째
+                    목록입니다.</a
+                  ><span>2019.05.03</span>
+                </li>
+                <li>
+                  <a href="#"
+                    >1. 첫번째 목록입니다.첫번째 목록입니다.첫번째
+                    목록입니다.</a
+                  ><span>2019.05.03</span>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">뉴스&middot;공지</a>
+              <ul>
+                <li>
+                  <a href="#"
+                    >2. 두번째 목록입니다.두번째 목록입니다.두번째
+                    목록입니다.</a
+                  >2019.05.03
+                </li>
+                <li>
+                  <a href="#"
+                    >2. 두번째 목록입니다.두번째 목록입니다.두번째
+                    목록입니다.</a
+                  >2019.05.03
+                </li>
+                <li>
+                  <a href="#"
+                    >2. 두번째 목록입니다.두번째 목록입니다.두번째
+                    목록입니다.</a
+                  >2019.05.03
+                </li>
+                <li>
+                  <a href="#"
+                    >2. 두번째 목록입니다.두번째 목록입니다.두번째
+                    목록입니다.</a
+                  >2019.05.03
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#" class="more">더보기 +</a>
+        </article>
+
         <article class="ad">
-          <img src="1111/img/lo_2.jpg" alt="온종일혜택" />
+          <a href=""><img src="1111/img/lo_2.jpg" alt="온종일혜택" /></a>
         </article>
       </section>
 
@@ -117,8 +181,14 @@
         </address>
       </footer>
     </div>
+    <!-- popup -->
+    <div class="layer">
+      <h2>타이틀</h2>
+      <a href="#" class="close">닫기</a>
+    </div>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/custom.js"></script>
+    <!-- <script src="js/custom.js"></script> -->
     <script>
       $(".nav>ul>li").mouseover(function () {
         $(this).find(".submenu").stop().slideDown(200);
@@ -140,6 +210,38 @@
         var slidePosition = currentIndex * -300 + "px";
         $(".slideList").animate({ top: slidePosition }, 400);
       }, 3000);
+    </script>
+    <script>
+      var tabMenu = $(".notice");
+
+      tabMenu.find("ul>li>ul").hide();
+      tabMenu.find("ul>li.active>ul").show();
+
+      function tabLIst(e) {
+        e.preventDefault();
+        // #때문에 글이 위로 올라가는 것을 막아줌
+        var target = $(this);
+        target
+          .next()
+          .show()
+          .parent("li")
+          .addClass("active")
+          .siblings("li")
+          .removeClass("active")
+          .find("ul")
+          .hide();
+      }
+
+      tabMenu.find("ul>li>a").click(tabLIst).focus(tabLIst);
+    </script>
+
+    <script>
+      $(".ad").click(function () {
+        $(".layer").css("display", "block");
+      });
+      $(".ad").click(function () {
+        $(".layer .close ").css("display", "none");
+      });
     </script>
   </body>
 </html>

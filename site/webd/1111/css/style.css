@@ -31,8 +31,10 @@
 #header .nav {
   float: right;
   width: 600px;
-  margin-top: 25px;
+  margin-top: 40px;
   background-color: #fff;
+  z-index: 100;
+  position: relative;
 }
 #header .nav ul {
   background-color: #fff;
@@ -62,7 +64,6 @@
   position: absolute;
   background-color: #fff;
   display: none;
-  z-index: 100;
 }
 #header .nav li ul.submenu li {
   width: 100%;
@@ -109,9 +110,60 @@
   float: left;
   width: 49%;
   height: 200px;
-  background-color: #ccc;
   margin-right: 2%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
 }
+.notice ul {
+}
+.notice ul li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+.notice ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #999;
+}
+.notice ul li.active a {
+  color: #000;
+}
+.notice ul li ul {
+  position: absolute;
+  left: 30px;
+  top: 60px;
+}
+.notice ul li ul li {
+  list-style: none;
+  width: 95%;
+  padding: 5px 0;
+}
+.notice ul li ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+  float: left;
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notice ul li ul li span {
+  float: right;
+  width: 20%;
+}
+.notice .more {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  text-decoration: none;
+}
+
 .ad {
   float: left;
   width: 49%;
@@ -178,4 +230,27 @@
 #footer p {
   text-transform: uppercase;
   padding: 20px 0;
+}
+/* 레이어 */
+.layer {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background: #ccc;
+  border: 2px solid #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+.layer h2 {
+  padding: 20px;
+  font-size: 30px;
+}
+.layer .close {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
 }
