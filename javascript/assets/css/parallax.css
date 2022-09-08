@@ -169,6 +169,7 @@ li {
   border-radius: 50%;
   position: relative;
   margin-left: 2rem;
+  z-index: 10000;
 }
 
 .modal__box .title .dot::before {
