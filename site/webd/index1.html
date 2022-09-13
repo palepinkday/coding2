@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>JUST 롯데월드</title>
-    <link rel="stylesheet" href="1111/css/style.css" />
+    <link rel="stylesheet" href="1111/css/style1.css" />
   </head>
 
   <body>
@@ -202,19 +202,21 @@
         // $(this).find(".submenu").stop().hide();
       });
     </script>
-
+    <!-- 
     <script>
+      var slideCount = $(".slideImg").length;
       var currentIndex = 0;
+      var slidePosition;
       setInterval(function () {
-        if (currentIndex < 2) {
+        if (currentIndex < slideCount - 1) {
           currentIndex++;
         } else {
           currentIndex = 0;
         }
-        var slidePosition = currentIndex * -300 + "px";
-        $(".slideList").animate({ top: slidePosition }, 400);
+        slidePosition = currentIndex * -1000 + "px";
+        $(".slideList").animate({ left: slidePosition }, 400);
       }, 3000);
-    </script>
+    </script> -->
 
     <script>
       var tabMenu = $(".notice");
