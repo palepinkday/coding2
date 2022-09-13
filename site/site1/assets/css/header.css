@@ -1,0 +1,45 @@
+#headerType {
+  width: 1920px;
+  height: 100px;
+  margin: 0 auto;
+}
+.header__inner {
+  display: flex;
+  text-align: center;
+}
+.header__logo {
+  width: 30%;
+  padding: 30px;
+}
+.header__logo a {
+  font-size: 30px;
+  font-weight: bold;
+}
+.header__logo em {
+  font-size: 18px;
+  font-weight: normal;
+  padding-left: 20px;
+}
+.header__menu {
+  width: 40%;
+  margin-top: 40px;
+}
+.header__menu ul {
+  display: flex;
+}
+.header__menu ul li {
+  width: 25%;
+}
+.header__menu ul li a {
+  font-size: 16px;
+}
+.header__member {
+  width: 20%;
+  padding: 40px;
+}
+.header__member a {
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: 1px solid;
+}
