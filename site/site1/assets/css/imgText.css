@@ -1,0 +1,38 @@
+@media (width: 960px) {
+  .imgText__innner {
+    flex-wrap: wrap;
+  }
+  .imgText__txt p {
+  }
+  .imgText__innner > div.imgText__txt {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+  .imgText__innner > div.imgText__txt ul {
+    display: none;
+  }
+  .imgText__innner > div.imgText__img {
+    width: 49%;
+  }
+}
+@media (width: 600px) {
+  .imgText__txt {
+  }
+  .imgText__txt h3 {
+    font-size: 30px;
+  }
+  .imgText__txt p {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .imgText__txt;
+}
+
+.section {
+  padding: 80px 0;
+}
+.section h2 {
+}
+.section p {
+}
