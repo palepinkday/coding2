@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>마우스 이펙트</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <style>
-        body {
-            padding: 0;
-            width: 100%;
-            height: 100vh;
-            background: #0f0ff0;
-            color: #FFF;
-        }
+      body {
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(
+          200deg,
+          rgba(93, 218, 207, 0.4),
+          rgba(64, 62, 131, 0.5),
+          rgba(255, 124, 244, 0.5)
+        );
+        color: #fff;
+      }
 
-        .intro_menu {
-            background: rgba(255, 255, 255, 0.1);
-        }
+      .intro_menu {
+        background: rgba(255, 255, 255, 0.1);
+      }
 
-        .intro_menu ul li {
-            color: #fff;
-        }
+      .intro_menu ul li {
+        color: #fff;
+      }
 
-        .intro_menu ul li a {
-            color: #fff;
-        }
+      .intro_menu ul li a {
+        color: #fff;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
-</body>
-
+  <body>
+    <main>
+      <div class="intro_menu white">
+        <ul>
+          <li>
+            01. 마우스 이펙트 :
+            <a href="mouseEffect01.html">Go</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <canvas id="webgl-canvas"></canvas>
+  </body>
 </html>
