@@ -22,17 +22,18 @@
 
     <!-- CSS(섹션별) -->
     <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/slider.css" />
     <link rel="stylesheet" href="assets/css/card.css" />
     <link rel="stylesheet" href="assets/css/image.css" />
     <link rel="stylesheet" href="assets/css/text.css" />
     <link rel="stylesheet" href="assets/css/imgText.css" />
     <link rel="stylesheet" href="assets/css/banner.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
 
-    <style>
-  
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/swiper.css" />
 
-   
-    </style>
+    <style></style>
   </head>
 
   <body>
@@ -70,18 +71,23 @@
     <!-- //headerType -->
 
     <main id="mainType">
-
       <section id="sliderType" class="slider__wrap">
-        <h2 class ="blind">슬라이드</h2>
+        <h2 class="blind">슬라이드</h2>
         <div class="slider__inner">
-          <img class="slider__img" src="assets/img/slider_bg01.jpg" alt="">
+          <!-- <div class ="slider__inner" -->
+          <!-- <img class="slider__img" src="assets/img/slider_bg01.jpg" alt="">
             <div class="slider__arrow">
                  <a href="#" class=""><span>이전이미지</span></href>
                     <a href="#"><span>다음이미지</span></href>
             </div>
         <div class="slider__dot">
+        
 
-        </div>
+        </div> -->
+
+          <div class="swiper-pagination"></div>
+
+          ??????
         </div>
       </section>
       <!-- //sliderType -->
@@ -355,5 +361,9 @@
       </div>
     </footer>
     <!-- //footerType -->
+    <script src="assets/js/swiper.min.js"></script>
+    <script>
+      var Swiper = new Swiper("");
+    </script>
   </body>
 </html>
