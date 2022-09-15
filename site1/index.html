@@ -66,6 +66,11 @@
         <div class="header__member">
           <a href="#">로그인</a>
         </div>
+        <div class="header__ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
     <!-- //headerType -->
@@ -363,7 +368,48 @@
     <!-- //footerType -->
     <script src="assets/js/swiper.min.js"></script>
     <script>
-      var Swiper = new Swiper("");
+      var Swiper = new Swiper(".my");
+
+
+      const btnStop = document.querySelector(.);
+      const btnStart = document.querySelector(.);
+      const btnHam = document.querySelector();
+      const btnMenu = document.querySelector();
+      const btnMenuList = document.querySelector();
+
+      btnStop.addEventListener("click", () => {
+        swiper.autoplay.stop();
+        btnStart.style.display = "block";
+        btnStop.style.display = "none";
+      });
+      btnStart.addEventListener("click", () => {
+        swiper.autoplay.start();
+        btnStart.style.display = "none";
+        btnStop.style.display = "block";
+      });
+
+      btnHam.addEventListener("click", () => {
+        btnHam.classList.toggle("active");
+        btnHam.classList.toggle("active");
+        document.body.classList.toggle("fixed");
+      });
+
+      btnMenuList
+        list.addEventListener("click", () => {
+        btnMenuList.classList.remove("fixed");
+        btnMenuList.classList.remove("active");
+        document.body.classList.remove("active");
+      });
+
+
+      window.addEventListener("resize", () => {
+        let width = window.innerWidth;
+        if (width > 1300) {
+          document.body.classList.remove("fixed");
+          btnMenu.classList.remove("active");
+          btnHam.classList.remove("active");
+        }
+      });
     </script>
   </body>
 </html>
