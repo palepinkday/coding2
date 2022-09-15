@@ -12,43 +12,43 @@ body {
 }
 
 body.img01 {
-  background: #000 url(../img/effect_bg01-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg011-min.jpg) no-repeat center / cover;
 }
 
 body.img02 {
-  background: #000 url(../img/effect_bg02-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg12-min.jpg) no-repeat center / cover;
 }
 
 body.img03 {
-  background: #000 url(../img/effect_bg03-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg13-min.jpg) no-repeat center / cover;
 }
 
 body.img04 {
-  background: #000 url(../img/effect_bg04-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg14-min.jpg) no-repeat center / cover;
 }
 
 body.img05 {
-  background: #000 url(../img/effect_bg05-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg15-min.jpg) no-repeat center / cover;
 }
 
 body.img06 {
-  background: #000 url(../img/effect_bg06-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg16-min.jpg) no-repeat center / cover;
 }
 
 body.img07 {
-  background: #000 url(../img/effect_bg07-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg17-min.jpg) no-repeat center / cover;
 }
 
 body.img08 {
-  background: #000 url(../img/effect_bg08-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg18-min.jpg) no-repeat center / cover;
 }
 
 body.img09 {
-  background: #000 url(../img/effect_bg09-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg19-min.jpg) no-repeat center / cover;
 }
 
 body.img10 {
-  background: #000 url(../img/effect_bg10-min-min.jpg) no-repeat center / cover;
+  background: #000 url(../img/effect_bg20-min.jpg) no-repeat center / cover;
 }
 
 body::after {
