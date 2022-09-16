@@ -36,6 +36,9 @@ li {
   background: rgba(69, 71, 100, 0.321);
   border-radius: 20px;
 }
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 /* layout */
 #header {
@@ -61,14 +64,13 @@ li {
   position: absolute;
   left: 0;
   top: 0;
-  display: none;
 }
 
 #header h1 {
   display: inline-block;
   font-weight: 300;
   margin-bottom: 10px;
-  border-bottom: 1px dashed #fff;
+  border-bottom: 2px dashed #fff;
 }
 
 #header p {
@@ -92,7 +94,7 @@ li {
 
 #header li.active a {
   background-color: #fff;
-  color: #33377d;
+  color: #000;
 }
 
 /* footer */
@@ -116,7 +118,7 @@ li {
   border-radius: 50px;
   display: inline-block;
   padding: 10px 20px;
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   cursor: pointer;

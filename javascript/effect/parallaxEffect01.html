@@ -1,174 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>01</title>
+    <title>parallax01</title>
     <link rel="stylesheet" href="../assets/css/parallax.css" />
     <link rel="stylesheet" href="../assets/css/dracula.css" />
-    <link
-      href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css"
-      rel="stylesheet"
-    />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
     <style>
-      /* parallrax nav */
-      #parallax__nav {
-        position: fixed;
-        margin: 20px;
-        top: 20px;
-        z-index: 10000;
-        background-color: rgba(0, 0, 0, 0.4);
-        padding: 20px 30px;
-        border-radius: 50px;
-      }
-      #parallax__nav li {
-        display: inline;
-        margin: 0 5px;
-      }
-      #parallax__nav li a {
-        display: inline-block;
-        height: 30px;
-        padding: 5px;
-        text-align: center;
-        line-height: 30px;
-      }
-      #parallax__nav li.active a {
-        background: #fff;
-        color: #000;
-        border-radius: 20px;
-        box-sizing: content-box;
-      }
-      #parallax__cont {
-        max-width: 1600px;
-        width: 98%;
-        margin: 0 auto;
-        /* background-color: rgba(255, 255, 255, 0.1); */
-      }
-      .parallax__item {
-        width: 1000px;
-        max-width: 70vw;
-        margin: 30vw auto;
-        /* background-color: rgba(255, 255, 255, 0.3); */
-        text-align: left;
-        margin-right: 0;
-        position: relative;
-        padding-top: 15vw;
-      }
-      .content__item:nth-child(even) {
-        margin-left: 0;
-        text-align: right;
-      }
-      .content__item__num {
-        font-size: 35vw;
-        font-family: "Lato";
-        font-weight: 100;
-        position: absolute;
-        left: -5vw;
-        top: -20vw;
-        opacity: 0.07;
-        z-index: -2;
-      }
-      .content__item:nth-child(even) .content__item__num {
-        left: auto;
-        right: -5vw;
-      }
-      .content__item__title {
-        font-weight: 400;
-        text-transform: capitalize;
-      }
-      .content__item__imgWrap {
-        width: 100%;
-        padding-bottom: 56.25%;
-        background: #000;
-        position: relative;
-        overflow: hidden;
-      }
-      .content__item__img {
-        background: url(../assets/img/effect_bg01-min.jpg);
-        position: absolute;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 110%;
-        height: 110%;
-        left: -5%;
-        top: -5%;
-        filter: saturate(0%);
-        transition: all 1s;
-      }
-      .content__item:nth-child(1).content__item__img {
-        background-image: url(../assets/img/effect_bg01-min.jpg);
-      }
-      .content__item:nth-child(2).content__item__img {
-        background-image: url(../assets/img/effect_bg02-min.jpg);
-      }
-      .content__item:nth-child(3).content__item__img {
-        background-image: url(../assets/img/effect_bg03-min.jpg);
-      }
-      .content__item:nth-child(4).content__item__img {
-        background-image: url(../assets/img/effect_bg04-min.jpg);
-      }
-      .content__item:nth-child(5).content__item__img {
-        background-image: url(../assets/img/effect_bg05-min.jpg);
-      }
-      .content__item:nth-child(6).content__item__img {
-        background-image: url(../assets/img/effect_bg06-min.jpg);
-      }
-      .content__item:nth-child(7).content__item__img {
-        background-image: url(../assets/img/effect_bg07-min.jpg);
-      }
-      .content__item:nth-child(8).content__item__img {
-        background-image: url(../assets/img/effect_bg07-min.jpg);
-      }
-      .content__item:nth-child(9).content__item__img {
-        background-image: url(../assets/img/effect_bg01-min.jpg);
-      }
-      .content__item__desc {
-        font-size: 4vw;
-        line-height: 1.4;
-        margin-top: -5vw;
-        margin-left: -4vw;
-        word-break: keep-all;
-      }
-      #parallax__info {
-        position: fixed;
-        left: 20px;
-        bottom: 20px;
-        z-index: 2000;
-        background-color: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        padding: 20px;
-        border-radius: 10px;
-      }
-      #parallax__info .scroll li {
-      }
+      /* parallax__nav */
+            #parallax__nav {
+                position: fixed;
+                right: 20px;
+                top: 20px;
+                z-index: 3000;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding: 20px 20px;
+                border-radius: 50px;
+            }
 
-      @media (max-width: 800px) {
-        #parallax__nav {
-          padding: 10px;
-          left: auto;
-          left: 10px;
-          top: 10px;
-          border-radius: 5px;
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-        #parallax__nav li {
-          display: block;
-          margin: 5px;
-        }
-        #parallax__nav li a {
-          font-size: 14px;
-          padding: 5px;
-          border-radius: 5px;
-          height: auto;
-          line-height: 1;
-        }
-        #parallax__info {
-        }
-      }
+            #parallax__nav ul li {
+                display: inline;
+                margin: 0 px;
+            }
+
+            #parallax__nav ul li a {
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                padding: 5px 50px;
+                text-align: center;
+            }
+
+            #parallax__nav ul li.active a {
+                background: #fff;
+                color: #000;
+                border-radius: 20px;
+                box-sizing: content-box;
+               
+            }
+
+            #parallax__cont {
+                max-width: 1600px;
+                width: 98%;
+                margin: 0 auto;
+                overflow: hidden;
+                /* 깨질경우 전체를 감싸는 부분에 overflow: hidden; 넣어줌 */
+                /* background-color: rgba(255, 255, 255, 0.1); */
+            }
+
+            .content__item {
+                position: relative;
+                width: 1000px;
+                max-width: 70vw;
+                /* 반응형이 되는 효과 */
+                margin: 30vw auto;
+                text-align: left;
+                margin-right: 0;
+                padding-top: 10vw;
+                /* background-color: rgba(255, 255, 255, 0.3); */
+            }
+
+            .content__item:nth-child(even) {
+                margin-left: 0;
+                text-align: right;
+            }
+
+            .content__item__num {
+                position: absolute;
+                left: -5vw;
+                top: -13vw;
+                opacity: 0.07;
+                font-size: 35vw;
+                font-family: Lato;
+                font-weight: 100;
+                z-index: -2;
+            }
+
+            .content__item:nth-child(even) .content__item__num {
+                left: auto;
+                right: -5vw;
+            }
+
+            .content__item__title {
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+
+            .content__item__imgWrap {
+                position: relative;
+                width: 100%;
+                padding-bottom: 56.25%;
+                overflow: hidden;
+                background: #000;
+                z-index: -1; 
+            }
+
+            .content__item__img {
+                position: absolute;
+                width: 110%;
+                height: 110%;
+                left: -5%;
+                top: -5%;
+                filter: saturate(0%);
+                transition: all 1s;
+            }
+             .content__item__img:hover {
+              filter: saturate(100%);
+             }
+
+            .content__item:nth-child(1) .content__item__img {
+                background: url(../assets/img/effect_bg31.jpg) no-repeat center / cover;
+            }
+            .content__item:nth-child(2) .content__item__img {
+                background: url(../assets/img/effect_bg22.jpg) no-repeat center / cover;
+            }
+
+            .content__item:nth-child(3) .content__item__img {
+                background: url(../assets/img/effect_bg23.jpg) no-repeat center / cover;
+            }
+
+            .content__item:nth-child(4) .content__item__img {
+                background: url(../assets/img/effect_bg24.jpg) no-repeat center / cover;
+            }
+
+            .content__item:nth-child(5) .content__item__img {
+                background: url(../assets/img/effect_bg30.jpg) no-repeat center / cover;
+            }
+
+            .content__item:nth-child(6) .content__item__img {
+                background: url(../assets/img/effect_bg26.jpg) no-repeat center / cover;
+            }
+
+            .content__item:nth-child(7) .content__item__img {
+                background: url(../assets/img/effect_bg36.jpg) no-repeat center / cover;
+            }
+
+            .content__item:nth-child(8) .content__item__img {
+                background: url(../assets/img/effect_bg28.jpg) no-repeat center / cover;
+            }
+
+            .content__item:nth-child(9) .content__item__img {
+                background: url(../assets/img/effect_bg29.jpg) no-repeat center / cover;
+            }
+
+            .content__item__desc {
+                font-size: 4vw;
+                line-height: 1.4;
+                margin-top: -5vw;
+                margin-left: -4vw;
+                word-break: keep-all;
+            }
+
+            .content__item:nth-child(even) .content__item__desc {
+                margin-left: auto;
+                margin-right: -4vw;
+            }
+
+            #parallax__info {
+                position: fixed;
+                left: 20px;
+                bottom: 20px;
+                z-index: 2000;
+                background: rgba(0, 0, 0, 0.6);
+                color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            #parallax__info li,
+            .scrollTop {
+                line-height: 1.4;
+            }
+
+            @media (max-width: 800px) {
+                #parallex__cont {
+                    margin-top: 70vw;
+                }
+
+                #parallax__nav {
+                    padding: 10px;
+                    right: auto;
+                    left: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-radius: 5px;
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
+
+                #parallax__nav li {
+                    display: block;
+                    margin: 5px;
+                }
+
+                #parallax__nav li a {
+                    font-size: 14px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    height: auto;
+                    line-height: 1;
+                }
+
+                #parallax__info {
+                    left: 10px;
+                    bottom: 10px;
+                }
+            }
+            .hljs{
+                background: none;
+            }
     </style>
   </head>
 
@@ -190,15 +232,15 @@
 
     <nav id="parallax__nav">
       <ul>
-        <l1 class="active"><a href="#section1">메뉴1</a></l1>
-        <l1><a href="#section2">메뉴2</a></l1>
-        <l1><a href="#section3">메뉴3</a></l1>
-        <l1><a href="#section4">메뉴4</a></l1>
-        <l1><a href="#section5">메뉴5</a></l1>
-        <l1><a href="#section6">메뉴6</a></l1>
-        <l1><a href="#section7">메뉴7</a></l1>
-        <l1><a href="#section8">메뉴8</a></l1>
-        <l1><a href="#section9">메뉴9</a></l1>
+        <l1 class="active"><a href="#section01">메뉴1</a></l1>
+        <l1><a href="#section02">메뉴2</a></l1>
+        <l1><a href="#section03">메뉴3</a></l1>
+        <l1><a href="#section04">메뉴4</a></l1>
+        <l1><a href="#section05">메뉴5</a></l1>
+        <l1><a href="#section06">메뉴6</a></l1>
+        <l1><a href="#section07">메뉴7</a></l1>
+        <l1><a href="#section08">메뉴8</a></l1>
+        <l1><a href="#section09">메뉴9</a></l1>
       </ul>
     </nav>
 
@@ -210,75 +252,76 @@
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">신은 용기있는자를 결코 버리지 않는다. </p>
         </section>
-        <section id="section01" class="content__item">
+        <section id="section02" class="content__item">
           <span class="content__item__num">02</span>
           <h2 class="" content__item__tittle>section02</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">일단 시작해라.나중에 완벽해지면 된다.</p>
         </section>
-        <section id="section01" class="content__item">
+        <section id="section03" class="content__item">
           <span class="content__item__num">03</span>
           <h2 class="" content__item__tittle>section03</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">행복은 습관이다,그것을 몸에 지녀라. </p>
         </section>
-        <section id="section01" class="content__item">
+        <section id="section04" class="content__item">
           <span class="content__item__num">04</span>
           <h2 class="" content__item__tittle>section04</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">아무것도 하지않으면 아무 일도 일어나지 않는다. </p>
         </section>
-        <section id="section01" class="content__item">
+        <section id="section05" class="content__item">
           <span class="content__item__num">05</span>
           <h2 class="" content__item__tittle>section05</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">인생에 뜻을 세우는데 있어 늦은 때라곤 없다. </p>
         </section>
-        <section id="section01" class="content__item">
+        <section id="section06" class="content__item">
           <span class="content__item__num">06</span>
           <h2 class="" content__item__tittle>section06</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">꿈을 꾸기에 인생은 빛난다.</p>
         </section>
-        <section id="section01" class="content__item">
+        <section id="section07" class="content__item">
           <span class="content__item__num">07</span>
           <h2 class="" content__item__tittle>section07</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">당신이 믿는 대로 될것이다.-</p>
         </section>
-        <section id="section01" class="content__item">
+        <section id="section08" class="content__item">
           <span class="content__item__num">08</span>
           <h2 class="" content__item__tittle>section08</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">작은 기회로 부터 종종 위대한 업적이 시작된다.</p>
         </section>
-        <section id="section01" class="content__item">
+        <section id="section09" class="content__item">
           <span class="content__item__num">09</span>
           <h2 class="" content__item__tittle>section09</h2>
           <figure class="content__item__imgWrap">
             <div class="content__item__img"></div>
           </figure>
-          <p class="content__item__desc"></p>
+          <p class="content__item__desc">얼마나 빨리 가느냐가 아니라 그 목적지가 어디냐는 것이다.</p>
         </section>
       </section>
     </main>
     <!-- //main -->
+
     <asied id="parallax__info">
       <div class="scroll">
         scrollTop:<span>0</span>
@@ -286,15 +329,15 @@
       </div>
       <div class="info">
         <ul>
-          <li>#section1 offset</li>
-          <li>#section1 offset</li>
-          <li>#section1 offset</li>
-          <li>#section1 offset</li>
-          <li>#section1 offset</li>
-          <li>#section1 offset</li>
-          <li>#section1 offset</li>
-          <li>#section1 offset</li>
-          <li>#section1 offset</li>
+    <li>#section1 offset() : <span class="offset1">0</span>px</li>
+                    <li>#section2 offset() : <span class="offset2">0</span>px</li>
+                    <li>#section3 offset() : <span class="offset3">0</span>px</li>
+                    <li>#section4 offset() : <span class="offset4">0</span>px</li>
+                    <li>#section5 offset() : <span class="offset5">0</span>px</li>
+                    <li>#section6 offset() : <span class="offset6">0</span>px</li>
+                    <li>#section7 offset() : <span class="offset7">0</span>px</li>
+                    <li>#section8 offset() : <span class="offset8">0</span>px</li>
+                    <li>#section9 offset() : <span class="offset9">0</span>px</li>
         </ul>
       </div>
     </aside>
@@ -522,6 +565,7 @@
       </div>
     </footer>
     <!-- //footer -->
+
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
@@ -609,7 +653,7 @@
     })
 
 
-
+                    
         //info
         doument.querySelector(".scroll span").innerText = Math.round(scrollTop);
    
@@ -636,7 +680,7 @@ behavior:"smooth"
         // doucument.querySelector("offset2").innerText = doucument.getElementById("section2").offsetTop;
         // doucument.querySelector("offset3").innerText = doucument.getElementById("section3").offsetTop;
         // doucument.querySelector("offset4").innerText = doucument.getElementById("section4").offsetTop;
-        // doucument.querySelector("offset5").innerText = doucument.getElementById("section5").offsetTop;
+        // doucument.querySelector("offset5").innerText = doucument.getElementById("section5").offsetTop; 
         // doucument.querySelector("offset6").innerText = doucument.getElementById("section6").offsetTop;
         // doucument.querySelector("offset7").innerText = doucument.getElementById("section7").offsetTop;
         // doucument.querySelector("offset8").innerText = doucument.getElementById("section8").offsetTop;
