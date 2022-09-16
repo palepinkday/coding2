@@ -18,16 +18,14 @@
       #parallax__nav {
         position: fixed;
         margin: 20px;
-        top: -200px;
+        top: 20px;
         z-index: 2000;
         background-color: rgba(0, 0, 0, 0.4);
         padding: 20px 30px;
         border-radius: 50px;
         transition: top .4s ease ;
       }
-      #parallax__nav .show{
-        top: 20px;
-      }
+  
       #parallax__nav li {
         display: inline;
         margin: 0 5px;
@@ -35,7 +33,7 @@
       #parallax__nav li a {
         display: inline-block;
         height: 30px;
-        padding: 5px;
+        padding: 5px 20px;
         text-align: center;
         line-height: 30px;
       }
@@ -154,14 +152,7 @@
         transition: all 0.3s;
 
       }
-      #parallax__top.show{
-        margin: 20px;
-      }
-      #parallax__top:hover{
-        background: #fff;
-        color: #000;
-      }
-      
+   
 
       @media (max-width: 800px) {
         #parallax__nav {
@@ -183,16 +174,73 @@
           height: auto;
           line-height: 1;
         }
-        #parallax__info {
-        }
+    
       }
+
+      #contents>section{
+        opacity: 0;
+        transition: all 1s;
+
+      }
+      #contents>section.show{
+        opacity: 1;
+      }
+      #contents>section.content__item__num{
+        opacity: 0;
+        transform: translateY(200);
+        transition:all 1s 0.9s cubic-bezier(0, 0.38, 0.21, 0.99);
+      }
+      #contents>section.content__item__title{
+        opacity: 0;
+        transform: translateY(-100);
+        transition:all 1s 0.9s cubic-bezier(0, 0.38, 0.21, 0.99);
+      }
+      #contents>section.content__item__imgWrap{
+        opacity: 0;
+        transform: translateY(200) rotate(30deg) skew(20deg);
+        transition:all 1s 0.9s cubic-bezier(0, 0.38, 0.21, 0.99);
+      }
+      #contents>section.content__item__desc{
+        opacity: 0;
+        transform: translateY(-200); 
+        transition: all 1s 0.9s cubic-bezier(0, 0.38, 0.21, 0.99);
+      }
+
+      #contents>section.content__item__num{
+        opacity: 0.7;
+        transform: translateY(0);
+      }
+      #contents>section.content__item__title{
+        opacity: 1;
+        transform: translateY(0);
+      }
+      #contents>section.content__item__imgWrap{
+        opacity: 1;
+        transform: translateY(0);
+      }
+      #contents>section.content__item__desc{
+        opacity: 0.7;
+        transform: translateY(0);
+    }
+    #contents>section.content__item__num{
+        
+    }
+    #contents>section:nth-child(even) .content__item__title{
+        transform: translateX(200px);
+    }
+    #contents>section.content__item__imgWrap{
+
+    }
+    #contents>section.content__item__desc{
+
+    }
     </style>
   </head>
 
   <body class="img07">
     <header id="header">
       <h1>Javascript parallaxEffect01</h1>
-      <p>패럴랙스 이펙트 - 숨긴메뉴</p>
+      <p>패럴랙스 이펙트 - 나타나기</p>
       <ul>
         <li><a href="parallaxEffect01.html">1</a></li>
         <li><a href="parallaxEffect02.html">2</a></li>
@@ -205,20 +253,7 @@
     </header>
     <!-- //header -->
 
-    <nav id="parallax__nav" class="show">
-      <ul>
-        <l1 class="active"><a href="#section1">메뉴1</a></l1>
-        <l1><a href="#section2">메뉴2</a></l1>
-        <l1><a href="#section3">메뉴3</a></l1>
-        <l1><a href="#section4">메뉴4</a></l1>
-        <l1><a href="#section5">메뉴5</a></l1>
-        <l1><a href="#section6">메뉴6</a></l1>
-        <l1><a href="#section7">메뉴7</a></l1>
-        <l1><a href="#section8">메뉴8</a></l1>
-        <l1><a href="#section9">메뉴9</a></l1>
-      </ul>
-    </nav>
-<!-- //parallax top -->
+
 
    <main id="parallax__cont">
       <section id="contents">
@@ -530,53 +565,18 @@
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
-   window.addEventListener("scroll", () => {
-                let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-                if (scrollTop > 0) {
-                    document.querySelector("#parallax__nav").classList.add("show");
-                } else {
-                    document.querySelector("#parallax__nav").classList.remove("show");
-                }
-                document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
-                // let top = document.querySelector(".section9");
-                // let topBtn = top.scrollY;
-                if (scrollTop == 12624) {
-                    document.querySelector("#parallax__top").classList.add("show");
-                } else {
-                    document.querySelector("#parallax__top").classList.remove("show");
-                }
-            });
-            //top버튼
-            document.querySelector("#parallax__top").addEventListener("click", ()=>{
-                window.scrollTo({left:0, top:0, behavior:"smooth"});
-            });
 
-
-                //03
-
-                let nowScroll =true;
-                let lastScroll =0;
-                function scrollProgress(){
-                    nowScroll=true;
-                    setInterval(()=>{
-                        if (nowScroll){
-                            nokwScroll =false;
-                            hasScroll();
-                        }
-                    }, 300)
-                }
-
-                function hasScroll(){
-                    
-                    let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-                    if(scroll<lastScroll){
-                      document.querySelector("#parallax__nav").classList.add("show");
-                      document.querySelector("#parallax__nav").classList.remove("show");
+//재귀함수
+            function scroll(){
+                let scrollTop = window.pageYOffset||document.documentElement.scrollTop||window.screenY;
+                document.querySelectorAll(".content__item").forEach((item)=>{
+                    if (scrollTop > item.offsetTop -window.innerHeight/2){
+                        item.classList.add("show");
                     }
-                lastScroll = scrollTop
-                }
-                window.addEventListener("scroll", scrollProgress);
-           
+                })
+                    requestAnimationFrame(scroll);
+            }
+            scroll();
     </script>
   </body>
 </html>
