@@ -71,14 +71,7 @@
             <li><a href="#sample10">10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</a></li>
             <li><a href="#sample11">11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
             <li><a href="#sample12">12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</a></li>
-            <li><a href="#sample13">13. 내부 함수</a></li>
-            <li><a href="#sample14">14. 즉시 실행 함수</a></li>
-            <li><a href="#sample15">15. 파라미터 함수</a></li>
-            <li><a href="#sample16">16. 아규먼트 함수</a></li>
-            <li><a href="#sample17">17. 재귀함수</a></li>
-            <li><a href="#sample18">18. 콜백함수</a></li>
-            <li><a href="#sample19">19. 콜백함수 : 반복문</a></li>
-            <li><a href="#sample20">20. 콜백함수 : 동기/비동기</a></li>
+
             <li><a href="#sample21">21. 함수 유형 : 함수와 매개변수를 이용한 형태</a></li>
             <li><a href="#sample22">22. 함수 유형 : 함수와 변수를 이용한 형태</a></li>
             <li><a href="#sample23">23. 함수 유형 : 함수와 배열,객체를 이용한 형태</a></li>
@@ -86,6 +79,17 @@
             <li><a href="#sample25">25. 함수 유형 : 객체 생성자 함수</a></li>
             <li><a href="#sample26">26. 함수 유형 : 프로토타입 함수</a></li>
             <li><a href="#sample27">27. 함수 유형 : 객체 리터럴 함수</a></li>
+
+            <li><a href="#sample14">14. 즉시 실행 함수</a></li>
+            <li><a href="#sample15">15. 파라미터 함수</a></li>
+            <li><a href="#sample16">16. 아규먼트 함수</a></li>
+            <li><a href="#sample17">17. 재귀함수</a></li>
+            <li><a href="#sample18">18. 콜백함수 : 다른함수에 인수로 넘겨지는 함수</a></li>
+            <li><a href="#sample19">19. 콜백함수 : 반복문</a></li>
+            <li><a href="#sample20">20. 콜백함수 : 동기/비동기</a></li>
+            <li><a href="#sample13">13. 내부 함수</a></li> 
+            <li><a href="#sample13">13. 클로저</a></li> 
+  
             <li><a href="#sample28">28. 클래스</a></li>
             <li><a href="#sample29">29. 클래스 상속</a></li>
         </ul>
@@ -1371,7 +1375,190 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
         }
         func("함수가 실행되었습니다", "함수가 실행되었습니다");
 
+        //23. 재귀함수
 
+        //반복
+        function func(num) {
+            if(num<=1){
+                document.write("함수가 실행되었습니다"+ num);
+            }else{ 
+                document.write("함수가 실행되었습니다" +num);
+                func(num-1);
+            }
+        }
+        func(10);
+
+        //애니
+        function func() {
+            document.write("함수가 실행되었습니다");
+            requestAnimationFrame(animation);
+        }
+        animation();
+        
+ 
+        //24.콜백함수
+        //-재귀함수는 동시에 여러개 실행, 
+        //콜백함수는 첫번째 함수가 실행되고 두번째 함수실행
+        function func() {
+            document.write("함수가 실행되었습니다.2");
+        }
+
+        function callback(str) {
+            document.write("함수가 실행되었습니다.1");
+            str();
+        }
+
+        callback(func);
+
+        //25.반복
+        function func(index) {
+            document.write("함수가 실행되었습니다." +index);
+        }
+
+        function callback(num) {
+            for( let i=1; i<=10; i++){
+                num(i);
+            }
+        }
+
+        callback(func);
+
+        //26.동기/비동기
+        // function funcA() {
+        //     document.write("funcA가 실행되었습니다.1");
+        // }
+        // function funcB() {
+        //     document.write("funcB가 실행되었습니다.2");
+        // }
+        // funcA();
+        // funcB();
+        //a
+        //b
+
+        // function funcA() {
+        //     setTimeout(()=>{  
+        //       console.log("funcA가 실행되었습니다.1");
+        //     }, 1000);
+          
+        // }
+        // function funcB() {
+        //     console.log("funcB가 실행되었습니다.2");
+        // }
+        // funcA();
+        // funcB();
+        //b
+        //a
+
+        // function funcA() {
+        //     setTimeout(()=>{  
+        //       console.log("funcA가 실행되었습니다.1");
+        //       callback();
+        //     }, 1000);
+          
+        // }
+        // function funcB() {
+        //     console.log("funcB가 실행되었습니다.2");
+        // }
+        // funcA( function(){
+        //     funcB();
+        // });
+       //a
+       //b
+
+       function funcA(callback) {
+            setTimeout(()=>{  
+              console.log("funcA가 실행되었습니다.");
+              callback();
+            }, 1000);
+          
+        }
+        function funcB() {
+            setTimeout(()=>{  
+              console.log("funcB가 실행되었습니다.");
+              callback();
+            }, 1000);
+        }
+        function funcC() {
+            setTimeout(()=>{  
+              console.log("funC가 실행되었습니다.");
+              callback();
+            }, 1000);
+        }
+        funcA( function(){
+            funcB( function(){
+                funcC(function(){
+                    funcD();
+                });
+            });
+        });
+        //a
+        //b
+        //c
+        //d
+
+        //27.promise함수
+
+        //28.내부함수: 스코프=클로저
+        function func(){
+            function funcA(){
+                document.write("함수가 실행되었습니다.1")  
+            };
+            funcA();
+
+            function funcB(){
+                document.write("함수가 실행되었습니다.2")  
+            };
+            funcB();
+        }
+        func();
+
+        //29.클래스: 함수의 집합체
+        class study {
+            constructor(num){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+            result(){
+                document.write(this.num + ".내이름은" +  this.name + "이며, 직업은" + this.job + "입니다.")
+            }
+        }
+            const info1 = new study("1","웹쓰", "웹퍼블리셔");
+            const info2 = new study("2","웹스토리보이", "프론트앤드개발자");
+  
+            info1.result();
+            info2.result();
+      
+
+            //
+            class study {
+            constructor(num){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+            result(){
+                document.write(this.num + ".내이름은" +  this.name + "이며, 직업은" + this.job + "입니다.")
+            }
+        }
+
+            class stuy2 extends study{
+                constructor(num, name, job, age){
+                    super(num, name, job);
+                    this.age = age;
+                }
+                result2(){
+                document.write(this.num + ".내이름은" +  this.name + "이며, 직업은" + this.job + "나이는" +this.age +"입니다.")
+            }
+            }
+            const info1 = new study("1","웹쓰", "웹퍼블리셔");
+            const info2 = new study("2","웹스토리보이", "프론트앤드개발자");
+  
+            info1.result();
+            info2.result2();
+
+
+        //30.
 
 
 
@@ -1395,3 +1582,58 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
