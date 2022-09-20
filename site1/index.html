@@ -453,5 +453,59 @@
         }
       });
     </script>
+    
+      <!-- // 선택자
+      const btnStop = document.querySelector(".swiper-button-stop");
+      const btnStart = document.querySelector(".swiper-button-play");
+      const btnHam = document.querySelector(".header__ham");
+      const btnMenu = document.querySelector(".header__menu");
+
+      // swiper에서 재생 버튼을 누르면 슬라이드 재생, 재생 버튼 숨김, 정지 버튼 나타남
+      // swiper에서 정지 버튼을 누르면 슬라이드 정지, 정지 버튼 숨김, 재생 버튼 나타남
+      btnStart.style.display = "none";
+      btnStop.addEventListener("click", () => {
+        swiper.autoplay.stop();
+        btnStart.style.display = "block";
+        btnStop.style.display = "none";
+      });
+      btnStart.addEventListener("click", () => {
+        swiper.autoplay.start();
+        btnStart.style.display = "none";
+        btnStop.style.display = "block";
+      });
+
+      // 햄버거를 클릭하면 메뉴가 나타나도록 설정
+      btnHam.addEventListener("click", () => {
+        btnHam.classList.toggle("active");
+        btnMenu.classList.toggle("overlay");
+      });
+
+      // 패럴랙스 효과
+      window.addEventListener("scroll", () => {
+        let scrollTop =
+          window.pageYOffset ||
+          window.scrollY ||
+          document.documentElement.scrollTop;
+        document.querySelectorAll("section").forEach((el, i) => {
+          if (scrollTop > el.offsetTop - 500) {
+            document.querySelectorAll(".header__menu ul li").forEach((li) => {
+              li.classList.remove("active");
+            });
+            document
+              .querySelector(".header__menu ul li:nth-child(" + (i + 1) + ")")
+              .classList.add("active");
+          }
+        });
+      });
+
+      // 메뉴 이동 시 부드럽게~
+      document.querySelectorAll(".header__inner li a").forEach((li) => {
+        li.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(li.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      }); -->
   </body>
 </html>
