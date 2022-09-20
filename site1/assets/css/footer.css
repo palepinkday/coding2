@@ -1,3 +1,6 @@
+.container {
+  margin-bottom: 50px;
+}
 .footer__menu {
   display: flex;
 }
@@ -6,7 +9,8 @@
 }
 .footer__menu h3 {
   font-size: 18px;
-  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 .footer__menu li a {
   font-size: 14px;

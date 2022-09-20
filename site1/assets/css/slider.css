@@ -7,10 +7,11 @@
 .slider__img {
   background: url(../img/slider_bg01.jpg) no-repeat center / cover;
 }
+
 .slider__img .desc {
   width: 100%;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding: 100px 100px;
 }
 .slider__img .desc span {
   font-size: 16px;

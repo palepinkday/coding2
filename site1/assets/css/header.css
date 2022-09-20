@@ -1,6 +1,6 @@
 #headerType {
   width: 1920px;
-  height: 70px;
+  
   margin: 0 auto;
 }
 .header__inner {
@@ -22,7 +22,7 @@
   width: 10%;
   font-size: 30px;
   font-weight: 700;
-
+  
   text-transform: uppercase;
 }
 .header__logo em {
@@ -49,6 +49,7 @@
 .header__member {
   width: 20%;
   text-align: right;
+  padding-right: 15px;
 }
 .header__member a {
   font-size: 16px;
