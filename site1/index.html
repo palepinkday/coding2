@@ -10,7 +10,7 @@
     />
     <title>사이트01</title>
     <!-- SEO -->
-    <meta name="author" content="pale" />
+    <meta name="author" content="palepinkday" />
     <meta name="description" content="사이트 만들기" />
     <meta name="keyword" content="사이트 만들기" />
     <meta name="robots" content="all" />
@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="assets/css/footer.css" />
 
     <!-- css -->
-    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
 
     <style></style>
   </head>
@@ -409,8 +409,22 @@
     </footer>
     <!-- //footerType -->
     <script src="assets/js/swiper.min.js"></script>
-    <script>
-      var Swiper = new Swiper(".my");
+    <!-- <script>
+         var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+    });
 
 
       const btnStop = document.querySelector();
@@ -452,9 +466,8 @@
           btnHam.classList.remove("active");
         }
       });
-    </script>
-    
-      <!-- // 선택자
+    </script> -->
+    <script> 
       const btnStop = document.querySelector(".swiper-button-stop");
       const btnStart = document.querySelector(".swiper-button-play");
       const btnHam = document.querySelector(".header__ham");
@@ -506,6 +519,8 @@
             behavior: "smooth",
           });
         });
-      }); -->
+      });
+      </script>
+
   </body>
 </html>
