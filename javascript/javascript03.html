@@ -789,119 +789,179 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
         <br>
         <br>
         <!-- //sample22 -->
-                  <h3></h3>
+                     <h3> 재귀함수</h3>
         <p>
             <br>
         </p>
         <div class="script">
-            <pre><code class="language-js">
+            <pre><code class="language-js"> //반복
+function func(num) {
+    if(num<=1){
+        document.write("함수가 실행되었습니다"+ num);
+    }else{ 
+        document.write("함수가 실행되었습니다" +num);
+        func(num-1);
+    }
+}
+        func(10);
+</code></pre>
+        </div>
+        <div class="result">
+            <details>
+                <summary>결과보기</summary>
+                <div class="sample24_result">
+                함수가 실행되었습니다. 10<br>
+                함수가 실행되었습니다. 9<br>
+                함수가 실행되었습니다. 8<br>
+                함수가 실행되었습니다. 7<br>
+                함수가 실행되었습니다. 6<br>
+                함수가 실행되었습니다. 5<br>
+                함수가 실행되었습니다. 4<br>
+                함수가 실행되었습니다. 3<br>
+                함수가 실행되었습니다. 2<br>
+                함수가 실행되었습니다. 1<br>
+                </div>
+            </details>
+        </div>
+        </div>
+         <div class="script">
+            <pre><code class="language-js">//애니
+function func() {
+    document.write("함수가 실행되었습니다");
+    requestAnimationFrame(animation);
+}
+animation();
+        
+</code></pre>
+        </div>
+        <div class="result">
+            <details>
+                <summary>결과보기</summary>
+                <div class="sample_result">
+                
+                </div>
+            </details>
+        </div>
+    </div>
+        <br>
+        <br>
+        <!-- //sample23 -->
+                  <h3>24.콜백함수
+      </h3>
+        <p>  //-재귀함수는 동시에 여러개 실행, 
+        //콜백함수는 첫번째 함수가 실행되고 두번째 함수실행
+            <br>
+        </p>
+        <div class="script">
+            <pre><code class="language-js">function func() {
+document.write("함수가 실행되었습니다.2");
+function callback(str) {
+document.write("함수가 실행되었습니다.1");
+str();
+callback(func);
 </code></pre>
         </div>
         <div class="result">
             <details>
                 <summary>결과보기</summary>
                 <div class="sample12_result">
-                
+                함수가 실행되었습니다.2<br>
+                함수가 실행되었습니다.1<br>
                 </div>
             </details>
         </div>
         </div>
         <br>
         <br>
-        <!-- //sample20 -->
-                  <h3></h3>
+        <!-- //sample24 -->
+     
+                  <h3>25.콜백함수 : 반복문</h3>
         <p>
             <br>
         </p>
         <div class="script">
-            <pre><code class="language-js">
-</code></pre>
-        </div>
-        <div class="result">
-            <details>
-                <summary>결과보기</summary>
-                <div class="sample12_result">
-                
-                </div>
-            </details>
-        </div>
-        </div>
-        <br>
-        <br>
-        <!-- //sample20 -->
-                  <h3></h3>
-        <p>
-            <br>
-        </p>
-        <div class="script">
-            <pre><code class="language-js">
-</code></pre>
-        </div>
-        <div class="result">
-            <details>
-                <summary>결과보기</summary>
-                <div class="sample12_result">
-                
-                </div>
-            </details>
-        </div>
-        </div>
-        <!-- //sample20 -->
-                  <h3></h3>
-        <p>
-            <br>
-        </p>
-        <div class="script">
-            <pre><code class="language-js">
-</code></pre>
-        </div>
-        <div class="result">
-            <details>
-                <summary>결과보기</summary>
-                <div class="sample12_result">
-                
-                </div>
-            </details>
-        </div>
-        </div>
-        <!-- //sample20 -->
-                  <h3></h3>
-        <p>
-            <br>
-        </p>
-        <div class="script">
-            <pre><code class="language-js">
-</code></pre>
-        </div>
-        <div class="result">
-            <details>
-                <summary>결과보기</summary>
-                <div class="sample12_result">
-                
-                </div>
-            </details>
-        </div>
-        </div>
-        <!-- //sample20 -->
-                  <h3></h3>
-        <p>
-            <br>
-        </p>
-        <div class="script">
-            <pre><code class="language-js">
-</code></pre>
-        </div>
-        <div class="result">
-            <details>
-                <summary>결과보기</summary>
-                <div class="sample12_result">
-                
-                </div>
-            </details>
-        </div>
-        </div>
-        <!-- //sample20 -->
+            <pre><code class="language-js"> function func(index) {
+    document.write("함수가 실행되었습니다." +index);
+}
 
+function callback(num) {
+    for( let i=1; i<=10; i++){
+        num(i);
+    }
+}
+
+callback(func);
+
+</code></pre>
+        </div>
+        <div class="result">
+            <details>
+                <summary>결과보기</summary>
+                <div class="sample25_result">
+                함수가 실행되었습니다.1<br>
+                함수가 실행되었습니다.2<br>
+                함수가 실행되었습니다.3<br>
+                함수가 실행되었습니다.4<br>
+                함수가 실행되었습니다.5<br>
+                함수가 실행되었습니다.6<br>
+                함수가 실행되었습니다.7<br>
+                함수가 실행되었습니다.8<br>
+                함수가 실행되었습니다.9<br>
+                함수가 실행되었습니다.10<br>
+
+                </div>
+            </details>
+        </div>
+        </div>
+        <!-- //sample25 -->
+                  <h3>26.콜백함수 : 동기 / 비동기</h3>
+        <p>
+            <br>
+        </p>
+        <div class="script">
+            <pre><code class="language-js">function funcA(callback) {
+            setTimeout(()=>{  
+              console.log("funcA가 실행되었습니다.");
+              callback();
+            }, 1000);
+          
+        }
+        function funcB() {
+            setTimeout(()=>{  
+              console.log("funcB가 실행되었습니다.");
+              callback();
+            }, 1000);
+        }
+        function funcC() {
+            setTimeout(()=>{  
+              console.log("funC가 실행되었습니다.");
+              callback();
+            }, 1000);
+        }
+        funcA( function(){
+            funcB( function(){
+                funcC(function(){
+                    funcD();
+                });
+            });
+        });
+        //a
+        //b
+        //c
+        //d
+
+</code></pre>
+        </div>
+        <div class="result">
+            <details>
+                <summary>결과보기</summary>
+                <div class="sample12_result">
+                
+                </div>
+            </details>
+        </div>
+        </div>
+        <!-- //sample26 -->
                   <h3></h3>
         <p>
             <br>
@@ -919,7 +979,99 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
             </details>
         </div>
         </div>
-        <!-- //sample20 -->
+        <!-- //sample27 -->
+                  <h3>28.내부함수: 스코프=클로저</h3>
+        <p>
+            <br>
+        </p>
+        <div class="script">
+            <pre><code class="language-js">function func(){
+            function funcA(){
+                document.write("함수가 실행되었습니다.1")  
+            };
+            funcA();
+
+            function funcB(){
+                document.write("함수가 실행되었습니다.2")  
+            };
+            funcB();
+        }
+        func();
+</code></pre>
+        </div>
+        <div class="result">
+            <details>
+                <summary>결과보기</summary>
+                <div class="sample12_result">
+                함수가 실행되었습니다.1<br>
+                함수가 실행되었습니다.2<br>
+
+                </div>
+            </details>
+        </div>
+        </div>
+        <!-- //sample28 -->
+
+                  <h3>29.클래스: 함수의 집합체</h3>
+        <p>
+            <br>
+        </p>
+        <div class="script">
+            <pre><code class="language-js">class study {
+            constructor(num){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+            result(){
+                document.write(this.num + ".내이름은" +  this.name + "이며, 직업은" + this.job + "입니다.")
+            }
+        }
+            const info1 = new study("1","웹쓰", "웹퍼블리셔");
+            const info2 = new study("2","웹스토리보이", "프론트앤드개발자");
+  
+            info1.result();
+            info2.result();
+      
+
+            //상속
+            class study {
+            constructor(num){
+                this.num = num;
+                this.name = name;
+                this.job = job;
+            }
+            result(){
+                document.write(this.num + ".내이름은" +  this.name + "이며, 직업은" + this.job + "입니다.")
+            }
+        }
+
+            class stuy2 extends study{
+                constructor(num, name, job, age){
+                    super(num, name, job);
+                    this.age = age;
+                }
+                result2(){
+                document.write(this.num + ".내이름은" +  this.name + "이며, 직업은" + this.job + "나이는" +this.age +"입니다.")
+            }
+            }
+            const info1 = new study("1","웹쓰", "웹퍼블리셔");
+            const info2 = new study("2","웹스토리보이", "프론트앤드개발자");
+  
+            info1.result();
+            info2.result2();
+</code></pre>
+        </div>
+        <div class="result">
+            <details>
+                <summary>결과보기</summary>
+                <div class="sample12_result">
+                
+                </div>
+            </details>
+        </div>
+        </div>
+        <!-- //sample29 -->
                   <h3></h3>
         <p>
             <br>
@@ -937,7 +1089,7 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
             </details>
         </div>
         </div>
-        <!-- //sample20 -->
+        <!-- //sample30 -->
                   <h3></h3>
         <p>
             <br>
@@ -955,7 +1107,7 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
             </details>
         </div>
         </div>
-        <!-- //sample20 -->
+        <!-- //sample31 -->
                   <h3></h3>
         <p>
             <br>
@@ -973,7 +1125,7 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
             </details>
         </div>
         </div>
-             <!-- //sample20 -->
+             <!-- //sample32 -->
         <br>
         <br>
     </main>
@@ -1530,7 +1682,7 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.")
             info2.result();
       
 
-            //
+            //상속
             class study {
             constructor(num){
                 this.num = num;

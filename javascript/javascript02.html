@@ -567,15 +567,15 @@
             <p></p>
             <div class="script">
               <pre><code class="language-js">{
-    const obj = [
-    { a: 100, b: 200, c: "j" }
-    ];
-    obj.map((el)) => {
-    document.write(el.a) //el객체의 a키값
-    document.write(el.b)
-    document.write(el.c)
-    }
-    }
+const obj = [
+{ a: 100, b: 200, c: "j" }
+];
+obj.map((el)) => {
+document.write(el.a) //el객체의 a키값
+document.write(el.b);
+document.write(el.c);
+}
+}
     </code></pre>
             </div>
             <div class="result">
@@ -628,23 +628,138 @@
             </div>
           </div>
           <!-- //sample18 -->
-          <div id="sample18" class="sample">
+          <div id="sample19" class="sample">
             <h3>19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사</h3>
             <p></p>
             <div class="script">
-              <pre><code class="language-js">
+              <pre><code class="language-js">{const obj = {
+   a: 100,
+   b: 200,
+   c: "javascript"
+   // document.write(obj.b);
+ }
+ const spread = {...obj}
+ document.spread(obj.a);
+ document.spread(obj.b);
+ document.spread(obj.c);
+}
     </code></pre>
             </div>
             <div class="result">
               <details>
                 <summary>결과보기</summary>
                 <div class="result">
-                  <br />
+                  100<br />
+                  200<br />
+                  javascript
                 </div>
               </details>
             </div>
           </div>
           <!-- //sample19 -->
+          <div id="sample20" class="sample">
+            <h3>20. 객체 : 데이터 불러오기 : 펼침연산자 - 추가</h3>
+            <p></p>
+            <div class="script">
+              <pre><code class="language-js">{ const obj = {
+    a:100,
+    b:200,
+    c:"javascript"
+}
+
+const spread = { ...obj, d: "jquery" } 
+
+document.write(spread.d)
+}
+    </code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과보기</summary>
+                <div class="result">jquery<br /></div>
+              </details>
+            </div>
+          </div>
+          <!-- //sample20 -->
+          <div id="sample21" class="sample">
+            <h3>21. 객체 : 데이터 불러오기 : 펼침연산자 - 결합</h3>
+            <p></p>
+            <div class="script">
+              <pre><code class="language-js">{ const objA = {
+    a:100,
+    b:200,
+}
+const objB = {
+    c: "javascript",
+    b: "jquery"
+}
+
+const spread = { ... objA, ...objB}
+
+document.write(spread.a);
+document.write(spread.b);
+document.write(spread.c);
+}
+    </code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과보기</summary>
+                <div class="result">100<br />200<br />javascript<br /></div>
+              </details>
+            </div>
+          </div>
+          <!-- //sample21 -->
+          <div id="sample22" class="sample">
+            <h3>22. 객체 : 데이터 불러오기 : 비구조화 할당</h3>
+            <p></p>
+            <div class="script">
+              <pre><code class="language-js">{ const obj = {
+    a: 100,
+    b: 200,
+    c: "javascript"
+}
+const{a, b, c} = obj;      
+
+document.write(a);
+document.write(b);
+document.write(c);
+}
+    </code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과보기</summary>
+                <div class="result">100<br />200<br />javascript<br /></div>
+              </details>
+            </div>
+          </div>
+          <!-- //sample22 -->
+          <div id="sample22" class="sample">
+            <h3>23. 객체 : 데이터 불러오기 : 비구조화 할당-변수명 변경</h3>
+            <p></p>
+            <div class="script">
+              <pre><code class="language-js">{ const obj= {
+  a: 100,
+  b: 200,
+  c:"c"
+}
+const{a:name1, b:name2, c:name3} = obj;
+document.write(name1);
+document.write(name2);
+document.write(name3);
+
+}
+    </code></pre>
+            </div>
+            <div class="result">
+              <details>
+                <summary>결과보기</summary>
+                <div class="result">100<br />200<br />c<br /></div>
+              </details>
+            </div>
+          </div>
+          <!-- //sample23 -->
         </div>
       </div>
     </main>
@@ -660,204 +775,204 @@
       hljs.highlightAll();
     </script>
     <script>
-      //for문 이용해서 하나씩 출력
-      const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      for (let i = 0; arr < 9; i++) {
-          //document.write(arr[i]);
-      };
-      //forEach 이용해서 하나씩 출력
-      const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      num.forEach(function (el) {
-          //document.write(el);
-      });
+      // //for문 이용해서 하나씩 출력
+      // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // for (let i = 0; arr < 9; i++) {
+      //     //document.write(arr[i]);
+      // };
+      // //forEach 이용해서 하나씩 출력
+      // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // num.forEach(function (el) {
+      //     //document.write(el);
+      // });
 
-      const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]  //const obj =[{},{},{}]
-      for (let i = 0; i < 9; i++) {
-          // i=0; i<arr.length;
-          //document. write(arr[i]);
-      }
-      const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-      arr.forEach(function (e, i, a) {
-          //document.write(e);
-      });
+      // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]  //const obj =[{},{},{}]
+      // for (let i = 0; i < 9; i++) {
+      //     // i=0; i<arr.length;
+      //     //document. write(arr[i]);
+      // }
+      // const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+      // arr.forEach(function (e, i, a) {
+      //     //document.write(e);
+      // });
 
+      // //map() 이용해서 하나씩 출력
+      // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // map()
+      // num.map(functionel(el){
+      //     //document.write(el);
+      // });
 
-      //map() 이용해서 하나씩 출력
-      const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      map()
-      num.map(functionel(el){
-          //document.write(el);
-      });
+      // //for in 이용해서 하나씩 출력
+      // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // for (let i in num) {
+      //     // document.write(i);
+      // }
 
-      //for in 이용해서 하나씩 출력
-      const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      for (let i in num) {
-          // document.write(i);
-      }
+      // //for of 이용해서 하나씩 출력
+      // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // for (let i of num) {
+      //     //document.write(i);
+      // }
 
-      //for of 이용해서 하나씩 출력
-      const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-      for (let i of num) {
-          //document.write(i);
-      }
+      // //11. 배열 : 데이터 불러오기 : 펼침연산자
+      // {
+      //     const num = [100, 200, 300, 400, 500];
+      //     //document.write(num, "<br>")//100200300400500
+      //     //document.write(num[0], num[1], num[2], num[3], num[4], "<br>");//100,200,300,400,500
+      //     //document.write(...num);//100200300400500
 
-      //11. 배열 : 데이터 불러오기 : 펼침연산자
-      {
-          const num = [100, 200, 300, 400, 500];
-          //document.write(num, "<br>")//100200300400500
-          //document.write(num[0], num[1], num[2], num[3], num[4], "<br>");//100,200,300,400,500
-          //document.write(...num);//100200300400500
+      // }
 
-      }
+      // //12. 배열 : 데이터 불러오기 : 배열구조분해할당
+      // {
+      //     let a, b, c;
+      //     [a, b, c] = [100, 200, "j"];
+      //     document.write(a);//100200j
+      //     document.write(b);
+      //     document.write(c);
+      // }
 
-      //12. 배열 : 데이터 불러오기 : 배열구조분해할당
-      {
-          let a, b, c;
-          [a, b, c] = [100, 200, "j"];
-          document.write(a);//100200j
-          document.write(b);
-          document.write(c);
-      }
+      // //13. 객체 : 데이터 불러오기 : 기본
+      // {
+      //     const obj = {
+      //         a: 100,
+      //         a: 200,
+      //         a: "j",
+      //     }
+      //     document.write(obj.a);
+      //     document.write(obj.b);
+      //     document.write(obj.c);
+      // }
 
-      //13. 객체 : 데이터 불러오기 : 기본
-      {
-          const obj = {
-              a: 100,
-              a: 200,
-              a: "j",
-          }
-          document.write(obj.a);
-          document.write(obj.b);
-          document.write(obj.c);
-      }
+      // //14. 객체 : 데이터 불러오기 : Object
+      // {
+      //     const obj = {
+      //         a: 100,
+      //         a: 200,
+      //         a: "j"
+      //     }
+      //     document.write(Object.keys(obj));
+      //     document.write(Object.values(obj));
+      //     document.write(Object.entries(obj));
+      // }
+      // //15. 객체 : 데이터 불러오기 : 변수
+      // {
+      //     const obj = {
+      //         a: 100,
+      //         a: 200,
+      //         a: "j"
+      //     }
+      //     const name1 = obj.a;
+      //     const name2 = obj.b;
+      //     const name3 = obj.c;
 
-      //14. 객체 : 데이터 불러오기 : Object
-      {
-          const obj = {
-              a: 100,
-              a: 200,
-              a: "j"
-          }
-          document.write(Object.keys(obj));
-          document.write(Object.values(obj));
-          document.write(Object.entries(obj));
-      }
-      //15. 객체 : 데이터 불러오기 : 변수
-      {
-          const obj = {
-              a: 100,
-              a: 200,
-              a: "j"
-          }
-          const name1 = obj.a;
-          const name2 = obj.b;
-          const name3 = obj.c;
+      //     document.write(name1);
+      //     document.write(name2);
+      //     document.write(name3);
 
-          document.write(name1);
-          document.write(name2);
-          document.write(name3);
+      // }
+      // //16. 객체 : 데이터 불러오기 : for in
+      // const obj = {
+      //     a: 100,
+      //     a: 200,
+      //     a: "j"
+      // }
+      // for (let key in obj) {
+      //     document.write(obj[key]);
+      // }
 
-      }
-      //16. 객체 : 데이터 불러오기 : for in
-      const obj = {
-          a: 100,
-          a: 200,
-          a: "j"
-      }
-      for (let key in obj) {
-          document.write(obj[key]);
-      }
+      // //17. 객체 : 데이터 불러오기 : map()
+      // {
+      //     const obj = [
+      //         { a: 100, b: 200, c: "j" }
+      //     ];
+      //     obj.map((el)) => {
+      //         document.write(el.a)
+      //         document.write(el.b)
+      //         document.write(el.c)
+      //     }
+      // }
+      // //18. 객체 : 데이터 불러오기 : hasOwnProperty()
+      // {
+      //     const obj = {
+      //         a: 100,
+      //         b: 200,
+      //         c: "j"
+      //     }
+      //     document.write(obj.hasOwnproperty("a"));//true
+      //     document.write(obj.hasOwnproperty("b"));//true
+      //     document.write(obj.hasOwnproperty("c"));//true
+      //     document.write(obj.hasOwnproperty("d"));//false
 
-      //17. 객체 : 데이터 불러오기 : map()
-      {
-          const obj = [
-              { a: 100, b: 200, c: "j" }
-          ];
-          obj.map((el)) => {
-              document.write(el.a)
-              document.write(el.b)
-              document.write(el.c)
-          }
-      }
-      //18. 객체 : 데이터 불러오기 : hasOwnProperty()
-      {
-          const obj = {
-              a: 100,
-              b: 200,
-              c: "j"
-          }
-          document.write(obj.hasOwnproperty("a"));//true
-          document.write(obj.hasOwnproperty("b"));//true
-          document.write(obj.hasOwnproperty("c"));//true
-          document.write(obj.hasOwnproperty("d"));//false
+      //     document.write("a" in obj);//true
+      //     document.write("b" in obj);//true
+      //     document.write("c" in obj);//true
+      //     document.write("d" in obj);//false
 
-          document.write("a" in obj);//true
-          document.write("b" in obj);//true
-          document.write("c" in obj);//true
-          document.write("d" in obj);//false
-
-      }
+      // }
       //19. 객체 : 데이터 불러오기 : 펼침연산자 - 복사
-      const obj = {
-        a: 100,
-        b: 200,
-        c: "javascript"
-        // document.write(obj.b);
+      {
+        const obj = {
+          a: 100,
+          b: 200,
+          c: "javascript",
+          // document.write(obj.b);
+        };
+        const spread = { ...obj };
+        document.spread(obj.a);
+        document.spread(obj.b);
+        document.spread(obj.c);
       }
-      const spread = {...obj}
-      document.spread(obj.a);
-      document.spread(obj.b);
-      document.spread(obj.c);
 
       //20.추가
       const obj = {
         a: 100,
         b: 200,
-        c: "javascript"
-
-      }
-      const spread = {...obj, d:"jquery"}
+        c: "javascript",
+      };
+      const spread = { ...obj, d: "jquery" };
       document.write(obj.a);
       document.write(obj.b);
       document.write(obj.c);
       document.write(obj.d);
 
-      //12.추가
-      const objA= {
+      //21.추가
+      const objA = {
         a: 100,
         b: 200,
-      }
-      const objB= {
+      };
+      const objB = {
         a: "a",
         b: "b",
-      }
-      const spread = {...objA, ...objB}
+      };
+      const spread = { ...objA, ...objB };
       document.write(obj.A);
       document.write(obj.B);
 
       //22
-      const obj= {
+      const obj = {
         a: 100,
         b: 200,
-        c:"c"
-      }
-      const{a, b, c} = obj;
+        c: "c",
+      };
+      const { a, b, c } = obj;
       document.write(a);
       document.write(b);
       document.write(c);
 
       //23
-      const obj= {
+      const obj = {
         a: 100,
         b: 200,
-        c:"c"
-      }
-      const{a:name1, b:name2, c:name3} = obj;
+        c: "c",
+      };
+      const { a: name1, b: name2, c: name3 } = obj;
       document.write(name1);
       document.write(name2);
       document.write(name3);
 
-      //24
+      24;
     </script>
   </body>
 </html>
