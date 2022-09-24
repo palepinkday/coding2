@@ -1,117 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>imgTextType</title>
     <style>
-        .gray {
-            background-color: #f5f5f5;
-        }
+      .gray {
+        background-color: #f5f5f5;
+      }
 
-        .imgText__inner {
-            display: flex;
-            justify-content: space-between;
-        }
+      .imgText__inner {
+        display: flex;
+        justify-content: space-between;
+      }
 
-        .imgText__inner>div {
-            width: 32px;
-            height: 500px;
-            background-color: #ccc;
+      .imgText__inner > div {
+        width: 32px;
+        height: 500px;
+        background-color: #ccc;
+      }
 
-        }
+      .imgText__txt {
+      }
 
-        .imgText__txt {}
+      .imgText__txt span {
+      }
 
-        .imgText__txt span {}
+      .imgText__txt h3 {
+      }
 
-        .imgText__txt h3 {}
+      .imgText__txt p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: #666;
+        margin-bottom: 10px;
+      }
 
-        .imgText__txt p {
-            font-size: 18px;
-            font-weight: 300;
-            line-height: 1.5;
-            color: #666;
-            margin-bottom: 10px;
-        }
+      .imgText__txt ul {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.6;
+      }
 
-        .imgText__txt ul {
-            font-size: 18px;
-            font-weight: 300;
-            line-height: 1.6;
-        }
+      .imgText__txt ul li {
+        color: #666;
+      }
 
-        .imgText__txt ul li {
-            color: #666;
-        }
+      .imgText__txt ul li::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        position: absolute;
+        left: 5px;
+        top: 9px;
+        background: #666;
+      }
 
-        .imgText__txt ul li::before {
-            content: '';
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            position: absolute;
-            left: 5px;
-            top: 9px;
-            background: #666;
+      .imgText__img {
+        border: radius 10px;
+      }
 
-        }
+      .imgText__img a {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        background-color: #7c22b3;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 30px;
+        border-radius: ;
+      }
 
-        .imgText__img {
-            border: radius 10px;
-            ;
-        }
+      .imgText__img a.blue {
+        background-color: #f5f5f5;
+      }
 
-        .imgText__img a {
-            position: absolute;
-            left: 30px;
-            top: 30px;
-            background-color: #7c22b3;
-            color: #fff;
-            font-size: 18px;
-            padding: 10px 30px;
-            border-radius: ;
+      .imgText__img .img1 {
+        background: url(img/imgText_bg01.jpg) no-repeat center;
+      }
 
-        }
-
-        .imgText__img a.blue {
-            background-color: #f5f5f5;
-        }
-
-        .imgText__img .img1 {
-            background: url(img/imgText_bg01.jpg) no-repeat center;
-
-        }
-
-        .imgText__img .img2 {
-            background: url(img/imgText_bg02.jpg) no-repeat center;
-
-        }
+      .imgText__img .img2 {
+        background: url(img/imgText_bg02.jpg) no-repeat center;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <section id="imgTextTyle" class="imgText__wrap nexon section">
-        <h2 class="blind"></h2>
-        <div class="imgText__inner container"></div>
-        <div class="imgText__txt">
-            <span>dld</span>
-            <h3></h3>
-            <p></p>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-            </ul>
-        </div>
-        <div class="..img/imgText__img1"></div>
-        <div class="..img/imgText__img2"></div>
+      <h2 class="blind"></h2>
+      <div class="imgText__inner container"></div>
+      <div class="imgText__txt">
+        <span>dld</span>
+        <h3></h3>
+        <p></p>
+        <ul>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </div>
+      <div class="..img/imgText__img1"></div>
+      <div class="..img/imgText__img2"></div>
     </section>
-</body>
-
+  </body>
 </html>
+
+<!-- //<section
+        id="imgTextType"
+        class="type imgText__wrap nexon section gray content__item"
+      >
+        <h2 class="blind">유용한 사이트 살펴보기</h2>
+        <div class="imgText__inner container">
+          <div class="imgText__txt">
+            <span>좀 더 가깝게...</span>
+            <h3>아트 매거진 <br />추천 사이트</h3>
+            <p>생활 속에서 늘 함께 하세요.</p>
+            <ul>
+              <li><a href="/">퍼블릭아트 사이트</a></li>
+              <li><a href="/">아트마인 사이트</a></li>
+              <li><a href="/">월간미술 사이트</a></li>
+              <li><a href="/">아트인컬처 사이트</a></li>
+              <li><a href="/">퍼블릭갤러리 사이트</a></li>
+              <li><a href="/">Frieze 사이트</a></li>
+            </ul>
+          </div>
+          <div class="imgText__img img1">
+            <a href="/">퍼블릭아트 사이트</a>
+          </div>
+          <div class="imgText__img img2">
+            <a href="/" class="blue">아트마인 사이트</a>
+          </div>
+        </div>
+      </section>
+imgTextType -->
