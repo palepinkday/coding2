@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #wrap {
+        width: 1000px;
+        margin: 0 auto;
+      }
+      .clearfix::before,
+      .clearfix::after {
+        display: block;
+        content: "";
+        clear: both;
+      }
+      #container {
+      }
+      .left {
+        width: 30%;
+        background-color: #fff;
+        float: left;
+      }
+      .left img {
+        width: 42%;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .left ul {
+        list-style: none;
+        display: block;
+      }
+      .left ul li {
+        font-weight: 800;
+        font-size: 22px;
+        padding: 20px;
+      }
+      .left ul li ul {
+      }
+      .submenu {
+        font-size: 18px;
+      }
+
+      .left ul li ul li {
+        text-align: left;
+        padding-left: 10px;
+      }
+      .right {
+        width: 70%;
+        background-color: #fff;
+        float: right;
+      }
+
+      .right img {
+        width: 100%;
+      }
+      .right__middle {
+        width: 100%;
+      }
+      .right__middle div {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
+      h2 {
+        padding: 10px;
+
+        display: inline;
+      }
+      .right__middle .tab {
+      }
+      .tab__wrap {
+        height: 100px;
+      }
+      .right__middle .tab__wrap img {
+        float: left;
+        width: 20%;
+      }
+      .right__bottom {
+        width: 100%;
+      }
+      .tab-bottom {
+        width: 100%;
+      }
+      .tab-bottom .tab-bot {
+        width: 20%;
+        float: left;
+      }
+      .tab-bottom .tab-bot {
+      }
+      .right__bottom {
+        height: 350px;
+        background-color: rgb(117, 106, 106);
+        margin-top: 150px;
+      }
+      .bottom__wrap {
+        width: 100%;
+      }
+      .notice {
+        width: 32%;
+        float: left;
+        text-align: center;
+      }
+      .notice div h2 {
+        padding-left: 70px;
+        padding-right: 10px;
+      }
+      .notice div img {
+        width: 30px;
+      }
+      .notice img {
+        width: 130px;
+        padding: 5px;
+        padding-bottom: 10px;
+      }
+      .notice ul li {
+        font-size: 14px;
+        line-height: 2;
+      }
+
+      .footer {
+        width: 100%;
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="container" class="clearfix">
+        <section class="left">
+          <div><img src="1111/img/img1/logo.jpg" alt="정부24" /></div>
+          <ul>
+            <li>서비스</li>
+            <ul class="submenu">
+              <li>분야별 정책정보</li>
+              <li>정책뉴스</li>
+              <li>연구보고서</li>
+              <li>간행물</li>
+              <li>정책자료</li>
+            </ul>
+            <li>정보정책</li>
+            <li>기관정보</li>
+            <li>고객센터</li>
+          </ul>
+        </section>
+        <section class="right">
+          <div class="right__top">
+            <div class="slider__wrap">
+              <div class="slider__inner">
+                <div class="slider">
+                  <div class="slider-img1">
+                    <img src="1111/img/img1/slider.jpg" alt="새로운시작" />
+                  </div>
+                  <div class="slider-img2"></div>
+                  <div class="slider-img3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right__middle">
+            <div>
+              <h2>자주 찾는 서비스</h2>
+              <h2>|</h2>
+              <h2>키워드 서비스</h2>
+            </div>
+            <div class="tab__wrap" class="clearfix">
+              <div class="tab-1" class="tab">
+                <img src="1111/img/img1/img1.jpg" alt="" />
+              </div>
+              <div class="tab-2" class="tab">
+                <img src="1111/img/img1/img2.jpg" alt="" />
+              </div>
+              <div class="tab-3" class="tab">
+                <img src="1111/img/img1/img3.jpg" alt="" />
+              </div>
+              <div class="tab-4" class="tab">
+                <img src="1111/img/img1/img4.jpg" alt="" />
+              </div>
+              <div class="tab-5" class="tab">
+                <img src="1111/img/img1/img5.jpg" alt="" />
+              </div>
+            </div>
+            <div class="tab-bottom" class="clearfix">
+              <div class="tab-bot">
+                <h4>주민등록등본</h4>
+                <h4>(초본)교부</h4>
+              </div>
+              <div class="tab-bot">
+                <h4>주민등록등본</h4>
+                <h4>(초본)교부</h4>
+              </div>
+              <div class="tab-bot">
+                <h4>주민등록등본</h4>
+                <h4>(초본)교부</h4>
+              </div>
+              <div class="tab-bot">
+                <h4>주민등록등본</h4>
+                <h4>(초본)교부</h4>
+              </div>
+              <div class="tab-bot">
+                <h4>주민등록등본</h4>
+                <h4>(초본)교부</h4>
+              </div>
+            </div>
+          </div>
+          <div class="right__bottom">
+            <div class="bottom__wrap">
+              <div class="notice">
+                <div>
+                  <h2>공지사항</h2>
+                  <img src="1111/img/img1/plus.jpg" alt="플러스" />
+                </div>
+
+                <img src="1111/img/img1/img1-1.jpg" alt="공지사항" />
+                <ul>
+                  <li>[어디서나대학민원]호서대학교 팩스</li>
+                  <li>[전라북도 고창군]새올행정 시스템</li>
+                  <li>교육부 행정전자서명인증센터 시스템</li>
+                </ul>
+              </div>
+              <div class="notice">
+                <div>
+                  <h2>자료실</h2>
+                  <img src="1111/img/img1/plus.jpg" alt="플러스" />
+                </div>
+
+                <img src="1111/img/img1/img1-1.jpg" alt="공지사항" />
+                <ul>
+                  <li>[어디서나대학민원]호서대학교 팩스</li>
+                  <li>[전라북도 고창군]새올행정 시스템</li>
+                  <li>교육부 행정전자서명인증센터 시스템</li>
+                </ul>
+              </div>
+              <div class="notice">
+                <div>
+                  <h2>FAQ</h2>
+                  <img src="1111/img/img1/plus.jpg" alt="플러스" />
+                </div>
+                <img src="1111/img/img1/img1-1.jpg" alt="공지사항" />
+                <ul>
+                  <li>[어디서나대학민원]호서대학교 팩스</li>
+                  <li>[전라북도 고창군]새올행정 시스템</li>
+                  <li>교육부 행정전자서명인증센터 시스템</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer"></footer>
+    </div>
+  </body>
+</html>
