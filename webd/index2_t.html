@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정부 24</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+      }
+      li {
+        list-style: none;
+      }
+      img {
+      }
+      .clearfix::before,
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      /* layout */
+      #wrap {
+        width: 1000px;
+        margin: 0 auto;
+        height: 1000px;
+        padding-top: 50px;
+      }
+      #aside {
+        float: left;
+        width: 270px;
+      }
+      #contents {
+        float: right;
+        width: 700px;
+      }
+
+      #footer {
+        float: left;
+        width: 100%;
+
+        background: #edf2f8;
+      }
+      /* aside */
+      #aside h1 {
+        margin-bottom: 30px;
+      }
+      #aside h1 img {
+        width: 150px;
+      }
+      #aside .nav {
+      }
+      #aside .nav li {
+        padding-bottom: 5px;
+      }
+      #aside .nav li a {
+        font-size: 23px;
+      }
+      #aside .nav li a:hover {
+        text-decoration: underline;
+      }
+      #aside .nav li.active a {
+        color: blueviolet;
+      }
+      #aside .nav li ul.submenu {
+        display: none;
+      }
+      #aside .nav li ul.submenu li {
+      }
+      #aside .nav li ul.submenu li a {
+        font-size: 20px;
+        color: #333;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        display: block;
+      }
+      #aside .nav li ul.submenu li a:hover {
+        text-decoration: none;
+      }
+      /* banner */
+      .banner img {
+        width: 100%;
+      }
+      /* tab */
+      .tab {
+        width: 100%;
+        height: 200px;
+        padding: 40px 0;
+        position: relative;
+      }
+      .tab img {
+        width: 100px;
+      }
+      .tab ul {
+        text-align: center;
+      }
+      .tab ul li {
+        display: inline;
+        padding: 5px;
+      }
+      .tab ul li a {
+        font-size: 24px;
+      }
+      .tab ul li ul {
+        position: absolute;
+        left: 0;
+        top: 100px;
+        width: 100%;
+
+        overflow: hidden;
+      }
+      .tab ul li ul li {
+        width: 20%;
+        float: left;
+        box-sizing: border-box;
+      }
+      .tab ul li ul li a {
+        color: #666;
+        font-size: 14px;
+      }
+      .tab ul li ul li a span {
+        display: block;
+      }
+      .tab ul li .active a {
+        color: #000;
+      }
+
+      /* layer */
+      .layer {
+        background: #bbb;
+        padding: 15px;
+      }
+      .layer > div {
+        float: left;
+        width: 32%;
+        padding: 6% 3%;
+        margin-right: 2%;
+        background: #fff;
+        text-align: center;
+        position: relative;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+      }
+      .layer > div:last-child {
+        margin-right: 0;
+      }
+      .layer > div img {
+        width: 100px;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      .layer > div ul li {
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding-bottom: 5px;
+      }
+      .layer > div .more {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .layer > div .more img {
+        width: 30px;
+        height: 30px;
+      }
+      /*#footer*/
+      #footer {
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 20px;
+      }
+      #footer h2 {
+        float: left;
+      }
+      #footer h2 img {
+        width: 80px;
+      }
+      #footer address {
+        float: left;
+        font-style: normal;
+        padding: 20px 0 0 20px;
+      }
+      #footer .sns {
+        float: right;
+        margin-top: 20px;
+      }
+      #footer .sns ul {
+        overflow: hidden;
+      }
+      #footer .sns li {
+        float: left;
+        padding-bottom: 5px;
+      }
+      #footer .sns li img {
+        width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap" class="clearfix">
+      <aside id="aside">
+        <h1><img src="1111/img/img1/logo.jpg" alt="정부24" /></h1>
+        <nav class="nav">
+          <ul>
+            <li class="active">
+              <a href="#">서비스</a>
+              <ul class="submenu">
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">정책정보</a>
+              <ul class="submenu">
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">기관정보</a>
+              <ul class="submenu">
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객정보</a>
+              <ul class="submenu">
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section id="contents">
+        <article class="banner">
+          <div class="slideList">
+            <div class="slideImg">
+              <h2>슬라이드효과 이미지1</h2>
+              <img src="1111/img/img1/slider.jpg" alt="정부" />
+            </div>
+            <div class="slideImg">
+              <h2>슬라이드효과 이미지2</h2>
+              <img src="1111/img/img2/slider.jpg" alt="정부" />
+            </div>
+            <div class="slideImg">
+              <h2>슬라이드효과 이미지3</h2>
+              <img src="1111/img/img3/slider.jpg" alt="정부" />
+            </div>
+          </div>
+        </article>
+        <article class="tab">
+          <ul>
+            <li class="active">
+              <a href="#">자주찾는 서비스</a>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img1.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img2.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img3.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img4.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img5.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">키워드 서비스</a>
+              <ul style="display: none">
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img1.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img2.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img3.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img4.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="1111/img/img1/img5.jpg" alt="" /><span
+                      >주민등록표등본</span
+                    ></a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+        <article class="layer clearfix">
+          <div>
+            <h3>공지사항</h3>
+            <img src="1111/img/img1/img1-1.jpg" alt="공지사항" />
+            <ul>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+            </ul>
+            <a href="#" class="more"
+              ><img src="1111/img/img1/plus.jpg" alt="+"
+            /></a>
+          </div>
+          <div>
+            <h3>공지사항</h3>
+            <img src="1111/img/img1/img1-2.jpg" alt="공지사항" />
+            <ul>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+            </ul>
+            <a href="#" class="more"
+              ><img src="1111/img/img1/plus.jpg" alt="+"
+            /></a>
+          </div>
+          <div>
+            <h3>공지사항</h3>
+            <img src="1111/img/img1/img1-3.jpg" alt="공지사항" />
+            <ul>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+              <li>djswpdjeltjsks fgdjswpdjelgjskksdflkj</li>
+            </ul>
+            <a href="#" class="more"
+              ><img src="1111/img/img1/plus.jpg" alt="+"
+            /></a>
+          </div>
+        </article>
+      </section>
+      <footer id="footer" class="clearfix">
+        <h2><img src="1111/img/img1/logo-1.jpg" alt="정부24" /></h2>
+        <address>
+          서울 특별시 세종대로 209 행정안전부<br />
+          정부 콜센처 1588-2188 <br />
+          Copyright &copy; All right reserved
+        </address>
+        <div class="sns">
+          <ul>
+            <li>
+              <a href="#"><img src="1111/img/img1/f1.jpg" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="1111/img/img1/f2.jpg" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="1111/img/img1/f3.jpg" /></a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="script/jquery.min.js"></script>
+    <script src="script/custom.js"></script>
+    <script>
+      //세로
+      $(".nav > ul > li").hover(
+        function () {
+          $(this).find(".submenu").stop().slideDown();
+        },
+        function () {
+          $(this).find(".submenu").stop().slideUp();
+        }
+      );
+    </script>
+  </body>
+</html>

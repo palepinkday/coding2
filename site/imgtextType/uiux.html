@@ -17,6 +17,10 @@
         margin: 0;
         padding: 0;
       }
+
+      .imgText__wrap {
+        margin: 0 auto;
+      }
       /* 섹션 공통요소 */
       .section {
         width: 1200px;
@@ -88,40 +92,43 @@
       .imgText__txt ul li {
         padding-left: 20px;
         list-style: none;
-
         background-color: #000;
-        padding: 8px 20px;
+        padding: 10px 20px;
         display: inline;
       }
       .imgText__txt ul li a {
         color: #fff;
         text-decoration: none;
       }
-
       .imgText__img {
+        width: 32%;
         border-radius: 10px;
+        position: relative;
       }
-      .imgText__img a {
+      .imgText__img a.blue {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .imgText__img a span {
         left: 30px;
         bottom: 30px;
-        background-color: rgba(6, 6, 6, 0.849);
+        background-color: rgba(16, 16, 16, 0.5);
         color: #fff;
-        font-size: 18px;
-        padding: 30px 18px;
+        font-size: 25px;
+        padding: 40px 25px;
         border-radius: 100px;
         text-decoration: none;
         display: inline-block;
         font-weight: 300;
       }
-      .imgText__img a.blue {
-        background-color: rgba(16, 16, 16, 0.5);
-      }
       .imgText__img.img1 {
-        background: url(img/site01.jpg) no-repeat / center;
+        background: url(img/site01.jpg) no-repeat center / cover;
+        margin-top: 50px;
       }
-
       .imgText__img.img2 {
-        background: url(img/site02.jpg) no-repeat / center;
+        background: url(img/site02.jpg) no-repeat center / cover;
       }
     </style>
   </head>
@@ -129,26 +136,27 @@
   <body>
     <section id="imgTextTyle" class="imgText__wrap gmarket section">
       <h2 class="blind"></h2>
-      <div class="imgText__inner container"></div>
-      <div class="imgText__txt">
-        <span>이미지 텍스트 유형01</span>
-        <h3>
-          웹스토리보이<br />
-          사이트
-        </h3>
-        <p>
-          웹디자이너, 웹퍼블리셔, 프론트 앤드 개발<br />
-          자를 위한 강의 사이트 입니다.<br />
-          Gmarket Sans Light 22px 150%<br />
-          #67778A
-        </p>
-        <ul>
-          <li><a href="#">더 많은 유형 살펴보기</a></li>
-        </ul>
-      </div>
-      <div class="imgText__img img1"></div>
-      <div class="imgText__img img2">
-        <a href="/" class="blue">view</a>
+      <div class="imgText__inner container">
+        <div class="imgText__txt">
+          <span>이미지 텍스트 유형01</span>
+          <h3>
+            웹스토리보이<br />
+            사이트
+          </h3>
+          <p>
+            웹디자이너, 웹퍼블리셔, 프론트 앤드 개발<br />
+            자를 위한 강의 사이트 입니다.<br />
+            Gmarket Sans Light 22px 150%<br />
+            #67778A
+          </p>
+          <ul>
+            <li><a href="#">더 많은 유형 살펴보기</a></li>
+          </ul>
+        </div>
+        <div class="imgText__img img1"></div>
+        <div class="imgText__img img2">
+          <a href="/" class="blue"><span>view</span></a>
+        </div>
       </div>
     </section>
   </body>
