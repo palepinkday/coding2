@@ -77,14 +77,14 @@
 }
 /* slide */
 #slider {
-  width: 3000px;
+  width: 1000px;
   height: 300px;
   text-align: center;
   overflow: hidden;
 }
 .slideList {
   position: relative;
-  width: 1000px;
+  width: 3000px;
   height: 300px;
 }
 .slideList .slideImg {
@@ -103,7 +103,7 @@
   border-radius: 25px;
 }
 .slideList .slideImg img {
-  display: block;
+  display: inline-block;
   width: 1000px;
   height: 300px;
 }
