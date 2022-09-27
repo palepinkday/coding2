@@ -3,19 +3,19 @@
 @import url("https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css");
 
 .nexon {
-  font-family: "NexonLv1Gothic";
-  font-weight: 400;
+    font-family: "NexonLv1Gothic";
+    font-weight: 400;
 }
 
 /* reset */
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
-  color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 h1,
@@ -24,92 +24,92 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 #imageType {
 }
 
 #imageType > h2 {
-  font-size: 50px;
-  margin-bottom: 20px;
+    font-size: 50px;
+    margin-bottom: 20px;
 }
 #imageType > p {
-  font-size: 22px;
-  font-weight: 300;
-  margin-bottom: 70px;
-  text-align: center;
-  color: #777;
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 70px;
+    text-align: center;
+    color: #777;
 }
 .image__inner {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .image {
-  width: 49%;
-  height: 370px;
-  color: #fff;
-  padding: 200px 30px 30px 30px;
-  box-sizing: border-box;
+    width: 49%;
+    height: 370px;
+    color: #fff;
+    padding: 200px 30px 30px 30px;
+    box-sizing: border-box;
 }
 
 .image.img1 {
-  background: url(../img/img01_01.jpg) no-repeat center;
+    background: url(../img/img01_01.jpg) no-repeat center;
 }
 
 .image.img2 {
-  background: url(../img/img01_02.jpg) no-repeat center;
+    background: url(../img/img01_02.jpg) no-repeat center;
 }
 
 .image__title {
-  font-size: 32px;
-  margin-bottom: 10px;
-  overflow: hidden;
+    font-size: 32px;
+    margin-bottom: 10px;
+    overflow: hidden;
 }
 
 .image__desc {
-  font-size: 16px;
-  font-weight: 300;
-  margin-bottom: 10px;
-  line-height: 1.5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .image__btn {
-  font-style: 16px;
-  font-weight: 300;
-  color: #000;
-  background-color: #ffd14a;
-  padding: 10px 20px;
-  display: inline-block;
+    font-style: 16px;
+    font-weight: 300;
+    color: #000;
+    background-color: #ffd14a;
+    padding: 10px 20px;
+    display: inline-block;
 }
 
 .image__btn.orange {
-  background-color: #c5740a;
+    background-color: #c5740a;
 }
 
 @media (max-width: 960px) {
 }
 @media (max-width: 600px) {
-  .image__inner {
-    flex-direction: column;
-  }
-  .image {
-    width: 100%;
-    padding: 210px 20px 20px 20px;
-  }
-  .image:first-child {
-    margin-bottom: 20px;
-  }
-  .image__title {
-    font-size: 24px;
-  }
-  .image__desc {
-    font-size: 16px;
-  }
+    .image__inner {
+        flex-direction: column;
+    }
+    .image {
+        width: 100%;
+        padding: 210px 20px 20px 20px;
+    }
+    .image:first-child {
+        margin-bottom: 20px;
+    }
+    .image__title {
+        font-size: 24px;
+    }
+    /* .image__desc {
+        font-size: 16px;
+    } */
 }

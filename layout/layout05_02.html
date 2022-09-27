@@ -1,185 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃5</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        #wrap{
-            width: 100%;
-            margin: 0 auto;
-        }
-        #header{
-            width: 100%;
-            height: 100px;
-            background-color:#EEEBE9;
-           
-        }
-        #nav{
-            width: 100%;
-            height: 100px;
-            background-color:#B9AAA5;
-           
-        }
-        #main{
-            width: 100%;
-            height: 780px;
-            background-color:#886F65;
-         
-            /* overflow: hidden;    */
-        }
-        .contents .con1{
-            width: 100%;
-            height: 100px;
-            background-color:#74574A;
-         
-            float: left; 
-        }
-        .contents .con2{
-            width: 100%;
-            height: 200px;
-            background-color:#684D43; 
-          
-            float: left; 
-        }
-        .contents .con3{
-            width: 50%;
-            height: 480px;
-            background-color:#594139; 
-            
-            float: left; 
-        }
-        .contents .con4{
-            width: 50%;
-            height: 480px;
-            background-color:#4A352F; 
-           
-            float: left; 
-        }
-        #footer{
-            width: 100%;
-            height: 100px;
-            background-color:#4E342E;
-          
-        }
-        .container{
-            width: 1200px;
-            height: inherit;
-            margin: 0 auto;
-            background-color: rgba(0,0,0,0.3);
-        }
-       /* float으로 인한 깨짐방지
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>레이아웃5</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #wrap {
+                width: 100%;
+                margin: 0 auto;
+            }
+            #header {
+                width: 100%;
+                height: 100px;
+                background-color: #eeebe9;
+            }
+            #nav {
+                width: 100%;
+                height: 100px;
+                background-color: #b9aaa5;
+            }
+            #main {
+                width: 100%;
+                height: 780px;
+                background-color: #886f65;
+
+                /* overflow: hidden;    */
+            }
+            .contents .con1 {
+                width: 100%;
+                height: 100px;
+                background-color: #74574a;
+
+                float: left;
+            }
+            .contents .con2 {
+                width: 100%;
+                height: 200px;
+                background-color: #684d43;
+
+                float: left;
+            }
+            .contents .con3 {
+                width: 50%;
+                height: 480px;
+                background-color: #594139;
+
+                float: left;
+            }
+            .contents .con4 {
+                width: 50%;
+                height: 480px;
+                background-color: #4a352f;
+
+                float: left;
+            }
+            #footer {
+                width: 100%;
+                height: 100px;
+                background-color: #4e342e;
+            }
+            .container {
+                width: 1200px;
+                height: inherit;
+                margin: 0 auto;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            /* float으로 인한 깨짐방지
             깨진영역 clear:both
             부모영역에  overflow: hidden
             clearfix
 
         */
-        .clearfix::before{
-            zoom: 1;
-        }
-        .clearfix::before,
-        .clearfix::after{
-            content:'' ;
-            display: block;
-            line-height: 0;
-        }
-        .clearfix::after{
-            clear: both;
-        }
-
-        @media (max-width: 1220px){
-            .container{
-                width: 96%;
+            .clearfix::before {
+                zoom: 1;
             }
-            .contents .con1{
-                width: 30%;
-                height: 780px;
+            .clearfix::before,
+            .clearfix::after {
+                content: "";
+                display: block;
+                line-height: 0;
             }
-            .contents .con2{
-                width: 70%;
-                height:390px;
-            }
-            .contents .con3{  
-                width: 35%;
-                height:390px;
-            }
-            .contents .con4{
-                width: 35%;
-                height:390px;
+            .clearfix::after {
+                clear: both;
             }
 
-        }                                   
-        @media (max-width: 768px){
-            .container{
-                width: 100%;
+            @media (max-width: 1220px) {
+                .container {
+                    width: 96%;
+                }
+                .contents .con1 {
+                    width: 30%;
+                    height: 780px;
+                }
+                .contents .con2 {
+                    width: 70%;
+                    height: 390px;
+                }
+                .contents .con3 {
+                    width: 35%;
+                    height: 390px;
+                }
+                .contents .con4 {
+                    width: 35%;
+                    height: 390px;
+                }
             }
-            .contents .con1{
-                width: 30%;
-                height: 780px;
+            @media (max-width: 768px) {
+                .container {
+                    width: 100%;
+                }
+                .contents .con1 {
+                    width: 30%;
+                    height: 780px;
+                }
+                .contents .con2 {
+                    width: 70%;
+                    height: 260px;
+                }
+                .contents .con3 {
+                    width: 35%;
+                    height: 260px;
+                }
+                .contents .con4 {
+                    width: 35%;
+                    height: 260px;
+                }
             }
-            .contents .con2{
-                width: 70%;
-                height:260px;
+            @media (max-width: 480px) {
+                .contents .con1 {
+                    width: 100%;
+                    height: 150px;
+                }
+                .contents .con2 {
+                    width: 100%;
+                    height: 210px;
+                }
+                .contents .con3 {
+                    width: 100%;
+                    height: 210px;
+                }
+                .contents .con4 {
+                    width: 100%;
+                    height: 210px;
+                }
             }
-            .contents .con3{  
-                width: 35%;
-                height:260px;
-            }
-            .contents .con4{
-                width: 35%;
-                height:260px;
-            }
-        }
-        @media (max-width: 480px){
-            .contents .con1{
-                width: 100%;
-                height: 150px;
-            }
-            .contents .con2{
-                width: 100%;
-                height:210px;
-            }
-            .contents .con3{  
-                width: 100%;
-                height:210px;
-            }
-            .contents .con4{
-                width: 100%;
-                height:210px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="wrap"> 
-        <div id="header">
-            <div class="container"></div>
-        </div>
-        
-        <div id="nav">
-            <div class="container"></div>
-        </div>
-
-        <div id="main">
-            <div class="contents container clearfix">
-                <div class="con1"></div>
-                <div class="con2"></div>
-                <div class="con3"></div>
-                <div class="con4"></div>
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div id="header">
+                <div class="container"></div>
             </div>
-           
+
+            <div id="nav">
+                <div class="container"></div>
+            </div>
+
+            <div id="main">
+                <div class="contents container clearfix">
+                    <div class="con1"></div>
+                    <div class="con2"></div>
+                    <div class="con3"></div>
+                    <div class="con4"></div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="container"></div>
+            </div>
         </div>
-        <div id="footer">
-            <div class="container"></div>
-        </div>
-    </div>      
-   
-</body>
+    </body>
 </html>
 <!-- layout05_01 float 방식 레이아웃 
      layout05_02 float 방식 반응형 레이아웃

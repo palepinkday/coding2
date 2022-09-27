@@ -75,7 +75,7 @@
   </header>
   <!-- //headerType -->
   <main id="mainType">
-    <section id="sliderType" class="slider__wrap content__item">
+    <section id="sliderType" class="slider__wrap parallax">
       <h2 class="blind">슬라이드 영역</h2>
       <div class="slider__inner">
         <div class="swiper mySwiper">
@@ -163,7 +163,7 @@
     <!-- //imageType -->
     <section
       id="imgTextType"
-      class="type imgText__wrap nexon section gray content__item"
+      class="type imgText__wrap nexon section gray parallax"
     >
       <h2 class="blind">유용한 사이트 살펴보기</h2>
       <div class="imgText__inner container">
@@ -189,14 +189,14 @@
       </div>
     </section>
     <!-- //imgTextType -->
-    <section id="cardType" class="card__wrap nexon section">
+    <section id="cardType" class="card__wrap nexon section parallax">
       <h2>앤디 워홀</h2>
       <p>팝아티스트 앤디워홀에 대해 알아보자.</p>
       <div class="card__inner container">
         <article class="card">
           <figure class="card__header">
             <img src="assets/img/card_bg01.jpg" alt="앤디워홀" />
-          </figure>s
+          </figure>
           <div class="card__body">
             <h3 class="tit">그는 누구인가?</h3>
             <p class="desc">
@@ -288,8 +288,7 @@
     <!-- //cardType -->
     <section
       id="bannerType"
-      class="type banner__wrap nexon section content__item"
-    >
+      class="type banner__wrap nexon section parallax">
       <h2 class="blind">배너 영역</h2>
       <div class="banner__inner">
         <h3 class="title">유튜브 웹갤러리</h3>
@@ -303,7 +302,7 @@
       </div>
     </section>
     <!-- //bannerType -->
-    <section id="textType" class="text__wrap nexon section">
+    <section id="textType" class="text__wrap nexon section parallax">
       <span>미술관 나들이</span>
       <h2>유명한 국내 국외 미술관</h2>
       <div class="text__inner container">
@@ -429,6 +428,8 @@
   </footer>
   <!-- //footerType -->
   <script src="assets/js/swiper.min.js"></script>
+  <script src="../javascript/assets/js/gsap.min.js"></script>
+
   
   <script>
        var swiper = new Swiper(".mySwiper", {
@@ -447,10 +448,10 @@
       },
   });
   // 슬라이드 영역 사진 클릭시 자동 애니메이션 설정
-  document.querySelector(".swiper-button-stop").addEventListener("click", () => {
+        document.querySelector(".swiper-button-stop").addEventListener("click", () => {
           swiper.autoplay.stop();
       });
-      document.querySelector(".swiper-button-play").addEventListener("click", () => {
+        document.querySelector(".swiper-button-play").addEventListener("click", () => {
           swiper.autoplay.start();
       });
     // const btnStop = document.querySelector();
@@ -552,15 +553,46 @@
     //     }
     //   });
     // });
-    // // 메뉴 이동 시 부드럽게~
-    // document.querySelectorAll(".header__inner li a").forEach((li) => {
-    //   li.addEventListener("click", (e) => {
-    //     e.preventDefault();
-    //     document.querySelector(li.getAttribute("href")).scrollIntoView({
-    //       behavior: "smooth",
-    //     });
-    //   });
-    // });
+
+  // scrollTop 위치값에 따른 메뉴바 활성화 상태 설정
+  window.addEventListener("scroll", () => {
+      let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTo
+      //forEach문
+      document.querySelectorAll(".parallax").forEach((el, i) => {
+          if (scrollTop >= el.offsetTop - 50) {
+              document.querySelectorAll(".header__menu li").forEach((li) => {
+                  li.classList.remove("active");
+              });
+              document.querySelector(".header__menu li:nth-child(" + (i + 1) + ")").classList.add("active");
+          }
+      });
+  });
+
+    // 메뉴 이동 시 부드럽게~
+    document.querySelectorAll(".header__inner li a").forEach((li) => {
+      li.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
+     // scroll값에 따른 Top 버튼 출력위치 설정
+     window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            if (scrollTop > document.body.scrollHeight - window.outerHeight) {
+                document.querySelector("#site__top").classList.add("show");
+            } else {
+                document.querySelector("#site__top").classList.remove("show");
+            }
+        });
+
+        // Top 버튼 이벤트 설정
+        document.querySelector("#site__top").addEventListener("click", () => {
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+        });
+    </script>
     </script>
   </body>
 </html>
