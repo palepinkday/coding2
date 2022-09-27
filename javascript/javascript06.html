@@ -75,11 +75,12 @@
                 <li><a href="#sample11">11. 배열 메서드 : indexOf() : 배열 요소를 검색할 때 : 반환(숫자)</a></li>
                 <li><a href="#sample11">11. 배열 메서드 : lastIndexOf() : 배열 요소를 끝에서 검색할 때 : 반환(숫자)</a></li>
                 
-                <li><a href="#sample11"> 10. 배열 메서드 : includes() : 배열 요소를 검색할 때 : 반환(불린)</a></li>
+                <li><a href="#sample11">10. 배열 메서드 : includes() : 배열 요소를 검색할 때 : 반환(불린)</a></li>
                 <li><a href="#sample11">10. 배열 메서드 : find() : 배열 요소를 검색할 때 : 반환(요소)</a></li>
                 <li><a href="#sample11">10. 배열 메서드 : findIndex() : 배열 요소를 검색할 때 : 반환(숫자)</a></li>
                 <li><a href="#sample11">10. 배열 메서드 : filter() : 조건에 만족하는 배열 요소를 검색할 때 : 반환(배열)</a></li>
-                <li><a href="#sample11">10. 배열 메서드 : map() : 배열 요소를 추출하여 새로운 배열로 만듦 : 반환(배열)</a></li>
+                <li><a href="#sample11">13. 배열 메서드 : map() : 배열 요소를 추출하여 새로운 배열로 만듦 : 반환(배열)</a></li>
+                <li><a href="#sample11">14. 배열 메서드 : Array.from() : </a></li>
 
 
 
@@ -369,15 +370,525 @@ document.querySelector(".sample03_A2").innerHTML = arrNum2;  //100,200,300,400
         }
 
 
-        //04 
+        //04 unshift()/shift() : 배열처음요소에 추가 / 배열처음요소에 삭제
+
+        {
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const arrNumUnshift = arrNum1.unshift(600);
+
+            document.querySelector(".sample04_N1").innerHTML = "1";
+            document.querySelector(".sample04_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample04_M1").innerHTML = "unshift()";
+            document.querySelector(".sample04_P1").innerHTML = arrNumUnshift; 
+            document.querySelector(".sample04_A1").innerHTML = arrNum1; 
+            
+            
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrNumshift = arrNum2.shift(600);
+     
+            document.querySelector(".sample04_N2").innerHTML = "2";
+            document.querySelector(".sample04_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample04_M2").innerHTML = "unshift()";
+            document.querySelector(".sample04_P2").innerHTML = arrNumshift; 
+            document.querySelector(".sample04_A2").innerHTML = arrNum2;  
+
+
+        }
+   
+              
+        //05 reverse() : 배열요소의 순서를 반대로 정렬/ sort() : 배열 요소를 정렬
+       
+        {
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const arrNumreverse = arrNum1.reverse();
+
+            document.querySelector(".sample05_N1").innerHTML = "1";
+            document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample05_M1").innerHTML = "reverse()";
+            document.querySelector(".sample05_P1").innerHTML = arrNumreverse; 
+       
+
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrNumsort2 = arrNum2.sort();
+
+            document.querySelector(".sample05_N2").innerHTML = "2";
+            document.querySelector(".sample05_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample05_M2").innerHTML = "sort()";
+            document.querySelector(".sample05_P2").innerHTML = arrNumsort2; 
+       
+
+            const arrNum3 = [100, 200, 300, 400, 500];
+            const arrNumsort3 = arrNum3.sort(function(a, b){return b - a});
+
+            document.querySelector(".sample05_N3").innerHTML = "3";
+            document.querySelector(".sample05_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample05_M3").innerHTML = "function(a, b){return b - a}";
+            document.querySelector(".sample05_P3").innerHTML = arrNumsort3; 
+
+
+            const arrNum4 = ['c', 'f', 'g', 'j', 'h'];
+            const arrNumsort4 = arrNum4.sort(function(a, b){return a -b});
+
+            document.querySelector(".sample05_N4").innerHTML = "3";
+            document.querySelector(".sample05_Q4").innerHTML = "['c', 'f', 'g', 'j', 'h']";
+            document.querySelector(".sample05_M4").innerHTML = "function(a, b){return b - a}";
+            document.querySelector(".sample05_P4").innerHTML = arrNumsort4; 
+            
+            const arrNum5 = ['c', 'f', 'g', 'j', 'h'];
+            const arrNumsort5 = arrNum4.sort(function(a, b){a.localeCompare});
+
+            document.querySelector(".sample05_N5").innerHTML = "4";
+            document.querySelector(".sample05_Q5").innerHTML = "['c', 'f', 'g', 'j', 'h']";
+            document.querySelector(".sample05_M5").innerHTML =  "a.localeCompare(a)";
+            document.querySelector(".sample05_P5").innerHTML = arrNumsort5; 
+
+            const arrNum6 = ['c', 'f', 'g', 'j', 'h'];
+            const arrNumsort6 = arrNum4.sort(function(a, b){b.localeCompare});
+
+            document.querySelector(".sample05_N6").innerHTML = "4";
+            document.querySelector(".sample05_Q6").innerHTML = "['c', 'f', 'g', 'j', 'h']";
+            document.querySelector(".sample05_M6").innerHTML = "b.localeCompare(a)";
+            document.querySelector(".sample05_P6").innerHTML = arrNumsort6; 
+ 
+        }
+
+        {
+
+            //06.concat(): 배열 요소를 결합할때
+                const arrNum1 = [100, 200, 300];
+                const arrNum2 = [400, 500, 600];
+                const arrconcat = arrNum1.concat(arrNum2);
+    
+                document.querySelector(".sample06_N1").innerHTML = "1";
+                document.querySelector(".sample06_Q1").innerHTML = "[100, 200, 300],[400, 500, 600]";
+                document.querySelector(".sample06_M1").innerHTML = "concat()";
+                document.querySelector(".sample06_P1").innerHTML = arrconcat; 
+    
+                const arrspread = [...arrNum1, ...arrNum2];
+    
+                document.querySelector(".sample06_N2").innerHTML = "2";
+                document.querySelector(".sample06_Q2").innerHTML = " [...arrNum1, ...arrNum2]";
+                document.querySelector(".sample06_M2").innerHTML = "spread()";
+                document.querySelector(".sample06_P2").innerHTML = arrspread; 
+        }
+
+
+        {
+
+            //07. reduce(): 배열요소를 하나로 정리: 반환(결과값)/
+            // reduceRight() : 배열요소를 하나로 정리: 반환(결과값)
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const arrNumreduce = arrNum1.reduce(element => element);
+
+            document.querySelector(".sample06_N1").innerHTML = "1";
+            document.querySelector(".sample06_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample06_M1").innerHTML = "arrNum1.reduce(element => element)";
+            document.querySelector(".sample06_P1").innerHTML = arrNumreduce; 
+
+            const arrNum2 = [100, 200, 300, 400, 500];
+            const arrNumreduce2 = arrNum2.reduce((p, c) =>p + c);
+
+            document.querySelector(".sample06_N2").innerHTML = "2";
+            document.querySelector(".sample06_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample06_M2").innerHTML = "arrNum2.reduce((p, c) =>p + c)";
+            document.querySelector(".sample06_P2").innerHTML = arrNumreduce2; 
+
+
+            const baeyeol = [1,2,3,4,5];
+            let jujang = 0;
+
+            for(let i=0; i<baeyeol.length; i++){
+                jujang = baeyeol[i] + jujang //15
+                // jujang += baeyeol[i]
+            }
+            document.write(jujang);
+
+//----->FOR문 정리하기!!!
+            const arrNum3 = [100, 200, 300, 400, 500];
+            const arrReduce3 = arrNum3.reduce();
+
+            document.querySelector(".sample06_N3").innerHTML = "3";
+            document.querySelector(".sample06_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample06_M3").innerHTML = "arrNum3.reduce()";
+            document.querySelector(".sample06_P3").innerHTML = arrReduce3; 
+
+
+            const arrNum4 = [[100, 200], [300, 400]];
+            const arrReduce4 = arrNum2.reduce((p, c) =>p.concat(c));
+
+            document.querySelector(".sample07_N4").innerHTML = "4";
+            document.querySelector(".sample07_Q4").innerHTML = "[[100, 200], [300, 400]]";
+            document.querySelector(".sample07_M4").innerHTML = "arrNum4.reduce((p, c) =>p.concat(c))";
+            document.querySelector(".sample07_P4").innerHTML = arrReduce4; 
+
+
+        }
+
+        //08. slice() : 배열요소를 하나로 정리: 반환(배열)
+
+        {
+        
+            const arrNum = [100, 200, 300, 400, 500];
+            const result = arrNum.slice(2);
+
+            document.querySelector(".sample08_N1").innerHTML = "1";
+            document.querySelector(".sample08_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample08_M1").innerHTML = "arrNum.slice(2)";
+            document.querySelector(".sample08_P1").innerHTML = result; 
+
+       
+            const result2 = arrNum.slice(2, 3);
+
+            document.querySelector(".sample08_N2").innerHTML = "2";
+            document.querySelector(".sample08_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample08_M2").innerHTML = "arrNum.slice(2, 3)";
+            document.querySelector(".sample08_P2").innerHTML = result2; 
+
+                   
+            const result3 = arrNum.slice(2, 4);
+
+            document.querySelector(".sample08_N3").innerHTML = "3";
+            document.querySelector(".sample08_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample08_M3").innerHTML = "arrNum.slice(2, 4)";
+            document.querySelector(".sample08_P3").innerHTML = result3; 
+
+            const result4 = arrNum.slice(2, 5);
+
+            document.querySelector(".sample08_N4").innerHTML = "4";
+            document.querySelector(".sample08_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample08_M4").innerHTML = "arrNum.slice(2, 5)";
+            document.querySelector(".sample08_P4").innerHTML = result4; 
+
+            const result5 = arrNum.slice(-2);
+
+            document.querySelector(".sample08_N5").innerHTML = "5";
+            document.querySelector(".sample08_Q5").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample08_M5").innerHTML = "arrNum.slice(-2)";
+            document.querySelector(".sample08_P5").innerHTML = result5; 
+
+            const result6 = arrNum.slice(-2, 5);
+
+            document.querySelector(".sample08_N6").innerHTML = "6";
+            document.querySelector(".sample08_Q6").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample08_M6").innerHTML = "arrNum.slice(-2, 5)";
+            document.querySelector(".sample08_P6").innerHTML = result6;
+
+          
+
+        }
+        //09. splice() : 원본값이 바뀜
+        {
+            
+            arrNum = [100, 200, 300, 400, 500];
+            const result = arrNum.splice(2);
+
+            document.querySelector(".sample09_N1").innerHTML = "1";
+            document.querySelector(".sample09_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample09_M1").innerHTML = "arrNum.splice(2)";
+            document.querySelector(".sample09_P1").innerHTML = result; 
+            document.querySelector(".sample09_A1").innerHTML = arrNum; 
+
+            arrNum2 = [100, 200, 300, 400, 500];
+            const result2 = arrNum.splice(2, 3);
+
+            document.querySelector(".sample09_N2").innerHTML = "2";
+            document.querySelector(".sample09_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample09_M2").innerHTML = "arrNum2.splice(2, 3)";
+            document.querySelector(".sample09_P2").innerHTML = result2; 
+            document.querySelector(".sample09_A1").innerHTML = arrNum2; 
+
+            arrNum3 = [100, 200, 300, 400, 500];      
+            const result3 = arrNum.splice(2, 3, 'j');
+
+            document.querySelector(".sample09_N3").innerHTML = "3";
+            document.querySelector(".sample09_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample09_M3").innerHTML = "arrNum3.splice(2, 3, 'j')";
+            document.querySelector(".sample09_P3").innerHTML = result3; 
+            document.querySelector(".sample09_A1").innerHTML = arrNum3; 
+
+            arrNum4 = [100, 200, 300, 400, 500];
+            const result4 = arrNum.splice(1, 1, 'j');
+
+            document.querySelector(".sample09_N4").innerHTML = "4";
+            document.querySelector(".sample09_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample09_M4").innerHTML = "arrNum4.splice(1, 1, 'j')";
+            document.querySelector(".sample09_P4").innerHTML = result4; 
+            document.querySelector(".sample09_A1").innerHTML = arrNum4; 
+
+        
+            arrNum5 = [100, 200, 300, 400, 500];
+            const result5 = arrNum.splice(1, 0, 'j');
+
+            document.querySelector(".sample09_N5").innerHTML = "5";
+            document.querySelector(".sample09_Q5").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample09_M5").innerHTML = "arrNum5.splice1, 0, 'j')";
+            document.querySelector(".sample09_P5").innerHTML = result5;
+            document.querySelector(".sample09_A1").innerHTML = arrNum5; 
 
 
 
+            arrNum6 = [100, 200, 300, 400, 500];
+            const result6 = arrNum.splice(0, 4, 'j');
+
+            document.querySelector(".sample09_N6").innerHTML = "6";
+            document.querySelector(".sample09_Q6").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample09_M6").innerHTML = "arrNum6.splice(0, 4, 'j')";
+            document.querySelector(".sample09_P6").innerHTML = result6;
+            document.querySelector(".sample09_A1").innerHTML = arrNum6; 
 
 
+        }
+        // 10. indexOf() /lastIndexOf() /includes()
+        {
+            arrNum = [100, 200, 300, 400, 500];
+            const result = arrNum.indexOf(200);
+
+            document.querySelector(".sample10_N1").innerHTML = "1";
+            document.querySelector(".sample10_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample10_M1").innerHTML = "arrNum.indexOf(200)";
+            document.querySelector(".sample10_P1").innerHTML = result; 
+      
+
+            arrNum2 = [100, 200, 300, 400, 500];
+            const result2 = arrNum2.indexOf(300);
+
+            document.querySelector(".sample10_N2").innerHTML = "2";
+            document.querySelector(".sample10_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample10_M2").innerHTML = "arrNum2.indexOf(300)";
+            document.querySelector(".sample10_P2").innerHTML = result2; 
+     
+
+            arrNum3 = [100, 200, 300, 400, 500];      
+            const result3 = arrNum3.indexOf(600);
+
+            document.querySelector(".sample10_N3").innerHTML = "3";
+            document.querySelector(".sample10_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample10_M3").innerHTML = "arrNum3.indexOf(600)";
+            document.querySelector(".sample10_P3").innerHTML = result3; 
+   
+
+            arrNum4 = [100, 200, 300, 400, 200];
+            const result4 = arrNum4.lastIndexOf(200);
+
+            document.querySelector(".sample10_N4").innerHTML = "4";
+            document.querySelector(".sample10_Q4").innerHTML = "[100, 200, 300, 400, 200]";
+            document.querySelector(".sample10_M4").innerHTML = "arrNum4.lastIndexOf(200)";
+            document.querySelector(".sample10_P4").innerHTML = result4; 
+    
+
+        
+            arrNum5 = [100, 200, 300, 400, 200];
+            const result5 = arrNum5.includes(200);
+
+            document.querySelector(".sample10_N5").innerHTML = "5";
+            document.querySelector(".sample10_Q5").innerHTML = "[100, 200, 300, 400, 200]";
+            document.querySelector(".sample10_M5").innerHTML = "arrNum5.includes(200)";
+            document.querySelector(".sample10_P5").innerHTML = result5; 
 
 
+            arrNum6 = [100, 200, 300, 400, 200];
+            const result6 = arrNum6.includes(600);
 
+            document.querySelector(".sample10_N6").innerHTML = "6";
+            document.querySelector(".sample10_Q6").innerHTML = "[100, 200, 300, 400, 200]";
+            document.querySelector(".sample10_M6").innerHTML = "arrNum6.includes(600)";
+            document.querySelector(".sample10_P6").innerHTML = result6;
+
+        }
+        //11. find() /findIndex()
+        {
+                // const arrNum = [100, 200, 300, 400, 500];
+                // const result = arrNum.find(function(element){
+                // return element === 300;
+                // });
+                // const result = arrNum.find((element)=>{
+                // return element === 300;
+                //  });
+                // const result = arrNum.find(elemen=>{
+                // return element === 300;
+                // });
+
+            const arrNum = [100, 200, 300, 400, 500];
+            const result = arrtext.find(300);
+            //확인필요^
+
+
+            document.querySelector(".sample11_N1").innerHTML = "1";
+            document.querySelector(".sample11_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample11_M1").innerHTML = "arrNum.find(200)";
+            document.querySelector(".sample11_P1").innerHTML = result; 
+      
+
+            const result2 = arrtext.find(300);
+
+            document.querySelector(".sample11_N2").innerHTML = "2";
+            document.querySelector(".sample11_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample11_M2").innerHTML = "arrNum2.find(300)";
+            document.querySelector(".sample11_P2").innerHTML = result2; 
+     
+
+            const result3 = arrtext.find(600);
+
+            document.querySelector(".sample11_N3").innerHTML = "3";
+            document.querySelector(".sample11_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample11_M3").innerHTML = "arrNum3.indexOf(600)";
+            document.querySelector(".sample11_P3").innerHTML = result3; 
+   
+
+
+            const result4 = arrNum4.lastIndexOf(200);
+
+            document.querySelector(".sample11_N4").innerHTML = "4";
+            document.querySelector(".sample11_Q4").innerHTML = "[100, 200, 300, 400, 500]";
+            document.querySelector(".sample11_M4").innerHTML = "arrNum4.findIndex(200)";
+            document.querySelector(".sample11_P4").innerHTML = result4; 
+    
+
+
+            const result5 = arrNum5.includes(200);
+
+            document.querySelector(".sample11_N5").innerHTML = "5";
+            document.querySelector(".sample11_Q5").innerHTML = "[100, 200, 300, 400, 200]";
+            document.querySelector(".sample11_M5").innerHTML = "arrNum5.findIndex(200)";
+            document.querySelector(".sample11_P5").innerHTML = result5; 
+
+
+        }
+
+//12. filter()
+{
+    
+const arrNum = [100, 200, 300, 400, 500];
+const result = arrNum.filter(el => el === 300);
+
+document.querySelector(".sample12_N1").innerHTML = "1";
+document.querySelector(".sample12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample12_M1").innerHTML = "filter(el => el === 300)";
+document.querySelector(".sample12_P1").innerHTML = result; 
+
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.filter(el => el === 600);
+
+document.querySelector(".sample12_N2").innerHTML = "2";
+document.querySelector(".sample12_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample12_M2").innerHTML = "filter(el => el === 600)";
+document.querySelector(".sample12_P2").innerHTML = result2; 
+
+const arrNu3m = [100, 200, 300, 400, 500];
+const result3 = arrNum3.filter(el => el === 300);
+
+document.querySelector(".sample12_N3").innerHTML = "3";
+document.querySelector(".sample12_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample12_M3").innerHTML = "filter(el => el >= 300)";
+document.querySelector(".sample12_P3").innerHTML = result3; 
+}
+
+//13. map()
+{
+const arrNum = [100, 200, 300, 400, 500];
+const result = arrNum.map(el=>el);
+
+document.querySelector(".sample13_N1").innerHTML = "1";
+document.querySelector(".sample13_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample13_M1").innerHTML = "arrNum.map(el=>el)";
+document.querySelector(".sample13_P1").innerHTML = result; 
+
+const arrNum2 = [100, 200, 300, 400, 500];
+const result2 = arrNum2.map(el=>el + 'j');
+
+document.querySelector(".sample13_N2").innerHTML = "1";
+document.querySelector(".sample13_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample13_M2").innerHTML = "arrNum.map(el=>el + 'j')";
+document.querySelector(".sample13_P2").innerHTML = result; 
+
+const arrNum3 = [100, 200, 300, 400, 500];
+const result3 = arrNu3m.map(el=>el + 100);
+
+document.querySelector(".sample13_N3").innerHTML = "1";
+document.querySelector(".sample13_Q3").innerHTML = "[100, 200, 300, 400, 500]";
+document.querySelector(".sample13_M3").innerHTML = "arrNum.map(el=>el + 100)";
+document.querySelector(".sample13_P3").innerHTML = result;
+
+const arrNum4 = [{a:100}, {a:200}, {a:300}];
+const result4 = arrNum4.map(el=>el.a);
+
+document.querySelector(".sample13_N4").innerHTML = "1";
+document.querySelector(".sample13_Q4").innerHTML = "[{a:100}, {a:200}, {a:300}]";
+document.querySelector(".sample13_M4").innerHTML = "arrNum.map(el=>el.a)";
+document.querySelector(".sample13_P4").innerHTML = result; 
+
+  
+}
+
+//14. Array.from()
+{
+const text = "javascript";
+const result = Array.from(text);
+
+document.querySelector(".sample14_N1").innerHTML = "1";
+document.querySelector(".sample14_Q1").innerHTML = "javascript";
+document.querySelector(".sample14_M1").innerHTML = " Array.from(text)";
+document.querySelector(".sample14_P1").innerHTML = result; 
+
+const text2 = "javascript";
+const result2 = Array.from(text2, el=>el + "10");
+
+document.querySelector(".sample14_N2").innerHTML = "2";
+document.querySelector(".sample14_Q2").innerHTML = "javascript";
+document.querySelector(".sample14_M2").innerHTML = " Array.from(text2, el=>el +'10')";
+document.querySelector(".sample14_P2").innerHTML = result2;
+
+const text3 = "javascript";
+const result3 =[...text3].map(el=>el);
+
+document.querySelector(".sample14_N2").innerHTML ="3";
+document.querySelector(".sample14_Q2").innerHTML = "javascript";
+document.querySelector(".sample14_M2").innerHTML = " =[...text3](el=>el)";
+document.querySelector(".sample14_P2").innerHTML = result3;
+
+
+}
+{
+    const number1 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result1 = number1[3];
+
+    const number2 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result2 = number2.splice(3, 1);
+
+    const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result3 = number1.slice(3, 4);
+
+    const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result4 = number3.find(el => el === 400);
+    
+    const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result5 = number4.filter(el => el === 400);
+
+    //400
+
+    console.log(result);
+}
+
+{
+    const number1 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result1 = number1[3, 4]
+
+    const number2 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result2 = number2.splice(0, 9, '400', '500');
+
+    const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result3 = number1.slice(3, 5);
+
+    const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result4 = number3.find(el => el === 400, 500);
+    
+    const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result5 = number4.filter(el => el === 400, 500);
+
+    //400 500
+
+    console.log(result);
+}
 
 
     </script>

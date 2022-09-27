@@ -79,8 +79,9 @@
       <section id="sliderType" class="slider__wrap content__item">
         <h2 class="blind">슬라이드 영역</h2>
         <div class="slider__inner">
-          <div class="slider">
-            <div class="slider__img">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide img1">
               <div class="desc">
                 <span>portfolio</span>
                 <h3>WEB GALLERY</h3>
@@ -94,17 +95,14 @@
                 </div>
               </div>
             </div>
-            <div class="slider__arrow">
-              <a href="#" class="left"><span class="ir">이전 이미지</span></a>
-              <a href="#" class="right"><span class="ir">다음 이미지</span></a>
             </div>
-            <div class="slider__dot">
-              <a href="#" class="dot active"><span class="ir">1</span></a>
-              <a href="#" class="dot"><span class="ir">2</span></a>
-              <a href="#" class="dot"><span class="ir">3</span></a>
-              <a href="#" class="play"><span class="ir">플레이</span></a>
-              <a href="#" class="stop"><span class="ir">정지</span></a>
-            </div>
+            <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
           </div>
         </div>
       </section>
@@ -173,7 +171,7 @@
           <article class="card">
             <figure class="card__header">
               <img src="assets/img/card_bg01.jpg" alt="앤디워홀" />
-            </figure>
+            </figure>s
             <div class="card__body">
               <h3 class="tit">그는 누구인가?</h3>
               <p class="desc">
@@ -426,100 +424,139 @@
         },
     });
 
-
-      const btnStop = document.querySelector();
-      const btnStart = document.querySelector();
-      const btnHam = document.querySelector();
-      const btnMenu = document.querySelector();
-      const btnMenuList = document.querySelector();
-
-      btnStop.addEventListener("click", () => {
-        swiper.autoplay.stop();
-        btnStart.style.display = "block";
-        btnStop.style.display = "none";
-      });
-      btnStart.addEventListener("click", () => {
-        swiper.autoplay.start();
-        btnStart.style.display = "none";
-        btnStop.style.display = "block";
-      });
-
-      btnHam.addEventListener("click", () => {
-        btnHam.classList.toggle("active");
-        btnHam.classList.toggle("active");
-        document.body.classList.toggle("fixed");
-      });
-
-      btnMenuList
-        list.addEventListener("click", () => {
-        btnMenuList.classList.remove("fixed");
-        btnMenuList.classList.remove("active");
-        document.body.classList.remove("active");
-      });
+    // 슬라이드 영역 사진 클릭시 자동 애니메이션 설정
+    document.querySelector(".swiper-button-stop").addEventListener("click", () => {
+            swiper.autoplay.stop();
+        });
+        document.querySelector(".swiper-button-play").addEventListener("click", () => {
+            swiper.autoplay.start();
+        });
 
 
-      window.addEventListener("resize", () => {
-        let width = window.innerWidth;
-        if (width > 1300) {
-          document.body.classList.remove("fixed");
-          btnMenu.classList.remove("active");
-          btnHam.classList.remove("active");
-        }
-      });
+
+      // const btnStop = document.querySelector();
+      // const btnStart = document.querySelector();
+      // const btnHam = document.querySelector();
+      // const btnMenu = document.querySelector();
+      // const btnMenuList = document.querySelector();
+
+      // btnStop.addEventListener("click", () => {
+      //   swiper.autoplay.stop();
+      //   btnStart.style.display = "block";
+      //   btnStop.style.display = "none";
+      // });
+      // btnStart.addEventListener("click", () => {
+      //   swiper.autoplay.start();
+      //   btnStart.style.display = "none";
+      //   btnStop.style.display = "block";
+      // });
+
+      // btnHam.addEventListener("click", () => {
+      //   btnHam.classList.toggle("active");
+      //   btnHam.classList.toggle("active");
+      //   document.body.classList.toggle("fixed");
+      // });
+
+      // btnMenuList
+      //   list.addEventListener("click", () => {
+      //   btnMenuList.classList.remove("fixed");
+      //   btnMenuList.classList.remove("active");
+      //   document.body.classList.remove("active");
+      // });
+
+
+      // window.addEventListener("resize", () => {
+      //   let width = window.innerWidth;
+      //   if (width > 1300) {
+      //     document.body.classList.remove("fixed");
+      //     btnMenu.classList.remove("active");
+      //     btnHam.classList.remove("active");
+      //   }
+      // });
     </script>
     <script> 
-      const btnStop = document.querySelector(".swiper-button-stop");
-      const btnStart = document.querySelector(".swiper-button-play");
-      const btnHam = document.querySelector(".header__ham");
-      const btnMenu = document.querySelector(".header__menu");
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+        const btnHam = document.querySelector(".header__ham");
+        const btnMenu = document.querySelector(".header__menu");
+        const btnMenuList = document.querySelectorAll("ul li a");
 
       // swiper에서 재생 버튼을 누르면 슬라이드 재생, 재생 버튼 숨김, 정지 버튼 나타남
       // swiper에서 정지 버튼을 누르면 슬라이드 정지, 정지 버튼 숨김, 재생 버튼 나타남
       btnStart.style.display = "none";
-      btnStop.addEventListener("click", () => {
-        swiper.autoplay.stop();
-        btnStart.style.display = "block";
-        btnStop.style.display = "none";
-      });
-      btnStart.addEventListener("click", () => {
-        swiper.autoplay.start();
-        btnStart.style.display = "none";
-        btnStop.style.display = "block";
-      });
 
-      // 햄버거를 클릭하면 메뉴가 나타나도록 설정
-      btnHam.addEventListener("click", () => {
-        btnHam.classList.toggle("active");
-        btnMenu.classList.toggle("overlay");
-      });
+        btnStop.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
 
-      // 패럴랙스 효과
-      window.addEventListener("scroll", () => {
-        let scrollTop =
-          window.pageYOffset ||
-          window.scrollY ||
-          document.documentElement.scrollTop;
-        document.querySelectorAll("section").forEach((el, i) => {
-          if (scrollTop > el.offsetTop - 500) {
-            document.querySelectorAll(".header__menu ul li").forEach((li) => {
-              li.classList.remove("active");
+        btnStart.addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        });
+
+        // 헤더 햄버거 메뉴 클릭시 스크롤 고정 설정
+        btnHam.addEventListener("click", () => {
+            btnHam.classList.toggle("active");
+            btnMenu.classList.toggle("active");
+            document.body.classList.toggle("fixed");
+        });
+
+
+        // 브라우저 크기에 따른 햄버거 메뉴 클릭시 스크롤 고정, 메뉴 활성화 여부 설정
+        window.addEventListener("resize", () => {
+            let width = window.innerWidth;
+            if (width > 1300) {
+                document.body.classList.remove("fixed");
+                btnMenu.classList.remove("active");
+                btnHam.classList.remove("active");
+            }
+        });
+
+        // 햄버거 메뉴에서 메뉴 클릭시 메뉴바가 비활성화 되도록 설정
+        btnMenuList.forEach(list => {
+            list.addEventListener("click", () => {
+                document.body.classList.remove("fixed");
+                btnMenu.classList.remove("active");
+                btnHam.classList.remove("active");
             });
-            document
-              .querySelector(".header__menu ul li:nth-child(" + (i + 1) + ")")
-              .classList.add("active");
-          }
         });
-      });
 
-      // 메뉴 이동 시 부드럽게~
-      document.querySelectorAll(".header__inner li a").forEach((li) => {
-        li.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(li.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-        });
-      });
+      // // 햄버거를 클릭하면 메뉴가 나타나도록 설정
+      // btnHam.addEventListener("click", () => {
+      //   btnHam.classList.toggle("active");
+      //   btnMenu.classList.toggle("overlay");
+      // });
+
+      // // 패럴랙스 효과
+      // window.addEventListener("scroll", () => {
+      //   let scrollTop =
+      //     window.pageYOffset ||
+      //     window.scrollY ||
+      //     document.documentElement.scrollTop;
+      //   document.querySelectorAll("section").forEach((el, i) => {
+      //     if (scrollTop > el.offsetTop - 500) {
+      //       document.querySelectorAll(".header__menu ul li").forEach((li) => {
+      //         li.classList.remove("active");
+      //       });
+      //       document
+      //         .querySelector(".header__menu ul li:nth-child(" + (i + 1) + ")")
+      //         .classList.add("active");
+      //     }
+      //   });
+      // });
+
+      // // 메뉴 이동 시 부드럽게~
+      // document.querySelectorAll(".header__inner li a").forEach((li) => {
+      //   li.addEventListener("click", (e) => {
+      //     e.preventDefault();
+      //     document.querySelector(li.getAttribute("href")).scrollIntoView({
+      //       behavior: "smooth",
+      //     });
+      //   });
+      // });
       </script>
 
   </body>
