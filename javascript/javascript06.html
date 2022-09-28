@@ -1683,7 +1683,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
         {
             
             arrNum = [100, 200, 300, 400, 500];
-            const result = arrNum.splice(2);
+            const result = arrNum.splice(2); //300, 400, 500
 
             document.querySelector(".sample09_N1").innerHTML = "1";
             document.querySelector(".sample09_Q1").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1692,7 +1692,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
             document.querySelector(".sample09_A1").innerHTML = arrNum; 
 
             arrNum2 = [100, 200, 300, 400, 500];
-            const result2 = arrNum.splice(2, 3);
+            const result2 = arrNum.splice(2, 3); //300, 400, 500
 
             document.querySelector(".sample09_N2").innerHTML = "2";
             document.querySelector(".sample09_Q2").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1701,7 +1701,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
             document.querySelector(".sample09_A1").innerHTML = arrNum2; 
 
             arrNum3 = [100, 200, 300, 400, 500];      
-            const result3 = arrNum.splice(2, 3, 'j');
+            const result3 = arrNum.splice(2, 3, 'j'); //300, 400, 500
 
             document.querySelector(".sample09_N3").innerHTML = "3";
             document.querySelector(".sample09_Q3").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1710,7 +1710,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
             document.querySelector(".sample09_A1").innerHTML = arrNum3; 
 
             arrNum4 = [100, 200, 300, 400, 500];
-            const result4 = arrNum.splice(1, 1, 'j');
+            const result4 = arrNum.splice(1, 1, 'j'); //200
 
             document.querySelector(".sample09_N4").innerHTML = "4";
             document.querySelector(".sample09_Q4").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1720,7 +1720,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
 
         
             arrNum5 = [100, 200, 300, 400, 500];
-            const result5 = arrNum.splice(1, 0, 'j');
+            const result5 = arrNum.splice(1, 0, 'j'); //
 
             document.querySelector(".sample09_N5").innerHTML = "5";
             document.querySelector(".sample09_Q5").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1731,7 +1731,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
 
 
             arrNum6 = [100, 200, 300, 400, 500];
-            const result6 = arrNum.splice(0, 4, 'j');
+            const result6 = arrNum.splice(0, 4, 'j'); //100, 200, 300, 400
 
             document.querySelector(".sample09_N6").innerHTML = "6";
             document.querySelector(".sample09_Q6").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1744,7 +1744,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
         // 10. indexOf() /lastIndexOf() /includes()
         {
             arrNum = [100, 200, 300, 400, 500];
-            const result = arrNum.indexOf(200);
+            const result = arrNum.indexOf(200); //1
 
             document.querySelector(".sample10_N1").innerHTML = "1";
             document.querySelector(".sample10_Q1").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1753,7 +1753,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
       
 
             arrNum2 = [100, 200, 300, 400, 500];
-            const result2 = arrNum2.indexOf(300);
+            const result2 = arrNum2.indexOf(300); //2
 
             document.querySelector(".sample10_N2").innerHTML = "2";
             document.querySelector(".sample10_Q2").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1762,7 +1762,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
      
 
             arrNum3 = [100, 200, 300, 400, 500];      
-            const result3 = arrNum3.indexOf(600);
+            const result3 = arrNum3.indexOf(600); //-1
 
             document.querySelector(".sample10_N3").innerHTML = "3";
             document.querySelector(".sample10_Q3").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1771,7 +1771,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
    
 
             arrNum4 = [100, 200, 300, 400, 200];
-            const result4 = arrNum4.lastIndexOf(200);
+            const result4 = arrNum4.lastIndexOf(200); //4
 
             document.querySelector(".sample10_N4").innerHTML = "4";
             document.querySelector(".sample10_Q4").innerHTML = "[100, 200, 300, 400, 200]";
@@ -1781,7 +1781,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
 
         
             arrNum5 = [100, 200, 300, 400, 200];
-            const result5 = arrNum5.includes(200);
+            const result5 = arrNum5.includes(200); //true
 
             document.querySelector(".sample10_N5").innerHTML = "5";
             document.querySelector(".sample10_Q5").innerHTML = "[100, 200, 300, 400, 200]";
@@ -1790,7 +1790,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
 
 
             arrNum6 = [100, 200, 300, 400, 200];
-            const result6 = arrNum6.includes(600);
+            const result6 = arrNum6.includes(600); //false
 
             document.querySelector(".sample10_N6").innerHTML = "6";
             document.querySelector(".sample10_Q6").innerHTML = "[100, 200, 300, 400, 200]";
@@ -1997,6 +1997,22 @@ document.querySelector(".sample14_P2").innerHTML = result3;
     console.log(result5);
 
 }
+    const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result3 = number1.slice(3, 5); //400, 500
+
+    const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+    const result5 = number4.filter((el) => el === 400 || el === 500); //400, 500
+
+      const number = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+      const result = number.splice(3, 2);
+      console.log(result);//400, 500
+
+      { const number = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+            if (number.includes(400 || 500)) {
+                console.log(number[3], number[4]) //400, 500
+            }
+        }
+        {
 
 const num = [a, b, c, d, e, f, g, h, i, k]
 //b d f h k
