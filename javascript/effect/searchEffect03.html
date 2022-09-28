@@ -22,16 +22,9 @@
         <header id="header">
             <nav>
                 <ul>
-                    <li>
-                        <a href="searchEffect01.html">1</a>
-                        <!-- <ul class="sub">
-                        <li><a href="searchEffect01.html">HTML</a></li>
-                        <li><a href="searchEffect01_css.html">CSS</a></li>
-                        <li><a href="searchEffect01_javascript.html">JAVASCRIPT</a></li>
-                    </ul> -->
-                    </li>
-                    <li class="active"><a href="searchEffect02.html">2</a></li>
-                    <li><a href="searchEffect03.html">3</a></li>
+                    <li><a href="searchEffect01.html">1</a></li>
+                    <li><a href="searchEffect02.html">2</a></li>
+                    <li class="active"><a href="searchEffect03.html">3</a></li>
                     <li><a href="searchEffect04.html">4</a></li>
                     <li><a href="searchEffect05.html">5</a></li>
                     <li><a href="searchEffect06.html">6</a></li>
@@ -42,28 +35,32 @@
 
         <main id="main">
             <div class="search__wrap">
-                <span>indexOf()를 이용하여 검색하기</span>
+                <span>includes()를 이용하여 검색하기</span>
                 <h1>CSS 속성 검색하기</h1>
                 <div class="search__box">
                     <label for="search">검색하기</label>
                     <input
                         type="text"
                         id="search"
-                        placeholder="CSS 속성을 입력해주세요!"
+                        placeholder="CSS 속성 및 유형을 입력해주세요!"
                     />
                 </div>
                 <div class="search__info">
-                    <div>CSS 속성 갯수 : <span class="num">0</span></div>
+                    <div class="type">
+                        플렉스, 애니메이션, 백그라운드, 기타 등등 유형 별로
+                        검색해보세요!
+                    </div>
+                    <div>전체 속성 갯수 : <span class="num">0</span></div>
                 </div>
 
                 <div class="search__list">
                     <div class="css">
                         <ul>
-                            <li data-name="accent-color">
+                            <li data-name="accent-color" data-type="효과">
                                 <strong>accent-color</strong> : accent-color 는
                                 특정 요소에 색상을 지정합니다.
                             </li>
-                            <li data-name="aline-content">
+                            <li data-name="aline-content" data-type="플렉스">
                                 <strong>aline-content</strong>:align-content
                                 속성은 콘텐츠 아이템의 상하관계 정렬 상태를
                                 설정합니다..
@@ -220,12 +217,6 @@
                                 >:background-origin 속성은 백그라운드 이미지의
                                 위치 기준점을 설정하기 위한 속성입니다..
                             </li>
-                            <li data-name="background-blend-mode">
-                                <strong>background-blend-mode</strong>:.
-                            </li>
-                            <li data-name="animation-direction">
-                                <strong>animation-delay</strong>:.
-                            </li>
                             <li data-name="animation-direction">
                                 <strong>animation-delay</strong>:.
                             </li>
@@ -272,10 +263,8 @@
         <!-- //footer -->
         <script>
             //선택자
-            //선택자
-            const searchBox = document.querySelector(".search__box"); //검색영역
+            const searchBox = document.querySelector(".search__box input"); //검색영역
             const searchList = document.querySelectorAll(".search__list ul li"); //목록리스트
-            const searchInfo = document.querySelector(".search__info .num");
 
             searchInfo.textContent = searchList.length; //전체갯수
 
@@ -283,9 +272,9 @@
                 const searchWord = searchBox.vaule; //사용자가 입력한 키워드
 
                 searchList.forEach((el) => {
-                    const cssName = el.dataset.name;
+                    const cssName = el.dataset.name; //css속성모든값
 
-                    if (cssName.indexOf(searchWord)) {
+                    if (cssName.includes(searchWord)) {
                         el.classList.remove("hide");
                     } else {
                         el.classList.add("hide"); //보임 indexOf()값이 0(false)이되는 값만 지움

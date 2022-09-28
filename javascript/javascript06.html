@@ -1982,18 +1982,21 @@ document.querySelector(".sample14_P2").innerHTML = result3;
     const result2 = number2.splice(0, 9, '400', '500');
 
     const number3 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-    const result3 = number1.slice(3, 5);
+    const result3 = number1.slice(3, 5); //
 
     const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
     const result4 = number3.find(el => el === 400, 500);
     
     const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-    const result5 = number4.filter(el => el === 400, 500);
+    const result5 = number4.filter(el => el === 400 || el === 500);
 
-    //400 500
+    //400 500-->확인필요
 
     console.log(result);
 }
+
+const num = [a, b, c, d, e, f, g, h, i, k]
+//b d f h k
 
 
     </script>
