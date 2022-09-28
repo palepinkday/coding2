@@ -356,8 +356,7 @@ document.querySelector(".sample04_A2").innerHTML = arrNum2;
             <!-- //sample04 -->
                         <div id="sample05" class="sample">
                 <h3>05. reverse() / sort()</h3>
-                <p>reverse() : 순서를 반대로 정렬
-sort() : 배열 요소를 정렬
+                <p>reverse() : 순서를 반대로 정렬 sort() : 배열 요소를 정렬
                 </p>
                 <div class="table">
                     <table>
@@ -417,54 +416,53 @@ sort() : 배열 요소를 정렬
                     </table>
                 </div>
                 <div class="script">
-<pre><code class="language-js">const arrNum1 = [100, 200, 300, 400, 500];
-const arrNumReverse = arrNum1.reverse();
+<pre><code class="language-js">    const arrNum1 = [100, 200, 300, 400, 500];
+    const arrNumReverse = arrNum1.reverse();
 
-document.querySelector(".sample05_N1").innerHTML = "1";
-document.querySelector(".sample05_Q1").innerHTML = [100, 200, 300, 400, 500];
-document.querySelector(".sample05_M1").innerHTML = "reverse()";
-document.querySelector(".sample05_P1").innerHTML = arrNumReverse;
+    document.querySelector(".sample05_N1").innerHTML = "1";
+    document.querySelector(".sample05_Q1").innerHTML = "[100, 200, 300, 400, 500]";
+    document.querySelector(".sample05_M1").innerHTML = "reverse()";
+    document.querySelector(".sample05_P1").innerHTML = arrNumReverse;
 
-const arrNum2 = [100, 200, 300, 400, 500];
-const arrNumSort2 = arrNum2.sort();
+    const arrNum2 = [100, 200, 300, 400, 500];
+    const arrNumSort2 = arrNum2.sort();
 
-document.querySelector(".sample05_N2").innerHTML = "2";
-document.querySelector(".sample05_Q2").innerHTML = [100, 200, 300, 400, 500];
-document.querySelector(".sample05_M2").innerHTML = "sort()";
-document.querySelector(".sample05_P2").innerHTML = arrNumSort2;
+    document.querySelector(".sample05_N2").innerHTML = "2";
+    document.querySelector(".sample05_Q2").innerHTML = "[100, 200, 300, 400, 500]";
+    document.querySelector(".sample05_M2").innerHTML = "sort()";
+    document.querySelector(".sample05_P2").innerHTML = arrNumSort2;
 
-const arrNum3 = [100, 200, 300, 400, 500];
-const arrNumSort3 = arrNum3.sort(function(a, b){return b - a});
+    const arrNum3 = [100, 500, 300, 400, 200];
+    const arrNumSort3 = arrNum3.sort(function (a, b) { return b - a });
 
-document.querySelector(".sample05_N3").innerHTML = "3";
-document.querySelector(".sample05_Q3").innerHTML = [100, 200, 300, 400, 500];
-document.querySelector(".sample05_M3").innerHTML = "sort(function(a,b){return b-a})";
-document.querySelector(".sample05_P3").innerHTML = arrNumSort3;
+    document.querySelector(".sample05_N3").innerHTML = "3";
+    document.querySelector(".sample05_Q3").innerHTML = "[100, 500, 300, 400, 200]";
+    document.querySelector(".sample05_M3").innerHTML = "sort(function(a,b){return b-a}";
+    document.querySelector(".sample05_P3").innerHTML = arrNumSort3;
 
-const arrNum4 = [500, 400, 300, 200, 100];
-const arrNumSort4 = arrNum4.sort(function(a, b){return a - b});
+    const arrNum4 = [400, 500, 300, 200, 100];
+    const arrNumSort4 = arrNum4.sort(function (a, b) { return a - b });
 
-document.querySelector(".sample05_N4").innerHTML = "4";
-document.querySelector(".sample05_Q4").innerHTML = [500, 400, 300, 200, 100];
-document.querySelector(".sample05_M4").innerHTML = "sort(function(a, b){return a - b})";
-document.querySelector(".sample05_P4").innerHTML = arrNumSort4;
+    document.querySelector(".sample05_N4").innerHTML = "4";
+    document.querySelector(".sample05_Q4").innerHTML = "[400, 500, 300, 200, 100]";
+    document.querySelector(".sample05_M4").innerHTML = "sort(function(a,b){return a-b}";
+    document.querySelector(".sample05_P4").innerHTML = arrNumSort4;
 
-const arrNum5 = ['c', 'b', 'e', 'w', 'h'];
-const arrNumSort5 = arrNum5.sort(function(a, b) { return a.localeCompare(b) });
+    const arrNum5 = ['c', 'b', 'e', 'w', 'h'];
+    const arrNumSort5 = arrNum5.sort(function (a, b) { return a.localeCompare(b) });
 
-document.querySelector(".sample05_N5").innerHTML = "5";
-document.querySelector(".sample05_Q5").innerHTML = ['c', 'b', 'e', 'w', 'h'];
-document.querySelector(".sample05_M5").innerHTML = "sort(function(a, b) { return a.localeCompare(b) })";
-document.querySelector(".sample05_P5").innerHTML = arrNumSort5;
+    document.querySelector(".sample05_N5").innerHTML = "5";
+    document.querySelector(".sample05_Q5").innerHTML = "['c', 'b', 'e', 'w', 'h']";
+    document.querySelector(".sample05_M5").innerHTML = "a.localeCompare(b)";
+    document.querySelector(".sample05_P5").innerHTML = arrNumSort5;
 
-const arrNum6 = ['c', 'b', 'e', 'w', 'h'];
-const arrNumSort6 = arrNum6.sort(function(a, b) { return b.localeCompare(a) });
+    const arrNum6 = ['c', 'b', 'e', 'w', 'h'];
+    const arrNumSort6 = arrNum6.sort(function (a, b) { return b.localeCompare(a) });
 
-document.querySelector(".sample05_N6").innerHTML = "6";
-document.querySelector(".sample05_Q6").innerHTML = ['c', 'b', 'e', 'w', 'h'];
-document.querySelector(".sample05_M6").innerHTML = "sort(function(a, b) { return b.localeCompare(a) })";
-document.querySelector(".sample05_P6").innerHTML = arrNumSort6;
-
+    document.querySelector(".sample05_N6").innerHTML = "6";
+    document.querySelector(".sample05_Q6").innerHTML = "['c', 'b', 'e', 'w', 'h']";
+    document.querySelector(".sample05_M6").innerHTML = "b.localeCompare(a)";
+    document.querySelector(".sample05_P6").innerHTML = arrNumSort6;
 </code></pre>
                 </div>
             </div>
@@ -1360,7 +1358,7 @@ const text2 = 'javascript';
 const result2 = Array.from(text, el => el + "10");
 document.querySelector(".sample14_N2").innerHTML = "2";
 document.querySelector(".sample14_Q2").innerHTML = "'javascript'";
-document.querySelector(".sample14_M2").innerHTML = "Array.from(text, el => el + '10')";
+document.querySelector(".sample14_M2").innerHTML = "Array.from(text2, el => el + '10')";
 document.querySelector(".sample14_P2").innerHTML = result2;
 
 const text3 = 'javascript';
@@ -1985,14 +1983,19 @@ document.querySelector(".sample14_P2").innerHTML = result3;
     const result3 = number1.slice(3, 5); //
 
     const number4 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
-    const result4 = number3.find(el => el === 400, 500);
+    const result4 = number3.find(el => el === 400 || el === 500);
     
     const number5 = [100, 200, 300, 400, 500, 600, 700, 800, 900];
     const result5 = number4.filter(el => el === 400 || el === 500);
 
     //400 500-->확인필요
 
-    console.log(result);
+    console.log(result1);
+    console.log(result2);
+    console.log(result3);
+    console.log(result4);
+    console.log(result5);
+
 }
 
 const num = [a, b, c, d, e, f, g, h, i, k]
