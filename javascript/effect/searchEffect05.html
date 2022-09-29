@@ -25,8 +25,8 @@
                     <li><a href="searchEffect01.html">1</a></li>
                     <li><a href="searchEffect02.html">2</a></li>
                     <li><a href="searchEffect03.html">3</a></li>
-                    <li  class="active"><a href="searchEffect04.html">4</a></li>
-                    <li><a href="searchEffect05.html">5</a></li>
+                    <li><a href="searchEffect04.html">4</a></li>
+                    <li class="active"><a href="searchEffect05.html">5</a></li>
                     <li><a href="searchEffect06.html">6</a></li>
                 </ul>
             </nav>
@@ -35,26 +35,32 @@
 
         <main id="main">
             <div class="search__wrap">
-                <span>find()를 이용하여 속성 검색하면 설명보여주기</span>
+                <span>filter()를 이용하여 속성의 중요도 보여주기</span>
                 <h1>CSS 속성 검색하기</h1>
-                <div class="search__box">
-                    <label for="search">검색하기</label>
-                    <input
-                        type="text"
-                        id="search"
-                        placeholder="CSS 속성 및 유형을 입력해주세요!"
-                    />
+                <div class="search__click">
+                    <ul>
+                        <li data-star="0"><a href="#">☆☆☆☆☆</a></li>
+                        <li data-star="1"><a href="#">★☆☆☆☆</a></li>
+                        <li data-star="2"><a href="#">★★☆☆☆</a></li>
+                        <li data-star="3"><a href="#">★★★☆☆</a></li>
+                        <li data-star="4"><a href="#">★★★★☆</a></li>
+                        <li data-star="5"><a href="#">★★★★★</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">1개 이상</a></li>
+                        <li><a href="#">2개 이상</a></li>
+                        <li><a href="#">3개 이상</a></li>
+                        <li><a href="#">4개 이상</a></li>
+                    </ul>
                 </div>
-                <div class="search__desc">속성을 설명이 표시됩니다!</div>
                 <div class="search__info">
                     <div>전체 속성 갯수 : <span class="num">0</span></div>
                 </div>
 
                 <div class="search__list">
-                        <ul>
-                            <li><span></span></li>
-                        </ul>
-                    </div>
+                    <ul class="line">
+                        <li><span></span></li>
+                    </ul>
                 </div>
             </div>
         </main>
@@ -68,110 +74,115 @@
             //선택자
             const cssProperty = [
                 {
+                    star: 1,
                     name: "all",
                     desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다.",
                 },
                 {
+                    star: 5,
                     name: "animation",
                     desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다.",
                 },
                 {
+                    star: 5,
                     name: "animation-delay",
                     desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다.",
                 },
                 {
+                    star: 5,
                     name: "animation-direction",
                     desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다.",
                 },
                 {
+                    star: 2,
                     name: "animation-duration",
                     desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다.",
                 },
                 {
+                    star: 2,
                     name: "animation-fill-mode",
                     desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다.",
                 },
                 {
+                    star: 2,
                     name: "animation-iteration-count",
                     desc: "animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다.",
                 },
                 {
+                    star: 2,
                     name: "animation-name",
                     desc: "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다.",
                 },
                 {
+                    star: 1,
                     name: "animation-play-state",
                     desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정합니다.",
                 },
                 {
+                    star: 1,
                     name: "backdrop-filter",
                     desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다.",
                 },
                 {
+                    star: 2,
                     name: "backface-visibility",
                     desc: "backface-visibility 속성은 요소 뒷면 출력 여부 설정합니다.",
                 },
                 {
+                    star: 3,
                     name: "caption-side",
                     desc: "caption-side 속성은 테이블 caption의 위치를 설정합니다.",
                 },
                 {
+                    star: 3,
                     name: "direction",
                     desc: "direction 속성은 문장의 방향을 설정합니다.",
                 },
                 {
+                    star: 2,
                     name: "filter",
                     desc: "filter 속성은 그래픽 효과를 설정합니다.",
                 },
                 {
+                    star: 2,
                     name: "flex",
                     desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다.",
                 },
                 {
+                    star: 1,
                     name: "grid-template-columns",
                     desc: "grid-template-columns 속성은 가로 컬럼의 크기와 위치 설정합니다.",
                 },
             ];
 
-            const searchList = document.querySelector(".search__list");
-            const searchNum = document.querySelector(".search__info.num");
-            const searchBox = document.querySelector(".search__box input");
-            const searchDesc = document.querySelector(".search__desc");
+            const searchList = document.querySelector(".search__list ul");
+            const searchClick = document.querySelectorAll(".search__click ul");
+
             //출력하기
-            cssProperty.map((el, i) => {
-                // searchList.innerHTML += "<li>" + el.name + "<li>";
-                // searchList.innerHTML += `<li><strong>align-content</strong> : 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.<li>`;
-                searchNum.innerText = index + 1;
-                searchList.innerHTML += `<li>${el.name}<li>`;
-            });
+            function updateList(list) {
+                listCSS = "";
 
-            //입력하기
-            searchBox.addEventListener("keyup", () => {
-                const searchWord = searchBox.value;
-                console.log(searchWord);
-                findProperty(searchWord);
-            });
-
-            //클릭하기
-            document.querySelectorAll(".search__list span").forEach(span=>{
-                span.addEventListener("click", ()=>{
-                    const clickWord =  span.innerText;
-                    findProperty(clickWord);
-                })
-            })
-            
-            //속성찾기
-            function findProperty(searchData) {
-                const targetData = cssProperty.find(
-                    (data) => data.name === searchData
-                );
-                if (targetData == null) {
-                    searchDesc.textContent =
-                        "해당 속성은 존재하지 않습니다. 다시 검색해주세요!!";
-                    return;
+                for (const data of list) {
+                    listCSS += `<li>4${data.name} : ${data.desc} <em>${data.star}</em></li>`;
                 }
-                searchDesc.textContent = targetData.desc;
+                searchList.innerHTML = listCSS;
             }
+            updateList(cssProperty);
+            //클릭하기
+            searchClick.forEach((ster) => {
+                star.addEventListener("click"),
+                    () => {
+                        const target = star.dataset.star;
+                        const filterList = cssProperty.filter(
+                            (data) => data.star == target
+                        );
+                        updateList(filterList);
+                    };
+            });
+            //숫자를 별로 치환해주기
+            //dataset 안쓰고 가져오는 방법 (index)
+            //조건문 들어간거 완료하기
+            //전체 속성 갯수 표시
         </script>
     </body>
 </html>
