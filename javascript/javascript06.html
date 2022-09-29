@@ -1811,8 +1811,8 @@ document.querySelector(".sample14_P3").innerHTML = result3;
                 // return element === 300;
                 // });
 
-            const arrNum = [100, 200, 300, 400, 500];
-            const result = arrtext.find(300);
+            const arrtext = [100, 200, 300, 400, 500];
+            const result = arrtext.find(el=>{el ===300});
             //확인필요^
 
 
@@ -1839,7 +1839,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
    
 
 
-            const result4 = arrNum4.lastIndexOf(200);
+            const result4 = arrtext.lastIndexOf(200);
 
             document.querySelector(".sample11_N4").innerHTML = "4";
             document.querySelector(".sample11_Q4").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1848,7 +1848,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
     
 
 
-            const result5 = arrNum5.includes(200);
+            const result5 = arrtext.includes(200);
 
             document.querySelector(".sample11_N5").innerHTML = "5";
             document.querySelector(".sample11_Q5").innerHTML = "[100, 200, 300, 400, 200]";
@@ -1862,7 +1862,7 @@ document.querySelector(".sample14_P3").innerHTML = result3;
 {
     
 const arrNum = [100, 200, 300, 400, 500];
-const result = arrNum.filter(el => el === 300);
+const result = arrNum.filter(el => el === 300);//300
 
 document.querySelector(".sample12_N1").innerHTML = "1";
 document.querySelector(".sample12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1870,15 +1870,15 @@ document.querySelector(".sample12_M1").innerHTML = "filter(el => el === 300)";
 document.querySelector(".sample12_P1").innerHTML = result; 
 
 const arrNum2 = [100, 200, 300, 400, 500];
-const result2 = arrNum2.filter(el => el === 600);
+const result2 = arrNum2.filter(el => el === 600);//,
 
 document.querySelector(".sample12_N2").innerHTML = "2";
 document.querySelector(".sample12_Q2").innerHTML = "[100, 200, 300, 400, 500]";
 document.querySelector(".sample12_M2").innerHTML = "filter(el => el === 600)";
 document.querySelector(".sample12_P2").innerHTML = result2; 
 
-const arrNu3m = [100, 200, 300, 400, 500];
-const result3 = arrNum3.filter(el => el === 300);
+const arrNum3 = [100, 200, 300, 400, 500];
+const result3 = arrNum3.filter(el => el === 300 || el === 400 );//300, 400
 
 document.querySelector(".sample12_N3").innerHTML = "3";
 document.querySelector(".sample12_Q3").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1926,7 +1926,7 @@ document.querySelector(".sample13_P4").innerHTML = result;
 //14. Array.from()
 {
 const text = "javascript";
-const result = Array.from(text);
+const result = Array.from(text);//'j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'
 
 document.querySelector(".sample14_N1").innerHTML = "1";
 document.querySelector(".sample14_Q1").innerHTML = "javascript";
@@ -1934,7 +1934,7 @@ document.querySelector(".sample14_M1").innerHTML = " Array.from(text)";
 document.querySelector(".sample14_P1").innerHTML = result; 
 
 const text2 = "javascript";
-const result2 = Array.from(text2, el=>el + "10");
+const result2 = Array.from(text2, el=>el + "10");//'j10', 'a10', 'v10', 'a10', 's10', 'c10', 'r10', 'i10', 'p10', 't10'
 
 document.querySelector(".sample14_N2").innerHTML = "2";
 document.querySelector(".sample14_Q2").innerHTML = "javascript";
@@ -1942,12 +1942,13 @@ document.querySelector(".sample14_M2").innerHTML = " Array.from(text2, el=>el +'
 document.querySelector(".sample14_P2").innerHTML = result2;
 
 const text3 = "javascript";
-const result3 =[...text3].map(el=>el);
+const result3 =[...text3].map(el=>el);//'j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't'
 
 document.querySelector(".sample14_N2").innerHTML ="3";
 document.querySelector(".sample14_Q2").innerHTML = "javascript";
 document.querySelector(".sample14_M2").innerHTML = " =[...text3](el=>el)";
 document.querySelector(".sample14_P2").innerHTML = result3;
+
 
 
 }
