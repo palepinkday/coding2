@@ -1035,23 +1035,23 @@ const currentStr16 = str1.endsWith('reference', 20);   //true
                 //"문자열".replace()(정규식)
                 //"문자열".replace()(정규식, "변경할 문자열")
 
-                const str1 = "javascript reference"; //자바스크립트 reference
-                const cirrentStr1 = str1.replace("javascript", "자바스크립트"); //javascript reference
-                const cirrentStr2 = str1.replace("j", "j"); //javascript reference
-                const cirrentStr3 = str1.replace("e", "E"); //javascript reference : 첫 번째 e만 바뀜
-                const cirrentStr4 = str1.replaceAll("e", "E"); //javascript reference : replaceAll() 사용하여 모든 e가 바뀜
-                const cirrentStr5 = str1.replace(/e/g, "E"); //javascript reference : 정규표현식 사용, 모든 e가 바뀜, g는 글로벌의 약자
-                const cirrentStr6 = str1.replace(/e/gi, "E"); //javascript reference : gi를 사용하면 소문자 대문자 구분x
+                const str1 = "javascript reference";
+                const currentStr1 = str1.replace("javascript", "자바스크립트"); //자바스크립트 reference
+                const currentStr2 = str1.replace("j", "j"); //javascript reference
+                const currentStr3 = str1.replace("e", "E"); //javascript rEference : 첫 번째 e만 바뀜
+                const currentStr4 = str1.replaceAll("e", "E"); //javascript rEferEnce : replaceAll() 사용하여 모든 e가 바뀜
+                const currentStr5 = str1.replace(/e/g, "E"); //javascript rEfErEncE: 정규표현식 사용, 모든 e가 바뀜, g는 글로벌의 약자
+                const currentStr6 = str1.replace(/e/gi, "E"); //javascript rEfErEncE : gi를 사용하면 소문자 대문자 구분x
 
                 const str2 = "http://www.naver.com/img01.jpg";
-                const cirrentStr7 = str2.replace("img01.jpg", "img01.jpg");
+                const currentStr7 = str2.replace("img01.jpg", "img01.jpg");
 
                 const str3 = "010-2000-1000";
-                const cirrentStr8 = str3.replace("-", ""); //01020001000
-                const cirrentStr9 = str3.replaceAll("-", ""); //01020001000
-                const cirrentStr10 = str3.replaceAll(/-/g, ""); //01020001000
-                const cirrentStr11 = str3.replaceAll(/-/g, " "); //010 2000 1000
-                const cirrentStr12 = str3.replaceAll(/[1-9]/g, "*"); //000*000*00
+                const currentStr8 = str3.replace("-", ""); //01020001000
+                const currentStr9 = str3.replaceAll("-", ""); //01020001000
+                const currentStr10 = str3.replaceAll(/-/g, ""); //01020001000
+                const currentStr11 = str3.replaceAll(/-/g, " "); //010 2000 1000
+                const currentStr12 = str3.replaceAll(/[1-9]/g, "*"); //000*000*00
             }
             //07
             {
@@ -1059,21 +1059,21 @@ const currentStr16 = str1.endsWith('reference', 20);   //true
                 //"문자열".concat(문자열, 문자열...)
 
                 const str1 = "javascript";
-                const cirrentStr1 = str1.concat("reference"); //javascriptreference
-                const cirrentStr2 = str1.concat(" ", "reference"); //javascript reference
-                const cirrentStr3 = str1.concat(",", "reference"); //javascript, reference
-                const cirrentStr4 = str1.concat(",", "reference", ",", "book"); //javascript, reference, book
-                const cirrentStr5 = str1.concat(",", ["reference", "book"]); //javascript,reference,book
+                const currentStr1 = str1.concat("reference"); //javascriptreference
+                const currentStr2 = str1.concat(" ", "reference"); //javascript reference
+                const currentStr3 = str1.concat(",", "reference"); //javascript, reference
+                const currentStr4 = str1.concat(",", "reference", ",", "book"); //javascript, reference, book
+                const currentStr5 = str1.concat(",", ["reference", "book"]); //javascript,reference,book
 
-                //console.log(cirrentStr5)
+                //console.log(currentStr5)
             }
             //08
             // repeat() 문자열을 복사하여 새로운 문자열을 반환
             {
                 const str1 = "javascript";
-                const cirrentStr1 = str1.repeat();
-                const cirrentStr2 = str1.repeat();
-                const cirrentStr3 = str1.repeat();
+                const currentStr1 = str1.repeat();
+                const currentStr2 = str1.repeat();
+                const currentStr3 = str1.repeat();
             }
             //09
             //주어진 길이에 맞게 앞/뒤 문자열 채우고 새로운 문자열 반환
@@ -1126,7 +1126,7 @@ const currentStr16 = str1.endsWith('reference', 20);   //true
                 const currentStr12 = str1.indexOf("reference", 11); //11
                 const currentStr13 = str1.indexOf("reference", 12); //-1
 
-                const str2 = "javascript reference";
+                const str2 = "javascript reference"; //다시 복습!!
 
                 const currentStr14 = str1.lastIndexOf("javascript"); //0
                 const currentStr15 = str1.lastIndexOf("reference"); //11

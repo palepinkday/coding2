@@ -8,23 +8,40 @@
     </head>
     <body>
         <script>
-            const arrNum = [100, 200, 300, 400, 500];
-            const result = arrNum.map((el) => el);
+            const arrNum1 = [100, 200, 300, 400, 500];
+            const a1 = arrNum1.reverse();
 
             const arrNum2 = [100, 200, 300, 400, 500];
-            const result2 = arrNum2.map((el) => el + "j");
+            const a2 = arrNum2.sort();
 
             const arrNum3 = [100, 200, 300, 400, 500];
-            const result3 = arrNu3m.map((el) => el + 100);
+            const a3 = arrNum3.sort(function (a, b) {
+                return b - a;
+            });
 
-            const arrNum4 = [{ a: 100 }, { a: 200 }, { a: 300 }];
-            const result4 = arrNum4.map((el) => el.a);
+            const arrNum4 = [500, 400, 300, 200, 100];
+            const a4 = arrNum4.sort(function (a, b) {
+                return a - b;
+            });
 
-            console.log(result);
-            console.log(result2);
-            console.log(result3);
-            console.log(result4);
-            // console.log(result5);
+            const arrNum5 = ["c", "f", "g", "j", "h"];
+            const a5 = arrNum5.sort(function (a, b) {
+                a.localeCompare(b);
+            });
+
+            const arrNum6 = ["c", "f", "g", "j", "h"];
+            const a6 = arrNum6.sort(function (a, b) {
+                return b.localeCompare(a);
+            });
+
+            console.log(a1);
+            console.log(a2);
+            console.log(a3);
+            console.log(a4);
+
+            console.log(a5);
+            console.log(a6);
+
             //
         </script>
     </body>
