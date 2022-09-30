@@ -19,11 +19,6 @@
         <nav>
             <ul>
                 <li class="active"><a href="searchEffect01.html">1</a>
-                    <ul class="sub">
-                        <li><a href="searchEffect01.html">HTML</a></li>
-                        <li><a href="searchEffect01_css.html">CSS</a></li>
-                        <li><a href="searchEffect01_javascript.html">JAVASCRIPT</a></li>
-                    </ul>
                 </li>
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
@@ -42,37 +37,83 @@
                 메서드 검색하기</h1>
             <div class="search__box">
                 <label for="search">검색하기</label>
-                <input type="text" id="search" placeholder="HTML 태그를 입력해주세요!">
+                <input type="text" id="search" placeholder="CSS 속성을 입력해주세요.">
             </div>
-
+               <div class="search__info">
+                CSS 속성 갯수 : <span class="num">0</span>
+            </div>
             <div class="search__list">
-                <div class="javascript">
+               <div class="html">
                     <ul>
-                        <li data-name="indexOf"><strong>indexOf</strong>:.</li>
-                        <li data-name="slice"><strong>slice</slice>:.</li>
-                        <li data-name="substring"><strong>substring</substring>:.</li>
-                        <li data-name="substr"><strong>substr</substr>:.</li>
-                        <li data-name="split"><strong>split</substr>:.</li>
-                        <li data-name="trim"><strong>trim</substr>:.</li>
+                        <li data-name="accent-color"><strong>accent-color</strong> : 다른 페이지 이동을 설정합니다.</li>
+                        <li data-name="align-content"><strong>align-content</strong> : 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.</li>
+                        <li data-name="animation"><strong>animation</strong> : 애니메이션과 관련된 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="animation-delay"><strong>animation-delay</strong> : 애니메이션 지연 시간을 설정합니다.</li>
+                        <li data-name="animation-duration"><strong>animation-duration</strong> : 애니메이션 움직임을 설정합니다.</li>
+                        <li data-name="animation-fill-mode"><strong>animation-fill-mode</strong> : 애니메이션이 끝난 후의 상태를 설정합니다.</li>
+                        <li data-name="animation-iteration-count"><strong>animation-iteration-count</strong> : 애니메이션의 반복 횟수를 설정합니다</li>
+                        <li data-name="animation-name"><strong>animation-name</strong> : 애니메이션 keyframe 이동을 설정합니다.</li>
+                        <li data-name="animation-play-state"><strong>animation-name</strong> : 애니메이션 keyframe 이동을 설정합니다.</li>
+                        <li data-name="animation-timing-function"><strong>animation-timing-function</strong> : 애니메이션 움직임의 속도를 설정합니다.</li>
+
+                        <li data-name="backdrop-filter"><strong>backdrop-filter</strong> : 배경에 다양한 효과를 줍니다.</li>
+                        <li data-name="background"><strong>background</strong> : 백그라운드 속성을 일괄적으로 설정합니다</li>
+                        <li data-name="background-attachment"><strong>background-attachment</strong> : 배경 이미지의 고정 여부를 설정합니다</li>
+                        <li data-name="background-blend-mode"><strong>background-blend-mode</strong> : 배경을 혼합했을 때 그래픽 효과를 설정합니다.</li>
+                        <li data-name="background-clip"><strong>background-clip</strong> : 백그라운드 이미지의 위치 기준점을 설정합니다.</li>
+                        <li data-name="background-color"><strong>background-color</strong> : 백그라운드 색을 설정합니다.</li>
+                        <li data-name="background-image"><strong>background-image</strong> : 백그라운드 이미지 속성을 설정합니다.</li>
+                        <li data-name="background-origin"><strong>background-origin</strong> : 백그라운드 이미지의 위치 기준점을 설정하기 위한 속성입니다.</li>
+                        <li data-name="background-position"><strong>background-position</strong> : 백그라운드 이미지의 위치 영역을 설정합니다.</li>
+                        <li data-name="background-position-x"><strong>background-position-x</strong> : 백그라운드 이미지의 x축 위치 영역을 설정합니다.</li>
+
+                        <li data-name="background-position-y"><strong>background-position-y</strong> : 백그라운드 이미지의 x축 위치 영역을 설정합니다.</li>
+                        <li data-name="background-repeat"><strong>background-repeat</strong> : 백그라운드 이미지 반복 여부를 설정합니다.</li>
+                        <li data-name="background-size"><strong>background-size</strong> : 백그라운드 이미지 사이즈를 설정합니다.</li>
+                        <li data-name="border"><strong>border</strong> : 테두리 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-bottom"><strong>border-bottom</strong> : 아래쪽 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-bottom-color"><strong>border-bottom-color</strong> : 테두리 아래쪽 색 속성을 설정합니다.</li>
+                        <li data-name="border-bottom-left-radius"><strong>border-left-radius</strong> : 아래 왼쪽 모서리 굴곡을 설정합니다.</li>
+                        <li data-name="border-bottom-right-radius"><strong>border-right-radius</strong> : 아래 오른쪽 모서리 굴곡을 설정합니다.</li>
+                        <li data-name="border-bottom-style"><strong>border-bottom-style</strong> : border-bottom-style은 아래쪽 테두리의 스타일 속성을 설정합니다.</li>
+                        <li data-name="border-bottom-width"><strong>border-bottom-width</strong> : border-bottom-width은 아래쪽 테두리의 두께 속성을 설정합니다.</li>
+                        
+                        <li data-name="border-collapse"><strong>border-collapse</strong> : border-collapse는 테이블의 테두리를 겹칠지, 떨어트릴지를 설정합니다</li>
+                        <li data-name="border-left"><strong>border-left</strong> : border-left는 요소의 왼쪽 테두리의 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-left-color"><strong>border-left-color</strong> : border-left-color는 요소의 왼쪽 테두리의 색상을 설정합니다.</li>
+                        <li data-name="border-left-style"><strong>border-left-style</strong> : border-left-style은 요소의 왼쪽 테두리의 스타일 속성을 설정합니다.</li>
+                        <li data-name="border-left-width"><strong>border-left-width</strong> : border-left-width는 요소의 왼쪽 테두리의 두께를 설정합니다.</li>
+                        <li data-name="border-radius"><strong>border-radius</strong> : border-radius는 요소의 테두리 굴곡을 설정합니다.</li>
+                        <li data-name="border-right"><strong>border-right</strong> :border-right은 요소의 오른쪽 테두리 속성을 일괄적으로 설정합니다.</li>
+                        <li data-name="border-right-color"><strong>border-right-color</strong> : border-right-color는 요소의 오른쪽 테두리의 색상을 설정합니다.</li>
+                        <li data-name="border-right-style"><strong><border-right-styl></border-right-styl>e</strong> : border-right-style은 요소의 오른쪽 테두리의 스타일 속성을 설정합니다.</li>
+                        <li data-name="border-right-width"><strong>border-right-width</strong> : border-right-width는 요소의 오른쪽 테두리의 두께를 설정합니다.</li>
                     </ul>
                 </div>
             </div>
         </div>
+        </div>
     </main>
     <!-- //main -->
-
     <footer id="footer">
         <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
     </footer>
     <!-- //footer -->
     <script>
         //선택자
-        const searchBox = document.querySelector(".search__box"); //검색영역
-        const searchList = document.querySelectorAll(".search__list ul li");//목록리스트
+        //서치는 정규식까지 표현할수있다는거
+        const searchBox = document.querySelector(".search__box input");               //검색 영역
+        const searchList = document.querySelectorAll(".search__list ul li");    //목록 리스트
+        const searchInfo = document.querySelectorAll(".search__info .num");    //전체 갯수
 
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.vaule; //사용자가 입력한 키워드
+        // 전체 갯수 구하기
+        document.querySelector(".num").innerHTML=searchList.length
+        // searchInfo.textContent = searchList.length;
 
+        //검색 영역
+        searchBox.addEventListener("keyup", ()=>{ //keyup이라 설정했기 때문에 한글자만 써도 실행이 됨
+            const searchWord = searchBox.value; //사용자가 입력한 키워드
+            
             searchList.forEach(el => {
                 const cssName = el.dataset.name;
 
