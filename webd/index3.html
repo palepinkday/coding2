@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>kita</title>
+        <style>
+            @import url("https://webfontworld.github.io/naver/NanumGothic.css");
+            .nanum {
+                font-family: "NanumGothic";
+                font-size: 18px;
+                font-weight: 500;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            /* .clearfix{
+                content: '';
+                display: block;
+                clear: both;
+            } */
+            .clearfix::before,
+            .clearfix::after {
+              content: "";
+              display: block;
+              line-height: 0;
+            }
+            #wrap {
+                margin: 0 auto;
+                width: 1100px;
+            }
+            #header {
+                padding: 20px 100px 10px 100px;
+            }
+            #header .logo {
+                float: left;
+            }
+            #header .logo img {
+                width: 120px;
+            }
+            #header .menu {
+                float: right;
+            }
+            #header .menu ul {
+            }
+            #header .menu ul li {
+                list-style: none;
+                float: left;
+                padding: 20px;
+            }
+            #slider {
+            }
+
+            #main {
+            }
+            .section{
+          
+                height: 900px;
+            }
+            .section>div{
+
+            }
+            .section1>div h2{
+                text-align: center;
+                padding-top: 40px;
+                padding-bottom: 30px;
+            }
+            .section>div span{
+                border: 3px solid rgb(70, 71, 73);
+                width: 50px;
+                height: 30px;
+                font-size: 25px;
+            }
+          
+            .section1{
+                width: 100%;
+                height: 350px;
+                background-color: rgb(202, 222, 233);
+
+            }
+            .section1 .box{
+                width: 24%;
+                height: 200px;
+                float: left;
+                justify-content: space-between;
+                 background: #ccc;
+               
+                margin-left: 7px;
+                background-color: #fff;
+                border: 1px solid #ccc;
+               
+            }
+           
+            .section1 .box p{
+                width: 95px;
+                height: 20px;
+                color: rgb(116, 130, 179);
+                font-size: 12px;
+                line-height: 20px;
+                font-weight: 600;
+                text-align: center;
+                border: 3px solid rgb(116, 130, 179);
+                border-radius: 5px;
+                margin-top: 20px;
+                margin-left: 20px;
+                margin-bottom: 10px;
+
+            }
+            .section1 .box h3{
+                font-style: normal;
+                color: rgb(41, 38, 38);
+                font-size: 16px;
+                margin: 15px 20px;
+               
+            }
+            .section1 .box .b{
+             
+            }
+            .section1 .box span{
+        
+                width: 120px;
+                height: 15px;
+                color:#fff;
+                background-color:rgb(116, 130, 179);
+                font-size: 10px;
+                line-height: 15px;
+        
+                text-align: center;
+                border: 3px solid rgb(116, 130, 179);
+                border-radius: 3px;
+                margin-left: 20px;
+
+            }
+            .section1 .box em{
+                font-size: 14px;
+                font-style: normal;
+                margin-left: 10px;
+            }
+            .section2{
+                width: 100%;
+                height: 220px;
+                margin-top: 50px;
+           
+              
+            }
+            .section2 .tab1{
+                width: 28.5%;
+                background-color: rgb(146, 132, 132);
+                float: left;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                height: 210px;
+            } 
+            .section2 .tab1 ul{
+               
+            }
+            .section2 .tab1 ul li{
+                list-style: none;
+                float: left;
+            }
+            .section2 .tab1 ul li >li{
+                list-style: none;
+                float: left;
+            }
+            .section2 .tab2{
+                width: 68.5%;
+                background-color: rgb(97, 68, 68);
+                float: left;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                height: 210px;
+                margin-left: 21px;
+            } 
+            .section2 .tab2 h3{
+                padding: 20px;
+                padding-bottom: 10px;
+            }
+            .section2 .tab2 p{
+                font-size: 14px;
+                padding: 7px 20px;
+
+
+            }
+            .section2 .tab2 span{
+                width: 300px;
+                height: 20px;background-color:rgb(60, 141, 216);
+                border: 1px solid rgb(60, 141, 216);
+              
+                color: #fff;
+                font-size: 12px;
+              margin-right: 20px;
+              /* text-decoration: none; */
+          
+           
+            }
+            .section2 .tab2 em{
+              float: right;
+              margin-right: 10px;
+           
+                color: #bbb;
+                text-decoration: none;
+                font-style: none;
+              
+            }
+            .section3 {
+                width: 100%;
+                height: 20px;
+            }
+            .section3 .ad{
+                width: 28.5%;
+                background-color: rgb(146, 132, 132);
+                float: left;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                height: 200px;
+                margin-top: 18px;
+                color: #fff;
+                position: relative;
+            
+            }
+            .section3 .ad h3{
+                position: absolute;
+                left: 0;top: 0;
+                padding: 20px;
+            }
+            .section3 .ad p{
+                position: absolute;
+                left: 0;top: 0;
+                font-size: 15px;
+                padding: 70px 20px;
+            }
+            .section3 .ad a{
+                position: absolute;
+                left: 0;top: 0;
+                font-size: 15px;
+                text-decoration: none;
+                top: 150px;
+                right: 100px;
+                bottom: 50px;
+                left: 20px;
+             
+
+                
+            }
+            .section3 .ad span{
+                padding: 10px 40px;
+                color: #fff;
+                border: 2px solid #fff;
+             
+                
+            }
+
+            .section3 .tab3{
+                width: 68.5%;
+                background-color: rgb(97, 68, 68);
+                float: left;
+                background-color: #fff;
+                border: 1px solid #ccc;
+                height: 200px;
+                margin-left: 21px;
+                margin-top: 18px;
+
+
+            }
+            .section3 .tab3 h3{
+                padding: 20px;
+            }
+            .section3 .tab3 .t3_1{
+                margin: 50px;
+                height: 50px;
+               border-right: 5px solid #bbb;
+            }
+            .section3 .tab3 .t3_2{
+                margin: 50px;
+               
+            }
+            .section3 .tab3 p{
+                font-size: 15px;
+                padding: 0 20px;
+                float: left;
+                width: 40%;
+                padding-bottom: 20px;
+            }
+            .section3 .tab3 em{
+                font-size: 14px;
+                color: #bbb;
+            }
+
+            #footer {
+                width: 100%;
+                height: 200px;
+                background-color: rgb(54, 66, 92);
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <header id="header" class="nanum">
+                <div class="logo">
+                    <img src="1111/img/img1/logo03.jpg" alt="" />
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>무역통상정보</li>
+                        <li>회원/업무지원</li>
+                        <li>무역통계</li>
+                        <li>협회안내</li>
+                    </ul>
+                </div>
+            </header>
+            <nav id="slider">
+                <div class="sliderwrap">
+                    <div class="sliderList">
+                        <div class="img1">
+                            <img
+                                src="1111/img/img1/slider03_img01.jpg"
+                                alt="참가업체모집"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <main id="main" class="section" class="clearfix"class="nanum">
+            
+                <section class="section1" class="clearfix">
+                    <div>   
+                        <h2>KITA 사업일정</h2>
+                    
+                    </div>
+                 
+                    <article class="box">
+                        <p>모집마감 -4일</p>
+                        <h3>2019 태국 국제식품전시회 업체모집</h2>
+                        <div class="b"><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
+                        <div><span>모집기간</span><em>2019-05-28~2019-06-01</em></div>
+                    </article>
+                    <article class="box">
+                        <p>모집마감 -4일</p>
+                        <h3>2019 태국 국제식품전시회 업체모집</h2>
+                        <div><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
+                        <div><span>모집기간</span><em>2019-05-28~2019-06-01</em></div>
+                    </article>
+                    <article class="box">
+                        <p>모집마감 -4일</p>
+                        <h3>2019 태국 국제식품전시회 업체모집</h2>
+                        <div><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
+                        <div><span>모집기간</span><em>2019-05-28~2019-06-01</em></div>
+                    </article>
+                    <article class="box">
+                        <p>모집마감 -4일</p>
+                        <h3>2019 태국 국제식품전시회 업체모집</h2>
+                        <div><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
+                        <div><span>모집기간</span><em>2019-05-28~2019-06-01</em></div>
+                    </article>
+                </section>
+                <section class="section2" class="clearfix">
+                    <div class="tab1"class="clearfix">
+                        <ul>
+                            <li><a href="#">보도자료</a><li>|</li>
+                            <li><a href="#">언론기고</a>
+                            </li>
+                            <ul>
+                                <li>민관합동 현장중심 수출활력촉진단 가동<em>2019-01-31</em></li>   
+                                <li>민간기업이 주도하는 유럽스타트업 캠퍼스  <em>2019-01-31</em></li>
+                            </ul> 
+                        </ul>
+             
+                        </div>
+                    <div class="tab2">
+                        <h3>KITA 연구보고서</h3>
+                      
+                        <div><p><span>  [TRADE BRIEF]  </span>2019년 수출기업의 경영환경 전망조사<em>2019-01-31</em></p></div>
+                        <div><p><span>      [KITA]     </span>[토론회 자료]WTO전자상거래 협상을 위한 공정회 겸 디지털통상정책 토론<em>2019-01-31</em></p></div>
+                        <div><p><span>      [KITA]     </span>[설명회자료]브렉시트(BREXIT)설명회 발표자료<em>2019-01-31</em></p></div>
+                        <div><p><span>  [TRADE BRIEF]  </span>T스타트업 사례를 통해 본 2018 중국 AI시장 트렌드<em>2019-01-31</em></p></div>
+                    </div>
+                </section>
+                <section class="section3" class="clearfix">
+                    <div class="ad">
+                        <img src="1111/img/img1/se.jpg" alt="온라인세미나">
+                        <h3>온라인세미나</h3>
+                        <p>무역협회에서 실시하는 국내 무역 관련 세미나, 설명회 등을 VOD 서비스로 제공</p>
+                        <a href="#"><span>바로가기</span></a>
+                    </div>
+                    <div class="tab3" class="clearfix">
+                        <h3>KITA통상정보</h3>
+                
+                        <div class="tab3_1">
+                            <p>한미 통상현안 사례분석집<br>
+                                <em>2019-01-15</em></p>
+                            <p>한미 통상현안 사례분석집통상현안 <br>
+                                <em>2019-01-15</em></p>
+                        </div>
+                        <div class="tab3_2">
+                            <p>한미 통상현안 사례분석집통상현안 <br>
+                                <em>2019-01-15</em></p>
+                            <p>한미 통상현안 사례분석집통상현안 <br>
+                                <em>2019-01-15</em></p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <footer id="footer">
+
+            </footer>
+        </div>
+    </body>
+</html>
