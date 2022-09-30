@@ -27,6 +27,18 @@
               display: block;
               line-height: 0;
             }
+            .plus,
+            .plus1,
+            .plus2, 
+            .plus3{
+                font-size: 18px;
+                font-weight: 700;
+                border: 1px solid #000;
+                padding: 0px 8px 4px 8px;
+                display: inline-block;
+                text-align: center;
+
+            }
             #wrap {
                 margin: 0 auto;
                 width: 1100px;
@@ -48,11 +60,29 @@
             #header .menu ul li {
                 list-style: none;
                 float: left;
-                padding: 20px;
+                padding: 28px;
             }
             #slider {
+                position: relative;
             }
+            #slider .desc {
+                position: absolute;
+                left: 10px;top:380px;
+                background-color: #000;
+                border: 2px solid #000;
+                padding: 20px;
+                padding-right: 90px;
 
+            }
+            #slider .desc p{
+                color: #fff;
+                font-size: 35px;
+                font-weight: 500;
+
+            }
+              #slider .desc span{
+                font-size: 20px;
+              }
             #main {
             }
             .section{
@@ -77,7 +107,8 @@
             .section1{
                 width: 100%;
                 height: 350px;
-                background-color: rgb(202, 222, 233);
+                background-color: #e2f3f7;
+                position: relative;
 
             }
             .section1 .box{
@@ -85,23 +116,29 @@
                 height: 200px;
                 float: left;
                 justify-content: space-between;
-                 background: #ccc;
-               
+                background: #ccc;
                 margin-left: 7px;
                 background-color: #fff;
                 border: 1px solid #ccc;
+              
                
+            }
+            .section1 .plus{
+                position: absolute;
+              right: 20px;top: 40px;;
+
+              
             }
            
             .section1 .box p{
                 width: 95px;
                 height: 20px;
-                color: rgb(116, 130, 179);
+                color:#6894d5;
                 font-size: 12px;
                 line-height: 20px;
                 font-weight: 600;
                 text-align: center;
-                border: 3px solid rgb(116, 130, 179);
+                border: 2px solid #6894d5;
                 border-radius: 5px;
                 margin-top: 20px;
                 margin-left: 20px;
@@ -113,6 +150,7 @@
                 color: rgb(41, 38, 38);
                 font-size: 16px;
                 margin: 15px 20px;
+              
                
             }
             .section1 .box .b{
@@ -123,12 +161,12 @@
                 width: 120px;
                 height: 15px;
                 color:#fff;
-                background-color:rgb(116, 130, 179);
+                background-color:#6894d5;
                 font-size: 10px;
                 line-height: 15px;
         
                 text-align: center;
-                border: 3px solid rgb(116, 130, 179);
+                border: 3px solid #6894d5;
                 border-radius: 3px;
                 margin-left: 20px;
 
@@ -141,8 +179,22 @@
             .section2{
                 width: 100%;
                 height: 220px;
-                margin-top: 50px;
-           
+                margin-top: 50px; 
+            }
+            .section2 .tab1{
+              position: relative;
+            }
+            .section2 .tab1 .plus1{
+              position: absolute;
+              right: 20px;top: 20px;;
+            }
+             .section2 .tab2{
+              position: relative;
+             }
+             .section2 .tab2 .plus2{
+              position: absolute;
+              right: 20px;top: 20px;;
+
               
             }
             .section2 .tab1{
@@ -185,8 +237,8 @@
             }
             .section2 .tab2 span{
                 width: 300px;
-                height: 20px;background-color:rgb(60, 141, 216);
-                border: 1px solid rgb(60, 141, 216);
+                height: 20px;background-color:#2f74cf;
+                border: 1px solid #2f74cf;
               
                 color: #fff;
                 font-size: 12px;
@@ -261,8 +313,12 @@
                 height: 200px;
                 margin-left: 21px;
                 margin-top: 18px;
+                position: relative;
 
-
+            }
+            .section3 .tab3 .plus3{
+               position: absolute;
+               right: 20px;top: 20px;; 
             }
             .section3 .tab3 h3{
                 padding: 20px;
@@ -291,9 +347,71 @@
             #footer {
                 width: 100%;
                 height: 200px;
-                background-color: rgb(54, 66, 92);
+                background-color: #263f5e;
                 clear: both;
+                color: #fff;
+                font-size: 13px;
             }
+             .footer1{
+             
+             }
+            .footer2{}
+            .footer1 .footer1-1{
+                width: 83%;
+                float: left;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 1%;
+                word-spacing: 20px;
+            }
+            .footer1 .footer1-2{
+             
+                
+            }
+            .footer1 .footer1-2 p{
+                width: 14%;
+                float: left;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 1%;
+                
+            }
+
+            .footer2 .footer2-1{
+                width: 45%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                display: inline-block;
+                float: left;
+            }
+            .footer2 .footer2-2{
+                width: 15%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                float: right;
+            }
+
+            .footer2 .img1{
+                width: 180px;
+                height: 60px;
+                float: left;
+                left: 0;
+                padding-right: 20px;
+            }
+            .footer2 .img2{
+                width: 120px;
+                height: 40px; 
+                padding-top: 10px;
+                margin-top: 10px;
+
+            }
+            .footer2 p{
+             margin-top: 10px;
+            }
+            .footer2-2 span{
+                font-size: 22px;
+            }
+
         </style>
     </head>
     <body>
@@ -320,6 +438,11 @@
                                 alt="참가업체모집"
                             />
                         </div>
+                        <div class="desc"><p>STARTUP Germany<br>
+                        2019 참가업체 모집<br>
+                        <span>사업기간2019-07-02~2019-08-09</span>
+                    </p></div>
+
                     </div>
                 </div>
             </nav>
@@ -328,7 +451,7 @@
                 <section class="section1" class="clearfix">
                     <div>   
                         <h2>KITA 사업일정</h2>
-                    
+                    <div class="plus">+</div>
                     </div>
                  
                     <article class="box">
@@ -361,6 +484,7 @@
                         <ul>
                             <li><a href="#">보도자료</a><li>|</li>
                             <li><a href="#">언론기고</a>
+                                 <div class="plus1">+</div>
                             </li>
                             <ul>
                                 <li>민관합동 현장중심 수출활력촉진단 가동<em>2019-01-31</em></li>   
@@ -371,7 +495,7 @@
                         </div>
                     <div class="tab2">
                         <h3>KITA 연구보고서</h3>
-                      
+                        <div class="plus2">+</div>
                         <div><p><span>  [TRADE BRIEF]  </span>2019년 수출기업의 경영환경 전망조사<em>2019-01-31</em></p></div>
                         <div><p><span>      [KITA]     </span>[토론회 자료]WTO전자상거래 협상을 위한 공정회 겸 디지털통상정책 토론<em>2019-01-31</em></p></div>
                         <div><p><span>      [KITA]     </span>[설명회자료]브렉시트(BREXIT)설명회 발표자료<em>2019-01-31</em></p></div>
@@ -387,7 +511,7 @@
                     </div>
                     <div class="tab3" class="clearfix">
                         <h3>KITA통상정보</h3>
-                
+                        <div class="plus3">+</div>
                         <div class="tab3_1">
                             <p>한미 통상현안 사례분석집<br>
                                 <em>2019-01-15</em></p>
@@ -405,7 +529,15 @@
             </main>
 
             <footer id="footer">
+<div class="footer1">
+    <div class="footer1-1"><p>이용약관  개인정보처리방침  저작권정책  이메일주소무단수집거부  온라인고객상담  신문고</p></div><div class="footer1-2"><p>국내외지부</p></div>
+</div>
 
+<div class="footer2">
+    <div class="footer2-1"><img class="img1" src="1111/img/img1/footer.jpg" alt="한국무역협회"><p>(06164)서울시 강남구 영동대로 511 (삼성동)<br><span>Copyright KITA ALL reserved</span></p></div>
+    <img class ="img2" src="1111/img/img1/sns.jpg" alt="sns">
+    <div class="footer2-2"><p>트레이드 콜센터<br><span>1566-5114</span></p></div>
+</div>
             </footer>
         </div>
     </body>

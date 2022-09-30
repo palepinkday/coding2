@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>검색 이펙트</title>
 
-        <link rel="stylesheet" href="../assets/css/search.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색 이펙트</title>
 
-        <link
-            href="https://webfontworld.github.io/tmon/Tmon.css"
-            rel="stylesheet"
-        />
-        <link
-            href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css"
-            rel="stylesheet"
-        />
-    </head>
+    <link rel="stylesheet" href="../assets/css/search.css">
 
-    <body>
-        <header id="header">
-            <nav>
-                <ul>
-                    <li><a href="searchEffect01.html">1</a></li>
-                    <li><a href="searchEffect02.html">2</a></li>
-                    <li><a href="searchEffect03.html">3</a></li>
-                    <li  class="active"><a href="searchEffect04.html">4</a></li>
-                    <li><a href="searchEffect05.html">5</a></li>
-                    <li><a href="searchEffect06.html">6</a></li>
-                </ul>
-            </nav>
-        </header>
-        <!-- //header -->
-
-        <main id="main">
-           <span>find()를 이용하여 속성을 검색하면 설명 보여주기</span>
+    <link href="https://webfontworld.github.io/tmon/Tmon.css" rel="stylesheet">
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="searchEffect01.html">1</a></li>
+                <li><a href="searchEffect02.html">2</a></li>
+                <li><a href="searchEffect03.html">3</a></li>
+                <li class="active"><a href="searchEffect04.html">4</a></li>
+                <li><a href="searchEffect05.html">5</a></li>
+                <li><a href="searchEffect06.html">6</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <!-- 소스보기 -->
+ 
+        <!-- 소스보기 끝 -->
+        <div class="search__wrap">
+            <span>find()를 이용하여 속성을 검색하면 설명 보여주기</span>
             <h1>CSS 속성 검색하기</h1>
 
             <div class="search__box">
@@ -57,12 +55,16 @@
         </div>
     </main>
     <!-- //main -->
-
-        <footer id="footer">
+ <footer id="footer">
             <a href="mailto:palepinkday@gmail.com">palepinkday@gmail.com</a>
         </footer>
-        <!-- //footer -->
-         <script>
+    <!-- //footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/source_show.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
         // //선택자
         // const searchKeyword = document.querySelectorAll(".search__info .keyword span"); //알파벳
         // const searchList = document.querySelectorAll(".search__list ul li"); //목록 리스트
@@ -95,9 +97,8 @@
         // });
     </script>
 
-        <script>
-            //선택자
-const cssProperty = [{
+    <script>
+        const cssProperty = [{
                 name: "accent-color",
                 desc: "특정 요소에 색상을 지정할 때 사용됩니다."
             },
@@ -1626,18 +1627,19 @@ const cssProperty = [{
                 desc: "요소들의 수직 위치를 설정합니다."
             },
         ];
-                //선택자
+
+        //선택자
         const searchList = document.querySelector(".search__list");
         const searchNum = document.querySelector(".search__info .num");
         const searchBox = document.querySelector(".search__box input");
         const searchDesc = document.querySelector(".search__desc")
 
-            //출력하기
-            cssProperty.map((el, i) => {
-                // searchList.innerHTML += "<li>" + el.name + "<li>";
-                // searchList.innerHTML += `<li><strong>align-content</strong> : 콘텐츠 아이템의 상하관계 정렬 상태를 설정합니다.<li>`;
-                searchNum.innerText = index + 1;
-searchList.innerHTML += `<span>${el.name}</span>`;
+
+
+        //출력하기
+        cssProperty.map((el, index) => {
+            searchNum.innerText = index + 1;
+            searchList.innerHTML += `<span>${el.name}</span>`;
         })
 
         //입력하기
@@ -1672,5 +1674,6 @@ searchList.innerHTML += `<span>${el.name}</span>`;
         };
     </script>
 
-    </body>
+</body>
+
 </html>

@@ -50,6 +50,48 @@ body.img09 {
 body.img10 {
   background: #000 url(../img/effect_bg20-min.jpg) no-repeat center / cover;
 }
+body.img11 {
+  background: #000 url(../img/effect_bg21.jpg) no-repeat center / cover;
+}
+body.img12 {
+  background: #000 url(../img/effect_bg22.jpg) no-repeat center / cover;
+}
+body.img13 {
+  background: #000 url(../img/effect_bg23.jpg) no-repeat center / cover;
+}
+body.img14 {
+  background: #000 url(../img/effect_bg24.jpg) no-repeat center / cover;
+}
+body.img15 {
+  background: #000 url(../img/effect_bg25.jpg) no-repeat center / cover;
+}
+body.img16 {
+  background: #000 url(../img/effect_bg26.jpg) no-repeat center / cover;
+}
+body.img17 {
+  background: #000 url(../img/effect_bg27.jpg) no-repeat center / cover;
+}
+body.img18 {
+  background: #000 url(../img/effect_bg28.jpg) no-repeat center / cover;
+}
+body.img19 {
+  background: #000 url(../img/effect_bg29.jpg) no-repeat center / cover;
+}
+body.img20 {
+  background: #000 url(../img/effect_bg30.jpg) no-repeat center / cover;
+}
+body.img21 {
+  background: #000 url(../img/effect_bg31jpg) no-repeat center / cover;
+}
+body.img22 {
+  background: #000 url(../img/effect_bg32.jpg) no-repeat center / cover;
+}
+body.img23 {
+  background: #000 url(../img/effect_bg33.jpg) no-repeat center / cover;
+}
+body.img24 {
+  background: #000 url(../img/effect_bg34.jpg) no-repeat center / cover;
+}
 
 body::after {
   content: "";
