@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <style>
-      /* mouseType */
+    /* mouseType */
       .mouse__wrap {
         width: 100%;
         height: 100vh;
@@ -22,7 +22,7 @@
         flex-direction: column;
         color: #fff;
         overflow: hidden;
-        /* cursor: none; */
+        cursor: none;
       }
 
       .mouse__wrap p {
@@ -42,106 +42,62 @@
         color: rgb(3, 247, 174);
       }
 
-      .mouse__cursor {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 3px solid #fff;
-        z-index: 9999;
-        background-color: rgba(255, 255, 255, 0.1);
-        user-select: none;
-        pointer-events: none;
-        transition: background-color 0.3s, border-color 0.3s, transform 0.6s;
-      }
-
-      .mouse__cursor.style1 {
-        background-color: rgba(6, 250, 217, 0.4);
-        border-color: rgb(6, 250, 217);
-        transform: scale(10) rotateY(720deg);
-      }
-
-      .mouse__cursor.style2 {
-        background-color: rgba(140, 0, 255, 0.4);
-        border-color: rgb(140, 0, 255);
-        transform: scale(3.5) rotateX(545deg);
-      }
-
-      .mouse__cursor.style3 {
-        background-color: rgba(0, 47, 255, 0.4);
-        border-color: rgb(0, 47, 255);
-        transform: scale(0.1);
-      }
-
-      .mouse__cursor.style4 {
-        background-color: rgba(141, 160, 243, 0.4);
-        border-color: rgb(141, 160, 243);
-        transform: scale(10);
-      }
-
-      .mouse__cursor.style5 {
-        background-color: rgba(241, 164, 190, 0.4);
-        border-color: rgb(241, 164, 190);
-        transform: scale(5) skew(40deg);
-      }
-
-      .mouse__cursor.style6 {
-        background-color: rgba(95, 243, 139, 0.4);
-        border-color: rgb(95, 243, 139);
-        transform: scale(5);
-        border-radius: 0;
-      }
-      @media (max-width: 800px) {
-        .mouse__wrap p {
-          padding: 0 20px;
-          font-size: 20px;
-          line-height: 1.5;
-          text-align: center;
-          margin-bottom: 10px;
-        }
-        .mouse__wrap p:last-child {
-          font-size: 40px;
-          line-height: 1.5;
-          text-align: center;
-          word-break: keep-all;
-        }
-      }
-      .mouse__cursor{
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 10px;
-        height: 10px;
-        z-index: 9999;
-        border-radius: 50%;
-        background: rgba(225, 225, 225, 0.1);
-        user-select: none;
-        pointer-events: none;
-        transition: transform 0.3s opacity 0.3 ;
-      }
-      .mouse__cursor2{
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 10px;
-        height: 10px;
-        z-index: 9999;
-        border-radius: 50%;
-        background: rgba(225, 225, 225, 0.4);
-        user-select: none;
-        pointer-events: none;
-        transition: transform 0.3s opacity 0.3;
+        @media (max-width: 800px){
+                .mouse__wrap p {
+                    padding: 0 20px;
+                    font-size: 30px;
+                    line-height: 1.5;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                .mouse__wrap p:last-child {
+                    font-size: 40px;
+                    line-height: 1.5;
+                    text-align: center;
+                    word-break: keep-all;
+                }
+            }
+		.mouse__cursor {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 10px;
+			height: 10px;
+			z-index: 9999;
+			border-radius: 50%;
+			background: rgba(255,255,255, 0.2);
+			user-select: none;
+			pointer-events: none;
+			transition: transform 0.3s, background 1.3s;
+		}
+       .mouse__cursor2 {
+	   		position: absolute;
+	   		left: 0;
+	   		top: 0;
+	   		width: 30px;
+	   		height: 30px;
+	   		z-index: 9998;
+	   		border-radius: 50%;
+	   		background: rgba(255,255,255, 0.3);
+	   		user-select: none;
+	   		pointer-events: none;
+	   		transition: transform 0.3s, background 1.3s;
       
-      }
-      .mouse__cursor.active{
-        transform: scale(0);
-      }
-      .mouse__cursor2.active{
-        transform: scale(10);
-        background: rgba(225, 116, 0, 0);
-      }
+	   	}
+            .mouse__cursor.active {
+                transform: scale(0);
+            }
+            .mouse__cursor2.active {
+                /* transform: scale(5); */
+                transform: scale(10) rotate(0.1turn);
+                background: linear-gradient(
+                    200deg,
+                    rgba(93, 218, 207, 0.4),
+                    rgba(244, 244, 247, 0.5),
+                    rgba(255, 124, 244, 0.5)
+                );
+            }
+            
     </style>
   </head>
   <body class="img02">
@@ -163,21 +119,21 @@
       <section id=" mouseType">
         <div class="mouse__cursor"></div>
         <div class="mouse__cursor2"></div>
-
-        <div class="mouse__wrap">
+   <div class="mouse__wrap">
           <p>
-            <span class="style1">가능</span>해 보이는 것
-             혹은 
-             <span class="style4">타당</span>해 보이는 것만<br />
+            <span class="style1">가능</span>해 보이는 것 혹은
+            <span class="style4">타당</span>해 보이는 것만<br />
             선택한다면 스스로가
             <span class="style2"> 진정 원하는 것</span>을<br />
-           알 수 없고  <span class="style3">타협</span>만 남는다..
+            알 수 없고 <span class="style3">타협</span>만 남는다..
           </p>
           <p>
-           If you limit  <span class="style6"> your choices</span
-            > only to what seems <span class="style4">possible or reasonable</span>,
-            <br />you disconnect your self from<span class="style5"> what you truly want</span>,<br />
-            and all that is left is  <span class="style6">a compromise..</span>
+            If you limit <span class="style6"> your choices</span> only to what
+            seems <span class="style4">possible or reasonable</span>, <br />you
+            disconnect your self from<span class="style5">
+              what you truly want</span
+            >,<br />
+            and all that is left is <span class="style6">a compromise..</span>
           </p>
         </div>
       </section>
@@ -410,27 +366,27 @@
 
     <script src="../assets/js/highlight.min.js"></script>
     <script src="../assets/js/common.js"></script>
-    <script src="../assets/js/gsap.js"></script>
+ <script src="../assets/js/gsap.min.js"></script>
 
     <script>
       //마우스 좌표 출력
-      window.addEventListener("mousemove", (event) => {
-        document.querySelector("clientX").innerText = event.clientX; //골라서 넣어서 값이 나옴
-        document.querySelector("clientY").innerText = event.clientY;
-        document.querySelector("offsetX").innerText = event.offsetX;
-        document.querySelector("offsetY").innerText = event.offsetY;
-        document.querySelector("pageX").innerText = event.pageX;
-        document.querySelector("pageY").innerText = event.pageY;
-        document.querySelector("screenX").innerText = event.screenX;
-        document.querySelector("screenY").innerText = event.screenY;
-      });
+      // window.addEventListener("mousemove", (event) => {
+      //   document.querySelector(".clientX").innerText = event.clientX; //골라서 넣어서 값이 나옴
+      //   document.querySelector(".clientY").innerText = event.clientY;
+      //   document.querySelector(".offsetX").innerText = event.offsetX;
+      //   document.querySelector(".offsetY").innerText = event.offsetY;
+      //   document.querySelector(".pageX").innerText = event.pageX;
+      //   document.querySelector(".pageY").innerText = event.pageY;
+      //   document.querySelector(".screenX").innerText = event.screenX;
+      //   document.querySelector(".screenY").innerText = event.screenY;
+      // });
 
       //마우스 움직이기
 
       window.addEventListener("mousemove", (e) => {
         const cursor = document.querySelector(".mouse__cursor");
-        cursor.style.left = e.clientX - 25 + "px";
-        cursor.style.top = e.clientY - 25 + "px";
+        cursor.style.left = e.clientX - 15 + "px";
+        cursor.style.top = e.clientY - 15 + "px";
       });
 
       //  document.querySelector(".style1").addEventListener("mouseover", () => {
@@ -524,17 +480,19 @@
 
     const cursor = document.querySelector(".mouse__cursor");
     const cursor2 = document.querySelector(".mouse__cursor2");
-    const span = document.querySelector(".mouse__wrap span");
+    const span = document.querySelectorAll(".mouse__wrap span");
 
-    window.addEventListener("mousemove", e =>{
+    window.addEventListener("mousemove", (e) =>{
         // cursor.style.left = e.pageX -5 + "px";
         // cursor.style.top = e.pageY -5 + "px";
         // cursor2.style.left = e.pageX -15 + "px";
         // cursor2.style.top = e.pageY -15 + "px";
 
         //gsap
-        gsap.to(cusor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5});
-        gsap.to(cusor2, {duration: 0.8, left: e.pageX -15, top: e.pageY -15});
+        gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5})
+        gsap.to(cursor2, {duration: 0.8, left: e.pageX -15, top: e.pageY -15})
+
+    });
        
        //mouseenter/mouseover이벤트 버블링 자식요소에 영향/
         span.forEach(span=>{
@@ -550,10 +508,27 @@
             });
         });
 
-        document.querySelector("modal__btn").addEventListener
-    });
+    document.querySelector(".modal__btn").addEventListener("mouseenter",()=>{
+				cursor.classList.add("active");
+				cursor2.classList.add("active");
+			});
+			document.querySelector(".modal__btn").addEventListener("mouseleave",()=>{
+				cursor.classList.remove("active");
+				cursor2.classList.remove("active");
+			});
+		// 	const activeMenu = document.querySelectorAll("#header ul li a");
+		// 	activeMenu.forEach(e=>{
+		// 		e.addEventListener("mouseenter", () => {
+		// 			cursor.classList.add("active__menu");
+		// 			cursor2.classList.add("active__menu");
+		// 		})
+		// 		e.addEventListener("mouseleave", () => {
+		// 			cursor.classList.remove("active__menu");
+		// 			cursor2.classList.remove("active__menu");
+		// 		})
+		// 	})
 
-
+	
     </script>
   </body>
 </html>
