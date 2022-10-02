@@ -92,6 +92,36 @@ body.img23 {
 body.img24 {
   background: #000 url(../img/effect_bg34.jpg) no-repeat center / cover;
 }
+body.img25 {
+  background: #000 url(../img/effect_bg35.jpg) no-repeat center / cover;
+}
+body.img26 {
+  background: #000 url(../img/effect_bg36.jpg) no-repeat center / cover;
+}
+body.img27 {
+  background: #000 url(../img/effect_bg37.jpg) no-repeat center / cover;
+}
+body.img28 {
+  background: #000 url(../img/effect_bg38.jpg) no-repeat center / cover;
+}
+body.img29 {
+  background: #000 url(../img/effect_bg39.jpg) no-repeat center / cover;
+}
+body.img30 {
+  background: #000 url(../img/effect_bg40.jpg) no-repeat center / cover;
+}
+body.img31 {
+  background: #000 url(../img/effect_bg41.jpg) no-repeat center / cover;
+}
+body.img32 {
+  background: #000 url(../img/effect_bg42.jpg) no-repeat center / cover;
+}
+body.img33 {
+  background: #000 url(../img/effect_bg43.jpg) no-repeat center / cover;
+}
+body.img34 {
+  background: #000 url(../img/effect_bg44.jpg) no-repeat center / cover;
+}
 
 body::after {
   content: "";
@@ -174,6 +204,7 @@ li {
 
 #header li {
   display: inline-block;
+  margin-right: 5px;
 }
 
 #header li a {
