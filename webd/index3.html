@@ -34,16 +34,19 @@
                 font-size: 18px;
                 font-weight: 700;
                 border: 1px solid #000;
-                padding: 0px 8px 4px 8px;
+                padding: 4px 8px 4px 8px;
                 display: inline-block;
                 text-align: center;
 
             }
             #wrap {
+                width: 1920px;
                 margin: 0 auto;
-                width: 1100px;
             }
             #header {
+                width: 1100px;
+                height:50px;
+                margin: 0 auto;
                 padding: 20px 100px 10px 100px;
             }
             #header .logo {
@@ -60,18 +63,50 @@
             #header .menu ul li {
                 list-style: none;
                 float: left;
-                padding: 28px;
+                padding: 10px 28px 10px 28px;
             }
+             #header .menu ul li a{
+                text-decoration: none;
+                color: #000;
+             }
             #slider {
-                position: relative;
+                width: 100%;
+                margin: 0 auto;
+               
+              
             }
+            .sliderwrap{
+               width: 100%;
+               position: relative;
+           
+            }
+            #slider img{
+                width: 100%;
+                height: 550px;               
+            }
+            
+            .sliderwrap .prev{
+                font-size: 50px;
+                color: #fff;
+                position: absolute;
+                left: 18%;top: 40%;
+            }
+            .sliderwrap .next{
+                font-size: 50px;
+                color: #fff;
+                position: absolute;
+                right: 18%;top: 40%;
+            }
+
+      
             #slider .desc {
                 position: absolute;
-                left: 10px;top:380px;
+                left: 22%;
+                top:300px;
                 background-color: #000;
                 border: 2px solid #000;
                 padding: 20px;
-                padding-right: 90px;
+                padding-right: 90px;            
 
             }
             #slider .desc p{
@@ -86,7 +121,8 @@
             #main {
             }
             .section{
-          
+                width: 1100px;
+                margin: 0 auto;
                 height: 900px;
             }
             .section>div{
@@ -154,6 +190,7 @@
                
             }
             .section1 .box .b{
+                padding-bottom: 5px;
              
             }
             .section1 .box span{
@@ -182,54 +219,78 @@
                 margin-top: 50px; 
             }
             .section2 .tab1{
-              position: relative;
-               width: 28.5%;
-                background-color: rgb(146, 132, 132);
+                position: relative;
+                width: 28.5%;
                 float: left;
-                background-color: #fff;
                 border: 1px solid #ccc;
                 height: 210px; 
             }
+            .section2 .tab1 h2{
+                position: absolute;
+                left: 0;
+                top: 0;
+                padding-top: 20px;
+                padding-left: 20px; 
+        
+            }
+            .section2 .tab1 .bar{
+                position: absolute;
+                left: 90px;
+                top: 0;
+
+            }
+            .section2 .tab1 .ulon{
+                position: absolute;
+                left: 110px;
+                top: 0px;
+            }
+      
+            .section2 .tab1 .active a{
+                color: #000;
+                font-size: 20px;
+                font-weight: 700; 
+                text-decoration: none; 
+                                       
+            }
+              .section2 .tab1 h2 a{
+                color: #bbb;
+                font-size: 20px;
+                font-weight: 700; 
+                text-decoration: none; 
+                                       
+            }
             .section2 .tab1 ul{
-               padding: 15px 0 40px 15px;
-               font-size: 18px;
+                position: absolute;
+                left: 20px;
+                top: 80px;      
             }
             .section2 .tab1 ul li{
                 list-style: none;
-                float: left;
-                font-size: 15px;
-                padding: 7px;
-              
+                float: left; 
+                padding-bottom: 20px;           
             }
+      
             .section2 .tab1 ul li a{
-                text-decoration: none;
+                text-decoration: none; 
                 color: #000;
-                font-weight: 700;  
-                padding-right: 1px;
-                font-size: 20px;
-
-            }
-             .section2 .tab1 ul li ul{}
-            .section2 .tab1 ul li ul li{
+                font-size: 14px;
              
+            }
+            .section2 .tab1 ul li ul{}
+            .section2 .tab1 ul li ul li a{
+                text-decoration: none; 
+                color: #000;
             }
             .section2 .tab1 span{
                 color: #bbb;
                 font-size: 14px;
             }
             .section2 .tab1 .plus1{
-              position: absolute;
-              right: 20px;top: 20px;;
+               position: absolute;
+               right: 20px;top: 20px;;
             }
              .section2 .tab2{
-              position: relative;
-             }
-             .section2 .tab2 .plus2{
-              position: absolute;
-              right: 20px;
-              top: 20px;
-            }         
-            .section2 .tab2{
+                position: relative;
                 width: 68.5%;
                 background-color: rgb(97, 68, 68);
                 float: left;
@@ -237,10 +298,15 @@
                 border: 1px solid #ccc;
                 height: 210px;
                 margin-left: 21px;
-            } 
+             }
+             .section2 .tab2 .plus2{
+              position: absolute;
+              right: 20px;
+              top: 20px;
+            }
             .section2 .tab2 h3{
                 padding: 20px;
-                padding-bottom: 10px;
+                padding-bottom: 20px;
             }
             .section2 .tab2 p{
                 font-size: 14px;
@@ -312,7 +378,7 @@
                 
             }
             .section3 .ad span{
-                padding: 10px 40px;
+                padding: 8px 38px;
                 color: #fff;
                 border: 2px solid #fff;
              
@@ -328,7 +394,8 @@
                 height: 200px;
                 margin-left: 21px;
                 margin-top: 18px;
-                position: relative;
+                position: relative;  
+                          
 
             }
             .section3 .tab3 .plus3{
@@ -337,21 +404,25 @@
             }
             .section3 .tab3 h3{
                 padding: 20px;
+                margin-bottom: 10px;
             }
-            .section3 .tab3 .t3_1{
-                margin: 50px;
-                height: 50px;
-               border-right: 5px solid #bbb;
+            .section3 .tab3 .tab3_1{
+              
+                width: 49%;
+                height: 100px; 
+                float: left;  
+                border-right: 2px solid #ddd;     
             }
-            .section3 .tab3 .t3_2{
-                margin: 50px;
+            .section3 .tab3 .tab3_2{
+                width: 49%;
+                height: 100px;
+                float: left;   
                
             }
             .section3 .tab3 p{
                 font-size: 15px;
                 padding: 0 20px;
-                float: left;
-                width: 40%;
+                width: 100%;
                 padding-bottom: 20px;
             }
             .section3 .tab3 em{
@@ -369,9 +440,13 @@
                 font-size: 13px;
             }
              .footer1{
-             
+             margin: 0 auto;
+             width: 1100px;
              }
-            .footer2{}
+            .footer2{
+             margin: 0 auto;
+             width: 1100px;
+            }
             .footer1 .footer1-1{
                 width: 83%;
                 float: left;
@@ -431,35 +506,40 @@
         </style>
     </head>
     <body>
-        <div id="wrap">
-            <header id="header" class="nanum">
+        <div id="wrap" class="nanum">
+            <header id="header">
                 <div class="logo">
                     <img src="1111/img/img1/logo03.jpg" alt="" />
                 </div>
                 <div class="menu">
                     <ul>
-                        <li>무역통상정보</li>
-                        <li>회원/업무지원</li>
-                        <li>무역통계</li>
-                        <li>협회안내</li>
+                        <li><a href="#">무역통상정보</a></li>
+                        <li><a href="#">회원/업무지원</a></li>
+                        <li><a href="#">무역통계</a></li>
+                        <li><a href="#">협회안내</a></li>
                     </ul>
                 </div>
             </header>
             <nav id="slider">
                 <div class="sliderwrap">
-                    <div class="sliderList">
-                        <div class="img1">
-                            <img
-                                src="1111/img/img1/slider03_img01.jpg"
-                                alt="참가업체모집"
-                            />
-                        </div>
-                        <div class="desc"><p>STARTUP Germany<br>
-                        2019 참가업체 모집<br>
-                        <span>사업기간2019-07-02~2019-08-09</span>
-                    </p></div>
+                        <div class="sliderList">
+                            <div class="img1">
+                                <img
+                                    src="1111/img/img1/slider03_img01.jpg"
+                                    alt="참가업체모집"
+                                />
+                            </div>
 
-                    </div>
+                            <div class="prev"><</div>
+                            <div class="next">></div>
+
+                            <div class="desc">
+                                <p>STARTUP Germany<br>
+                                2019 참가업체 모집<br>
+                                <span>사업기간2019-07-02~2019-08-09</span>
+                                </p>
+                            </div>
+                        </div>
                 </div>
             </nav>
             <main id="main" class="section" class="clearfix"class="nanum">
@@ -469,7 +549,7 @@
                         <h2>KITA 사업일정</h2>
                     <div class="plus">+</div>
                     </div>
-                 
+             
                     <article class="box">
                         <p>모집마감 -4일</p>
                         <h3>2019 태국 국제식품전시회 업체모집</h2>
@@ -479,38 +559,36 @@
                     <article class="box">
                         <p>모집마감 -4일</p>
                         <h3>2019 태국 국제식품전시회 업체모집</h2>
-                        <div><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
+                        <div class="b"><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
                         <div><span>모집기간</span><em>2019-05-28~2019-06-01</em></div>
                     </article>
                     <article class="box">
                         <p>모집마감 -4일</p>
                         <h3>2019 태국 국제식품전시회 업체모집</h2>
-                        <div><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
+                        <div class="b"><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
                         <div><span>모집기간</span><em>2019-05-28~2019-06-01</em></div>
                     </article>
                     <article class="box">
                         <p>모집마감 -4일</p>
                         <h3>2019 태국 국제식품전시회 업체모집</h2>
-                        <div><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
+                        <div class="b"><span>사업기간</span><em>2019-05-28~2019-06-01</em></div>
                         <div><span>모집기간</span><em>2019-05-28~2019-06-01</em></div>
                     </article>
+                  
                 </section>
                 <section class="section2">
                     <div class="tab1">
-                        <ul class="clearfix">
-                            <li><a href="#">보도자료</a></li>
-                            <li><a>|</a></li>  
-                            <li><a href="#">언론기고</a></li>
-                        </ul> 
-                        <ul>
-                           <li>민관합동 현장중심 수출활력촉진 가동<br><span>2019-01-31</span></li>
-                           <li>민간기업이 주도하는 유럽스타트업 캠퍼스<br><span>2019-01-29</span></li>
-                        </ul>            
-                         <ul style="display: none;">
-                           <li>민관합동 현장중심 수출활력촉진 가동<br><span>2019-01-31</span></li>
-                           <li>민간기업이 주도하는 유럽스타트업 캠퍼스<br><span>2019-01-29</span></li>
-                        </ul>                        
-                         <div class="plus1">+</div>     
+                        <h2 class="active"><a href="#">보도자료</a></h2><h2 class="bar">|</h2>
+                            <ul>
+                                <li><a href="#">민관합동 현장중심 수출활력촉진 가동<br><span>2019-01-31</span></a></li>
+                                <li><a href="#">민간기업이 주도하는 유럽스타트업 캠퍼스<br><span>2019-01-29</span></a></li>
+                            </ul>
+                        <h2 class="ulon"><a href="#">언론기고</a></h2>
+                            <ul style="display: none">
+                                <li><a href="#">민관합동 현장중심 수출활력촉진 가동<br><span>2019-01-31</span></a></li>
+                                <li><a href="#">민간기업이 주도하는 유럽스타트업 캠퍼스<br><span>2019-01-29</span></a></li>
+                            </ul>
+                  <div class="plus1">+</div>  
                     </div>
                     <div class="tab2">
                         <h3>KITA 연구보고서</h3>
@@ -548,15 +626,16 @@
             </main>
 
             <footer id="footer">
-<div class="footer1">
-    <div class="footer1-1"><p>이용약관  개인정보처리방침  저작권정책  이메일주소무단수집거부  온라인고객상담  신문고</p></div><div class="footer1-2"><p>국내외지부</p></div>
-</div>
-
-<div class="footer2">
-    <div class="footer2-1"><img class="img1" src="1111/img/img1/footer.jpg" alt="한국무역협회"><p>(06164)서울시 강남구 영동대로 511 (삼성동)<br><span>Copyright KITA ALL reserved</span></p></div>
-    <img class ="img2" src="1111/img/img1/sns.jpg" alt="sns">
-    <div class="footer2-2"><p>트레이드 콜센터<br><span>1566-5114</span></p></div>
-</div>
+                <div class="footer1">
+                    <div class="footer1-1"><p>이용약관  개인정보처리방침  저작권정책  이메일주소무단수집거부  온라인고객상담  신문고</p></div>
+                    <div class="footer1-2"><p>국내외지부</p></div>
+                </div>
+                
+                <div class="footer2">
+                    <div class="footer2-1"><img class="img1" src="1111/img/img1/footer.jpg" alt="한국무역협회"><p>(06164)서울시 강남구 영동대로 511 (삼성동)<br><span>Copyright KITA ALL reserved</span></p></div>
+                    <img class ="img2" src="1111/img/img1/sns.jpg" alt="sns">
+                    <div class="footer2-2"><p>트레이드 콜센터<br><span>1566-5114</span></p></div>
+                </div>
             </footer>
         </div>
     </body>
