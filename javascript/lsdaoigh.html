@@ -8,41 +8,18 @@
     </head>
     <body>
         <script>
-            const arrNum1 = [100, 200, 300, 400, 500];
-            const a1 = arrNum1.reverse();
+            {
+                function func13() {
+                    let a, b, c, result;
+                    a = 20;
+                    b = 10;
+                    c = b * a;
+                    result = a < b ? b * a : c;
 
-            const arrNum2 = [100, 200, 300, 400, 500];
-            const a2 = arrNum2.sort();
-
-            const arrNum3 = [100, 200, 300, 400, 500];
-            const a3 = arrNum3.sort(function (a, b) {
-                return b - a;
-            });
-
-            const arrNum4 = [500, 400, 300, 200, 100];
-            const a4 = arrNum4.sort(function (a, b) {
-                return a - b;
-            });
-
-            const arrNum5 = ["c", "f", "g", "j", "h"];
-            const a5 = arrNum5.sort(function (a, b) {
-                a.localeCompare(b);
-            });
-
-            const arrNum6 = ["c", "f", "g", "j", "h"];
-            const a6 = arrNum6.sort(function (a, b) {
-                return b.localeCompare(a);
-            });
-
-            console.log(a1);
-            console.log(a2);
-            console.log(a3);
-            console.log(a4);
-
-            console.log(a5);
-            console.log(a6);
-
-            //
+                    document.write(result);
+                }
+                func13();
+            }
         </script>
     </body>
 </html>
