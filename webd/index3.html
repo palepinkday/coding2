@@ -70,54 +70,71 @@
                 color: #000;
              }
             #slider {
-                width: 100%;
+                width: 1300px;
+                height: 550px;
+                text-align: center;
+                overflow: hidden;
                 margin: 0 auto;
-               
-              
             }
-            .sliderwrap{
-               width: 100%;
+            /* #slider .sliderwrap{
+               width: 1300px;
+               height: 550px;
                position: relative;
            
+            } */
+            #slider .sliderList{
+                position: relative;
+                width: 3900px;
+                height: 550px; 
             }
-            #slider img{
-                width: 100%;
-                height: 550px;               
+            .sliderList .slideImg{
+                width: 1300px;
+                height: 550px; 
+                position: relative; 
+                float: left;             
             }
-            
-            .sliderwrap .prev{
-                font-size: 50px;
-                color: #fff;
-                position: absolute;
-                left: 18%;top: 40%;
+            .sliderList .slideImg img{
+                display: inline-block;
+                width: 1300px;
+                height: 550px;
+                position: relative;
             }
-            .sliderwrap .next{
-                font-size: 50px;
-                color: #fff;
-                position: absolute;
-                right: 18%;top: 40%;
-            }
-
-      
-            #slider .desc {
-                position: absolute;
-                left: 22%;
-                top:300px;
+            .slideList .slideImg .desc {
+                z-index: 1000;
+                position: relative;
+                left: 0;
+                top: px;
                 background-color: #000;
                 border: 2px solid #000;
+                width: 400px;
+                height: 300px;
                 padding: 20px;
-                padding-right: 90px;            
-
+                padding-right: 90px;
+                padding-bottom: 300px;
             }
             #slider .desc p{
                 color: #fff;
                 font-size: 35px;
                 font-weight: 500;
-
             }
               #slider .desc span{
                 font-size: 20px;
+               
               }
+            .sliderwrap .prev{
+                font-size: 50px;
+                color: #fff;
+                position: absolute;
+                left: 0%;top: 40%;
+            }
+            .sliderwrap .next{
+                font-size: 50px;
+                color: #fff;
+                position: absolute;
+                right: 0%;top: 40%;
+            }   
+      
+
             #main {
             }
             .section{
@@ -372,17 +389,12 @@
                 top: 150px;
                 right: 100px;
                 bottom: 50px;
-                left: 20px;
-             
-
-                
+                left: 20px;                
             }
             .section3 .ad span{
                 padding: 8px 38px;
                 color: #fff;
-                border: 2px solid #fff;
-             
-                
+                border: 2px solid #fff;   
             }
 
             .section3 .tab3{
@@ -394,9 +406,7 @@
                 height: 200px;
                 margin-left: 21px;
                 margin-top: 18px;
-                position: relative;  
-                          
-
+                position: relative;                          
             }
             .section3 .tab3 .plus3{
                position: absolute;
@@ -423,7 +433,10 @@
                 font-size: 15px;
                 padding: 0 20px;
                 width: 100%;
-                padding-bottom: 20px;
+                height: 30px;
+                line-height: 1.5;
+                padding-bottom: 30px;
+               
             }
             .section3 .tab3 em{
                 font-size: 14px;
@@ -523,15 +536,27 @@
             <nav id="slider">
                 <div class="sliderwrap">
                         <div class="sliderList">
-                            <div class="img1">
+                            <div class="slideImg">
                                 <img
                                     src="1111/img/img1/slider03_img01.jpg"
                                     alt="참가업체모집"
                                 />
-                            </div>
-
-                            <div class="prev"><</div>
-                            <div class="next">></div>
+                                <div class="prev"><</div>
+                                <div class="next">></div>
+                                <div class="desc">
+                                    <p>STARTUP Germany<br>
+                                    2019 참가업체 모집<br>
+                                    <span>사업기간2019-07-02~2019-08-09</span>
+                                    </p>
+                                </div>
+                           </div>
+                           <div class="slideImg">
+                                <img
+                                    src="1111/img/img1/slider03_img01.jpg"
+                                    alt="참가업체모집"
+                                />
+                                <div class="prev"><</div>
+                                <div class="next">></div>
 
                             <div class="desc">
                                 <p>STARTUP Germany<br>
@@ -539,8 +564,23 @@
                                 <span>사업기간2019-07-02~2019-08-09</span>
                                 </p>
                             </div>
+                       </div>
+                       <div class="slideImg">
+                        <img
+                            src="1111/img/img1/slider03_img01.jpg"
+                            alt="참가업체모집"
+                        />
+                        <div class="prev"><</div>
+                        <div class="next">></div>
+
+                        <div class="desc">
+                            <p>STARTUP Germany<br>
+                            2019 참가업체 모집<br>
+                            <span>사업기간2019-07-02~2019-08-09</span>
+                            </p>
                         </div>
-                </div>
+                   </div>
+                       </div>
             </nav>
             <main id="main" class="section" class="clearfix"class="nanum">
             
