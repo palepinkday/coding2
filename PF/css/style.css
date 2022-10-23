@@ -9,7 +9,7 @@
 }
 body {
   width: 1920px;
-  height: 4000px;
+  height: 5000px;
 }
 a {
   text-decoration: none;
@@ -24,28 +24,84 @@ a {
 #header .logo {
   float: left;
   width: 25%;
-  height: 110px;
+  height: 60px;
   padding-top: 50px;
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #eee;
+  letter-spacing: 6px;
+}
+.logo a {
 }
 #header .menu {
   float: right;
   width: 75%;
   height: 110px;
+  /* padding: 10px; */
+  background-color: #ddd;
 }
 .menu1 {
   float: right;
-  width: 100%;
+  width: 45%;
   height: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: #ccc;
+  padding-top: 10px;
+}
+.menu1 > li {
+  float: left;
+}
+.menu1 > li > a {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding-left: 17px;
 }
 .menu2 {
   float: left;
-  width: 75%;
+  width: 80%;
+  height: 60px;
+  font-size: 15px;
+  font-weight: 300;
+  background-color: #eee;
+  padding-top: 10px;
+}
+.menu2 > li {
+  float: left;
+  width: 78px;
+}
+.menu2 > li > a {
+  width: 100%;
   height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+.menu2 > li:last-child {
+  width: 135px;
+}
+.menu2 > li > a:first-child {
+  padding-left: 20px;
 }
 .icon_3 {
   float: right;
-  width: 25%;
+  width: 20%;
+  height: 70px;
+  padding-top: 10px;
+}
+.icon_3 > li {
+  float: left;
+  width: 30%;
+}
+.icon_3 > li > a {
+  width: 100%;
   height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+.icon_3 > li > a:first-child {
+  padding-left: 50px;
 }
 /* section */
 #section {
@@ -54,24 +110,246 @@ a {
 #section .content1 {
 }
 .slide {
+  width: 1920px;
+  height: 490px;
+  background-color: #ccc;
 }
 .icon_btn {
+  width: 1280px;
+  height: 265px;
+  background-color: #ffffff;
 }
+.icon_btn_top {
+  padding-top: 60px;
+  padding-bottom: 15px;
+}
+.icon_btn_top img {
+  padding-right: 9.9px;
+}
+.icon_btn_top img:last-child {
+  padding: 0;
+}
+.icon_btn_bottom {
+  float: left;
+  width: 1280px;
+}
+.icon_btn_bottom > li {
+  float: left;
+  width: 10%;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+}
+.icon_btn_bottom > li > a {
+  font-size: 15px;
+  font-weight: 300;
+}
+
 .banner {
+  width: 1280px;
+  height: 70px;
 }
 /* content2 */
 #section .content2 {
 }
 .mealkit {
+  width: 1280px;
+  height: 920px;
+  background-color: #ccc;
+}
+.mealkit > h2 {
+  font-size: 32px;
+  padding-top: 80px;
+  float: left;
+}
+.mealkit > span {
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 90px;
+  float: right;
+  padding-right: 870px;
+}
+.kitimg {
+  float: left;
+  padding-top: 30px;
+}
+.mealkit img {
+  width: 630px;
+  height: 378px;
+  padding-bottom: 15px;
+}
+.mealkit img:first-child {
+  padding-right: 15px;
+}
+.mealkit img:last-child {
+  padding-left: 15px;
 }
 .todayfood {
+  width: 1280px;
+  height: 495px;
+  background-color: #ddd;
+}
+.todayfood h2 {
+  font-size: 25px;
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+.todayfood .food1 {
+  float: left;
+  padding: 7px;
+}
+.todayfood .food2 {
+  float: left;
+  padding: 7px;
+}
+.todayfood .food3 {
+  float: left;
+  padding: 7px;
+}
+.todayfood .food4 {
+  float: left;
+  padding: 7px;
+}
+.todayfood img {
+  width: 306px;
+  height: 306px;
+}
+.food_txt {
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 7px;
+}
+.todayfood > p {
+  font-size: 15px;
 }
 .review {
+  width: 1280px;
+  height: 590px;
+  background-color: #ccc;
 }
+.review > h2 {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+.review img {
+  width: 306px;
+  height: 306px;
+}
+.review1 {
+  float: left;
+  width: 306px;
+  padding: 7px;
+}
+.review2 {
+  float: left;
+  width: 306px;
+  padding: 7px;
+}
+.review3 {
+  float: left;
+  width: 306px;
+  padding: 7px;
+}
+.review4 {
+  float: left;
+  width: 306px;
+  padding: 7px;
+}
+.review_txt {
+  font-size: 22px;
+}
+.review > p {
+  font-size: 15px;
+}
+
 .howto {
+  width: 1280px;
+  height: 735px;
+  background-color: #ddd;
+  text-align: center;
 }
+.howto > h2 {
+  padding-top: 110px;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+.howto > p {
+  padding-bottom: 45px;
+  font-size: 18px;
+}
+.ad1 {
+}
+.ad1 img {
+  width: 630px;
+  height: 355px;
+  padding: 3.6px;
+}
+.ad2 {
+  padding-top: 10px;
+}
+.ad2 img {
+  width: 413px;
+  height: 120px;
+  padding: 5.3px 5.3px 0 5.3px;
+}
+
 .place {
+  width: 1280px;
+  height: 455px;
+  background-color: #ccc;
+  text-align: center;
 }
+.place > h2 {
+  font-size: 30px;
+  padding-top: 150px;
+  padding-bottom: 18px;
+}
+.place > p {
+  font-size: 17px;
+  padding-bottom: 40px;
+}
+.place img {
+  float: left;
+  width: 122px;
+  height: 122px;
+  padding: 3px;
+}
+.place1 {
+  float: left;
+}
+.place2 {
+  float: left;
+}
+.place3 {
+  float: left;
+}
+.place4 {
+  float: left;
+}
+.place5 {
+  float: left;
+}
+.place6 {
+  float: left;
+}
+.place7 {
+  float: left;
+}
+.place8 {
+  float: left;
+}
+.place9 {
+  float: left;
+}
+.place10 {
+  float: left;
+}
+
 /* footer */
 #footer {
+  width: 1920px;
+  height: 400px;
+  background-color: rgb(91, 89, 89);
 }
