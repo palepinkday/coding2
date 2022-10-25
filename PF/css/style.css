@@ -14,6 +14,7 @@ body {
 a {
     text-decoration: none;
 }
+
 .container {
     width: 1280px;
     margin: 0 auto;
@@ -29,11 +30,6 @@ a {
     display: block;
     line-height: 0;
 }
-
-.clearfix::after {
-    clear: both;
-}
-
 /* header */
 #header {
     height: 110px;
@@ -167,7 +163,9 @@ a {
 .icon_btn_bottom > li > a:last-child {
     padding-left: 35px;
 }
-
+.banner {
+    clear: both;
+}
 .banner img {
     width: 100%;
 }
@@ -180,62 +178,92 @@ a {
 .mealkit > h2 {
     font-size: 32px;
     padding-top: 80px;
-    float: left;
+    padding-bottom: 30px;
+    text-align: left;
 }
-.mealkit > span {
+.mealkit h2 > span {
     font-size: 20px;
     font-weight: 400;
     padding-top: 90px;
-    float: right;
-    padding-right: 870px;
+    text-align: right;
+    padding-left: 50px;
+}
+.kitimg_wrap1 {
+    width: 100%;
+    float: left;
+}
+.kitimg_wrap2 {
+    width: 100%;
+    float: left;
 }
 .kitimg {
-    float: left;
-    padding-top: 30px;
+    margin-bottom: 20px;
 }
-.kit_txt {
-    font-size: 25px;
+.kit_1 {
     position: relative;
+    float: left;
+    margin-right: 20px;
+}
+.kit_2 {
+    position: relative;
+    float: left;
+}
+.kit_3 {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+}
+.kit_4 {
+    position: relative;
+    float: left;
+}
+
+.kit_txt {
 }
 .kit_t1 {
     position: absolute;
+    font-size: 25px;
     color: #fff;
-    top: 495px;
-    left: 180px;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 .kit_t2 {
     position: absolute;
+    font-size: 25px;
     color: #fff;
-    top: 495px;
-    left: 980px;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 .kit_t3 {
     position: absolute;
+    font-size: 25px;
     color: #fff;
-    top: 895px;
-    left: 180px;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
 .kit_t4 {
     position: absolute;
+    font-size: 25px;
     color: #fff;
-    top: 895px;
-    left: 970px;
+    top: 0;
+    left: 0;
+    z-index: 3;
 }
-.mealkit img {
-    width: 630px;
-    height: 378px;
-    padding-bottom: 15px;
-}
-.mealkit img:first-child {
+
+/* .mealkit img:first-child {
     padding-right: 15px;
 }
 .mealkit img:last-child {
     padding-left: 15px;
-}
+} */
 /* section4 */
 #section4 {
 }
 .todayfood {
+    width: 100%;
     height: 495px;
 }
 .todayfood h2 {
@@ -276,6 +304,7 @@ a {
 #section5 {
 }
 .review {
+    width: 100%;
     height: 590px;
 }
 .review > h2 {
@@ -329,6 +358,7 @@ a {
 #section6 {
 }
 .howto {
+    width: 100%;
     height: 735px;
     text-align: center;
 }
@@ -348,11 +378,29 @@ a {
     height: 355px;
     padding: 3.6px;
 }
-.ad2 {
-    padding-top: 10px;
+.ad2_1 {
     position: relative;
+    float: left;
 }
-.ad2 img {
+.ad2_1 img {
+    width: 413px;
+    height: 120px;
+    padding: 5.3px 5.3px 0 5.3px;
+}
+.ad2_2 {
+    position: relative;
+    float: left;
+}
+.ad2_2 img {
+    width: 413px;
+    height: 120px;
+    padding: 5.3px 5.3px 0 5.3px;
+}
+.ad2_3 {
+    position: relative;
+    float: left;
+}
+.ad2_3 img {
     width: 413px;
     height: 120px;
     padding: 5.3px 5.3px 0 5.3px;
@@ -363,33 +411,33 @@ a {
 .ad2_txt span {
     font-size: 15px;
 }
-.ad2_t1 {
+.ad2_1 .ad2_t1 {
     position: absolute;
-    top: 3608px;
-    left: 480px;
-    z-index: 1;
-    float: left;
+    top: 60px;
+    left: 170px;
+    z-index: 2;
 }
-.ad2_t2 {
+.ad2_2 .ad2_t2 {
     position: absolute;
-    top: 3600px;
-    left: 910px;
-    z-index: 1;
-    float: left;
+    top: 50px;
+    left: 170px;
+    z-index: 2;
+
     text-align: left;
 }
-.ad2_t3 {
+.ad2_3 .ad2_t3 {
     position: absolute;
-    top: 3600px;
-    left: 1335px;
-    z-index: 1;
-    float: left;
+    top: 50px;
+    left: 170px;
+    z-index: 2;
+
     text-align: left;
 }
 /* section7 */
 #section7 {
 }
 .place {
+    width: 100%;
     height: 455px;
     text-align: center;
 }
@@ -442,6 +490,7 @@ a {
 
 /* footer */
 #footer {
+    clear: both;
     height: 400px;
     background-color: rgb(91, 89, 89);
 }
