@@ -1,256 +1,262 @@
 @import url("https://webfontworld.github.io/gmarket/GmarketSans.css");
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: "GmarketSans";
-    color: #333333;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "GmarketSans";
+  color: #333333;
 }
 
 body {
-    /* width: 1920px;
+  /* width: 1920px;
     height: 5000px; */
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    width: 1280px;
-    margin: 0 auto;
+  width: 1280px;
+  margin: 0 auto;
 }
 /* 클리어 픽스 */
 .clearfix {
-    zoom: 1;
+  zoom: 1;
 }
 
 .clearfix::before,
 .clearfix::after {
-    content: "";
-    display: block;
-    line-height: 0;
+  content: "";
+  display: block;
+  line-height: 0;
 }
 /* header */
 #header {
-    height: 110px;
+  height: 110px;
 }
 .container .logo {
-    float: left;
-    width: 25%;
-    height: 60px;
-    padding-top: 50px;
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 6px;
+  float: left;
+  width: 25%;
+  height: 60px;
+  padding-top: 50px;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 6px;
 }
 .logo a {
 }
 .container .menu {
-    float: right;
-    width: 75%;
-    height: 110px;
-    /* padding: 10px; */
+  float: right;
+  width: 75%;
+  height: 110px;
+  /* padding: 10px; */
 }
 .menu1 {
-    float: right;
-    width: 45%;
-    height: 30px;
-    font-size: 14px;
-    font-weight: 300;
-    padding-top: 10px;
+  float: right;
+  width: 45%;
+  height: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  padding-top: 10px;
 }
 .menu1 > li {
-    float: left;
+  float: left;
 }
 .menu1 > li > a {
-    width: 150px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    padding-left: 17px;
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding-left: 17px;
 }
 .menu2 {
-    float: left;
-    width: 80%;
-    height: 60px;
-    font-size: 15px;
-    font-weight: 300;
-    padding-top: 10px;
+  float: left;
+  width: 80%;
+  height: 60px;
+  font-size: 15px;
+  font-weight: 300;
+  padding-top: 10px;
 }
 .menu2 > li {
-    float: left;
-    width: 78px;
+  float: left;
+  width: 78px;
 }
 .menu2 > li > a {
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
 }
 .menu2 > li:last-child {
-    width: 135px;
+  width: 135px;
 }
 .menu2 > li > a:first-child {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 .icon_3 {
-    float: right;
-    width: 20%;
-    height: 70px;
-    padding-top: 10px;
+  float: right;
+  width: 20%;
+  height: 70px;
+  padding-top: 10px;
 }
 .icon_3 > li {
-    float: left;
-    width: 30%;
+  float: left;
+  width: 30%;
 }
 .icon_3 > li > a {
-    width: 100%;
-    height: 80px;
-    line-height: 80px;
-    text-align: center;
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
 }
 .icon_3 > li > a:first-child {
-    padding-left: 50px;
+  padding-left: 50px;
 }
 /* contents */
 #contents {
+  text-align: center;
 }
 /* section1 */
 #section1 {
+  width: 100%;
+  height: 490px;
 }
 .slide {
-    height: 490px;
+  width: 100%;
+  height: 490px;
 }
 .slide img {
-    width: 100%;
+  width: 100%;
 }
 /* section2 */
 #section2 {
+  width: 100%;
+  height: 265px;
 }
 .icon_btn {
-    width: 100%;
-    height: 265px;
+  width: 100%;
+  height: 265px;
 }
 .icon_btn_top {
-    padding-top: 60px;
-    padding-bottom: 15px;
-    text-align: center;
+  padding-top: 60px;
+  padding-bottom: 15px;
+  text-align: center;
 }
 .icon_btn_top img {
-    margin-right: 8.95px;
+  margin-right: 8.95px;
 }
 .icon_btn_top img:last-child {
-    padding: 0;
+  padding: 0;
 }
 .icon_btn_bottom {
-    float: left;
-    width: 100%;
+  float: left;
+  width: 100%;
 }
 .icon_btn_bottom > li {
-    float: left;
-    width: 10%;
-    height: 15px;
-    line-height: 15px;
-    text-align: center;
+  float: left;
+  width: 10%;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
 }
 .icon_btn_bottom > li > a {
-    font-size: 15px;
-    font-weight: 300;
+  font-size: 15px;
+  font-weight: 300;
 }
 .icon_btn_bottom > li > a:first-child {
-    padding-right: 35px;
+  padding-right: 35px;
 }
 .icon_btn_bottom > li > a:last-child {
-    padding-left: 35px;
+  padding-left: 35px;
 }
 .banner {
-    clear: both;
+  clear: both;
 }
 .banner img {
-    width: 100%;
+  width: 100%;
 }
 /* section3 */
 #section3 {
 }
 .mealkit {
-    height: 920px;
+  height: 920px;
 }
 .mealkit > h2 {
-    font-size: 32px;
-    padding-top: 80px;
-    padding-bottom: 30px;
-    text-align: left;
+  font-size: 32px;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  text-align: left;
 }
 .mealkit h2 > span {
-    font-size: 20px;
-    font-weight: 400;
-    padding-top: 90px;
-    text-align: right;
-    padding-left: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  padding-top: 90px;
+  text-align: right;
+  padding-left: 50px;
 }
 .kitimg_wrap1 {
-    width: 100%;
-    float: left;
+  width: 100%;
+  float: left;
 }
 .kitimg_wrap2 {
-    width: 100%;
-    float: left;
+  width: 100%;
+  float: left;
 }
 .kitimg {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .kit_1 {
-    position: relative;
-    float: left;
-    margin-right: 20px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
 }
 .kit_2 {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 .kit_3 {
-    position: relative;
-    float: left;
-    margin-right: 20px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
 }
 .kit_4 {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 
 .kit_txt {
 }
 .kit_t1 {
-    position: absolute;
-    font-size: 25px;
-    color: #fff;
-    top: 0;
-    left: 0;
-    z-index: 3;
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 .kit_t2 {
-    position: absolute;
-    font-size: 25px;
-    color: #fff;
-    top: 0;
-    left: 0;
-    z-index: 3;
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 .kit_t3 {
-    position: absolute;
-    font-size: 25px;
-    color: #fff;
-    top: 0;
-    left: 0;
-    z-index: 3;
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 .kit_t4 {
-    position: absolute;
-    font-size: 25px;
-    color: #fff;
-    top: 0;
-    left: 0;
-    z-index: 3;
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 3;
 }
 
 /* .mealkit img:first-child {
@@ -263,273 +269,273 @@ a {
 #section4 {
 }
 .todayfood {
-    width: 100%;
-    height: 495px;
+  width: 100%;
+  height: 495px;
 }
 .todayfood h2 {
-    font-size: 25px;
-    padding-top: 70px;
-    padding-bottom: 20px;
+  font-size: 25px;
+  padding-top: 70px;
+  padding-bottom: 20px;
 }
 .todayfood .food1 {
-    float: left;
-    padding: 7px;
+  float: left;
+  padding: 7px;
 }
 .todayfood .food2 {
-    float: left;
-    padding: 7px;
+  float: left;
+  padding: 7px;
 }
 .todayfood .food3 {
-    float: left;
-    padding: 7px;
+  float: left;
+  padding: 7px;
 }
 .todayfood .food4 {
-    float: left;
-    padding: 7px;
+  float: left;
+  padding: 7px;
 }
 .todayfood img {
-    width: 306px;
-    height: 306px;
+  width: 306px;
+  height: 306px;
 }
 .food_txt {
-    font-size: 20px;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 7px;
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 7px;
 }
 .todayfood > p {
-    font-size: 15px;
+  font-size: 15px;
 }
 /* section5 */
 #section5 {
 }
 .review {
-    width: 100%;
-    height: 590px;
+  width: 100%;
+  height: 590px;
 }
 .review > h2 {
-    padding-top: 100px;
-    padding-bottom: 20px;
-    font-size: 25px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  font-size: 25px;
 }
 .review img {
-    width: 306px;
-    height: 306px;
+  width: 306px;
+  height: 306px;
 }
 .review1 {
-    float: left;
-    width: 306px;
-    padding: 7px;
+  float: left;
+  width: 306px;
+  padding: 7px;
 }
 .review2 {
-    float: left;
-    width: 306px;
-    padding: 7px;
+  float: left;
+  width: 306px;
+  padding: 7px;
 }
 .review3 {
-    float: left;
-    width: 306px;
-    padding: 7px;
+  float: left;
+  width: 306px;
+  padding: 7px;
 }
 .review4 {
-    float: left;
-    width: 306px;
-    padding: 7px;
+  float: left;
+  width: 306px;
+  padding: 7px;
 }
 .review_txt {
-    font-size: 22px;
-    line-height: 1.4;
+  font-size: 22px;
+  line-height: 1.4;
 }
 .review_desc {
-    font-size: 15px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    line-height: 1.4;
+  font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.4;
 }
 .date {
-    font-size: 15px;
-    color: #bbbb;
-    line-height: 1.4;
+  font-size: 15px;
+  color: #bbbb;
+  line-height: 1.4;
 }
 /* section6 */
 #section6 {
 }
 .howto {
-    width: 100%;
-    height: 735px;
-    text-align: center;
+  width: 100%;
+  height: 735px;
+  text-align: center;
 }
 .howto > h2 {
-    padding-top: 110px;
-    padding-bottom: 20px;
-    font-size: 30px;
+  padding-top: 110px;
+  padding-bottom: 20px;
+  font-size: 30px;
 }
 .howto > p {
-    padding-bottom: 45px;
-    font-size: 18px;
+  padding-bottom: 45px;
+  font-size: 18px;
 }
 .ad1 {
 }
 .ad1 img {
-    width: 630px;
-    height: 355px;
-    padding: 3.6px;
+  width: 630px;
+  height: 355px;
+  padding: 3.6px;
 }
 .ad2_1 {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 .ad2_1 img {
-    width: 413px;
-    height: 120px;
-    padding: 5.3px 5.3px 0 5.3px;
+  width: 413px;
+  height: 120px;
+  padding: 5.3px 5.3px 0 5.3px;
 }
 .ad2_2 {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 .ad2_2 img {
-    width: 413px;
-    height: 120px;
-    padding: 5.3px 5.3px 0 5.3px;
+  width: 413px;
+  height: 120px;
+  padding: 5.3px 5.3px 0 5.3px;
 }
 .ad2_3 {
-    position: relative;
-    float: left;
+  position: relative;
+  float: left;
 }
 .ad2_3 img {
-    width: 413px;
-    height: 120px;
-    padding: 5.3px 5.3px 0 5.3px;
+  width: 413px;
+  height: 120px;
+  padding: 5.3px 5.3px 0 5.3px;
 }
 .ad2_txt {
-    font-size: 18px;
+  font-size: 18px;
 }
 .ad2_txt span {
-    font-size: 15px;
+  font-size: 15px;
 }
 .ad2_1 .ad2_t1 {
-    position: absolute;
-    top: 60px;
-    left: 170px;
-    z-index: 2;
+  position: absolute;
+  top: 60px;
+  left: 170px;
+  z-index: 2;
 }
 .ad2_2 .ad2_t2 {
-    position: absolute;
-    top: 50px;
-    left: 170px;
-    z-index: 2;
+  position: absolute;
+  top: 50px;
+  left: 170px;
+  z-index: 2;
 
-    text-align: left;
+  text-align: left;
 }
 .ad2_3 .ad2_t3 {
-    position: absolute;
-    top: 50px;
-    left: 170px;
-    z-index: 2;
+  position: absolute;
+  top: 50px;
+  left: 170px;
+  z-index: 2;
 
-    text-align: left;
+  text-align: left;
 }
 /* section7 */
 #section7 {
 }
 .place {
-    width: 100%;
-    height: 455px;
-    text-align: center;
+  width: 100%;
+  height: 455px;
+  text-align: center;
 }
 .place > h2 {
-    font-size: 30px;
-    padding-top: 150px;
-    padding-bottom: 18px;
+  font-size: 30px;
+  padding-top: 150px;
+  padding-bottom: 18px;
 }
 .place > p {
-    font-size: 17px;
-    padding-bottom: 40px;
+  font-size: 17px;
+  padding-bottom: 40px;
 }
 .place img {
-    float: left;
-    width: 122px;
-    height: 122px;
-    padding: 3px;
-    padding-bottom: 10px;
+  float: left;
+  width: 122px;
+  height: 122px;
+  padding: 3px;
+  padding-bottom: 10px;
 }
 .place1 {
-    float: left;
+  float: left;
 }
 .place2 {
-    float: left;
+  float: left;
 }
 .place3 {
-    float: left;
+  float: left;
 }
 .place4 {
-    float: left;
+  float: left;
 }
 .place5 {
-    float: left;
+  float: left;
 }
 .place6 {
-    float: left;
+  float: left;
 }
 .place7 {
-    float: left;
+  float: left;
 }
 .place8 {
-    float: left;
+  float: left;
 }
 .place9 {
-    float: left;
+  float: left;
 }
 .place10 {
-    float: left;
+  float: left;
 }
 
 /* footer */
 #footer {
-    clear: both;
-    height: 400px;
-    background-color: rgb(91, 89, 89);
+  clear: both;
+  height: 400px;
+  background-color: rgb(91, 89, 89);
 }
 #footer div ul li {
-    color: #fff;
+  color: #fff;
 }
 #footer div p {
-    color: #fff;
+  color: #fff;
 }
 .footer_top {
-    width: 100%;
-    height: 213px;
-    padding: 40px;
+  width: 100%;
+  height: 213px;
+  padding: 40px;
 }
 .box1 {
-    width: 20%;
-    float: left;
+  width: 20%;
+  float: left;
 }
 .box2 {
-    width: 20%;
-    float: left;
+  width: 20%;
+  float: left;
 }
 .box3 {
-    width: 20%;
-    float: left;
+  width: 20%;
+  float: left;
 }
 .box4 {
-    width: 20%;
-    float: left;
+  width: 20%;
+  float: left;
 }
 .box5 {
-    width: 20%;
-    float: left;
+  width: 20%;
+  float: left;
 }
 .footer_bottom {
 }
 
 @media (max-width: 1200px) {
-    .container {
-        width: 100%;
-    }
+  .container {
+    width: 100%;
+  }
 }
