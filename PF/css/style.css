@@ -8,8 +8,9 @@
 }
 
 body {
-    width: 1920px;
-    height: 5000px;
+   width: 100%;
+   height:auto;
+   overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -32,6 +33,7 @@ a {
 }
 /* header */
 #header {
+    width: 100%;
     height: 110px;
 }
 .container .logo {
@@ -112,11 +114,11 @@ a {
 .icon_3 > li > a:first-child {
     padding-left: 50px;
 }
-/* contents */
+
+/* section1 */
 #contents {
     text-align: center;
 }
-/* section1 */
 #section1 {
     width: 100%;
     height: 490px;
@@ -135,48 +137,29 @@ a {
 }
 .icon_btn {
     width: 100%;
-    height: 265px;
-}
-.icon_btn_top {
+    height: 230px;
     padding-top: 60px;
-    padding-bottom: 15px;
-    text-align: center;
+   
 }
-.icon_btn_top img {
-    margin-right: 8.95px;
+.icon_btn li{
+float: left;
+padding-right: 14px;
 }
-.icon_btn_top img:last-child {
+.icon_btn li:last-child{
     padding: 0;
 }
-.icon_btn_bottom {
-    float: left;
-    width: 100%;
+.icon_btn li p{
+    padding-top: 10px;
 }
-.icon_btn_bottom > li {
-    float: left;
-    width: 10%;
-    height: 15px;
-    line-height: 15px;
-    text-align: center;
-}
-.icon_btn_bottom > li > a {
-    font-size: 15px;
-    font-weight: 300;
-}
-.icon_btn_bottom > li > a:first-child {
-    padding-right: 35px;
-}
-.icon_btn_bottom > li > a:last-child {
-    padding-left: 35px;
-}
+
 .banner {
     width: 100%;
-
-    clear: both;
+    height: 70px;
+    float: left;
 }
 .banner img {
     width: 100%;
-    height: 70px;
+  
 }
 /* section3 */
 #section3 {
@@ -552,6 +535,11 @@ a {
 #footer div p {
     color: #fff;
 }
+#footer div span {
+    color: #fff;
+    font-size: 17px;
+    padding-left: 2px;
+}
 .footer_top {
     width: 100%;
     height: 213px;
@@ -561,6 +549,10 @@ a {
 .box1 {
     width: 20%;
     float: left;
+}
+.box1 >p{
+    font-size: 24px;
+    font-weight: 400;
 }
 .box2 {
     width: 20%;
@@ -574,15 +566,82 @@ a {
     width: 20%;
     float: left;
 }
+.box4 img{
+    padding-right: 10px;
+}
 .box5 {
     width: 20%;
     float: left;
 }
+.box5 ul li:nth-child(2){
+    font-size: 18px;
+}
 .footer_bottom {
     text-align: left;
 }
+@media (max-width: 1280px) {
+    .container {
+        width: 100%;
+        height:auto;
+    }
+    .logo{width: 5%;
+    }
+    .menu{width: 50%;}
+    .menu1{
+        float: right;
+        width: 100%;
+    }
 
-@media (max-width: 1200px) {
+    .slide img{
+    width: 100%;
+    height: auto;
+}
+}
+@media (max-width: 1220px) {
+    .container {
+        width: 100%;
+        height:auto;
+    }
+    .logo{
+        width: 20%;
+    }
+    .logo a{
+   margin-left: 20px;
+    }
+    .menu{width: 100%;}
+    .menu1{
+    float: left;
+    width: 100%;
+    }
+    .menu2 {
+        display: none;
+    }
+    .icon_3 {
+    float: left;
+    width: 100%;
+    height: 70px; 
+}
+.icon_3 li{
+    width: 11%;
+}
+.slide img{
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
     .container {
         width: 100%;
     }
