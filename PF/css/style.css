@@ -24,6 +24,9 @@ a {
 .clearfix {
   zoom: 1;
 }
+.clearfix:after {
+ clear: both;
+}
 
 .clearfix::before,
 .clearfix::after {
@@ -34,29 +37,22 @@ a {
 /* header */
 #header {
   width: 100%;
-  height: 110px;
 }
 .container .logo {
   float: left;
-  width: 25%;
-  height: 60px;
+  width: 20%;
   padding-top: 50px;
   font-size: 32px;
   font-weight: bold;
   letter-spacing: 6px;
 }
-.logo a {
-}
 .container .menu {
   float: right;
-  width: 75%;
-  height: 110px;
-  /* padding: 10px; */
+  width: 80%;
 }
 .menu1 {
   float: right;
   width: 45%;
-  height: 30px;
   font-size: 14px;
   font-weight: 300;
   padding-top: 10px;
@@ -66,7 +62,6 @@ a {
 }
 .menu1 > li > a {
   width: 150px;
-  height: 30px;
   line-height: 30px;
   text-align: center;
   padding-left: 17px;
@@ -74,7 +69,6 @@ a {
 .menu2 {
   float: left;
   width: 80%;
-  height: 60px;
   font-size: 15px;
   font-weight: 300;
   padding-top: 10px;
@@ -85,7 +79,6 @@ a {
 }
 .menu2 > li > a {
   width: 100%;
-  height: 80px;
   line-height: 80px;
   text-align: center;
 }
@@ -98,7 +91,6 @@ a {
 .icon_3 {
   float: right;
   width: 20%;
-  height: 70px;
   padding-top: 10px;
 }
 .icon_3 > li {
@@ -107,7 +99,6 @@ a {
 }
 .icon_3 > li > a {
   width: 100%;
-  height: 80px;
   line-height: 80px;
   text-align: center;
 }
@@ -121,45 +112,47 @@ a {
 }
 #section1 {
   width: 100%;
-  height: 490px;
+ 
 }
 .slide {
   width: 100%;
-  height: 490px;
+
 }
 .slide img {
   width: 100%;
+ height: auto;
 }
 /* section2 */
 #section2 {
   width: 100%;
-  height: 400px;
+
 }
 .icon_btn {
   width: 100%;
-  height: 400px;
   padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
 }
 .icon_btn ul {
-  height: 400px;
   align-items: center;
 }
 .icon_btn ul li { 
+  width: 9%;
   float: left;
-  padding: 5px;}
-
-/* .icon_btn li:last-child {
-  padding: 0;
-} */
+  padding: .5%;}
+.icon_btn ul li img{
+  width: 115px;
+  height: auto;
+}
 .icon_btn li p {
   padding-top: 10px;
+  text-align: center;
 }
 
-.banner {
+#section2 .container .banner {
+  padding-bottom: 85px;
   width: 100%;
-  height: 70px;
-  float: left;
+float: left;
 }
 .banner img {
   width: 100%;
@@ -167,13 +160,11 @@ a {
 /* section3 */
 #section3 {
   width: 100%;
-  height: 920px;
 }
 .mealkit {
 }
 .mealkit > h2 {
   font-size: 32px;
-  margin-top: 84px;
   padding: 30px 30px 30px 0;
   text-align: left;
 }
@@ -186,37 +177,36 @@ a {
 }
 .kitimg_wrap {
   width: 100%;
-  height: 384px;
+  height: auto;
   margin-bottom: 20px;
   float: left;
 }
 
 .kitimg {
-  /* margin-bottom: 20px; */
-  width: 630px;
-  height: 378px;
+  width: 100%;
+  height: auto;
   padding-bottom: 20px;
   float: left;
 }
 .blur1 {
   position: absolute;
-  top: 210px;
-  left: -1px;
+  top: 53%;
+  left: -0.5%;
 }
 .blur2 {
   position: absolute;
-  top: 210px;
-  left: 503px;
+  top: 53%;
+  left: 80%;
 }
 .blur3 {
   position: absolute;
-  top: 210px;
-  left: -1px;
+  top: 53%;
+  left: -0.5%;
 }
 .blur4 {
   position: absolute;
-  top: 210px;
-  left: 506px;
+  top: 53%;
+  left:  80.5%;
 }
 .kit_1 {
   width: 49%;
@@ -240,57 +230,45 @@ a {
   position: relative;
   float: left;
 }
-
-.kit_txt {
-}
 .kit_t1 {
   position: absolute;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #fff;
-  top: 350px;
-  left: 180px;
+  top:89%;
+  left: 28%;
   z-index: 3;
 }
 .kit_t2 {
   position: absolute;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #fff;
-  top: 350px;
-  left: 375px;
+  top: 89%;
+  left: 60%;
   z-index: 3;
 }
 .kit_t3 {
   position: absolute;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #fff;
-  top: 350px;
-  left: 170px;
+  top: 89%;
+  left: 27%;
   z-index: 3;
 }
 .kit_t4 {
   position: absolute;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: #fff;
-  top: 350px;
-  left: 350px;
+  top: 89%;
+  left: 56%;
   z-index: 3;
 }
-
-/* .mealkit img:first-child {
-    padding-right: 15px;
-}
-.mealkit img:last-child {
-    padding-left: 15px;
-} */
 /* section4 */
 #section4 {
 }
 .todayfood {
   width: 100%;
-  height: 495px;
 }
 .todayfood > h2 {
- padding-top: 100px;
   padding-bottom: 20px;
   font-size: 25px;
   text-align: left;
@@ -301,23 +279,13 @@ a {
 .todayfood ul li {
   width: 23.7%;
   float: left;
-  padding: 7px;
+  padding: 0.65%;
 }
-/* .todayfood .food2 {
-  float: left;
-  padding: 7px;
-}
-.todayfood .food3 {
-  float: left;
-  padding: 7px;
-}
-.todayfood .food4 {
-  float: left;
-  padding: 7px;
-} */
+
 .todayfood ul li img {
  width: 100%;
  height: auto;
+
 }
 .food_txt {
   font-size: 20px;
@@ -335,37 +303,37 @@ a {
 }
 .review {
   width: 100%;
-  height: 590px;
+  /* height: 590px; */
 }
 .review > h2 {
-margin-top: 100px;
+  margin-top: 100px;
   padding-bottom: 20px;
   font-size: 25px;
   text-align: left;
 }
 .review img {
-  width: 306px;
-  height: 306px;
+  width: 100%;
+
 }
 .review1 {
   float: left;
-  width: 306px;
-  padding: 7px;
+  width: 23.7%;
+  padding: 0.65%;
 }
 .review2 {
   float: left;
-  width: 306px;
-  padding: 7px;
+ width: 23.7%;
+  padding: 0.65%;
 }
 .review3 {
   float: left;
-  width: 306px;
-  padding: 7px;
+   width: 23.7%;
+  padding: 0.65%;
 }
 .review4 {
   float: left;
-  width: 306px;
-  padding: 7px;
+  width: 23.7%;
+  padding: 0.65%;
 }
 .review_txt {
   font-size: 22px;
@@ -392,7 +360,6 @@ margin-top: 100px;
 }
 .howto {
   width: 100%;
-  height: 735px;
   text-align: center;
 }
 .howto > h2 {
@@ -407,38 +374,44 @@ margin-top: 100px;
 .ad1 {
 }
 .ad1 img {
-  width: 630px;
-  height: 355px;
-  padding: 3.6px;
+  width: 48%;
+  padding:0.5%;
 }
 .ad2 {
+  width: 100%;
   margin-top: 20px;
 }
 .ad2_1 {
+  width: 32.3%;
+  padding: 0.5%;
   position: relative;
   float: left;
-  padding-right: 20px;
 }
 .ad2_1 img {
-  width: 413px;
-  height: 120px;
+ width: 100%;
+
+
 }
 .ad2_2 {
+  width: 32.3%;
+  padding: 0.5%;
   position: relative;
   float: left;
-  padding-right: 20px;
 }
 .ad2_2 img {
-  width: 413px;
-  height: 120px;
+  width: 100%;
+ 
 }
 .ad2_3 {
+  width: 32.3%;
+  padding: 0.5%;
   position: relative;
   float: left;
 }
 .ad2_3 img {
-  width: 413px;
-  height: 120px;
+ width: 100%;
+ 
+
 }
 .ad2_txt {
   font-size: 18px;
@@ -448,22 +421,22 @@ margin-top: 100px;
 }
 .ad2_1 .ad2_t1 {
   position: absolute;
-  top: 60px;
-  left: 170px;
+  top: 30%;
+  left: 30%;
   z-index: 2;
 }
 .ad2_2 .ad2_t2 {
   position: absolute;
-  top: 50px;
-  left: 170px;
+  top: 30%;
+  left: 30%;
   z-index: 2;
 
   text-align: left;
 }
 .ad2_3 .ad2_t3 {
   position: absolute;
-  top: 50px;
-  left: 170px;
+   top: 30%;
+  left: 30%;
   z-index: 2;
 
   text-align: left;
@@ -473,12 +446,13 @@ margin-top: 100px;
 }
 .place {
   width: 100%;
-  height: 455px;
+  /* height: 455px; */
   text-align: center;
+ 
 }
 .place > h2 {
-  font-size: 30px;
-  padding-top: 150px;
+  font-size: 30px; 
+  padding-top: 200px;
   padding-bottom: 18px;
 }
 .place > p {
@@ -487,44 +461,26 @@ margin-top: 100px;
 }
 .place img {
   float: left;
-  width: 122px;
-  height: 122px;
-  padding: 3px;
+  width: 9.5%;
+  /* height: 122px; */
+  padding: 0.25%;
   padding-bottom: 10px;
 }
-.place1 {
-  float: left;
+.place ul{
+width: 100%;
 }
-.place2 {
+.place ul>li{
   float: left;
+  width: 9.5%;
+  padding: 0.25%;
 }
-.place3 {
-  float: left;
-}
-.place4 {
-  float: left;
-}
-.place5 {
-  float: left;
-}
-.place6 {
-  float: left;
-}
-.place7 {
-  float: left;
-}
-.place8 {
-  float: left;
-}
-.place9 {
-  float: left;
-}
-.place10 {
-  float: left;
+.place ul>li img{
+width: 100%;
 }
 
 /* footer */
 #footer {
+  margin-top: 200px;
   clear: both;
   height: 400px;
   font-size: 12px;
@@ -581,25 +537,33 @@ margin-top: 100px;
 }
 .footer_bottom {
   text-align: left;
+
 }
 
-@media (max-width: 1200px) {
-  .container {
-    width: 98%;
-    height: auto;
+
+@media (max-width: 1279px) {
+ .container {
+    width: 100%;
   }
   .logo {
-    width: 20%;
+    width: 100%;
+    padding-bottom: 30px;
   }
   .logo a {
-    margin-left: 20px;
+    padding-left: 10px;
+ 
   }
   .menu {
     width: 100%;
+    text-align: center; 
+    position: relative;
   }
   .menu1 {
     width: 100%;
+    padding-left: 10%;
     align-items: center;
+    position: absolute;
+    top: 0;left: 0;
   }
   .menu1 li{
     width: 15%;
@@ -609,303 +573,200 @@ margin-top: 100px;
   }
   .icon_3 {
     width: 100%;
-    align-items: center;
+    position: absolute;
+   top: 30px;
+   left: 0;
   }
   .icon_3 li {
-    width: 33.3%;
+    width: 33%;
+  
+  }
+  .icon_3 > li > a:first-child {
+   padding: 0;
   }
   .slide img {
     width: 100%;
     height: auto;
   }
-
+ 
   /* section2 */
-  #section2 {
-    width: 100%;
-  height: auto;
-    text-align: center;
+ #section2 {
+  width: 100%;
   }
   .icon_btn {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
   }
-  .icon_btn img{
-    width: 100%;
-    height: auto;
-  }
-  .icon_btn ul {
+   .icon_btn ul {
    width: 100%;
   margin-left: auto;
   margin-right: auto;
   }
   .icon_btn ul li {
+    width: 19%;
     float: left;
-   margin: 0 50px 0;
   }
-  
+  .icon_btn img{
+    width: 100%;
+    height: auto;
+  }
   .icon_btn li p {
     padding-top: 10px;
   }
-  .banner {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
 
   /* section3 */
-  #section{
-    height: auto;
-  }
-  .container{
-    height: auto;
-  }
-  .mealkit{
-    height: auto;
-  }
-  .mealkit > h2 {
- padding: 0 0 30px 30px;
-  }
-  .mealkit>span {
-    padding: 0;
-  }
-  .kitimg_wrap{
-    width: 100%;
-    height: auto;
-  }
-
-.kit_t1{
-  position: absolute;
-  top: 0;left: 0;
-}
-.kit_t2{
-  position: absolute;
-  top: 0;left: 0;
-
-}
-.kit_t3{
-  position: absolute;
-  top: 0;left: 0;
-
-}
-.kit_t4{
-  position: absolute;
-  top: 0;left: 0;
-
-}
-
-.kitimg{
- max-width:100%;
- height: auto;
-}
-
-.blur1, .blur2, .blur3, .blur4{
-  display: none;
-}
-/* section4 */
-#section4{
-  width: 100%;
-  height: 495px;
-}
- .todayfood > h2 {
-
-    padding-left: 30px;
-  }
-  .todayfood{
-    align-items: center;
-  }
-  .todayfood ul{
-       height: auto;
-  }
-.food1, 
-.food2,
-.food3, 
-.food4{
-    width: 26%;
-
-}
-.todayfood img{
+.kitimg_wrap {
   width: 100%;
   height: auto;
+  margin-bottom: 20px;
+  float: left;
+}
+.blur1 {
+  position: absolute;
+  top: 53%;
+  left: -0.5%;
+}
+.blur2 {
+  position: absolute;
+  top: 53%;
+  left: 80%;
+}
+.blur3 {
+  position: absolute;
+  top: 53%;
+  left: -0.5%;
+}
+.blur4 {
+  position: absolute;
+  top: 53%;
+  left:  80.5%;
+}
+.kit_1 {
+  width: 49%;
+  position: relative;
+  float: left;
+  margin-right: 2%;
+}
+.kit_2 {
+  width: 49%;
+  position: relative;
+  float: left;
+}
+.kit_3 {
+  width: 49%;
+  position: relative;
+  float: left;
+  margin-right: 2%;
+}
+.kit_4 {
+  width: 49%;
+  position: relative;
+  float: left;
 }
 
-/* section5 */
-#section5{
-  width: 100%;
-  height: 500px;
+.kit_txt {
 }
-.review> h2{
- 
-    padding-left: 30px;
+.kit_t1 {
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  top:89%;
+  left: 28%;
+  z-index: 4;
 }
-.review{
-  align-items: center;
+.kit_t2 {
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  top: 89%;
+  left: 60%;
+  z-index: 4;
+}
+.kit_t3 {
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  top: 89%;
+  left: 27%;
+  z-index: 4;
+}
+.kit_t4 {
+  position: absolute;
+  font-size: 25px;
+  color: #fff;
+  top: 89%;
+  left: 56%;
+  z-index: 4;
+}
+}
+@media (max-width: 1118px) {
 
 }
-.review ul{
-     height: auto;
-}
-.review1, 
-.review2,
-.review3, 
-.review4{
-width: 23.7%;
-}
-.review img{
-  width: 100%;
-  height: auto;
-}
+@media (max-width: 1092px) {
 
-/* section6 */
-#section6{
-  width: 100%;
-  height: 1200px;
 }
-.howto{
-     height: auto;
-}
-.ad2{
-  width: 100%;
-  align-items: center;
-}
-.ad2_1,
-.ad2_2,
-.ad2_3{
- width: 31%;
- 
-}
-/* section7 */
-
-.place>ul{align-items: center;}
-.place>ul>li{
-  padding: 50px;
-}
-#footer{
-  padding-left: 30px;
-}
-}
-
-
-
-
-
-@media (max-width: 1024px) {
-   .container {
-    width: 98%;
-    height: auto;
-  }
+@media (max-width: 1015px) {
   /* section2 */
- #section2 {
-    width: 100%;
-    height: 400px;
-    /* text-align: center; */
+ .icon_btn ul li {
+    width: 24%;
+    float: left;
   }
-  .container{
-    height: 400px;
+}
+
+@media (max-width: 860px) {
+  .logo a{
+    font-size: 25px;
+
   }
-  .icon_btn {
+  .menu1 {
     width: 100%;
-     height: 400px;
+    padding-left: 10%;
+    align-items: center;
+    position: absolute;
+    top: 0;left: 0;
+  }
+  .menu1 li{
+    width: 32%;
+
+  }
+  .icon_3 {
+    width: 100%;
+    position: absolute;
+   top: 50px;
+   left: 100px;
+  
+  }
+  .icon_3 li{
+    width: 28%;
+  }
+}
+@media (max-width: 627px) {
+  .logo a{
+    font-size: 20px;
+    padding-left: 10px;
+    /* padding-bottom: 50px; */
+  }
+  .menu1 {
+    width: 100%;
+    padding-left: 15%;
+  }
+  .menu1 li{
+    width: 30%;
+
+  }
+    .menu1 li a{
+    font-size: 12px;
+  } 
+  .icon_3 {
+   /* padding-bottom: 50px; */
+  }
+
+
+  /* section2 */
+ .icon_btn ul li {
+    width: 32%;
+    float: left;
+  }
+}
+
  
-  }
-   .icon_btn ul{
-   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-   }
- .icon_btn ul li{
- margin: 0 30px 0;
-}
-  .banner {
-   padding: 0 0 50px 0;
-  }
-  /* section3 */
-  .kitimg_wrap {
-    width: 100%;
-    height: auto;
-  }
-  /*section4 */
-  #section{
-  width: 100%;
- height: auto;
-
-  }
-.todayfood >h2{
-  padding: 0 0 0 30px;
-}
-.todayfood{
-  width: 100%;
- height: auto;
-}
-.todayfood img{
-  width: 100%;
-  height: auto;
-}
-.todayfood ul{
- width: 100%;
- height: auto;
-
-}
-.todayfood ul li{
-width: 23.5%;
-}
-
-  /* section5 */
-#section5{
-width: 100%;
-height: auto;
-}
-.review> h2{
-   padding-top: 30px;
-    padding-left: 30px;
-}
-.review{
-  width: 100%;
-  align-items: center;
-
-}
-.review1, 
-.review2,
-.review3, 
-.review4{
-width: 23.3%;
-}
-.review img{
-  width: 100%;
-  height: auto;
-}
-
-/* section7 */
-
-.place>ul{
-  padding-left: 80px;
- text-align: center;
-}
-.place>ul>li{
-  padding: 15px;
-}
-
-}
-
-/* @media (max-width: 960px) {
-  .container {
-    width: 100%;
-  }
-  #section2 {
-    width: 100%;
-    height: 900px;
-  }
-} */
-@media (max-width: 768px) {
-  .container {
-    width: 98%;
-    height: auto;
-  }
-}
-
-
-
-@media (max-width: 576px) {
-  .container {
-    width: 98%;
-    height: auto;
-  }
-}
