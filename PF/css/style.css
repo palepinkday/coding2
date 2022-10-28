@@ -25,7 +25,7 @@ a {
   zoom: 1;
 }
 .clearfix:after {
- clear: both;
+  clear: both;
 }
 
 .clearfix::before,
@@ -112,20 +112,17 @@ a {
 }
 #section1 {
   width: 100%;
- 
 }
 .slide {
   width: 100%;
-
 }
 .slide img {
   width: 100%;
- height: auto;
+  height: auto;
 }
 /* section2 */
 #section2 {
   width: 100%;
-
 }
 .icon_btn {
   width: 100%;
@@ -136,11 +133,12 @@ a {
 .icon_btn ul {
   align-items: center;
 }
-.icon_btn ul li { 
+.icon_btn ul li {
   width: 9%;
   float: left;
-  padding: .5%;}
-.icon_btn ul li img{
+  padding: 0.5%;
+}
+.icon_btn ul li img {
   width: 115px;
   height: auto;
 }
@@ -152,7 +150,7 @@ a {
 #section2 .container .banner {
   padding-bottom: 85px;
   width: 100%;
-float: left;
+  float: left;
 }
 .banner img {
   width: 100%;
@@ -206,7 +204,7 @@ float: left;
 .blur4 {
   position: absolute;
   top: 53%;
-  left:  80.5%;
+  left: 80.5%;
 }
 .kit_1 {
   width: 49%;
@@ -232,15 +230,15 @@ float: left;
 }
 .kit_t1 {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 25px;
   color: #fff;
-  top:89%;
+  top: 89%;
   left: 28%;
   z-index: 3;
 }
 .kit_t2 {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 25px;
   color: #fff;
   top: 89%;
   left: 60%;
@@ -248,7 +246,7 @@ float: left;
 }
 .kit_t3 {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 25px;
   color: #fff;
   top: 89%;
   left: 27%;
@@ -256,7 +254,7 @@ float: left;
 }
 .kit_t4 {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 25px;
   color: #fff;
   top: 89%;
   left: 56%;
@@ -273,7 +271,7 @@ float: left;
   font-size: 25px;
   text-align: left;
 }
-.todayfood ul{
+.todayfood ul {
   width: 100%;
 }
 .todayfood ul li {
@@ -283,9 +281,8 @@ float: left;
 }
 
 .todayfood ul li img {
- width: 100%;
- height: auto;
-
+  width: 100%;
+  height: auto;
 }
 .food_txt {
   font-size: 20px;
@@ -313,7 +310,6 @@ float: left;
 }
 .review img {
   width: 100%;
-
 }
 .review1 {
   float: left;
@@ -322,12 +318,12 @@ float: left;
 }
 .review2 {
   float: left;
- width: 23.7%;
+  width: 23.7%;
   padding: 0.65%;
 }
 .review3 {
   float: left;
-   width: 23.7%;
+  width: 23.7%;
   padding: 0.65%;
 }
 .review4 {
@@ -375,7 +371,7 @@ float: left;
 }
 .ad1 img {
   width: 48%;
-  padding:0.5%;
+  padding: 0.5%;
 }
 .ad2 {
   width: 100%;
@@ -388,9 +384,7 @@ float: left;
   float: left;
 }
 .ad2_1 img {
- width: 100%;
-
-
+  width: 100%;
 }
 .ad2_2 {
   width: 32.3%;
@@ -400,7 +394,6 @@ float: left;
 }
 .ad2_2 img {
   width: 100%;
- 
 }
 .ad2_3 {
   width: 32.3%;
@@ -409,9 +402,7 @@ float: left;
   float: left;
 }
 .ad2_3 img {
- width: 100%;
- 
-
+  width: 100%;
 }
 .ad2_txt {
   font-size: 18px;
@@ -435,7 +426,7 @@ float: left;
 }
 .ad2_3 .ad2_t3 {
   position: absolute;
-   top: 30%;
+  top: 30%;
   left: 30%;
   z-index: 2;
 
@@ -448,10 +439,9 @@ float: left;
   width: 100%;
   /* height: 455px; */
   text-align: center;
- 
 }
 .place > h2 {
-  font-size: 30px; 
+  font-size: 30px;
   padding-top: 200px;
   padding-bottom: 18px;
 }
@@ -466,16 +456,16 @@ float: left;
   padding: 0.25%;
   padding-bottom: 10px;
 }
-.place ul{
-width: 100%;
+.place ul {
+  width: 100%;
 }
-.place ul>li{
+.place ul > li {
   float: left;
   width: 9.5%;
   padding: 0.25%;
 }
-.place ul>li img{
-width: 100%;
+.place ul > li img {
+  width: 100%;
 }
 
 /* footer */
@@ -537,12 +527,10 @@ width: 100%;
 }
 .footer_bottom {
   text-align: left;
-
 }
 
-
 @media (max-width: 1279px) {
- .container {
+  .container {
     width: 100%;
   }
   .logo {
@@ -551,11 +539,10 @@ width: 100%;
   }
   .logo a {
     padding-left: 10px;
- 
   }
   .menu {
     width: 100%;
-    text-align: center; 
+    text-align: center;
     position: relative;
   }
   .menu1 {
@@ -563,9 +550,10 @@ width: 100%;
     padding-left: 10%;
     align-items: center;
     position: absolute;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
   }
-  .menu1 li{
+  .menu1 li {
     width: 15%;
   }
   .menu2 {
@@ -574,39 +562,38 @@ width: 100%;
   .icon_3 {
     width: 100%;
     position: absolute;
-   top: 30px;
-   left: 0;
+    top: 30px;
+    left: 0;
   }
   .icon_3 li {
     width: 33%;
-  
   }
   .icon_3 > li > a:first-child {
-   padding: 0;
+    padding: 0;
   }
   .slide img {
     width: 100%;
     height: auto;
   }
- 
+
   /* section2 */
- #section2 {
-  width: 100%;
+  #section2 {
+    width: 100%;
   }
   .icon_btn {
-  width: 100%;
-  text-align: center;
+    width: 100%;
+    text-align: center;
   }
-   .icon_btn ul {
-   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  .icon_btn ul {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .icon_btn ul li {
     width: 19%;
     float: left;
   }
-  .icon_btn img{
+  .icon_btn img {
     width: 100%;
     height: auto;
   }
@@ -615,158 +602,143 @@ width: 100%;
   }
 
   /* section3 */
-.kitimg_wrap {
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-  float: left;
-}
-.blur1 {
-  position: absolute;
-  top: 53%;
-  left: -0.5%;
-}
-.blur2 {
-  position: absolute;
-  top: 53%;
-  left: 80%;
-}
-.blur3 {
-  position: absolute;
-  top: 53%;
-  left: -0.5%;
-}
-.blur4 {
-  position: absolute;
-  top: 53%;
-  left:  80.5%;
-}
-.kit_1 {
-  width: 49%;
-  position: relative;
-  float: left;
-  margin-right: 2%;
-}
-.kit_2 {
-  width: 49%;
-  position: relative;
-  float: left;
-}
-.kit_3 {
-  width: 49%;
-  position: relative;
-  float: left;
-  margin-right: 2%;
-}
-.kit_4 {
-  width: 49%;
-  position: relative;
-  float: left;
-}
+  .kitimg_wrap {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    float: left;
+  }
+  .blur1 {
+    position: absolute;
+    top: 53%;
+    left: -0.5%;
+  }
+  .blur2 {
+    position: absolute;
+    top: 53%;
+    left: 80%;
+  }
+  .blur3 {
+    position: absolute;
+    top: 53%;
+    left: -0.5%;
+  }
+  .blur4 {
+    position: absolute;
+    top: 53%;
+    left: 80.5%;
+  }
+  .kit_1 {
+    width: 49%;
+    position: relative;
+    float: left;
+    margin-right: 2%;
+  }
+  .kit_2 {
+    width: 49%;
+    position: relative;
+    float: left;
+  }
+  .kit_3 {
+    width: 49%;
+    position: relative;
+    float: left;
+    margin-right: 2%;
+  }
+  .kit_4 {
+    width: 49%;
+    position: relative;
+    float: left;
+  }
 
-.kit_txt {
-}
-.kit_t1 {
-  position: absolute;
-  font-size: 25px;
-  color: #fff;
-  top:89%;
-  left: 28%;
-  z-index: 4;
-}
-.kit_t2 {
-  position: absolute;
-  font-size: 25px;
-  color: #fff;
-  top: 89%;
-  left: 60%;
-  z-index: 4;
-}
-.kit_t3 {
-  position: absolute;
-  font-size: 25px;
-  color: #fff;
-  top: 89%;
-  left: 27%;
-  z-index: 4;
-}
-.kit_t4 {
-  position: absolute;
-  font-size: 25px;
-  color: #fff;
-  top: 89%;
-  left: 56%;
-  z-index: 4;
-}
-}
-@media (max-width: 1118px) {
-
-}
-@media (max-width: 1092px) {
-
+  .kit_txt {
+  }
+  .kit_t1 {
+    position: absolute;
+    font-size: 25px;
+    color: #fff;
+    top: 89%;
+    left: 28%;
+    z-index: 4;
+  }
+  .kit_t2 {
+    position: absolute;
+    font-size: 25px;
+    color: #fff;
+    top: 89%;
+    left: 60%;
+    z-index: 4;
+  }
+  .kit_t3 {
+    position: absolute;
+    font-size: 25px;
+    color: #fff;
+    top: 89%;
+    left: 27%;
+    z-index: 4;
+  }
+  .kit_t4 {
+    position: absolute;
+    font-size: 25px;
+    color: #fff;
+    top: 89%;
+    left: 56%;
+    z-index: 4;
+  }
 }
 @media (max-width: 1015px) {
   /* section2 */
- .icon_btn ul li {
+  .icon_btn ul li {
     width: 24%;
     float: left;
   }
 }
-
 @media (max-width: 860px) {
-  .logo a{
+  .logo a {
     font-size: 25px;
-
   }
   .menu1 {
     width: 100%;
     padding-left: 10%;
     align-items: center;
     position: absolute;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
   }
-  .menu1 li{
+  .menu1 li {
     width: 32%;
-
   }
   .icon_3 {
     width: 100%;
     position: absolute;
-   top: 50px;
-   left: 100px;
-  
+    top: 50px;
+    left: 100px;
   }
-  .icon_3 li{
+  .icon_3 li {
     width: 28%;
   }
 }
 @media (max-width: 627px) {
-  .logo a{
+  .logo a {
     font-size: 20px;
     padding-left: 10px;
-    /* padding-bottom: 50px; */
   }
   .menu1 {
     width: 100%;
     padding-left: 15%;
   }
-  .menu1 li{
+  .menu1 li {
     width: 30%;
-
   }
-    .menu1 li a{
+  .menu1 li a {
     font-size: 12px;
-  } 
-  .icon_3 {
-   /* padding-bottom: 50px; */
   }
-
+  .icon_3 {
+  }
 
   /* section2 */
- .icon_btn ul li {
+  .icon_btn ul li {
     width: 32%;
     float: left;
   }
 }
-
- 
