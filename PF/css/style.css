@@ -359,7 +359,7 @@ a {
   text-align: center;
 }
 .howto > h2 {
-  padding-top: 110px;
+  padding-top: 500px;
   padding-bottom: 20px;
   font-size: 30px;
 }
@@ -412,22 +412,22 @@ a {
 }
 .ad2_1 .ad2_t1 {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 40%;
+  left: 40%;
   z-index: 2;
 }
 .ad2_2 .ad2_t2 {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 35%;
+  left: 40%;
   z-index: 2;
 
   text-align: left;
 }
 .ad2_3 .ad2_t3 {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 35%;
+  left: 40%;
   z-index: 2;
 
   text-align: left;
@@ -610,23 +610,26 @@ a {
   }
   .blur1 {
     position: absolute;
-    top: 53%;
+    top: 0%;
     left: -0.5%;
   }
   .blur2 {
     position: absolute;
-    top: 53%;
-    left: 80%;
+    top: 0%;
+
+    left: 0%;
   }
   .blur3 {
     position: absolute;
-    top: 53%;
+    top: 0%;
+
     left: -0.5%;
   }
   .blur4 {
     position: absolute;
-    top: 53%;
-    left: 80.5%;
+    top: 0%;
+
+    left: 0%;
   }
   .kit_1 {
     width: 49%;
@@ -654,36 +657,16 @@ a {
   .kit_txt {
   }
   .kit_t1 {
-    position: absolute;
-    font-size: 25px;
-    color: #fff;
-    top: 89%;
-    left: 28%;
-    z-index: 4;
+    display: none;
   }
   .kit_t2 {
-    position: absolute;
-    font-size: 25px;
-    color: #fff;
-    top: 89%;
-    left: 60%;
-    z-index: 4;
+    display: none;
   }
   .kit_t3 {
-    position: absolute;
-    font-size: 25px;
-    color: #fff;
-    top: 89%;
-    left: 27%;
-    z-index: 4;
+    display: none;
   }
   .kit_t4 {
-    position: absolute;
-    font-size: 25px;
-    color: #fff;
-    top: 89%;
-    left: 56%;
-    z-index: 4;
+    display: none;
   }
 }
 @media (max-width: 1015px) {
@@ -692,7 +675,47 @@ a {
     width: 24%;
     float: left;
   }
+  .ad2_1 {
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+  }
+  .ad2_2 {
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+  }
+  .ad2_3 {
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .ad2_1 .ad2_t1 {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    z-index: 2;
+  }
+  .ad2_2 .ad2_t2 {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    z-index: 2;
+    text-align: left;
+  }
+  .ad2_3 .ad2_t3 {
+    position: absolute;
+    top: 35%;
+    left: 45%;
+    z-index: 2;
+    text-align: left;
+  }
 }
+
 @media (max-width: 860px) {
   .logo a {
     font-size: 25px;
@@ -718,6 +741,8 @@ a {
     width: 28%;
   }
 }
+@media (max-width: 740px) {
+}
 @media (max-width: 627px) {
   .logo a {
     font-size: 20px;
@@ -740,5 +765,68 @@ a {
   .icon_btn ul li {
     width: 32%;
     float: left;
+  }
+}
+@media (max-width: 595px) {
+  .blur1 {
+    display: none;
+  }
+  .blur2 {
+    display: none;
+  }
+  .blur3 {
+    display: none;
+  }
+  .blur4 {
+    display: none;
+  }
+}
+@media (max-width: 586px) {
+  /* section6 */
+  .ad2_1 {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+  }
+  .ad2_2 {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+  }
+  .ad2_3 {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  /* section4 */
+  .todayfood ul li {
+    width: 48%;
+    float: left;
+    padding: 1%;
+  }
+  /* section5 */
+  .review1 {
+    float: left;
+    width: 48%;
+    padding: 1%;
+  }
+  .review2 {
+    float: left;
+    width: 48%;
+    padding: 1%;
+  }
+  .review3 {
+    float: left;
+    width: 48%;
+    padding: 1%;
+  }
+  .review4 {
+    float: left;
+    width: 48%;
+    padding: 1%;
   }
 }
