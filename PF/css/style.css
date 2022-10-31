@@ -38,6 +38,16 @@ a {
 #header {
   width: 100%;
 }
+.header__inner{
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background:#ffff;
+  z-index: 3;
+}
+
 .container .logo {
   float: left;
   width: 20%;
@@ -68,7 +78,7 @@ a {
 }
 .menu2 {
   float: left;
-  width: 80%;
+  width: 85%;
   font-size: 15px;
   font-weight: 300;
   padding-top: 10px;
@@ -83,14 +93,14 @@ a {
   text-align: center;
 }
 .menu2 > li:last-child {
-  width: 135px;
+  /* width: 135px; */
 }
 .menu2 > li > a:first-child {
   padding-left: 20px;
 }
 .icon_3 {
   float: right;
-  width: 20%;
+  width: 15%;
   padding-top: 10px;
 }
 .icon_3 > li {
@@ -103,7 +113,10 @@ a {
   text-align: center;
 }
 .icon_3 > li > a:first-child {
-  padding-left: 50px;
+  /* padding-left: 50px; */
+}
+.header__ham{
+display: none;
 }
 
 /* section1 */
@@ -115,6 +128,7 @@ a {
 }
 .slide {
   width: 100%;
+  padding-top: 50px;
 }
 .slide img {
   width: 100%;
@@ -404,19 +418,13 @@ a {
 .ad2_3 img {
   width: 100%;
 }
-.ad2_txt {
-  font-size: 18px;
-}
-.ad2_txt span {
-  font-size: 15px;
-}
-.ad2_1 .ad2_t1 {
+.ad2_t1 {
   position: absolute;
   top: 40%;
   left: 40%;
   z-index: 2;
 }
-.ad2_2 .ad2_t2 {
+.ad2_t2 {
   position: absolute;
   top: 35%;
   left: 40%;
@@ -424,7 +432,7 @@ a {
 
   text-align: left;
 }
-.ad2_3 .ad2_t3 {
+.ad2_t3 {
   position: absolute;
   top: 35%;
   left: 40%;
@@ -529,9 +537,13 @@ a {
   text-align: left;
 }
 
+
+/* media */
+
 @media (max-width: 1279px) {
   .container {
     width: 100%;
+ 
   }
   .logo {
     width: 100%;
@@ -540,37 +552,105 @@ a {
   .logo a {
     padding-left: 10px;
   }
-  .menu {
+   /* ham */
+  .header__ham {
     width: 100%;
-    text-align: center;
-    position: relative;
-  }
-  .menu1 {
+    position: fixed;
+    right: 30px;
+    top: 45px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: block;
+    cursor: pointer;
+}
+.header__ham span {
+    display: block;
+    background: #000;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: 0.25s margin 0.25s, 0.25s transform;
+}
+.header__ham span:nth-child(1) {
+    margin-top: 17px;
+}
+.header__ham.active span {
+    transition: 0.25s margin, 0.25s transform 0.25s;
+}
+.header__ham.active span:nth-child(1) {
+    margin-top: 25px;
+    margin-bottom: -7px;
+    transform: rotate(45deg);
+}
+.header__ham.active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+.header__ham.active span:nth-child(3) {
+    margin-top: -2px;
+    transform: rotate(135deg);
+}
+.menu{
+  position: fixed;
+  right: -100%;
+  top: 0px;
+  background: #fff;
+  width: 60%;
+  height: 100vh;
+  padding: 20px;
+  text-align: right;
+  transition: right 0.4s ease-in;
+  opacity: 0.8;
+  line-height: 2;
+  font-size: 20px;
+  z-index: 10;
+
+}
+.menu ul li {
+        display: block;
+     
+    }
+    .menu.active {
+        right: 0;
+    }
+      .menu1 {
+    float: right;
     width: 100%;
-    padding-left: 10%;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .menu1 li {
-    width: 15%;
-  }
-  .menu2 {
-    display: none;
-  }
-  .icon_3 {
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 100px;
+    text-align: right;
+}
+.menu1>li{
+  width: 150px;
+
+}
+.menu2 {
+    float: right;
     width: 100%;
-    position: absolute;
-    top: 30px;
-    left: 0;
-  }
-  .icon_3 li {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: right;
+
+}
+.menu2 > li{
+  width: 95px;
+  height: 50px;
+}
+.menu2 > li > a:first-child {
+  padding-left: 0px;
+}
+.icon_3{
+ width: 100%;
+ height: 110px;
+ padding-right: 10px;
+}
+.icon_3 > li {
+    float: left;
     width: 33%;
-  }
-  .icon_3 > li > a:first-child {
-    padding: 0;
-  }
+}
   .slide img {
     width: 100%;
     height: auto;
@@ -720,7 +800,7 @@ a {
   .logo a {
     font-size: 25px;
   }
-  .menu1 {
+  /* .menu1 {
     width: 100%;
     padding-left: 10%;
     align-items: center;
@@ -739,7 +819,7 @@ a {
   }
   .icon_3 li {
     width: 28%;
-  }
+  } */
 }
 @media (max-width: 740px) {
 }
@@ -748,19 +828,6 @@ a {
     font-size: 20px;
     padding-left: 10px;
   }
-  .menu1 {
-    width: 100%;
-    padding-left: 15%;
-  }
-  .menu1 li {
-    width: 30%;
-  }
-  .menu1 li a {
-    font-size: 12px;
-  }
-  .icon_3 {
-  }
-
   /* section2 */
   .icon_btn ul li {
     width: 32%;
@@ -828,5 +895,17 @@ a {
     float: left;
     width: 48%;
     padding: 1%;
+  }
+}
+@media (max-width: 400px){
+  .ad2_t1{
+    font-size: 13px;
+    
+  }
+   .ad2_t2{
+    font-size: 13px;
+  }
+   .ad2_t3{
+    font-size: 13px;
   }
 }
