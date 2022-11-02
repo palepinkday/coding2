@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apple</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.fixed{
+position: fixed;
+left: 0;top: 0;
+transform: translate(-50%, -50%);
+}
+.scroll{
+position: fixed;
+width: 40px;height: vh;
+}
+.sec1_text1{
+font-size: 8vw;
+white-space: nowrap;
+}
+.sec1_text2{
+font-size: 8vw;
+white-space: nowrap;
+}
+.sec1_text3{
+width: 100%;
+height: 100vh;
+background: url();
+background-size: cover;
+background-position: center;
+}
+.sec1_text4{
+width: 50vh;
+height: 50vh;
+border-radius: 50%;
+background: #000;
+}
+
+    </style>
+    </head>
+<body>
+    <div class="scrollTop">0</div>
+    <div id="contents">
+         <section class="section1">
+            <div class="sec1">
+                <div class="sec1_text1 fixed" 
+                data-0 = "top:50%; opacity:1;" 
+                data-500 = "top:30%; opacity:0;">
+                    안녕하세요
+                    
+                </div>
+            <div class="sec1_text2 fixed" 
+            data-500 = "top:70%; opacity:0; transform: translate(-50%, -50%) scale(1)" 
+            data-1000 = "top:50%; opacity:1;transform: translate(-50%, -50%) scale(1)"
+            data-1500 = "top:50%; opacity:1;transform: translate(-50%, -50%) scale(0)"></div>
+            <div class="sec1_text3 fixed" 
+            data-1300 = "width:0%;  transform: translate(-50%, -50%) rotate(360deg)" 
+            data-2300 = "width:100%; transform: translate(-50%, -50%) rotate(0deg)"></div>
+            <div class="sec1_text4 fixed" 
+            data-2000 = "transform: translate(-50%, -50%) scale(0)rotate(-360deg)" 
+            data-3000 = "width:50vw; transform: translate(-50%, -50%) scale(1)rotate(0deg)">hello!</div>
+            </section>
+         </div>
+         <div class="section2">
+         <div class="sec2">
+           
+         </div>
+
+         </div>
+         <div class="section3"></div>
+         <div class="section4"></div>
+         <div class="section5"></div>
+         <div class="section6"></div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        // const s =skrollr
+        var s = skrollr.init();
+        function scroll() {
+        let scrollTop =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          window.screenY;
+        document.querySelectorAll(".scrollTop").innerText= Math.ceil(scrollTop);
+        requestAnimationFrame(scroll); //1분에 60번실행 메모리 적게 차지
+      }
+      scroll();
+     
+    </script>
+</body>
+</html>

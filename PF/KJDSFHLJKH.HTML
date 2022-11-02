@@ -1,0 +1,69 @@
+let colors = ['#FE93C2', '#3BD89F', '#0045E8', '#FF323B', '#FFC247', '#ffffff'];
+
+function setup() {
+	createCanvas(900, 900);
+	shuffle(colors, true);
+	background(0);
+	let num = 150;
+	let scl = 0.02;
+	for (let i = 0; i < num; i++) {
+		let x = random(width);
+		let y = random(height);
+		let d = random(0.01, 0.1) * width;
+		let col = random(colors);
+		strokeWeight(0.1);
+		stroke(col);
+		noFill();
+		for (let a = 0; a < TAU; a += TAU / 90) {
+			noiseCurve(x + d * 0.5 * cos(a), y + d * 0.5 * sin(a));
+		}
+		fill(col);
+		form(x, y, d);
+	}
+}
+
+function draw() {
+	// (:
+}
+
+function form(x, y, d) {
+	let a = random(TAU);
+	push();
+	translate(x, y);
+	stroke(0);
+	strokeWeight(2);
+	noStroke();
+	circle(0, 0, d);
+	let dd = d * 0.3
+	let xx = (d - dd) * 0.5 * cos(a);
+	let yy = (d - dd) * 0.5 * sin(a)
+	let aa = random(TAU);
+	push();
+	translate(xx, yy);
+	rotate(aa);
+	noStroke();
+	fill(0);
+	ellipse(-dd * 0.3, -dd * 0.2, dd * 0.2, dd * 0.3);
+	ellipse(dd * 0.3, -dd * 0.2, dd * 0.2, dd * 0.3);
+	noFill();
+	stroke(0);
+	strokeWeight(dd * 0.1);
+	arc(0, 0, dd * 0.8, dd * 0.8, PI * 0.2, PI * 0.8)
+	pop();
+	pop();
+}
+
+function noiseCurve(x, y) {
+	let c = 100;
+	noFill();
+	beginShape();
+	for (let i = 0; i < c; i++) {
+		let scl = 0.0002;
+		let str = noise(x * scl, y * scl) * 200;
+		let angle = noise(x * scl, y * scl) * str;
+		vertex(x, y);
+		x += cos(angle) * 3;
+		y += sin(angle) * 3;
+	}
+	endShape();
+}
