@@ -1,0 +1,230 @@
+@import url('https://webfontworld.github.io/Poppins/Poppins.css');
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+/* @font-face {
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Black.ttf') format("truetype");
+    font-display: swap;
+} */
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+li {
+    list-style: none;
+
+}
+
+#wrap {}
+
+.section1 {
+    margin-top: 20px;
+    width: 1880px;
+    height: 972px;
+    border: 8px solid #000000;
+    position: relative;
+
+}
+
+.topleft {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: -8px;
+    top: -8px;
+    border: 3px solid #000000;
+}
+
+.topleft img {
+    padding: 8px;
+}
+
+.topright {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1798px;
+    height: 78px;
+    left: 90px;
+    top: -8px;
+    border: 3px solid #000000;
+    font-size: 30px;
+
+}
+
+.menu {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.menu_l {
+    width: 35%;
+    float: left;
+    padding: 16px 20px 16px;
+}
+
+.menu_r {
+    width: 37%;
+    float: right;
+}
+
+.menu_r ul {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.menu_r li {
+    display: inline;
+    padding: 16px 20px 16px 20px;
+
+}
+
+.main {
+    font-size: 300px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 260px;
+    position: relative;
+}
+
+.main img {
+    position: absolute;
+    top: 15%;
+    left: 13%;
+
+}
+
+.port {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 300;
+    font-size: 80px;
+    position: absolute;
+    top: 82%;
+    left: 57%;
+}
+
+.since {
+    font-weight: 800;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 190px;
+    top: 98%;
+    left: 90%;
+}
+
+.bottombox {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1896px;
+    height: 30px;
+    left: -8px;
+    top: 950px;
+    border: 3px solid #000000;
+}
+
+
+.section2 {
+    margin-top: 20px;
+    width: 1880px;
+    height: 972px;
+    border: 8px solid #000000;
+
+}
+
+.sec2_l {
+    width: 60%;
+    float: left;
+    position: relative;
+
+}
+
+.about {
+
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    float: left;
+}
+
+.about1 {
+    border: solid 1px;
+    width: 197px;
+    height: 67px;
+
+
+}
+
+.about1 p {
+    font-size: 50px;
+    color: #000000;
+    font-weight: 900;
+    padding-left: 7px;
+}
+
+.about2 {}
+
+.desc {
+    width: 100%;
+
+}
+
+.desc_m {
+    width: 100%;
+
+}
+
+.desc_m li {
+    display: inline;
+
+}
+
+.sec2_r {
+    width: 40%;
+    float: right;
+    padding: 75px;
+}
+
+.sec2_r img {}
+
+.section3 {}
+
+.section4 {}
+
+.section5 {}
+
+.section6 {}
+
+.section7 {
+    margin-top: 20px;
+    width: 1880px;
+    height: 972px;
+    border: 8px solid #000000;
+}
