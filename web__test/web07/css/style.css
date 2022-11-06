@@ -1,0 +1,340 @@
+@charset "utf-8";
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  color: #333;
+  font-family: "맑은 고딕";
+}
+body {
+  width: 1000px;
+  background-color: #fff;
+  font-size: 20px;
+}
+a {
+  text-decoration: none;
+  display: block;
+  /* 박스속성들이 블럭요소가 되도록 앞뒤줄바꿈이 자동으로 */
+}
+/* header */
+header {
+  float: left;
+  position: absolute;
+}
+.top {
+  width: 200px;
+  height: 650px;
+  float: left;
+}
+.logo {
+  float: left;
+  width: 200px;
+  height: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+}
+.menu {
+  width: 180px;
+  top: 100px;
+  left: 10px;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+.navi {
+}
+.navi > li {
+  width: 180px;
+  display: block;
+}
+.navi > li > a {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+}
+.navi > li > a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+.submenu {
+  float: left;
+  width: 180px;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 180px;
+  background-color: #ccc;
+  display: none;
+}
+.submenu > li {
+  width: 180px;
+  display: block;
+}
+.submenu > li > a {
+  width: 180px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.submenu > li > a:hover {
+  background-color: #fff;
+}
+
+/* bodywrap */
+.bodywrap {
+  float: right;
+  width: 800px;
+  height: 550px;
+}
+.imgslide {
+  float: right;
+  width: 800px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+.slidelist {
+  width: 2400px;
+}
+.slidelist ul li {
+  width: 800px;
+  float: left;
+}
+.slidelist span {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  margin-left: 250px;
+  margin-top: 150px;
+  text-align: center;
+  background-color: rgba(100, 100, 100, 0.5);
+  color: #fff;
+}
+.contents {
+  float: left;
+  width: 800px;
+  height: 200px;
+}
+.tabmenu {
+  float: left;
+  width: 290px;
+  height: 180px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  position: relative;
+}
+.tabmenu > li {
+  float: left;
+  width: 80px;
+  line-height: 30px;
+}
+.tabmenu > li > a {
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  background-color: #ccc;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+.tabmenu > li > a:hover {
+  background-color: #eee;
+}
+.tabmenu > li:first-child a {
+  border-right: none;
+}
+.tabmenu > li.active > a {
+  background-color: #fff;
+}
+.tabmenu > li div {
+  position: absolute;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+}
+.tabmenu > li.active div {
+  width: 288px;
+  height: 148px;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+.notice {
+  float: left;
+}
+.notice ul {
+  float: left;
+  width: 288px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.notice ul li {
+  height: 32px;
+  line-height: 32px;
+  font-size: 13px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.notice ul li:hover {
+  font-weight: bold;
+}
+.notice ul li:nth-child(2n) {
+  background-color: #ccc;
+}
+.notice span {
+  float: right;
+}
+.gallery {
+  float: left;
+}
+.gallery li {
+  float: left;
+  margin-top: 20px;
+  margin-left: 4.5px;
+}
+.gallery li:hover {
+  opacity: 0.5;
+}
+.gallery img {
+  padding: 10px;
+  width: 70px;
+  height: 90px;
+}
+.otherwrap {
+  float: right;
+  width: 500px;
+  height: 200px;
+}
+.banner {
+  float: left;
+  width: 300px;
+  height: 200px;
+  position: relative;
+}
+.banner img {
+  width: 300px;
+  height: 180px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.banner img:hover {
+  opacity: 0.5;
+}
+.bntext {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  background-color: rgba(255, 251, 251, 0.3);
+  text-align: center;
+}
+.shortcut {
+  float: right;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.shortcut img {
+  width: 185px;
+  height: 180px;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.shortcut img:hover {
+  opacity: 0.5;
+}
+.sctext {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  color: #fff;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  background-color: rgba(255, 251, 251, 0.3);
+  text-align: center;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+.modal.active {
+  display: block;
+}
+.modal_up {
+  width: 400px;
+  height: 400px;
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  top: 100px;
+}
+.uptitle {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.upbody {
+  margin-bottom: 30px;
+  line-height: 30px;
+}
+.btn {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  background-color: #ccc;
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* footer */
+footer {
+  width: 800px;
+  height: 100px;
+  float: right;
+}
+.bottom {
+  float: left;
+  width: 800px;
+  height: 100px;
+  background-color: #ccc;
+}
+.btlogo {
+  float: left;
+  width: 200px;
+  height: 100px;
+}
+.site {
+  float: right;
+  width: 600px;
+  height: 100px;
+}
+.btmenu {
+  width: 600px;
+  height: 50px;
+}
+.copy {
+  width: 600px;
+  height: 50px;
+}
