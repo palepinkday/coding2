@@ -62,4 +62,13 @@ jQuery(document).ready(function () {
     });
   });
   //탭메뉴
+
+  $(".notice ul li:first").click(function () {
+    $(".modal_bg").addClass("active");
+  });
+  $(".btn").click(function () {
+    $(".modal_bg").removeClass("active");
+   });
+  //모달팝업창
+
 });

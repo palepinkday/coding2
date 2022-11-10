@@ -125,6 +125,7 @@ header {
 .submenu {
   width: 180px;
   text-align: center;
+  display: none;
 }
 
 .submenu>li {
@@ -489,9 +490,13 @@ footer {
   height: 100px;
 }
 
-.btmenu {
-  width: 600px;
-  height: 50px;
+.f_site {
+  width: 150px;
+  height: 30px;
+  margin-left: 430px;
+  margin-right: 10px;
+  margin-top: 10px;
+
 }
 
 .copy {

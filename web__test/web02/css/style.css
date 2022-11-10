@@ -61,7 +61,7 @@ header {
   float: right;
 }
 
-.menu > ul {
+.menu>ul {
   width: 800px;
   float: right;
   margin-top: 25px;
@@ -69,11 +69,11 @@ header {
   margin-right: 10px;
 }
 
-.menu > ul > li {
+.menu>ul>li {
   float: left;
 }
 
-.menu > ul > li > a {
+.menu>ul>li>a {
   width: 200px;
   height: 50px;
   line-height: 50px;
@@ -84,7 +84,7 @@ header {
   background: rgb(49, 46, 111);
 }
 
-.menu > ul > li > a:hover {
+.menu>ul>li>a:hover {
   background: rgb(156, 156, 157);
 }
 
@@ -97,10 +97,9 @@ header {
   display: none;
 }
 
-.submenu > li {
-}
+.submenu>li {}
 
-.submenu > li > a {
+.submenu>li>a {
   width: 200px;
   height: 40px;
   line-height: 40px;
@@ -111,7 +110,7 @@ header {
   font-weight: bold;
 }
 
-.submenu > li > a:hover {
+.submenu>li>a:hover {
   background: rgb(156, 156, 157);
 }
 
@@ -148,7 +147,7 @@ header {
 } */
 
 /* 페이드인페이드아웃 슬라이드 */
-.imgslide > a {
+.imgslide>a {
   display: block;
   position: absolute;
 }
@@ -175,19 +174,82 @@ header {
 }
 
 .tabmenu {
+  float: left;
+  width: 400px;
+  height: 200px;
+  position: absolute;
+}
+
+.tabmenu>li {
+  float: left;
+  width: 80px;
+  height: 30px;
+}
+
+.tabmenu>li>a {
+  border: 1px solid #ddd;
+  text-align: center;
+  background-color: #ccc;
+  border-bottom: none;
+
+}
+
+.tabmenu>li>a:hover {
+  background-color: #fff;
+}
+
+/* 중요기억 */
+.tabmenu>li div {
+  position: absolute;
+  left: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.tabmenu>li.active div {
+  width: 398px;
+  height: 163px;
+  border: 1px solid #ccc;
+}
+
+.notice>ul>li {
+  width: 380px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid#ddd;
+}
+
+.notice>ul>li a:hover {
+  font-weight: bold;
+}
+
+.notice ul li span {
+  float: right;
+}
+
+.gallery ul li {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  margin-top: 40px;
+
+}
+
+/* 탭메뉴 */
+/* .tabmenu {
   width: 400px;
   height: 200px;
   float: left;
   position: relative;
 }
 
-.tabmenu > li {
+.tabmenu>li {
   float: left;
   width: 100px;
   height: 30px;
 }
 
-.tabmenu > li > a {
+.tabmenu>li>a {
   text-align: center;
   font-size: 16px;
   line-height: 30px;
@@ -195,21 +257,24 @@ header {
   border: 1px solid #ccc;
   border-bottom: none;
 }
-.tabmenu > li:first-child a {
+
+.tabmenu>li:first-child a {
   border-right: none;
 }
 
-.tabmenu > li.active > a {
+.tabmenu>li.active>a {
   background-color: #fff;
-}
+} */
+
 /* 높이0  갤러리와노티스박스*/
-.tabmenu > li div {
+/* .tabmenu>li div {
   position: absolute;
   left: 0;
   height: 0;
   overflow: hidden;
 }
-.tabmenu > li.active div {
+
+.tabmenu>li.active div {
   width: 398px;
   height: 163px;
   border: 1px solid #ccc;
@@ -219,6 +284,7 @@ header {
   width: 380px;
   height: 40px;
 }
+
 .notice li:nth-child(2n) {
   background-color: #ddd;
 }
@@ -259,9 +325,11 @@ header {
   height: 100px;
   padding: 10px;
 }
+
 .gallery img:hover {
   opacity: 0.5;
-}
+} */
+
 .others {
   width: 800px;
   height: 200px;
@@ -338,6 +406,10 @@ header {
   display: none;
 }
 
+.modal_bg.active {
+  display: block;
+}
+
 .modal_layer {
   width: 500px;
   height: 500px;
@@ -359,8 +431,7 @@ header {
 
 .layer_body {
   color: black;
-  text-align: center;
-  text-align: center;
+  text-align: left;
   padding: 30px;
 }
 
@@ -408,11 +479,25 @@ footer {
   line-height: 50px;
   float: left;
   text-align: center;
+  position: relative;
+}
+
+.f_site {
+  width: 150px;
+  height: 20px;
+  float: right;
+  margin-right: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
 .btmenu ul li {
+  padding: 10px;
+
   display: inline-block;
 }
+
 .copy {
   width: 1000px;
   height: 50px;

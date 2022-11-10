@@ -48,7 +48,7 @@ jQuery(document).ready(function () {
     });
   });
 //모달팝업창
-  $(".notice li:first").click(function () {
+  $(".notice ul:first-child").click(function () {
     $(".modal").addClass("active");
   });
   $(".btn").click(function () {
