@@ -95,7 +95,6 @@ header {
   background-color: #fff;
 } */
 
-
 /* 아래로내려가는 메뉴 */
 .menu {
   width: 180px;
@@ -103,12 +102,12 @@ header {
   text-align: center;
 }
 
-.navi>li {
+.navi > li {
   width: 180px;
   float: left;
 }
 
-.navi>li>a {
+.navi > li > a {
   height: 40px;
   line-height: 40px;
   width: 180px;
@@ -118,7 +117,7 @@ header {
   background-color: rgb(101, 49, 111);
 }
 
-.navi>li>a:hover {
+.navi > li > a:hover {
   background-color: rgb(227, 160, 252);
 }
 
@@ -128,12 +127,12 @@ header {
   display: none;
 }
 
-.submenu>li {
+.submenu > li {
   width: 180px;
   float: left;
 }
 
-.submenu>li>a {
+.submenu > li > a {
   height: 40px;
   line-height: 40px;
   width: 180px;
@@ -143,7 +142,7 @@ header {
   background-color: #fff;
 }
 
-.submenu>li>a:hover {
+.submenu > li > a:hover {
   background-color: rgb(227, 160, 252);
 }
 
@@ -221,16 +220,15 @@ header {
   overflow: hidden;
 }
 
-.imgslide>a {
+.imgslide > a {
   display: block;
   position: absolute;
   left: 0;
   top: 0;
-
 }
 
 /* span 위치%로 */
-.imgslide span {
+/* .imgslide span {
   width: 300px;
   height: 50px;
   line-height: 50px;
@@ -240,8 +238,18 @@ header {
   text-align: center;
   background-color: rgba(100, 100, 100, 0.5);
   color: #fff;
+} */
+.imgslide span {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+  position: absolute;
+  top: 150px;
+  left: 250px;
+  text-align: center;
+  background-color: rgba(100, 100, 100, 0.5);
+  color: #fff;
 }
-
 
 .contents {
   float: left;
@@ -259,13 +267,13 @@ header {
   position: relative;
 }
 
-.tabmenu>li {
+.tabmenu > li {
   float: left;
   width: 80px;
   line-height: 30px;
 }
 
-.tabmenu>li>a {
+.tabmenu > li > a {
   display: block;
   font-size: 14px;
   text-align: center;
@@ -274,26 +282,26 @@ header {
   border-bottom: none;
 }
 
-.tabmenu>li>a:hover {
+.tabmenu > li > a:hover {
   background-color: #eee;
 }
 
-.tabmenu>li:first-child a {
+.tabmenu > li:first-child a {
   border-right: none;
 }
 
-.tabmenu>li.active>a {
+.tabmenu > li.active > a {
   background-color: #fff;
 }
 
-.tabmenu>li div {
+.tabmenu > li div {
   position: absolute;
   left: 0;
   height: 0;
   overflow: hidden;
 }
 
-.tabmenu>li.active div {
+.tabmenu > li.active div {
   width: 288px;
   height: 148px;
   border: 1px solid #ddd;
@@ -496,7 +504,6 @@ footer {
   margin-left: 430px;
   margin-right: 10px;
   margin-top: 10px;
-
 }
 
 .copy {
