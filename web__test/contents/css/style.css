@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    color: #333;
+    font-family: "맑은고딕";
+
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+body {
+    width: 1200px;
+    height: 1000px;
+    background-color: #fff;
+    font-size: 20px;
+}
+
+.contents {
+    width: 1200px;
+    height: 200px;
+    background-color: rgb(127, 127, 231);
+    float: left;
+
+
+}
+
+.tabmenu {
+    width: 400px;
+    height: 200px;
+    float: left;
+    position: absolute;
+
+}
+
+/* 공지 갤러리 박스 영역 */
+.tabmenu>li {
+    float: left;
+    width: 100px;
+    height: 30px;
+
+}
+
+/* 공지 갤러리 글 */
+.tabmenu>li>a {
+    background-color: #ccc;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.tabmenu>li.active>a {
+    background-color: #fff;
+}
+
+/* 아래박스정리 */
+.tabmenu>li.active div {
+    width: 390px;
+    height: 160px;
+    border: 1px solid #ddd;
+}
+
+.tabmenu>li div {
+    width: 390px;
+    height: 0;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+
+/* 줄정리 */
+.notice ul li {
+    width: 380px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.notice ul li span {
+    float: right;
+}
+
+.gallery ul li {
+    float: left;
+    margin-top: 30px;
+    margin-left: 23px;
+
+}
+
+.gallery img {
+    width: 100px;
+    height: 100px;
+}
+
+.b_wrap {
+    width: 800px;
+    height: 200px;
+    float: right;
+}
+
+.banner1 {
+    width: 400px;
+    float: left;
+}
+
+.banner2 {
+    width: 400px;
+    float: right;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.modal.active {
+    display: block;
+}
+
+.layer {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+
+.tit {
+    padding: 30px;
+}
+
+.titbody {
+    padding: 30px;
+}
+
+.btn {
+    background-color: #ccc;
+    text-align: center;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
