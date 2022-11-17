@@ -61,7 +61,7 @@ header {
   float: right;
 }
 
-.menu>ul {
+.menu > ul {
   width: 800px;
   float: right;
   margin-top: 25px;
@@ -69,11 +69,11 @@ header {
   margin-right: 10px;
 }
 
-.menu>ul>li {
+.menu > ul > li {
   float: left;
 }
 
-.menu>ul>li>a {
+.menu > ul > li > a {
   width: 200px;
   height: 50px;
   line-height: 50px;
@@ -84,7 +84,7 @@ header {
   background: rgb(49, 46, 111);
 }
 
-.menu>ul>li>a:hover {
+.menu > ul > li > a:hover {
   background: rgb(156, 156, 157);
 }
 
@@ -97,9 +97,10 @@ header {
   display: none;
 }
 
-.submenu>li {}
+.submenu > li {
+}
 
-.submenu>li>a {
+.submenu > li > a {
   width: 200px;
   height: 40px;
   line-height: 40px;
@@ -110,7 +111,7 @@ header {
   font-weight: bold;
 }
 
-.submenu>li>a:hover {
+.submenu > li > a:hover {
   background: rgb(156, 156, 157);
 }
 
@@ -123,16 +124,15 @@ header {
 }
 
 /* 좌우 슬라이드 */
-/* .slidelist {
-    width: 3600px;
-
+.slidelist {
+  width: 3600px;
+  height: 300px;
 }
 
 .slidelist ul li {
-    width: 1200px;
-    float: left;
-
-} */
+  width: 1200px;
+  float: left;
+}
 
 /* 상하 슬라이드 */
 /* .slidelist {
@@ -147,10 +147,10 @@ header {
 } */
 
 /* 페이드인페이드아웃 슬라이드 */
-.imgslide>a {
+/* .imgslide>a {
   display: block;
   position: absolute;
-}
+} */
 
 .imgslide span {
   color: #fff;
@@ -180,46 +180,45 @@ header {
   position: absolute;
 }
 
-.tabmenu>li {
+.tabmenu > li {
   float: left;
   width: 80px;
   height: 30px;
 }
 
-.tabmenu>li>a {
+.tabmenu > li > a {
   border: 1px solid #ddd;
   text-align: center;
   background-color: #ccc;
   border-bottom: none;
-
 }
 
-.tabmenu>li>a:hover {
+.tabmenu > li > a:hover {
   background-color: #fff;
 }
 
 /* 중요기억 */
-.tabmenu>li div {
+.tabmenu > li div {
   position: absolute;
   left: 0;
   height: 0;
   overflow: hidden;
 }
 
-.tabmenu>li.active div {
+.tabmenu > li.active div {
   width: 398px;
   height: 163px;
   border: 1px solid #ccc;
 }
 
-.notice>ul>li {
+.notice > ul > li {
   width: 380px;
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid#ddd;
 }
 
-.notice>ul>li a:hover {
+.notice > ul > li a:hover {
   font-weight: bold;
 }
 
@@ -232,7 +231,6 @@ header {
   width: 33.3%;
   text-align: center;
   margin-top: 40px;
-
 }
 
 /* 탭메뉴 */

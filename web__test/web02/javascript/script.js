@@ -24,35 +24,35 @@ jQuery(document).ready(function () {
     });
   //백그라운드 내려오는 메뉴
 
-  // setInterval(function () {
-  //     $('.slidelist').delay(1000);
-  //     $('.slidelist').animate({ marginLeft: -1200 });
-  //     $('.slidelist').delay(2000);
-  //     $('.slidelist').animate({ marginLeft: -2400 });
-  //     $('.slidelist').delay(2000);
-  //     $('.slidelist').animate({ marginLeft: 0 });
-  //     $('.slidelist').delay(2000);
-  // });
+  setInterval(function () {
+    $(".slidelist").delay(1000);
+    $(".slidelist").animate({ marginLeft: -1200 });
+    $(".slidelist").delay(2000);
+    $(".slidelist").animate({ marginLeft: -2400 });
+    $(".slidelist").delay(2000);
+    $(".slidelist").animate({ marginLeft: 0 });
+    $(".slidelist").delay(2000);
+  });
   // 좌우 슬라이드
-  //     setInterval(function () {
-  //     $('.slidelist').delay(1000);
-  //     $('.slidelist').animate({ marginTop: -300 });
-  //     $('.slidelist').delay(2000);
-  //     $('.slidelist').animate({ marginTop: -600 });
-  //     $('.slidelist').delay(2000);
-  //     $('.slidelist').animate({ marginTop: 0 });
-  //     $('.slidelist').delay(2000);
+  // setInterval(function () {
+  //   $(".slidelist").delay(1000);
+  //   $(".slidelist").animate({ marginTop: -300 });
+  //   $(".slidelist").delay(2000);
+  //   $(".slidelist").animate({ marginTop: -600 });
+  //   $(".slidelist").delay(2000);
+  //   $(".slidelist").animate({ marginTop: 0 });
+  //   $(".slidelist").delay(2000);
   // });
   //상하 슬라이드
-  $(".imgslide a:gt(0)").hide();
-  setInterval(() => {
-    $(".imgslide a:first-child")
-      .fadeOut(1000)
-      .next("a")
-      .fadeIn(1000)
-      .end()
-      .appendTo(".imgslide");
-  }, 3000);
+  // $(".imgslide a:gt(0)").hide();
+  // setInterval(() => {
+  //   $(".imgslide a:first-child")
+  //     .fadeOut(1000)
+  //     .next("a")
+  //     .fadeIn(1000)
+  //     .end()
+  //     .appendTo(".imgslide");
+  // }, 3000);
   //페이드인페이드아웃 슬라이드
 
   $(function () {
@@ -68,7 +68,6 @@ jQuery(document).ready(function () {
   });
   $(".btn").click(function () {
     $(".modal_bg").removeClass("active");
-   });
+  });
   //모달팝업창
-
 });
