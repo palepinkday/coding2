@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+            height: 6000px;
+            font-family: 'nanumsquare';
+
+        }
+
+        div {
+            margin-top: 1000px;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transform: rotate(-720deg);
+            transition: all 0.5s;
+        }
+
+        div img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>프로틴그래놀라</h1>
+    </div>
+    <div>
+        <h1>프로틴그래놀라</h1>
+    </div>
+    <div>
+        <h1>프로틴그래놀라</h1>
+    </div>
+    <div><img src="img/masaaki-komori-NoXUQ54pDac-unsplash.jpg" alt=""></div>
+
+    <script>
+        let observer = new IntersectionObserver((e) => {
+            e.forEach((박스) => {
+                if (박스.isIntersecting) {
+                    박스.target.style.opacity = 1;
+                    박스.target.style.transform = 'rotate(0deg)';
+
+                } 박스.intersectionRatio
+
+            })
+        })
+
+        let div = document.querySelectorAll('div')
+        observer.observe(div[0])
+        observer.observe(div[1])
+        observer.observe(div[2])
+        observer.observe(div[3])
+
+    </script>
+
+
+</body>
+
+</html>

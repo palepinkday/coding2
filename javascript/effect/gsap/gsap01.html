@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .box {
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .green {
+            background-color: rgb(45, 181, 18);
+            width: 100px;
+            height: 100px;
+        }
+
+        .purple {
+            background-color: rgb(215, 15, 215);
+            width: 100px;
+            height: 100px;
+        }
+
+        .red {
+            background-color: rgb(215, 15, 15);
+            width: 100px;
+            height: 100px;
+            transform: translateY(-200px);
+        }
+
+        .blue {
+            background-color: rgb(100, 152, 243);
+            width: 100px;
+            height: 100px;
+        }
+
+        .mint {
+            background-color: rgb(100, 243, 214);
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <div class="box green">linear</div>
+    <div class="box purple">bounce</div>
+    <div class="box red">yoyo,elastic</div>
+    <div class="box blue">stagger</div>
+    <div class="box mint">stagger</div>
+
+
+
+
+    <script>
+        gsap.to(".green", {
+            rotation: 360,
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'none',
+            backgroundColor: '#8d3dae',
+            borderRadius: 100
+
+        });
+
+
+        gsap.to(".purple", {
+            rotation: 360,
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            ease: 'bounce.out'
+        });
+        gsap.to(".red", {
+            rotation: 360,
+            x: 100,
+            duration: 2,
+            repeat: -1,
+            repeatDelay: 2,
+            yoyo: true,
+            ease: "elastic",
+
+        });
+        gsap.to(".blue", 1, {
+            scale: 0.1,
+            y: 60,
+            yoyo: true,
+            repeat: -1,
+            ease: "power1.inOut",
+            delay: 1,
+            stagger: {
+                amount: 1.5,
+                grid: "auto",
+                from: "center"
+            }
+        });
+        gsap.from(".mint", {
+            duration: 2,
+            scale: 2,
+            opacity: 0,
+            delay: 0.5,
+            stagger: 0.2,
+            ease: "elastic",
+            force3D: true
+        });
+
+        document.querySelectorAll(".mint").forEach(function (mint) {
+            mint.addEventListener("click", function () {
+                gsap.to(".mint", {
+                    duration: 0.5,
+                    opacity: 0,
+                    y: -100,
+                    stagger: 0.1,
+                    ease: "back.in"
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

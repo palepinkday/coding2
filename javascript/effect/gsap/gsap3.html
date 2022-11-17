@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .horizontalSection {
+            overscroll-behavior: ;
+        }
+
+        .section {}
+
+        .section1 {}
+
+        .section2 {}
+
+        .section3 {}
+
+        .section4 {}
+
+        .section5 {}
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="horizontalSection">
+            <section class="section section1"></section>
+            <section class="section section2"></section>
+            <section class="section section3"></section>
+            <section class="section section4"></section>
+            <section class="section section5"></section>
+            <section class="section section6"></section>
+
+
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const section = gsap.utils.toArray(".section");
+
+        gasp.to(
+            sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollerTrigger: {
+
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        button {
+            cursor: pointer;
+            padding: 8px 16px;
+            margin: 10px 5px;
+        }
+
+        main {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .controls {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 70px;
+            min-height: 70px;
+        }
+
+        .slides-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex: 1;
+        }
+
+        .slide {
+            position: absolute;
+            font-size: 90px;
+            font-weight: 700;
+            color: rgba(30, 27, 27, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            width: calc(100% / 3);
+            width: 100%;
+        }
+
+        .slides-inner {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <main>
+
+        <div class="slides-container">
+            <div class="slides-inner">
+                <div class="slide">1</div>
+                <div class="slide">2</div>
+                <div class="slide">3</div>
+                <div class="slide">4</div>
+                <div class="slide">5</div>
+                <div class="slide">6</div>
+                <div class="slide">7</div>
+                <div class="slide">8</div>
+                <div class="slide">9</div>
+                <div class="slide">10</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="prevButton">Prev</button>
+            <button id="nextButton">Next</button>
+        </div>
+
+    </main>
+
+    <script>
+        gsap.registerPlugin(Draggable, InertiaPlugin);
+
+        var slideDelay = 1.5;
+        var slideDuration = 0.3;
+        var wrap = true;
+
+        var slides = document.querySelectorAll(".slide");
+        var prevButton = document.querySelector("#prevButton");
+        var nextButton = document.querySelector("#nextButton");
+        var progressWrap = gsap.utils.wrap(0, 1);
+
+        var numSlides = slides.length;
+
+        gsap.set(slides, {
+            backgroundColor: "random([red, blue, green, purple, orange, yellow, lime, pink])",
+            xPercent: i => i * 100
+        });
+
+        var wrapX = gsap.utils.wrap(-100, (numSlides - 1) * 100);
+        var timer = gsap.delayedCall(slideDelay, autoPlay);
+
+        var animation = gsap.to(slides, {
+            xPercent: "+=" + (numSlides * 100),
+            duration: 1,
+            ease: "none",
+            paused: true,
+            repeat: -1,
+            modifiers: {
+                xPercent: wrapX
+            }
+        });
+
+        var proxy = document.createElement("div");
+        var slideAnimation = gsap.to({}, {});
+        var slideWidth = 0;
+        var wrapWidth = 0;
+
+        var draggable = new Draggable(proxy, {
+            trigger: ".slides-container",
+            inertia: true,
+            onPress: updateDraggable,
+            onDrag: updateProgress,
+            onThrowUpdate: updateProgress,
+            snap: {
+                x: snapX
+            }
+        });
+
+        resize();
+
+        window.addEventListener("resize", resize);
+
+        prevButton.addEventListener("click", function () {
+            animateSlides(1);
+        });
+
+        nextButton.addEventListener("click", function () {
+            animateSlides(-1);
+        });
+
+        function updateDraggable() {
+            timer.restart(true);
+            slideAnimation.kill();
+            this.update();
+        }
+
+        function animateSlides(direction) {
+
+            timer.restart(true);
+            slideAnimation.kill();
+            var x = snapX(gsap.getProperty(proxy, "x") + direction * slideWidth);
+
+            slideAnimation = gsap.to(proxy, {
+                x: x,
+                duration: slideDuration,
+                onUpdate: updateProgress
+            });
+        }
+
+        function autoPlay() {
+            if (draggable.isPressed || draggable.isDragging || draggable.isThrowing) {
+                timer.restart(true);
+            } else {
+                animateSlides(-1);
+            }
+        }
+
+        function updateProgress() {
+            animation.progress(progressWrap(gsap.getProperty(proxy, "x") / wrapWidth));
+        }
+
+        function snapX(value) {
+            let snapped = gsap.utils.snap(slideWidth, value);
+            return wrap ? snapped : gsap.utils.clamp(-slideWidth * (numSlides - 1), 0, snapped);
+        }
+
+        function resize() {
+
+            var norm = (gsap.getProperty(proxy, "x") / wrapWidth) || 0;
+
+            slideWidth = slides[0].offsetWidth;
+            wrapWidth = slideWidth * numSlides;
+
+            wrap || draggable.applyBounds({ minX: -slideWidth * (numSlides - 1), maxX: 0 });
+
+            gsap.set(proxy, {
+                x: norm * wrapWidth
+            });
+
+            animateSlides(0);
+            slideAnimation.progress(1);
+        }
+
+    </script>
+</body>
+
+</html>

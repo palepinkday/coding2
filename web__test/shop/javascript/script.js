@@ -8,13 +8,13 @@ jQuery(document).ready(function () {
     setInterval(function () { 
         $(".slidelist").delay(1000);
         $(".slidelist").animate({ marginLeft: -1200 });
-        $(".slidelist").delay(2000);
+        $(".slidelist").delay(1000);
         $(".slidelist").animate({ marginLeft: -2400 });
-        $(".slidelist").delay(2000);
+        $(".slidelist").delay(1000);
         $(".slidelist").animate({ marginLeft: 0 });
-        $(".slidelist").delay(2000);
+        $(".slidelist").delay(1000);
 
-    });
+    }, 3000);
 
     $(function () {
         $(".tabmenu>li>a").click(function () {

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img-wrap {
+            width: 1200px;
+            padding: 0;
+            margin: 0 auto;
+            display: grid;
+            /* grid-column: 3; */
+
+        }
+
+        .img {
+
+            height: 500px;
+            background-size: cover;
+
+        }
+
+        .img:nth-child(1) {
+            background-image: url(img/andrew-small-EfhCUc_fjrU-unsplash.jpg);
+        }
+
+        .img:nth-child(2) {
+            background-image: url(img/annie-spratt-4wz1YsANFB0-unsplash.jpg)
+        }
+
+        .img:nth-child(3) {
+            background-image: url(img/annie-spratt-90Zp9h6mamw-unsplash.jpg)
+        }
+
+        .img:nth-child(4) {
+            background-image: url(img/annie-spratt-hX_hf2lPpUU-unsplash.jpg)
+        }
+
+        .img:nth-child(5) {
+            background-image: url(img/annie-spratt-WBpr_yH0Frg-unsplash.jpg)
+        }
+
+        .img:nth-child(6) {
+            background-image: url(img/brigitte-tohm-buUFEtmNnjc-unsplash.jpg)
+        }
+
+        .img:nth-child(7) {
+            background-image: url(img/cody-fitzgerald-lWJeGCgVbYI-unsplash.jpg)
+        }
+
+        .img:nth-child(8) {
+            background-image: url(img/cristina-pop-HEvkdZEUirQ-unsplash.jpg)
+        }
+
+        .img:nth-child(9) {
+            background-image: url(img/diana-olfert-JZVrDQAm_gk-unsplash.jpg)
+        }
+
+        .img:nth-child(10) {
+            background-image: url(img/erda-estremera-6ZyLeconAsg-unsplash.jpg)
+        }
+
+        .img:nth-child(11) {
+            background-image: url(img/evie-s-w1JE5duY62M-unsplash.jpg)
+        }
+
+        .img:nth-child(12) {
+            background-image: url(img/han-chenxu-YdAqiUkUoWA-unsplash.jpg)
+        }
+
+        .img:nth-child(13) {
+            background-image: url(img/hisu-lee-V4Pn7QeYdPQ-unsplash.jpg)
+        }
+
+        .img:nth-child(14) {
+            background-image: url(img/annie-spratt-4wz1YsANFB0-unsplash.jpg)
+        }
+
+        .img:nth-child(15) {
+            background-image: url(img/j-lee-pXqAMSHIfXs-unsplash.jpg)
+        }
+    </style>
+</head>
+
+<body>
+    <section class="img-wrap">
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+        <div class="img"></div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+</body>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+
+    const tl = gsap.timeline({
+        ScrollTrigger: {
+            trigger: ".img-wrap .img",
+            markers: true,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: true
+        }
+            .to(".img", {
+                y: -1000,
+                scrub: true,
+            })
+    });
+</script>
+
+</html>

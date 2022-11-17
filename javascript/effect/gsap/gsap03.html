@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .box {
+            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 200px;
+            margin-bottom: 200px;
+        }
+
+        .green {
+            background-color: rgb(45, 181, 18);
+            width: 100px;
+            height: 100px;
+        }
+
+        .purple {
+            background-color: rgb(215, 15, 215);
+            width: 100px;
+            height: 100px;
+        }
+
+        .blue {
+            background-color: rgb(52, 174, 255);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <div class="box green">green</div>
+    <div class="box purple">purple</div>
+    <div class="box blue">blue</div>
+</body>
+
+<script>
+    // gsap.registerPlugin(scrollTrigger);
+
+    gsap.to('.purple', {
+
+        scrollTrigger: {
+            trigger: '.green',
+            markers: true,
+            start: 'top 100%'
+        },
+        x: 400, rotation: 720, duration: 5,
+    });
+
+
+</script>
+
+</html>
