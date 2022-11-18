@@ -3,48 +3,62 @@
   margin: 0;
   list-style: none;
 }
+
 body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
 }
+
 h1 {
   font-size: 95px;
   margin-top: 75px;
+
 }
+
 a {
   text-decoration: none;
   color: #000;
 }
-#wrap {
-}
+
+#wrap {}
+
 .container {
   margin: 0 auto;
   margin: 0 40px 0 40px;
 }
+
 .header {
   width: 100%;
   position: relative;
 }
+
 nav {
   width: 100%;
 }
+
+nav ul li {}
+
 .about {
+
   position: absolute;
   top: 0;
   right: 0;
   font-size: 90px;
 }
+
 .menu {
   width: 50%;
   margin-top: 143px;
 }
-.menu ul {
-}
+
+.menu ul {}
+
 .menu ul li {
   list-style: none;
   display: inline;
 }
+
 .menu ul li a {
   display: inline-block;
   width: 186px;
@@ -56,22 +70,55 @@ nav {
   border-radius: 30px;
   margin-bottom: 10px;
 }
+
 section {
   width: 100%;
   margin-top: 100px;
 }
-section ul {
-}
+
+section ul {}
+
 section ul li {
   display: inline;
 }
+
 section ul li a {
   font-size: 70px;
   display: inline-block;
 }
+
 .footer {
   width: 100%;
   text-align: center;
   margin-top: 50px;
   font-size: 25px;
+}
+
+@media (max-width:959px) {
+  .about {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    font-size: 90px;
+  }
+}
+
+@media (max-width:613px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 30px;
+
+  }
+
+  .about {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    font-size: 30px;
+  }
+
+  section ul li a {
+    font-size: 30px;
+    display: inline-block;
+  }
 }
