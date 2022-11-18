@@ -8,6 +8,16 @@ body {
   width: 100%;
   height: auto;
   overflow-x: hidden;
+  color: #333;
+  background: radial-gradient(circle at 50% 0,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0) 70.71%),
+    radial-gradient(circle at 6.7% 75%,
+      rgba(0, 0, 255, 0.5),
+      rgba(0, 0, 255, 0) 70.71%),
+    radial-gradient(circle at 93.3% 75%,
+      rgba(0, 255, 0, 0.5),
+      rgba(0, 255, 0, 0) 70.71%)
 }
 
 h1 {
@@ -17,6 +27,7 @@ h1 {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: #000;
 }
@@ -31,6 +42,7 @@ a {
 .header {
   width: 100%;
   position: relative;
+
 }
 
 nav {
@@ -40,7 +52,6 @@ nav {
 nav ul li {}
 
 .about {
-
   position: absolute;
   top: 0;
   right: 0;
@@ -92,6 +103,10 @@ section ul li a {
   text-align: center;
   margin-top: 50px;
   font-size: 25px;
+}
+
+.footer a {
+  margin-bottom: 100px;
 }
 
 @media (max-width:959px) {
