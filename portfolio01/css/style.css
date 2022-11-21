@@ -6,24 +6,31 @@
 
 body {
   width: 100%;
-  height: auto;
+  height: 100vh;
+  /* width: 100%;
+  height: auto; */
   overflow-x: hidden;
   color: #333;
-  background: radial-gradient(circle at 50% 0,
+  background: radial-gradient(
+      circle at 50% 0,
       rgba(255, 0, 0, 0.5),
-      rgba(255, 0, 0, 0) 70.71%),
-    radial-gradient(circle at 6.7% 75%,
+      rgba(255, 0, 0, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
       rgba(0, 0, 255, 0.5),
-      rgba(0, 0, 255, 0) 70.71%),
-    radial-gradient(circle at 93.3% 75%,
+      rgba(0, 0, 255, 0) 70.71%
+    ),
+    radial-gradient(
+      circle at 93.3% 75%,
       rgba(0, 255, 0, 0.5),
-      rgba(0, 255, 0, 0) 70.71%)
+      rgba(0, 255, 0, 0) 70.71%
+    );
 }
 
 h1 {
   font-size: 95px;
   margin-top: 75px;
-
 }
 
 a {
@@ -32,7 +39,8 @@ a {
   color: #000;
 }
 
-#wrap {}
+#wrap {
+}
 
 .container {
   margin: 0 auto;
@@ -42,14 +50,14 @@ a {
 .header {
   width: 100%;
   position: relative;
-
 }
 
 nav {
   width: 100%;
 }
 
-nav ul li {}
+nav ul li {
+}
 
 .about {
   position: absolute;
@@ -63,7 +71,8 @@ nav ul li {}
   margin-top: 143px;
 }
 
-.menu ul {}
+.menu ul {
+}
 
 .menu ul li {
   list-style: none;
@@ -87,7 +96,8 @@ section {
   margin-top: 100px;
 }
 
-section ul {}
+section ul {
+}
 
 section ul li {
   display: inline;
@@ -109,7 +119,7 @@ section ul li a {
   margin-bottom: 100px;
 }
 
-@media (max-width:959px) {
+@media (max-width: 959px) {
   .about {
     position: absolute;
     top: 120px;
@@ -118,11 +128,10 @@ section ul li a {
   }
 }
 
-@media (max-width:613px) {
+@media (max-width: 613px) {
   h1 {
     font-size: 50px;
     margin-top: 30px;
-
   }
 
   .about {
