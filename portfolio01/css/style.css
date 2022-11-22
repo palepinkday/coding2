@@ -72,6 +72,11 @@ nav ul li {}
   top: 0;
   right: 0;
   font-size: 90px;
+  transition: all .5s ease;
+}
+
+.about a:hover {
+  color: #fff;
 }
 
 .menu {
@@ -101,7 +106,7 @@ nav ul li {}
 }
 
 .menu ul li a:hover {
-  background-color: #fff;
+  background-color: rgba(252, 247, 247, .5);
 
 
 }
@@ -124,11 +129,11 @@ section ul li a {
 
 span {
   width: 150px;
-  background-color: #fff;
+  background-color: rgba(252, 247, 247, .5);
   font-size: 20px;
   position: absolute;
   top: -10px;
-  right: 0;
+  right: 20px;
   text-align: center;
   border-radius: 30px;
   opacity: 0;
