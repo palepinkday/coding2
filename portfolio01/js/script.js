@@ -95,4 +95,12 @@
     }
     (() => {
       const stage = new Stage();
-    })();
+})();
+    
+$("section ul li a").click(function(){
+  $(".modal").addClass("open");
+});
+
+$(".close").click(function(){
+  $(".modal").removeClass("open");
+});
