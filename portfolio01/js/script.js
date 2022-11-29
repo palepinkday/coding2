@@ -97,10 +97,14 @@
       const stage = new Stage();
 })();
     
-$("section ul li a").click(function(){
-  $(".modal").addClass("open");
+$(".btn_modal").click(function (e) {
+  e.preventDefault();
+  // $(this).parent().addClass("open");
+    $(".modal").addClass("open");
 });
 
-$(".close").click(function(){
+$(".close").click(function (e) {
+  e.preventDefault();
+  // $(this).parent().parent().removeClass("open");
   $(".modal").removeClass("open");
 });
