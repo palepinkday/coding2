@@ -18,7 +18,7 @@
         </h1>
         <nav>
             <ul>
-                <li><a href="#" class="font1">about</a>
+                <li><a href="#" class="font1" class="about">about</a>
                     <!-- <div class="modal">
                         <h3>about</h3>
                         <div class="desc">
@@ -27,11 +27,10 @@
                             </div>
                             <div class="right">꿈이 있는 신입 웹 퍼블리셔 유현주입니다. 대학 졸업 후 쇼핑몰을 운영한 경험이 있습니다. 사이트를 운영하면서 사이트를 원하는 대로
                                 바꾸기엔 한계가 있었습니다. 그래서 답답했던 적이 많았습니다. 지나오면서 그때 공부를 좀 더 해 봤었다면 어땠을까? 하고 자주 생각했고 아쉬움이 많이
-                                남았습니다.
-                                올해, 문득 다시 도전해보면 어떨까? 하는 생각이 들면서 국비지원 학원에 등록하고 저의 아쉬움을 실현해보는 기회가 생겼습니다. 처음엔 잘 할수 있을까? 걱정도
+                                남았습니다.올해, 문득 다시 도전해보면 어떨까? 하는 생각이 들면서 국비지원 학원에 등록하고 저의 아쉬움을 실현해보는 기회가 생겼습니다. 처음엔 잘 할수
+                                있을까? 걱정도
                                 되었지만 시간이 지나면서 어느새 몰입하고 있는 저를 보면서 진정 살아 숨쉬고 있는 느낌이 들었습니다. 그리고 저의 선택과 도전에 대한 걱정을 지울 수
-                                있었습니다.
-                                공부를 하면서 느낀 점은 코딩으로 사이트를 시각화 시킨다는 점이 무척 매력적이었습니다. 그리고 어려운 부분이 생기면 고민하고 탐색하며 나아가는 것도
+                                있었습니다.공부를 하면서 느낀 점은 코딩으로 사이트를 시각화 시킨다는 점이 무척 매력적이었습니다. 그리고 어려운 부분이 생기면 고민하고 탐색하며 나아가는 것도
                                 좋았습니다. 한 가족의 엄마로 살아가다가 오로지 나에게 투자되는 시간들이 무지 소중하고 감사하게 느껴졌습니다. 그래서 이 시간들을 허투로 쓰기 싫어서 계획을
                                 세우고 실천하며, 공부하고 준비했습니다.</div>
                         </div>
@@ -64,12 +63,17 @@
                             <div class="left">
                                 <img src="img/site01.png" alt="사이트01">
                             </div>
-                            <div class="right">이렇게 작업을 했습니다.</div>
+                            <div class="right">이렇게 작업을 했습니다.이렇게 작업을 했습니다.이렇게 작업을 했습니다.이렇게 작업을 했습니다.이렇게 작업을 했습니다.
+                            </div>
+                            <div class="bot">
+                                <a href="#" class="site_view">사이트보기</a>
+                                <a href="#" class="code">코드보기</a>
+                            </div>
                         </div>
 
                         <a href="#" class="close">닫기</a>
-                        <a href="#" class="site_view">사이트보기</a>
-                        <a href="#" class="code">코드보기</a>
+
+
                     </div>
                 </div>
 
@@ -118,6 +122,7 @@
                             <div class="left">
                                 <img src="img/HOWTO2BOX1.jpg" alt="배너3">
                                 <img src="img/HOWTO2BOX2.jpg" alt="배너3">
+                                <img src="img/s_banner.jpg" alt="배너3">
                             </div>
                             <div class="right">이렇게 작업을 했습니다.</div>
                         </div>
@@ -262,7 +267,16 @@
         $(this).parent().parent().removeClass("open");
     });
 </script>
-
+<script>
+    $(".about").click(function (e) {
+        e.preventDefault();
+        $(this).parent().addClass("open");
+    });
+    $(".close").click(function (e) {
+        e.preventDefault();
+        $(this).parent().parent().removeClass("open");
+    });
+</script>
 <script type="x-shader/x-vertex" id="vertCode">
     uniform float time;
   </script>
