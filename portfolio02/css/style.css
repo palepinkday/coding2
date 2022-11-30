@@ -20,6 +20,7 @@ a {
   font-size: 20px;
 }
 
+
 .contaienr {
   width: 96%;
   margin: 0 auto;
@@ -146,8 +147,6 @@ nav a {
   width: 60%;
   font-size: 16px;
   margin-top: 30px;
-  /* display: flex;
-  justify-content: space-between; */
 
 }
 
@@ -264,17 +263,14 @@ nav a {
   position: absolute;
   bottom: 20px;
   right: 30px;
-
-
 }
 
-.bot .site_view {
+.desc .bot .site_view {
   width: 85px;
   height: 30px;
   line-height: 30px;
   font-size: 13px;
   color: #fff;
-  font-family: "Quicksand";
   text-align: center;
   position: relative;
   border-radius: 50px;
@@ -282,13 +278,12 @@ nav a {
 
 }
 
-.bot .code {
+.desc .bot .code {
   width: 73px;
   height: 30px;
   line-height: 30px;
   font-size: 13px;
   color: #fff;
-  font-family: "Quicksand";
   text-align: center;
   position: relative;
   border-radius: 50px;
@@ -296,60 +291,6 @@ nav a {
 
 }
 
-/* site code line*/
-.bot .site_view:before,
-.bot .site_view:after {
-  content: "";
-  border-bottom: solid 1px #fff;
-  position: absolute;
-  bottom: 0px;
-  width: 0;
-}
-
-.bot .code:before,
-.bot .code:after {
-  content: "";
-  border-bottom: solid 1px #fff;
-  position: absolute;
-  bottom: 0px;
-  width: 0;
-}
-
-.bot .code:before {
-  left: 0;
-}
-
-.bot .code:after {
-  right: 0;
-}
-
-.bot .site_view:before {
-  left: 0;
-}
-
-.bot .site_view:after {
-  right: 0;
-}
-
-.bot .site_view:hover:before,
-.bot .site_view:hover:after {
-  width: 50%;
-}
-
-.bot .code:hover:before,
-.bot .code:hover:after {
-  width: 50%;
-}
-
-.bot .site_view:before,
-.bot .site_view:after {
-  transition: all 0.2s ease;
-}
-
-.bot .code:before,
-.bot .code:after {
-  transition: all 0.2s ease;
-}
 
 .keyword>div.open .modal {
   top: 10%;
@@ -367,7 +308,7 @@ nav a {
   transition: all 0.3s ease-in-out;
 }
 
-.keyword>div:hover span {
+.keyword>div a:hover+span {
   transform: translateX(-50%) translateY(-15px);
   opacity: 1;
 }
