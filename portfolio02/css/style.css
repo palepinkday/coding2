@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap");
+@import url("https://webfontworld.github.io/BMJua/BMJua.css");
+
+#webgl {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+a {
+  display: inline-block;
+}
+
+#main {
+  min-height: 100vh;
+  font-family: "Quicksand";
+  font-size: 20px;
+}
+
+.contaienr {
+  width: 96%;
+  margin: 0 auto;
+}
+
+#header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1vw;
+  padding-right: 2%;
+}
+
+#header h1 {
+  font-size: 4vw;
+  line-height: 1;
+  text-transform: capitalize;
+  padding: 2%;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.font1 {
+  font-family: "Quicksand";
+  font-weight: 100;
+}
+
+.title {
+  padding-top: 30vh;
+  padding-bottom: 5vw;
+}
+
+.title li {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.title li a {
+  border: 2px solid #000;
+  padding: 10px 40px;
+  display: inline-block;
+  border-radius: 50px;
+  font-family: "Quicksand";
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.keyword {}
+
+.keyword>div {
+  font-size: 3vw;
+  display: inline-block;
+  margin-right: 2vw;
+  margin-bottom: 1vw;
+  position: relative;
+}
+
+.keyword>div .modal {
+  background: rgba(211, 205, 190, 0.7);
+  backdrop-filter: blur(10px);
+  width: 80%;
+  height: 80%;
+  position: fixed;
+  top: 100%;
+  left: 10%;
+  z-index: 1000;
+  font-family: "BMJua";
+  border-radius: 20px;
+  padding: 2%;
+  transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+
+}
+
+.keyword>div .modal h3 {
+  line-height: 1;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* 스크롤 */
+/* .class {
+    width: 100px;
+    height: 100px;
+    overflow-y: auto;
+    border: 1px solid #000;
+}
+
+ */
+
+.left::-webkit-scrollbar {
+  width: 10px;
+  /*스크롤바의 너비*/
+}
+
+.left::-webkit-scrollbar-thumb {
+  background-color: rgb(249, 250, 251, 0.5);
+  /*스크롤바의 색상*/
+  border-radius: 10px;
+  /*스크롤바 라운드*/
+}
+
+.left::-webkit-scrollbar-track {
+  background: linear-gradient(blue, pink, rgb(247, 5, 207));
+  /*스크롤바 트랙 색상*/
+  border-radius: 10px;
+  /*스크롤바 트랙 라운드*/
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+  /*스크롤바 트랙 안쪽 그림자*/
+}
+
+/* webstandard */
+.keyword .webstandard .modal .desc .left {
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+}
+
+.keyword .webstandard .modal .desc .right {
+  width: 60%;
+  font-size: 16px;
+  margin-top: 30px;
+  /* display: flex;
+  justify-content: space-between; */
+
+}
+
+/* photoshop_website */
+.keyword .photoshop_website .modal .desc .left {
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+}
+
+.keyword .photoshop_website .modal .desc .right {
+  width: 100%;
+  font-size: 16px;
+}
+
+/* banner_design01 */
+.keyword .banner_design01 .modal .desc .left {
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+}
+
+.keyword .banner_design01 .modal .desc .right {
+  width: 100%;
+  font-size: 16px;
+}
+
+/* banner_design02 */
+.keyword .banner_design02 .modal .desc .left {
+  width: 100%;
+  height: 500px;
+  overflow: auto;
+}
+
+.keyword .banner_design02 .modal .desc .right {
+  width: 100%;
+  font-size: 16px;
+}
+
+/* banner_design03 */
+.keyword .banner_design03 .modal .desc {}
+
+.keyword .banner_design03 .modal .desc .left {
+  width: 100%;
+
+
+
+}
+
+.keyword .banner_design03 .modal .desc .right {
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Illustrator_icon */
+.keyword .Illustrator_icon .modal .desc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.keyword .Illustrator_icon .modal .desc .left {
+  width: 40%;
+}
+
+.keyword .Illustrator_icon .modal .desc .right {
+  width: 50%;
+  font-size: 16px;
+}
+
+/* img */
+.keyword>div .modal .desc .left img {
+  border-radius: 10px;
+}
+
+.webstandard>.modal>.desc>.left img {
+  width: 100%;
+}
+
+.banner_design01>.modal>.desc>.left img {
+  margin-bottom: 5px;
+}
+
+.banner_design02>.modal>.desc>.left img {
+  margin-bottom: 5px;
+}
+
+.banner_design03>.modal>.desc>.left img {
+  width: 47%;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  display: inline;
+}
+
+.banner_design03>.modal>.desc>.left img:last-child {
+  width: 95%;
+}
+
+.Illustrator_icon>.modal>.desc>.left img {
+  width: 90%;
+}
+
+.keyword>div .modal .close {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+}
+
+/* bot */
+.bot {
+  width: 100%;
+  text-align: right;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+
+}
+
+.bot .site_view {
+  width: 70px;
+  font-size: 13px;
+  color: #fff;
+  font-family: "Quicksand";
+  text-align: center;
+  position: relative;
+
+}
+
+.bot .code {
+  width: 58px;
+  font-size: 13px;
+  color: #fff;
+  font-family: "Quicksand";
+  text-align: center;
+  position: relative;
+
+}
+
+/* site code line*/
+.bot .site_view:before,
+.bot .site_view:after {
+  content: "";
+  border-bottom: solid 1px #fff;
+  position: absolute;
+  bottom: 0px;
+  width: 0;
+}
+
+.bot .code:before,
+.bot .code:after {
+  content: "";
+  border-bottom: solid 1px #fff;
+  position: absolute;
+  bottom: 0px;
+  width: 0;
+}
+
+.bot .code:before {
+  left: 0;
+}
+
+.bot .code:after {
+  right: 0;
+}
+
+.bot .site_view:before {
+  left: 0;
+}
+
+.bot .site_view:after {
+  right: 0;
+}
+
+.bot .site_view:hover:before,
+.bot .site_view:hover:after {
+  width: 50%;
+}
+
+.bot .code:hover:before,
+.bot .code:hover:after {
+  width: 50%;
+}
+
+.bot .site_view:before,
+.bot .site_view:after {
+  transition: all 0.2s ease;
+}
+
+.bot .code:before,
+.bot .code:after {
+  transition: all 0.2s ease;
+}
+
+.keyword>div.open .modal {
+  top: 10%;
+}
+
+.keyword>div span {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-35px);
+  white-space: nowrap;
+  font-size: 20px;
+  font-family: "BMJua";
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.keyword>div:hover span {
+  transform: translateX(-50%) translateY(-15px);
+  opacity: 1;
+}
+
+.keyword>div a:before,
+.keyword>div a:after {
+  content: "";
+  border-bottom: solid 2px #000;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+}
+
+.keyword>div a:before {
+  left: 0;
+}
+
+.keyword>div a:after {
+  right: 0;
+}
+
+.keyword>div a:hover:before,
+.keyword>div a:hover:after {
+  width: 50%;
+}
+
+.keyword>div a:before,
+.keyword>div a:after {
+  transition: all 0.2s ease;
+}
