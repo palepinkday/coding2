@@ -269,22 +269,30 @@ nav a {
 }
 
 .bot .site_view {
-  width: 70px;
+  width: 85px;
+  height: 30px;
+  line-height: 30px;
   font-size: 13px;
   color: #fff;
   font-family: "Quicksand";
   text-align: center;
   position: relative;
+  border-radius: 50px;
+  background-color: #333;
 
 }
 
 .bot .code {
-  width: 58px;
+  width: 73px;
+  height: 30px;
+  line-height: 30px;
   font-size: 13px;
   color: #fff;
   font-family: "Quicksand";
   text-align: center;
   position: relative;
+  border-radius: 50px;
+  background-color: #333;
 
 }
 
