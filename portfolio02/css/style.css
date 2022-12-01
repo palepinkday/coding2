@@ -463,7 +463,7 @@ nav a {
   left: 50%;
   transform: translateX(-50%) translateY(-35px);
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "BMJua";
   opacity: 0;
   transition: all 0.3s ease-in-out;
