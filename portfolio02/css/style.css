@@ -142,7 +142,7 @@ nav a {
 
 .keyword .webstandard .modal .desc .left {
   width: 66%;
-  height: 500px;
+  height: 700px;
   overflow: auto;
 }
 
@@ -153,10 +153,29 @@ nav a {
   margin-top: 30px;
 }
 
+/* quiz_effect */
+.keyword .quiz_effect .modal .desc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keyword .quiz_effect .modal .desc .left {
+  width: 66%;
+  height: 700px;
+  overflow: auto;
+}
+
+.keyword .quiz_effect .modal .desc .right {
+  padding-left: 1%;
+  width: 34%;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
 /* photoshop_website */
 .keyword .photoshop_website .modal .desc .left {
   width: 100%;
-  height: 500px;
+  height: 700px;
   overflow: auto;
 }
 
@@ -168,7 +187,7 @@ nav a {
 /* banner_design01 */
 .keyword .banner_design01 .modal .desc .left {
   width: 100%;
-  height: 500px;
+  height: 700px;
   overflow: auto;
 }
 
@@ -181,7 +200,7 @@ nav a {
 /* banner_design02 */
 .keyword .banner_design02 .modal .desc .left {
   width: 100%;
-  height: 500px;
+  height: 700px;
   overflow: auto;
 }
 
@@ -209,7 +228,7 @@ nav a {
 }
 
 .keyword .Illustrator_icon .modal .desc .left {
-  width: 40%;
+  width: 45%;
 }
 
 .keyword .Illustrator_icon .modal .desc .right {
@@ -226,6 +245,7 @@ nav a {
   width: 100%;
 }
 
+/* banner_design img */
 .banner_design01>.modal>.desc>.left img {
   margin-bottom: 5px;
 }
@@ -257,8 +277,9 @@ nav a {
   width: 30%;
 }
 
+/* Illustrator_icon img*/
 .Illustrator_icon>.modal>.desc>.left img {
-  width: 90%;
+  width: 100%;
 }
 
 .keyword>div .modal .close {
