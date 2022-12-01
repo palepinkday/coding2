@@ -135,14 +135,20 @@ nav a {
 }
 
 /* webstandard */
+.keyword .webstandard .modal .desc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .keyword .webstandard .modal .desc .left {
-  width: 100%;
+  width: 66%;
   height: 500px;
   overflow: auto;
 }
 
 .keyword .webstandard .modal .desc .right {
-  width: 60%;
+  padding-left: 1%;
+  width: 34%;
   font-size: 16px;
   margin-top: 30px;
 }
@@ -169,6 +175,7 @@ nav a {
 .keyword .banner_design01 .modal .desc .right {
   width: 100%;
   font-size: 16px;
+  padding: 10px;
 }
 
 /* banner_design02 */
@@ -234,8 +241,20 @@ nav a {
   display: inline;
 }
 
-.banner_design03>.modal>.desc>.left img:last-child {
+.banner_design03>.modal>.desc>.left img:nth-child(3) {
   width: 95%;
+}
+
+.banner_design03>.modal>.desc>.left img:nth-child(4) {
+  width: 30%;
+}
+
+.banner_design03>.modal>.desc>.left img:nth-child(5) {
+  width: 30%;
+}
+
+.banner_design03>.modal>.desc>.left img:nth-child(6) {
+  width: 30%;
 }
 
 .Illustrator_icon>.modal>.desc>.left img {
