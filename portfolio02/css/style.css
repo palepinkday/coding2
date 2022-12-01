@@ -153,6 +153,44 @@ nav a {
   margin-top: 30px;
 }
 
+/* parallax_effect */
+.keyword .parallax_effect .modal .desc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keyword .parallax_effect .modal .desc .left {
+  width: 66%;
+  height: 700px;
+  overflow: auto;
+}
+
+.keyword .parallax_effect .modal .desc .right {
+  padding-left: 1%;
+  width: 34%;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
+/* slider_effect */
+.keyword .slider_effect .modal .desc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keyword .slider_effect .modal .desc .left {
+  width: 66%;
+  height: 700px;
+  overflow: auto;
+}
+
+.keyword .slider_effect .modal .desc .right {
+  padding-left: 1%;
+  width: 34%;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
 /* quiz_effect */
 .keyword .quiz_effect .modal .desc {
   display: flex;
@@ -172,6 +210,25 @@ nav a {
   margin-top: 30px;
 }
 
+/* mouse_effect */
+.keyword .mouse_effect .modal .desc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.keyword .mouse_effect .modal .desc .left {
+  width: 66%;
+  height: 700px;
+  overflow: auto;
+}
+
+.keyword .mouse_effect .modal .desc .right {
+  padding-left: 1%;
+  width: 34%;
+  font-size: 16px;
+  margin-top: 30px;
+}
+
 /* photoshop_website */
 .keyword .photoshop_website .modal .desc .left {
   width: 100%;
@@ -180,6 +237,18 @@ nav a {
 }
 
 .keyword .photoshop_website .modal .desc .right {
+  width: 100%;
+  font-size: 16px;
+}
+
+/*figma_website */
+.keyword .figma_website .modal .desc .left {
+  width: 100%;
+  height: 700px;
+  overflow: auto;
+}
+
+.keyword .figma_website .modal .desc .right {
   width: 100%;
   font-size: 16px;
 }
@@ -241,8 +310,14 @@ nav a {
   border-radius: 10px;
 }
 
+/* webstandard img */
 .webstandard>.modal>.desc>.left img {
   width: 100%;
+}
+
+/* mouse_effect img */
+.mouse_effect>.modal>.desc>.left img {
+  margin-bottom: 5px;
 }
 
 /* banner_design img */
