@@ -72,10 +72,9 @@ nav a {
   text-transform: uppercase;
 }
 
-.keyword {
-}
+.keyword {}
 
-.keyword > div {
+.keyword>div {
   font-size: 3vw;
   display: inline-block;
   margin-right: 2vw;
@@ -83,7 +82,7 @@ nav a {
   position: relative;
 }
 
-.keyword > div .modal {
+.keyword>div .modal {
   background: rgba(211, 205, 190, 0.7);
   backdrop-filter: blur(10px);
   width: 80%;
@@ -98,7 +97,7 @@ nav a {
   transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-.keyword > div .modal h3 {
+.keyword>div .modal h3 {
   line-height: 1;
   font-size: 30px;
   margin-bottom: 30px;
@@ -136,18 +135,18 @@ nav a {
 }
 
 /* webstandard */
-.keyword > .webstandard > .modal > .desc {
+.keyword>.webstandard>.modal>.desc {
   display: flex;
   flex-wrap: wrap;
 }
 
-.keyword > .webstandard > .modal > .desc > .left {
+.keyword>.webstandard>.modal>.desc>.left {
   width: 66%;
   height: 500px;
   overflow: auto;
 }
 
-.keyword > .webstandard > .modal > .desc > .right {
+.keyword>.webstandard>.modal>.desc>.right {
   padding-left: 1%;
   width: 34%;
   height: 500px;
@@ -369,63 +368,62 @@ nav a {
 }
 
 /* img */
-.keyword > div .modal .desc .left img {
+.keyword>div .modal .desc .left img {
   border-radius: 10px;
 }
 
 /* webstandard img */
-.webstandard > .modal > .desc > .left img {
+.webstandard>.modal>.desc>.left img {
   width: 100%;
 }
 
 /* Coding_Clone_Site */
-.webstandard > .modal > .desc > .left img {
+.webstandard>.modal>.desc>.left img {
   width: 100%;
 }
 
 /* mouse_effect img */
-.mouse_effect > .modal > .desc > .left img {
+.mouse_effect>.modal>.desc>.left img {
   margin-bottom: 5px;
 }
 
 /* banner_design img */
-.banner_design01 > .modal > .desc > .left img {
+.banner_design01>.modal>.desc>.left img {
   margin-bottom: 5px;
 }
 
-.banner_design02 > .modal > .desc > .left img {
+.banner_design02>.modal>.desc>.left img {
   margin-bottom: 5px;
 }
 
-.banner_design03 > .modal > .desc > .left img {
+.banner_design03>.modal>.desc>.left img {
   width: 47%;
   margin-bottom: 5px;
-  margin-right: 5px;
   display: inline;
 }
 
-.banner_design03 > .modal > .desc > .left img:nth-child(3) {
+.banner_design03>.modal>.desc>.left img:nth-child(3) {
   width: 95%;
 }
 
-.banner_design03 > .modal > .desc > .left img:nth-child(4) {
+.banner_design03>.modal>.desc>.left img:nth-child(4) {
   width: 30%;
 }
 
-.banner_design03 > .modal > .desc > .left img:nth-child(5) {
+.banner_design03>.modal>.desc>.left img:nth-child(5) {
   width: 30%;
 }
 
-.banner_design03 > .modal > .desc > .left img:nth-child(6) {
+.banner_design03>.modal>.desc>.left img:nth-child(6) {
   width: 30%;
 }
 
 /* Illustrator_icon img*/
-.Illustrator_icon > .modal > .desc > .left img {
+.Illustrator_icon>.modal>.desc>.left img {
   width: 100%;
 }
 
-.keyword > div .modal .close {
+.keyword>div .modal .close {
   position: absolute;
   right: 30px;
   top: 20px;
@@ -473,11 +471,11 @@ nav a {
   background-color: #333;
 }
 
-.keyword > div.open .modal {
+.keyword>div.open .modal {
   top: 10%;
 }
 
-.keyword > div span {
+.keyword>div span {
   position: absolute;
   top: 0px;
   left: 50%;
@@ -489,13 +487,13 @@ nav a {
   transition: all 0.3s ease-in-out;
 }
 
-.keyword > div a:hover + span {
+.keyword>div a:hover+span {
   transform: translateX(-50%) translateY(-15px);
   opacity: 1;
 }
 
-.keyword > div a:before,
-.keyword > div a:after {
+.keyword>div a:before,
+.keyword>div a:after {
   content: "";
   border-bottom: solid 2px #000;
   position: absolute;
@@ -503,26 +501,26 @@ nav a {
   width: 0;
 }
 
-.keyword > div a:before {
+.keyword>div a:before {
   left: 0;
 }
 
-.keyword > div a:after {
+.keyword>div a:after {
   right: 0;
 }
 
-.keyword > div a:hover:before,
-.keyword > div a:hover:after {
+.keyword>div a:hover:before,
+.keyword>div a:hover:after {
   width: 50%;
 }
 
-.keyword > div a:before,
-.keyword > div a:after {
+.keyword>div a:before,
+.keyword>div a:after {
   transition: all 0.2s ease;
 }
 
 @media (max-width: 1125px) {
-  .keyword > .webstandard > .modal > .desc > .right {
+  .keyword>.webstandard>.modal>.desc>.right {
     font-size: 13px;
   }
 
@@ -546,7 +544,7 @@ nav a {
 }
 
 @media (max-width: 500px) {
-  .keyword > .webstandard > .modal > .desc > .right {
+  .keyword>.webstandard>.modal>.desc>.right {
     font-size: 10px;
   }
 
@@ -556,7 +554,7 @@ nav a {
 }
 
 @media (max-width: 330px) {
-  .keyword > .webstandard > .modal > .desc > .right {
+  .keyword>.webstandard>.modal>.desc>.right {
     font-size: 5px;
   }
 
