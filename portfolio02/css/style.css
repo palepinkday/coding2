@@ -147,11 +147,11 @@ nav a {
 }
 
 .keyword>.webstandard>.modal>.desc>.right {
-  padding-left: 1%;
+  padding-left: 2%;
   width: 34%;
   height: 500px;
   font-size: 20px;
-  margin-top: 30px;
+
 }
 
 /* Responsive */
@@ -167,11 +167,11 @@ nav a {
 }
 
 .keyword .Responsive .modal .desc .right {
-  padding-left: 1%;
+  padding-left: 2%;
   width: 34%;
   height: 500px;
   font-size: 20px;
-  margin-top: 30px;
+
 }
 
 /* Coding_Clone_Site */
@@ -187,11 +187,11 @@ nav a {
 }
 
 .keyword .Coding_Clone_Site .modal .desc .right {
-  padding-left: 1%;
+  padding-left: 2%;
   width: 34%;
   height: 500px;
   font-size: 20px;
-  margin-top: 30px;
+
 }
 
 /* parallax_effect */
@@ -207,11 +207,11 @@ nav a {
 }
 
 .keyword .parallax_effect .modal .desc .right {
-  padding-left: 1%;
+  padding-left: 2%;
   width: 34%;
   height: 500px;
   font-size: 20px;
-  margin-top: 30px;
+
 }
 
 /* slider_effect */
@@ -227,11 +227,11 @@ nav a {
 }
 
 .keyword .slider_effect .modal .desc .right {
-  padding-left: 1%;
+  padding-left: 2%;
   width: 34%;
   height: 500px;
   font-size: 20px;
-  margin-top: 30px;
+
 }
 
 /* quiz_effect */
@@ -247,11 +247,11 @@ nav a {
 }
 
 .keyword .quiz_effect .modal .desc .right {
-  padding-left: 1%;
+  padding-left: 2%;
   width: 34%;
   height: 500px;
   font-size: 20px;
-  margin-top: 30px;
+
 }
 
 /* mouse_effect */
@@ -267,11 +267,11 @@ nav a {
 }
 
 .keyword .mouse_effect .modal .desc .right {
-  padding-left: 1%;
+  padding-left: 2%;
   width: 34%;
   height: 500px;
   font-size: 20px;
-  margin-top: 30px;
+
 }
 
 /* photoshop_website */
@@ -285,6 +285,8 @@ nav a {
   width: 100%;
   height: 500px;
   font-size: 20px;
+  margin-top: 10px;
+
 }
 
 /*figma_website */
@@ -298,6 +300,7 @@ nav a {
   width: 100%;
   height: 500px;
   font-size: 20px;
+  margin-top: 10px;
 }
 
 /* banner_design01 */
@@ -310,7 +313,8 @@ nav a {
 .keyword .banner_design01 .modal .desc .right {
   width: 100%;
   font-size: 20px;
-  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
 }
 
 /* page_design */
@@ -323,11 +327,11 @@ nav a {
 .keyword .page_design .modal .desc .right {
   width: 100%;
   font-size: 20px;
-  padding: 10px;
+  margin-top: 10px;
 }
 
 /* banner_design02 */
-.keyword .banner_design02 .modal .desc .left {
+/* .keyword .banner_design02 .modal .desc .left {
   width: 100%;
   height: 500px;
   overflow: auto;
@@ -336,7 +340,7 @@ nav a {
 .keyword .banner_design02 .modal .desc .right {
   width: 100%;
   font-size: 20px;
-}
+} */
 
 /* banner_design03 */
 .keyword .banner_design03 .modal .desc .left {
@@ -348,7 +352,7 @@ nav a {
 .keyword .banner_design03 .modal .desc .right {
   width: 100%;
   font-size: 20px;
-  padding: 10px;
+  margin-top: 10px;
 }
 
 /* Illustrator_icon */
@@ -365,6 +369,7 @@ nav a {
   width: 50%;
   height: 500px;
   font-size: 20px;
+  padding-right: 2%;
 }
 
 /* img */
@@ -446,7 +451,7 @@ nav a {
 }
 
 .bot .site_view {
-  width: 90px;
+  width: 100px;
   height: 40px;
   line-height: 40px;
   font-size: 15px;
@@ -459,7 +464,7 @@ nav a {
 }
 
 .bot .code {
-  width: 80px;
+  width: 100px;
   height: 40px;
   line-height: 40px;
   font-size: 16px;
@@ -517,6 +522,16 @@ nav a {
 .keyword>div a:before,
 .keyword>div a:after {
   transition: all 0.2s ease;
+}
+
+#footer {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.phon {
+  font-size: 25px;
 }
 
 @media (max-width: 1125px) {
