@@ -367,7 +367,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   padding-left: 8px;
-  padding-bottom: 5px;
+
   max-height: 40px;
 }
 .notice2 li:before {
@@ -388,6 +388,173 @@ body {
   text-transform: uppercase;
   font-size: 10px;
 }
+/* blog1 */
+.blog1 img {
+  width: 100%;
+}
+
+.blog1 .img-retina {
+  display: none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5),
+  only screen and (min-resolution: 1.5dppx) {
+  .blog1 .img-retina {
+    display: initial;
+  }
+  .blog1 .img-normal {
+    display: none;
+  }
+}
+
+/* blog2 */
+.blog2 h5 {
+  color: #fff;
+  text-align: center;
+  padding: 30px 30px;
+  text-transform: uppercase;
+}
+.blog2 p {
+  padding-top: 5px;
+}
+.blog2 .img-retina {
+  background-image: url(../img/blog4_@1.jpg);
+  background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 2dppx) {
+  .blog2 .img-retina {
+    background-image: url(../img/blog4_@2.jpg);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (min-device-pixel-ratio: 3),
+  only screen and (min-resolution: 3dppx) {
+  .blog2 .img-retina {
+    background-image: url(../img/blog4_@3.jpg);
+  }
+}
+
+/* 이미지 슬라이드 */
+.slider figure {
+  position: relative;
+}
+.slider figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 18px;
+}
+.slider figcaption em {
+  display: block;
+  font-weight: bold;
+  font-size: 28px;
+  text-transform: uppercase;
+  font-family: "Abel", sans-serif;
+  opacity: 0;
+  transition: all 0.84s ease;
+  transform: translateX(50px);
+}
+.slider figcaption span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.84s 0.2s ease;
+  transform: translateX(50px);
+}
+.slider .slick-active figcaption em {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slider .slick-active figcaption span {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slider .slick-dots {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.slider .slick-dots li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+}
+.slider .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background: #5dbfeb;
+  border-radius: 50%;
+}
+.slider .slick-dots li.slick-active button {
+  background: #2b91c8;
+}
+.slider .slick-prev {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-indent: -9999px;
+  font: normal normal normal 14px/1 FontAwesome;
+  background: #fff;
+}
+.slider .slick-prev:before {
+  content: "\f053";
+  color: #5dbfeb;
+  text-indent: 0;
+  position: absolute;
+  left: 9px;
+  top: 8px;
+}
+.slider .slick-next {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-indent: -9999px;
+  font: normal normal normal 14px/1 FontAwesome;
+  background: #fff;
+}
+.slider .slick-next:before {
+  content: "\f054";
+  color: #5dbfeb;
+  text-indent: 0;
+  position: absolute;
+  left: 11px;
+  top: 8px;
+}
+
+/* lightbox */
+.square a {
+  float: left;
+  width: 19%;
+  margin: 0.5%;
+}
+.square a img {
+  width: 100%;
+  display: block;
+}
 
 @media (max-width: 1220px) {
   .container {
@@ -407,8 +574,21 @@ body {
     margin-right: 0;
     border-right: 0;
   }
+  .square a {
+    width: 24%;
+  }
+  .square a:nth-child(5n) {
+    display: none;
+  }
 }
+
 @media (max-width: 1024px) {
+  .square a {
+    width: 32.3333%;
+  }
+  .square a:nth-child(5) {
+    display: block;
+  }
 }
 
 @media (max-width: 960px) {
@@ -507,14 +687,39 @@ body {
   .column.col4 {
     border-top: 1px solid #dbdbdb;
   }
+  .slider figcaption {
+    padding: 10px;
+  }
+  .slider figcaption {
+    padding: 10px;
+  }
+  .slider figcaption em {
+    font-size: 18px;
+  }
+  .slider figcaption span {
+    font-size: 14px;
+  }
+  .square a {
+    width: 49%;
+  }
+  .square a:nth-child(5) {
+    display: none;
+  }
 }
+
 @media (max-width: 480px) {
 }
+
 @media (max-width: 320px) {
   .nav > div li {
     width: 100%;
   }
   .nav > div:last-child li {
     width: 100%;
+  }
+  .square a {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
   }
 }
