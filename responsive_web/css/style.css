@@ -7,7 +7,7 @@ body {
 
 #nav {
   background-color: #f6fdff;
-  display: none;
+
 }
 
 #title {
@@ -269,6 +269,8 @@ body {
   border-radius: 50%;
   transition: all 0.3s ease;
 }
+
+.title .btn.open {}
 
 .title .btn:hover {
   box-shadow: 0 0 0 3px rgba(75, 154, 191, 0.9) inset,
