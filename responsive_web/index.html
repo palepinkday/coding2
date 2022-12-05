@@ -491,15 +491,15 @@
 
     //접기, 펼치기
     $(".btn").click(function (e) {
+
       e.preventDefault();
       $(".nav").slideToggle();
       $(".btn").toggleClass("open");
 
-      if ((".btn").hasClass("open")) {
+      if ($(".btn").hasClass("open")) {
         //open이 있을때
         $(".btn").find("i").attr("class", "fa-angle-up")
-      }
-      else {
+      } else {
         //open이 없을때
         $(".btn").find("i").attr("class", "fa-angle-down")
       }
