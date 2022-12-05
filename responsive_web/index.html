@@ -421,9 +421,15 @@
             <h4 class="col_tit">Effect1</h4>
             <p class="col_desc">CSS의 transform을 이용한 마우스 오버효과 입니다.</p>
             <!-- side1 -->
-            <figure>
-              <img src="img/side1.jpg" alt="이미지1">
-            </figure>
+            <div class="side1">
+              <figure class="front">
+                <img src="img/side1.jpg" alt="이미지1">
+              </figure>
+              <div class="back">
+                <i class="fa fa-heart" aria-hidden="true"></i>
+              </div>
+            </div>
+
             <!-- //side1 -->
           </article>
           <!-- //col7 -->
@@ -431,9 +437,21 @@
             <h4 class="col_tit">Effect2</h4>
             <p class="col_desc">CSS의 transform을 이용한 마우스 오버효과 입니다.</p>
             <!-- side2 -->
-            <figure>
-              <img src="img/side2.jpg" alt="이미지2">
-            </figure>
+            <div class="side2">
+              <figure class="front">
+                <img src="img/side2.jpg" alt="이미지2">
+                <figcaption>
+                  Hover Effect
+                </figcaption>
+              </figure>
+              <figure class="back">
+                <img src="img/side2.jpg" alt="이미지2">
+                <figcaption>
+                  Hover Effect
+                </figcaption>
+              </figure>
+            </div>
+
             <!-- //side2 -->
           </article>
           <!-- //col8-->
@@ -441,8 +459,11 @@
             <h4 class="col_tit">Effect3</h4>
             <p class="col_desc">CSS의 transform을 이용한 마우스 오버효과 입니다..</p>
             <!-- side3 -->
-            <figure>
+            <figure class="side3">
               <img src="img/side3.jpg" alt="이미지2">
+              <figcaption>
+                <h3>Hover <em>Effect</em> </h3>
+              </figcaption>
             </figure>
             <!-- //side3 -->
           </article>
@@ -494,11 +515,18 @@
 
       e.preventDefault();
       $(".nav").slideToggle();
+      // .slideToggle()은 보이지 않는 요소는 아래쪽으로 서서히 나타나게 하고,
+      //  보이는 요소는 위쪽으로 서서히 사라지게 합니다.
       $(".btn").toggleClass("open");
+      // $('p').toggleClass('xyz');
+      // 는, p 요소에 xyz 클래스가 없으면 추가하고, 있으면 제거합니다.
 
       if ($(".btn").hasClass("open")) {
         //open이 있을때
         $(".btn").find("i").attr("class", "fa fa-angle-up")
+        //  예를 들어 아래는 h1 요소에 title 속성을 추가하고 속성의 값은 
+        //  Hello로 한다.
+        //   $('h1').attr('title', 'Hello');
       } else {
         //open이 없을때
         $(".btn").find("i").attr("class", "fa fa-angle-down")

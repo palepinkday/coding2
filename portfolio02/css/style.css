@@ -407,6 +407,11 @@ nav a {
   display: inline;
 }
 
+/* Responsive img */
+.keyword .Responsive .modal .desc .left img {
+  width: 100%;
+}
+
 .banner_design03>.modal>.desc>.left img:nth-child(3) {
   width: 95%;
 }
