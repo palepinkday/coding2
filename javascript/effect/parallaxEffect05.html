@@ -217,7 +217,7 @@
   <body>
     <header id="header">
       <h1>Javascript Parallax Effect01</h1>
-      <p>패럴랙스 이펙트 - 메뉴이동</p>
+      <p>패럴랙스 이펙트 - 이질감효과</p>
       <ul>
         <li><a href="parallaxEffect01.html">1</a></li>
         <li><a href="parallaxEffect02.html">2</a></li>
@@ -995,34 +995,29 @@ document.querySelectorAll("#parallax__nav li a").forEach(li =&gt; {
     <script src="../assets/js/common.js"></script>
 
     <script>
-      //재귀함수
+      const parallaxItem = document.querySelectorAll(".content__item");
+
       function scroll() {
         let scrollTop =
           window.pageYOffset ||
           document.documentElement.scrollTop ||
-          window.screenY;
-        document.querySelector("#parallax__info span").innerText =
-          Math.ceil(scrollTop);
-        document.querySelectorAll(".content__item").forEach((item) => {
+          window.scrollY;
+
+        // const img = document.querySelector("#section1 .content__item__img")
+        // img.style.transform = "translateY("+scrollTop/10+"px)";
+
+        parallaxItem.forEach((item) => {
+          let offset1 = (scrollTop - item.offsetTop) * 0.1;
+          let offset2 = (scrollTop - item.offsetTop) * 0.15;
+
           const target1 = item.querySelector(".content__item__img");
           const target2 = item.querySelector(".content__item__desc");
-          //   const target3 = item.querySelector(".content__item__num");
-          const target3 = item.querySelector(".content__item__desc");
-
-          let offset1 = (scrollTop - item.offsetTop) * 0.2;
-          let offset2 = (scrollTop - item.offsetTop) * 0.15;
-          let offset3 = (scrollTop - item.offsetTop) * 0.2;
 
           target1.style.transform = `translateY(${offset1}px)`;
-          target2.style.transform = `translateY(${offset2}px)`;
-          //   target3.style.transform = `translateY(${offset3}px)`;
-          target3.style.transform = `translateY(${offset3}px)`;
-
-          //   gsap.to(target1, { duration: 0.3, y: offset1, ease: "power4.out" });
-          //   gsap.to(target2, { duration: 0.3, y: offset2 });
-          //   gsap.to(target3, { duration: 0.3, y: offset3, ease: "expo.out" });
+          target2.style.transform = `translateY(${-offset2}px)`;
         });
-        requestAnimationFrame(scroll); //1분에 60번실행 메모리 적게 차지
+
+        requestAnimationFrame(scroll);
       }
       scroll();
     </script>
