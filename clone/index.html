@@ -12,12 +12,12 @@
     <title>메가박스 사이트 코딩하기</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="assets/icons/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
+    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="icons/favicon_72.png" />
     <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
     <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
@@ -35,6 +35,11 @@
     <meta name="twitter:image" content="https://webstoryboy.github.io/megabox2019/mega.jpg">
     <meta name="twitter:description" content="메가박스 사이트 따라하면서 배우는 튜토리얼입니다.">
 
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+
     <!-- HTLM5shiv ie6~8 -->
     <!--[if lt IE 9]> 
           <script src="assets/js/html5shiv.min.js"></script>
@@ -46,10 +51,34 @@
 </head>
 
 <body>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header clearfix">
+                    <h1><a href="#">
+                            <em><img src="img/logo.png" alt="메가박스"></em>
+                            <strong><img src="img/logo-sub.png" alt="라이프 시어터"></strong>
+                        </a></h1>
+                    <nav class="nav">
+                        <ul class="clearfix">
+                            <li><a href="#">영화</a></li>
+                            <li><a href="#">큐레이션</a></li>
+                            <li><a href="#">영화관</a></li>
+                            <li><a href="#">특별관</a></li>
+                            <li><a href="#">스토어</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">로그인</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
     <!-- 자바스크립트 라이브러리 -->
-    <script src="assets/js/jquery.min_1.12.4.js"></script>
-    <script src="assets/js/modernizr-custom.js"></script>
-    <script src="assets/js/ie-checker.js"></script>
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/ie-checker.js"></script>
 </body>
 
 </html>
