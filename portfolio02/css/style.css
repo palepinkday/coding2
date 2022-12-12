@@ -537,9 +537,9 @@ nav a {
   font-size: 25px;
 }
 
-.site.up a {
+/* .SITES.up a {
   color: #fff;
-}
+} */
 
 @media (max-width: 1125px) {
   .keyword>.webstandard>.modal>.desc>.right {

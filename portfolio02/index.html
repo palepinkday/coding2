@@ -50,15 +50,15 @@
     <div class="contaienr">
       <div class="title">
         <ul>
-          <li class="study"><a href="/">STUDY</a></li>
-          <li class="site"><a href="/">SITES</a></li>
-          <li><a href="/">DESIGN</a></li>
-          <li><a href="/">JAVASCRIPT</a></li>
+          <li><a href="#">STUDY</a></li>
+          <li><a href="#">SITES</a></li>
+          <li><a href="#">DESIGN</a></li>
+          <li><a href="#">JAVASCRIPT</a></li>
         </ul>
       </div>
       <div class="keyword">
-        <div class="webstandard" class="site">
-          <a href="#" class="btn-modal">Webstandard</a>
+        <div class="webstandard">
+          <a href="#" class="SITES" class="btn-modal">Webstandard</a>
           <span>웹표준 코딩 작업</span>
           <div class="modal">
             <h3>웹표준 코딩 작업</h3>
@@ -89,12 +89,8 @@
             <a href="#" class="close">닫기</a>
           </div>
         </div>
-
-
-
-
-        <div class="Responsive" class="site">
-          <a href="#" class="btn-modal">Responsive Web</a>
+        <div class="Responsive">
+          <a href="#" class="SITES" class="btn-modal">Responsive Web</a>
           <span>반응형웹 코딩 작업</span>
           <div class="modal">
             <h3>반응형웹 코딩 작업</h3>
@@ -202,8 +198,8 @@
 
 
 
-        <div class="Coding_Clone_Site" class="site">
-          <a href="#" class="btn-modal">Coding Clone Site</a>
+        <div class="Coding_Clone_Site">
+          <a href="#" class="SITES" class="btn-modal">Coding Clone Site</a>
           <span>클론 코딩 사이트</span>
           <div class="modal">
             <h3>클론 코딩 사이트</h3>
@@ -417,11 +413,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-  $(".title>ul>li").click(function (e) {
+  $(".title > ul > li").click(function (e) {
     e.preventDefault();
     let text = $(this).text();
-    // $(".keyword>div").removeClass("up");
-    if ($(".keyword>div").hasClass(text)) {
+    $(".keyword > div").removeClass("up");
+    if ($(".keyword > div").hasClass(text)) {
       $("." + text).addClass("up");
     }
   });

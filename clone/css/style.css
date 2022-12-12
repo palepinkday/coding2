@@ -28,6 +28,14 @@
   background-size: cover;
 }
 
+#new {}
+
+#help {}
+
+#footer {
+  background: #211f1f;
+}
+
 /* 가운데 영역 */
 .container {
   position: relative;
@@ -755,14 +763,13 @@
 
 /* notice */
 .notice {
-  padding: 17px;
   position: relative;
+  padding: 17px;
 }
 
 .notice ul {
   overflow: hidden;
 }
-
 
 .notice ul li {
   float: left;
@@ -771,7 +778,7 @@
 }
 
 .notice ul li a {
-  border: 1px solid#dbdbdb;
+  border: 1px solid #dbdbdb;
   font-size: 15px;
   color: #666;
   display: block;
@@ -781,7 +788,7 @@
 }
 
 .notice ul li.active a {
-  background: #fff;
+  background-color: #fff;
 }
 
 .notice ul li ul {
@@ -789,15 +796,14 @@
   left: 17px;
   top: 70px;
   width: 90%;
-
 }
 
 .notice ul li ul li {
   width: 100%;
+  box-sizing: border-box;
   text-align: left;
   padding: 17px;
   border-bottom: 1px solid #dbdbdb;
-  box-sizing: border-box;
 }
 
 .notice ul li ul li:last-child {
@@ -807,8 +813,6 @@
 .notice ul li ul li dt em {
   color: #999;
 }
-
-.notice ul li ul li dt {}
 
 .notice ul li ul li dt .bar {
   position: relative;
@@ -860,16 +864,16 @@
 .card ul li strong {
   display: block;
   font-size: 18px;
-  padding-left: 120px;
   color: #777;
+  padding-left: 120px;
 }
 
 .card ul li em {
   display: block;
   font-size: 14px;
-  padding-left: 120px;
   color: #777;
   font-weight: 300;
+  padding-left: 120px;
 }
 
 /* 고객센터 */
@@ -913,7 +917,124 @@
   border-right: 0;
 }
 
+/* footer */
 
+.footer_sns {
+  position: absolute;
+  right: 17px;
+  top: 33px;
+  z-index: 1;
+}
+
+.footer_sns li {
+  display: inline-block;
+
+}
+
+.footer_sns li a {
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+.footer_sns li.s1 {
+  background-position: 0 -375px;
+}
+
+.footer_sns li.s2 {
+  background-position: -36px -375px;
+}
+
+.footer_sns li.s3 {
+  background-position: -72px -375px;
+}
+
+.footer_sns li.s4 {
+  background-position: -108px -375px;
+}
+
+.footer_sns li.s5 {
+  background-position: -144px -375px;
+}
+
+.footer_sns li.s1:hover {
+  background-position: 0 -411px;
+}
+
+.footer_sns li.s2:hover {
+  background-position: -36px -411px;
+}
+
+.footer_sns li.s3:hover {
+  background-position: -72px -411px;
+}
+
+.footer_sns li.s4:hover {
+  background-position: -108px -411px;
+}
+
+.footer_sns li.s5:hover {
+  background-position: -144px -411px;
+}
+
+.footer_sns .tel {
+  text-align: right;
+  padding-top: 5px;
+}
+
+.footer_sns .tel a {
+  color: #8f8f8f;
+  font-size: 21px;
+}
+
+.footer_sns .tel a em {
+  color: #fff;
+}
+
+.footer_info {
+  padding: 50px 0;
+}
+
+.footer_info h2 img {
+  width: 150px;
+}
+
+.footer_info ul {
+  padding: 15px 0;
+}
+
+.footer_info li {
+  position: relative;
+  display: inline;
+  padding-right: 16px;
+  white-space: nowrap;
+  /* 두줄을 한줄로 */
+}
+
+.footer_info li:after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 1px;
+  height: 11px;
+  background: #8f8f8f;
+}
+
+.footer_info li:last-child:after {
+  width: 0;
+  height: 0;
+}
+
+.footer_info li a {
+  color: #8f8f8f;
+
+}
+
+.footer_info address p {
+  color: #8f8f8f;
+  padding-bottom: 15px;
+}
 
 /* media */
 @media (max-width: 1290px) {
@@ -974,23 +1095,42 @@
     display: none;
   }
 
-  .help .article.help_box1 {
+  .help article.help_box1 {
     width: 49%;
-    margin-right: 1%;
+    margin-right: 2%;
   }
 
-  .help .article.help_box2 {
+  .help article.help_box2 {
     width: 49%;
     margin-right: 0;
   }
 
-  .help .article.help_box3 {
+  .help article.help_box3 {
     width: 100%;
     margin-top: 2%;
   }
 
-  .help .article {
+  .help article {
     height: auto;
+  }
+
+  .service li {
+    width: 25%;
+    height: auto;
+  }
+
+  .service li:nth-child(1) {
+    border-bottom: 1px solid #d7d7d7;
+  }
+
+  .service li:nth-child(2) {
+    border-bottom: 1px solid #d7d7d7;
+    border-right: 0;
+  }
+
+  .service li a strong {
+    display: block;
+    padding-bottom: 10%;
   }
 
 }
@@ -1202,6 +1342,65 @@
   .new .new_right {
     padding: 24px;
   }
+
+  #help .row {
+    padding: 0 24px;
+
+  }
+
+  .help article.help_box1 {
+    width: 100%;
+    margin-right: 0;
+    background: #fff;
+    margin-top: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+
+  }
+
+  .help article.help_box1 h3 {
+    font-size: 24px;
+    font-weight: 700;
+    height: 27px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .help article.help_box2 {
+    width: 100%;
+    margin-right: 0;
+    background: #fff;
+    margin-top: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .help article.help_box2 h3 {
+    font-size: 24px;
+    font-weight: 700;
+    height: 27px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+
+  .help article.help_box3 {
+    width: 100%;
+    margin-top: 0;
+    background: #fff;
+    margin-top: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+  }
+
+  .help article.help_box3 h3 {
+    display: none;
+  }
+
+  .help article.help_box3>div {
+    height: auto;
+
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -1429,6 +1628,55 @@
   .new .new_right .select .s2 {
     width: 100%;
   }
+
+  #help .row {
+    padding: 0 8px;
+
+  }
+
+  .help article.help_box1 {
+    margin-top: 8px;
+    padding: 16px;
+  }
+
+  .help article.help_box2 {
+    margin-top: 8px;
+    padding: 16px;
+  }
+
+  .help article.help_box3 {
+    margin-top: 8px;
+    padding: 16px;
+  }
+
+  .help article.help_box1 h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .help article.help_box2 h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .card {
+    padding: 8px;
+  }
+
+  .service li {
+    border: 0;
+    width: 50%;
+  }
+
+  .service li:nth-child(1) {
+    width: 50%;
+    border-right: 1px solid #d7d7d7;
+  }
+
+  .service li:nth-child(3) {
+    width: 50%;
+    border-right: 1px solid #d7d7d7;
+  }
 }
 
 @media (max-width: 480px) {}
@@ -1437,4 +1685,63 @@
   .movie_title li a {
     margin-right: 9px;
   }
+
+  .notice {
+    padding: 8px;
+
+  }
+
+  .notice ul li ul {
+    left: 9px;
+    top: 56px;
+  }
+
+  .notice ul li ul li {
+    padding: 8px;
+
+  }
+
+  .notice ul li a {
+    padding: 5px 10px;
+
+  }
+
+  .help article>div {
+    height: 287px;
+  }
+
+  .card ul li {
+    padding: 8px;
+    margin-bottom: 8px;
+    min-height: 90px;
+  }
+
+  .card ul li span {
+    left: 11px;
+    top: 10px;
+
+  }
+
+  .card ul li span img {
+    width: 60px;
+  }
+
+  .card ul li strong {
+    padding-left: 75px;
+    font-style: 14px;
+  }
+
+  .card ul li em {
+    padding-left: 75px;
+  }
+
+  .service li a span {
+    width: 70px;
+    height: 70px;
+  }
+
+  .service li a strong {
+    font-size: 14px;
+  }
+
 }
