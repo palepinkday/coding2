@@ -374,7 +374,7 @@
 .movie_chart>div>div>div {
   float: left;
   width: 292px;
-  height: 592px;
+  /* height: 592px; */
   margin-right: 18px;
 }
 
@@ -1306,16 +1306,6 @@ body.modal_on {
     padding: 0 16px;
   }
 
-  #movie {
-    background: none;
-  }
-
-  #movie .row {
-    background: #fff;
-    margin: 24px 24px 0 24px;
-    padding: 24px;
-  }
-
   #mNav {
     right: 6px;
   }
@@ -1326,6 +1316,16 @@ body.modal_on {
 
   .header h1 strong {
     display: none;
+  }
+
+  #movie {
+    background: none;
+  }
+
+  #movie .row {
+    background: #fff;
+    margin: 24px 24px 0 24px;
+    padding: 24px;
   }
 
   #movie .ir_so {
@@ -1380,7 +1380,7 @@ body.modal_on {
   .movie_title li.active a:before {
     content: "";
     position: absolute;
-    z-index: 1000;
+    z-index: 2;
     left: 0;
     bottom: -10px;
     width: 100%;
@@ -1486,9 +1486,9 @@ body.modal_on {
 
   .help article.help_box3 {
     width: 100%;
-    margin-top: 0;
     background: #fff;
     margin-top: 24px;
+    /* margin-top: 0; */
     padding: 24px;
     box-sizing: border-box;
   }
