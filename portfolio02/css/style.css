@@ -48,8 +48,7 @@ nav a {
   text-transform: uppercase;
 }
 
-
-.font1 {
+footer .font1 {
   font-family: "Quicksand";
   font-weight: 100;
 }
@@ -174,19 +173,19 @@ nav a {
   font-size: 20px;
 }
 
-/* Coding_Clone_Site */
-.keyword .Coding_Clone_Site .modal .desc {
+/* Clone_Coding_Site */
+.keyword .Clone_Coding_Site .modal .desc {
   display: flex;
   flex-wrap: wrap;
 }
 
-.keyword .Coding_Clone_Site .modal .desc .left {
+.keyword .Clone_Coding_Site .modal .desc .left {
   width: 66%;
   height: 500px;
   overflow: auto;
 }
 
-.keyword .Coding_Clone_Site .modal .desc .right {
+.keyword .Clone_Coding_Site .modal .desc .right {
   padding-left: 2%;
   width: 34%;
   height: 500px;
