@@ -27,20 +27,21 @@ h6 {
     font-weight: normal;
 }
 
-#imageType {
-}
+#imageType {}
 
-#imageType > h2 {
+#imageType>h2 {
     font-size: 50px;
     margin-bottom: 20px;
 }
-#imageType > p {
+
+#imageType>p {
     font-size: 22px;
     font-weight: 300;
     margin-bottom: 70px;
     text-align: center;
     color: #777;
 }
+
 .image__inner {
     display: flex;
     justify-content: space-between;
@@ -93,22 +94,26 @@ h6 {
     background-color: #c5740a;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 750px) {
+    .image__title {
+        font-size: 24px;
+    }
 }
+
 @media (max-width: 600px) {
     .image__inner {
         flex-direction: column;
     }
+
     .image {
         width: 100%;
         padding: 210px 20px 20px 20px;
     }
+
     .image:first-child {
         margin-bottom: 20px;
     }
-    .image__title {
-        font-size: 24px;
-    }
+
     /* .image__desc {
         font-size: 16px;
     } */

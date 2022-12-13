@@ -34,6 +34,7 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
 @media (max-width: 960px) {
     .card {
         width: 32%;
@@ -49,12 +50,19 @@
     .card__inner {
         display: block;
     }
+
     .card:first-child {
         margin-bottom: 20px;
     }
+
+    .card:last-child {
+        margin-top: 20px;
+    }
+
     .card__body {
         padding: 20px;
     }
+
     .card__body .desc {
         font-size: 16px;
     }
