@@ -4,7 +4,8 @@
     /* YouTube iframe API: https://developers.google.com/youtube/player_parameters */
     
     (function handleTrailer() {
-        // 셀렉터 캐시
+        // 셀렉터 캐시(객체로 이용하는 방법)
+    
         var $selector = {
             body: $( "body" ),
             overlay: $( "#blackout" ),
@@ -12,6 +13,9 @@
             showButton: $( "#showTrailer" ),
             hideButton: $( "#hideTrailer" ),
         };
+
+        // var body = $("body"),
+        //     overlay = $("#blackout"),
         
         // 플레이어
         var player = {
