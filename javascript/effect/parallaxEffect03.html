@@ -1,574 +1,498 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>패럴랙스 이펙트03</title>
 
-    <link rel="stylesheet" href="../assets/css/parallax.css" />
-    <link rel="stylesheet" href="../assets/css/dracula.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>패럴랙스 이펙트03</title>
 
-    <link
-      href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="../assets/css/parallax.css" />
+  <link rel="stylesheet" href="../assets/css/dracula.css" />
 
-    <style>
-      /* parallax__nav */
-      #parallax__nav {
-        position: fixed;
-        right: 20px;
-        top: -200px;
-        z-index: 2000;
-        background-color: rgba(0, 0, 0, 0.4);
-        padding: 20px 30px;
-        border-radius: 50px;
-        transition: top 0.4s ease;
-      }
-      #parallax__nav.show {
-        top: 20px;
-      }
-      #parallax__nav li {
-        display: inline;
-        margin: 0 5px;
-      }
-      #parallax__nav li a {
-        display: inline-block;
-        height: 30px;
-        padding: 5px 20px;
-        text-align: center;
-        line-height: 30px;
-      }
-      #parallax__nav li.active a {
-        background: #fff;
-        color: #000;
-        border-radius: 20px;
-        box-sizing: content-box;
-      }
+  <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* parallax__nav */
+    #parallax__nav {
+      position: fixed;
+      right: 20px;
+      top: -200px;
+      z-index: 2000;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 20px 30px;
+      border-radius: 50px;
+      transition: top 0.4s ease;
+    }
+
+    #parallax__nav.show {
+      top: 20px;
+    }
+
+    #parallax__nav li {
+      display: inline;
+      margin: 0 5px;
+    }
+
+    #parallax__nav li a {
+      display: inline-block;
+      height: 30px;
+      padding: 5px 20px;
+      text-align: center;
+      line-height: 30px;
+    }
+
+    #parallax__nav li.active a {
+      background: #fff;
+      color: #000;
+      border-radius: 20px;
+      box-sizing: content-box;
+    }
+
+    #parallax__cont {
+      max-width: 1600px;
+      width: 98%;
+      margin: 0 auto;
+      overflow: hidden;
+      /* 깨질경우 전체를 감싸는 부분에 overflow: hidden; 넣어줌 */
+      /* background-color: rgba(255, 255, 255, 0.1); */
+    }
+
+    .content__item {
+      width: 1000px;
+      max-width: 70vw;
+      margin: 30vw auto;
+      /* background-color: rgba(255, 255, 255, 0.3); */
+      text-align: left;
+      margin-right: 0;
+      position: relative;
+      padding-top: 8vw;
+    }
+
+    .content__item:nth-child(even) {
+      margin-left: 0;
+      text-align: right;
+    }
+
+    .content__item__num {
+      font-family: "Lato";
+      font-weight: 100;
+      font-size: 35vw;
+      position: absolute;
+      left: -5vw;
+      top: -13vw;
+      opacity: 0.07;
+      z-index: -2;
+    }
+
+    .content__item:nth-child(even) .content__item__num {
+      left: auto;
+      right: -5vw;
+    }
+
+    .content__item__title {
+      font-weight: 700;
+      text-transform: capitalize;
+    }
+
+    .content__item__imgWrap {
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: #000;
+      position: relative;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .content__item__img {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 1);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 110%;
+      height: 110%;
+      left: -5%;
+      top: -5%;
+      filter: saturate(0%);
+      transition: all 1s;
+      opacity: 0.7;
+    }
+
+    .content__item__img:hover {
+      filter: saturate(100%);
+      transform: scale(1.025);
+    }
+
+    .content__item:nth-child(1) .content__item__img {
+      background: url(../assets/img/effect_bg31.jpg) no-repeat center / cover;
+    }
+
+    .content__item:nth-child(2) .content__item__img {
+      background: url(../assets/img/effect_bg22.jpg) no-repeat center / cover;
+    }
+
+    .content__item:nth-child(3) .content__item__img {
+      background: url(../assets/img/effect_bg23.jpg) no-repeat center / cover;
+    }
+
+    .content__item:nth-child(4) .content__item__img {
+      background: url(../assets/img/effect_bg24.jpg) no-repeat center / cover;
+    }
+
+    .content__item:nth-child(5) .content__item__img {
+      background: url(../assets/img/effect_bg30.jpg) no-repeat center / cover;
+    }
+
+    .content__item:nth-child(6) .content__item__img {
+      background: url(../assets/img/effect_bg26.jpg) no-repeat center / cover;
+    }
+
+    .content__item:nth-child(7) .content__item__img {
+      background: url(../assets/img/effect_bg36.jpg) no-repeat center / cover;
+    }
+
+    .content__item:nth-child(8) .content__item__img {
+      background: url(../assets/img/effect_bg28.jpg) no-repeat center / cover;
+    }
+
+    .content__item:nth-child(9) .content__item__img {
+      background: url(../assets/img/effect_bg29.jpg) no-repeat center / cover;
+    }
+
+    .content__item__desc {
+      font-size: 4vw;
+      font-weight: 300;
+      line-height: 1.4;
+      margin-top: -4vw;
+      margin-left: -4vw;
+      word-break: keep-all;
+    }
+
+    .content__item:nth-child(even) .content__item__desc {
+      margin-left: auto;
+      margin-right: -4vw;
+    }
+
+    #parallax__info {
+      position: fixed;
+      left: 20px;
+      bottom: 20px;
+      z-index: 2000;
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #parallax__info li,
+    .scroll {
+      line-height: 1.4;
+    }
+
+    #parallax__top {
+      position: fixed;
+      left: 50%;
+      bottom: -120px;
+      z-index: 10000;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 40px;
+      background: rgba(0, 0, 0, 0.4);
+      text-align: center;
+      line-height: 40px;
+      color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    #parallax__top.show {
+      bottom: 20px;
+    }
+
+    #parallax__top:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    @media (max-width: 800px) {
       #parallax__cont {
-        max-width: 1600px;
-        width: 98%;
-        margin: 0 auto;
-        overflow: hidden;
-        /* 깨질경우 전체를 감싸는 부분에 overflow: hidden; 넣어줌 */
-        /* background-color: rgba(255, 255, 255, 0.1); */
-      }
-      .content__item {
-        width: 1000px;
-        max-width: 70vw;
-        margin: 30vw auto;
-        /* background-color: rgba(255, 255, 255, 0.3); */
-        text-align: left;
-        margin-right: 0;
-        position: relative;
-        padding-top: 8vw;
-      }
-      .content__item:nth-child(even) {
-        margin-left: 0;
-        text-align: right;
-      }
-      .content__item__num {
-        font-family: "Lato";
-        font-weight: 100;
-        font-size: 35vw;
-        position: absolute;
-        left: -5vw;
-        top: -13vw;
-        opacity: 0.07;
-        z-index: -2;
-      }
-      .content__item:nth-child(even) .content__item__num {
-        left: auto;
-        right: -5vw;
-      }
-      .content__item__title {
-        font-weight: 700;
-        text-transform: capitalize;
-      }
-      .content__item__imgWrap {
-        width: 100%;
-        padding-bottom: 56.25%;
-        background: #000;
-        position: relative;
-        overflow: hidden;
-        z-index: -1;
-      }
-      .content__item__img {
-        position: absolute;
-        background-color: rgba(0, 0, 0, 1);
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
-        width: 110%;
-        height: 110%;
-        left: -5%;
-        top: -5%;
-        filter: saturate(0%);
-        transition: all 1s;
-        opacity: 0.7;
-      }
-      .content__item__img:hover {
-        filter: saturate(100%);
-        transform: scale(1.025);
-      }
-      .content__item:nth-child(1) .content__item__img {
-        background: url(../assets/img/effect_bg31.jpg) no-repeat center / cover;
-      }
-      .content__item:nth-child(2) .content__item__img {
-        background: url(../assets/img/effect_bg22.jpg) no-repeat center / cover;
+        margin-top: 70vw;
       }
 
-      .content__item:nth-child(3) .content__item__img {
-        background: url(../assets/img/effect_bg23.jpg) no-repeat center / cover;
+      #parallax__nav {
+        padding: 10px;
+        right: auto;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.8);
       }
 
-      .content__item:nth-child(4) .content__item__img {
-        background: url(../assets/img/effect_bg24.jpg) no-repeat center / cover;
+      #parallax__nav li {
+        display: block;
+        margin: 5px;
       }
 
-      .content__item:nth-child(5) .content__item__img {
-        background: url(../assets/img/effect_bg30.jpg) no-repeat center / cover;
+      #parallax__nav li a {
+        font-size: 14px;
+        padding: 5px;
+        border-radius: 5px;
+        height: auto;
+        line-height: 1;
       }
 
-      .content__item:nth-child(6) .content__item__img {
-        background: url(../assets/img/effect_bg26.jpg) no-repeat center / cover;
+      #parallax__nav li.active a {
+        border-radius: 5px;
       }
 
-      .content__item:nth-child(7) .content__item__img {
-        background: url(../assets/img/effect_bg36.jpg) no-repeat center / cover;
-      }
-
-      .content__item:nth-child(8) .content__item__img {
-        background: url(../assets/img/effect_bg28.jpg) no-repeat center / cover;
-      }
-
-      .content__item:nth-child(9) .content__item__img {
-        background: url(../assets/img/effect_bg29.jpg) no-repeat center / cover;
-      }
-      .content__item__desc {
-        font-size: 4vw;
-        font-weight: 300;
-        line-height: 1.4;
-        margin-top: -4vw;
-        margin-left: -4vw;
-        word-break: keep-all;
-      }
-      .content__item:nth-child(even) .content__item__desc {
-        margin-left: auto;
-        margin-right: -4vw;
-      }
       #parallax__info {
-        position: fixed;
-        left: 20px;
-        bottom: 20px;
-        z-index: 2000;
-        background-color: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        padding: 20px;
-        border-radius: 10px;
+        left: 10px;
+        bottom: 10px;
       }
-      #parallax__info li,
-      .scroll {
-        line-height: 1.4;
-      }
+    }
+  </style>
+</head>
 
-      #parallax__top {
-        position: fixed;
-        left: 50%;
-        bottom: -120px;
-        z-index: 10000;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 40px;
-        background: rgba(0, 0, 0, 0.4);
-        text-align: center;
-        line-height: 40px;
-        color: #fff;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: all 0.3s;
-      }
-      #parallax__top.show {
-        bottom: 20px;
-      }
-      #parallax__top:hover {
-        background: #fff;
-        color: #000;
-      }
+<body>
+  <header id="header">
+    <h1>Javascript Parallax Effect03</h1>
+    <p>패럴랙스 이펙트 - 숨김 메뉴</p>
+    <ul>
+      <li><a href="parallaxEffect01.html">1</a></li>
+      <li><a href="parallaxEffect02.html">2</a></li>
+      <li class="active"><a href="parallaxEffect03.html">3</a></li>
+      <li><a href="parallaxEffect04.html">4</a></li>
+      <li><a href="parallaxEffect05.html">5</a></li>
+      <li><a href="parallaxEffect06.html">6</a></li>
+      <li><a href="parallaxEffect07.html">7</a></li>
+    </ul>
+  </header>
+  <!-- //header -->
 
-      @media (max-width: 800px) {
-        #parallax__cont {
-          margin-top: 70vw;
-        }
-        #parallax__nav {
-          padding: 10px;
-          right: auto;
-          left: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          border-radius: 5px;
-          background-color: rgba(0, 0, 0, 0.8);
-        }
-        #parallax__nav li {
-          display: block;
-          margin: 5px;
-        }
-        #parallax__nav li a {
-          font-size: 14px;
-          padding: 5px;
-          border-radius: 5px;
-          height: auto;
-          line-height: 1;
-        }
-        #parallax__nav li.active a {
-          border-radius: 5px;
-        }
-        #parallax__info {
-          left: 10px;
-          bottom: 10px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header id="header">
-      <h1>Javascript Parallax Effect01</h1>
-      <p>패럴랙스 이펙트 - 숨김 메뉴</p>
-      <ul>
-        <li><a href="parallaxEffect01.html">1</a></li>
-        <li><a href="parallaxEffect02.html">2</a></li>
-        <li class="active"><a href="parallaxEffect03.html">3</a></li>
-        <li><a href="parallaxEffect04.html">4</a></li>
-        <li><a href="parallaxEffect05.html">5</a></li>
-        <li><a href="parallaxEffect06.html">6</a></li>
-        <li><a href="parallaxEffect07.html">7</a></li>
-      </ul>
-    </header>
-    <!-- //header -->
+  <nav id="parallax__nav" class="show">
+    <ul>
+      <li class="active"><a href="#section1">메뉴1</a></li>
+      <li><a href="#section2">메뉴2</a></li>
+      <li><a href="#section3">메 뉴3</a></li>
+      <li><a href="#section4">메뉴4</a></li>
+      <li><a href="#section5">메뉴5</a></li>
+      <li><a href="#section6">메뉴6</a></li>
+      <li><a href="#section7">메뉴7</a></li>
+      <li><a href="#section8">메뉴8</a></li>
+      <li><a href="#section9">메뉴9</a></li>
+    </ul>
+  </nav>
+  <!-- //parallax__nav -->
+  <div id="parallax__top">Top</div>
+  <!-- //parallax__top -->
 
-    <nav id="parallax__nav" class="show">
-      <ul>
-        <li class="active"><a href="#section1">메뉴1</a></li>
-        <li><a href="#section2">메뉴2</a></li>
-        <li><a href="#section3">메 뉴3</a></li>
-        <li><a href="#section4">메뉴4</a></li>
-        <li><a href="#section5">메뉴5</a></li>
-        <li><a href="#section6">메뉴6</a></li>
-        <li><a href="#section7">메뉴7</a></li>
-        <li><a href="#section8">메뉴8</a></li>
-        <li><a href="#section9">메뉴9</a></li>
-      </ul>
-    </nav>
-    <!-- //parallax__nav -->
-    <div id="parallax__top">Top</div>
-    <!-- //parallax__top -->
+  <main id="parallax__cont">
+    <div id="contents">
+      <section id="section1" class="content__item">
+        <span class="content__item__num">01</span>
+        <h2 class="content__item__title">section1</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">
+          신은 용기있는자를 결코 버리지 않는다.
+        </p>
+      </section>
+      <!-- //section1 -->
 
-    <main id="parallax__cont">
-      <div id="contents">
-        <section id="section1" class="content__item">
-          <span class="content__item__num">01</span>
-          <h2 class="content__item__title">section1</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">
-            신은 용기있는자를 결코 버리지 않는다.
-          </p>
-        </section>
-        <!-- //section1 -->
+      <section id="section2" class="content__item">
+        <span class="content__item__num">02</span>
+        <h2 class="content__item__title">section2</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">
+          일단 시작해라.나중에 완벽해지면 된다.
+        </p>
+      </section>
+      <!-- //section2 -->
 
-        <section id="section2" class="content__item">
-          <span class="content__item__num">02</span>
-          <h2 class="content__item__title">section2</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">
-            일단 시작해라.나중에 완벽해지면 된다.
-          </p>
-        </section>
-        <!-- //section2 -->
+      <section id="section3" class="content__item">
+        <span class="content__item__num">03</span>
+        <h2 class="content__item__title">section3</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">행복은 습관이다,그것을 몸에 지녀라.</p>
+      </section>
+      <!-- //section3 -->
 
-        <section id="section3" class="content__item">
-          <span class="content__item__num">03</span>
-          <h2 class="content__item__title">section3</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">행복은 습관이다,그것을 몸에 지녀라.</p>
-        </section>
-        <!-- //section3 -->
+      <section id="section4" class="content__item">
+        <span class="content__item__num">04</span>
+        <h2 class="content__item__title">section4</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">
+          아무것도 하지않으면 아무 일도 일어나지 않는다.
+        </p>
+      </section>
+      <!-- //section4 -->
 
-        <section id="section4" class="content__item">
-          <span class="content__item__num">04</span>
-          <h2 class="content__item__title">section4</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">
-            아무것도 하지않으면 아무 일도 일어나지 않는다.
-          </p>
-        </section>
-        <!-- //section4 -->
+      <section id="section5" class="content__item">
+        <span class="content__item__num">05</span>
+        <h2 class="content__item__title">section5</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">
+          인생에 뜻을 세우는데 있어 늦은 때라곤 없다.
+        </p>
+      </section>
+      <!-- //section5 -->
 
-        <section id="section5" class="content__item">
-          <span class="content__item__num">05</span>
-          <h2 class="content__item__title">section5</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">
-            인생에 뜻을 세우는데 있어 늦은 때라곤 없다.
-          </p>
-        </section>
-        <!-- //section5 -->
+      <section id="section6" class="content__item">
+        <span class="content__item__num">06</span>
+        <h2 class="content__item__title">section6</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">꿈을 꾸기에 인생은 빛난다.</p>
+      </section>
+      <!-- //section6 -->
 
-        <section id="section6" class="content__item">
-          <span class="content__item__num">06</span>
-          <h2 class="content__item__title">section6</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">꿈을 꾸기에 인생은 빛난다.</p>
-        </section>
-        <!-- //section6 -->
+      <section id="section7" class="content__item">
+        <span class="content__item__num">07</span>
+        <h2 class="content__item__title">section7</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">당신이 믿는 대로 될 것이다.</p>
+      </section>
+      <!-- //section7 -->
 
-        <section id="section7" class="content__item">
-          <span class="content__item__num">07</span>
-          <h2 class="content__item__title">section7</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">당신이 믿는 대로 될 것이다.</p>
-        </section>
-        <!-- //section7 -->
+      <section id="section8" class="content__item">
+        <span class="content__item__num">08</span>
+        <h2 class="content__item__title">section8</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">
+          작은 기회로 부터 종종 위대한 업적이 시작된다.
+        </p>
+      </section>
+      <!-- //section8 -->
 
-        <section id="section8" class="content__item">
-          <span class="content__item__num">08</span>
-          <h2 class="content__item__title">section8</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">
-            작은 기회로 부터 종종 위대한 업적이 시작된다.
-          </p>
-        </section>
-        <!-- //section8 -->
+      <section id="section9" class="content__item">
+        <span class="content__item__num">09</span>
+        <h2 class="content__item__title">section9</h2>
+        <figure class="content__item__imgWrap">
+          <div class="content__item__img"></div>
+        </figure>
+        <p class="content__item__desc">
+          얼마나 빨리 가느냐가 아니라 그 목적지가 어디냐는 것이다.
+        </p>
+      </section>
+      <!-- //section9 -->
+    </div>
+  </main>
+  <!-- //main -->
 
-        <section id="section9" class="content__item">
-          <span class="content__item__num">09</span>
-          <h2 class="content__item__title">section9</h2>
-          <figure class="content__item__imgWrap">
-            <div class="content__item__img"></div>
-          </figure>
-          <p class="content__item__desc">
-            얼마나 빨리 가느냐가 아니라 그 목적지가 어디냐는 것이다.
-          </p>
-        </section>
-        <!-- //section9 -->
+  <aside id="parallax__info">
+    <div class="scroll">scrollTop : <span>0</span>px</div>
+    <div class="info"></div>
+  </aside>
+
+  <footer id="footer">
+    <div class="modal__wrap">
+      <div class="modal__btn">
+        <label for="btn">소스 보기</label>
       </div>
-    </main>
-    <!-- //main -->
 
-    <aside id="parallax__info">
-      <div class="scroll">scrollTop : <span>0</span>px</div>
-      <div class="info"></div>
-    </aside>
-
-    <footer id="footer">
-      <div class="modal__wrap">
-        <div class="modal__btn">
-          <label for="btn">소스 보기</label>
-        </div>
-
-        <div class="modal__cont">
-          <div class="modal__box">
-            <div class="title">
-              <span class="dot" aria-label="true"></span>
-              <div class="tabs">
-                <div class="active">
-                  <span class="favicon">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="9" cy="9" r="9" fill="red"></circle>
-                      <path
-                        d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
-                        fill="orange"
-                      ></path>
-                      <path
-                        d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
-                        fill="yellow"
-                      ></path>
-                    </svg>
-                  </span>
-                  <em>Javascript</em>
-                  <span class="close">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M12.5 3.5L3.5 12.5"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M12.5 12.5L3.5 3.5"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </span>
-                </div>
-                <div>
-                  <span class="favicon">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="9" cy="9" r="9" fill="red"></circle>
-                      <path
-                        d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
-                        fill="orange"
-                      ></path>
-                      <path
-                        d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
-                        fill="yellow"
-                      ></path>
-                    </svg>
-                  </span>
-                  <em>HTML</em>
-                  <span class="close">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M12.5 3.5L3.5 12.5"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M12.5 12.5L3.5 3.5"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </span>
-                </div>
-                <div>
-                  <span class="favicon">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <circle cx="9" cy="9" r="9" fill="red"></circle>
-                      <path
-                        d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
-                        fill="orange"
-                      ></path>
-                      <path
-                        d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
-                        fill="yellow"
-                      ></path>
-                    </svg>
-                  </span>
-                  <em>CSS</em>
-                  <span class="close">
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      aria-hidden="true"
-                      focusable="false"
-                    >
-                      <path
-                        d="M12.5 3.5L3.5 12.5"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                      <path
-                        d="M12.5 12.5L3.5 3.5"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
-                    </svg>
-                  </span>
-                </div>
-              </div>
-              <span class="plus" aria-label="true">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <path
-                    d="M2.5 8H13.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M8 2.5V13.5"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </span>
-            </div>
-            <div class="cont">
+      <div class="modal__cont">
+        <div class="modal__box">
+          <div class="title">
+            <span class="dot" aria-label="true"></span>
+            <div class="tabs">
               <div class="active">
-                <pre><code class="language-js">window.addEventListener("scroll", () =&gt; {
+                <span class="favicon">
+                  <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                    <circle cx="9" cy="9" r="9" fill="red"></circle>
+                    <path
+                      d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                      fill="orange"></path>
+                    <path
+                      d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                      fill="yellow"></path>
+                  </svg>
+                </span>
+                <em>Javascript</em>
+                <span class="close">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </div>
+              <div>
+                <span class="favicon">
+                  <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                    <circle cx="9" cy="9" r="9" fill="red"></circle>
+                    <path
+                      d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                      fill="orange"></path>
+                    <path
+                      d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                      fill="yellow"></path>
+                  </svg>
+                </span>
+                <em>HTML</em>
+                <span class="close">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </div>
+              <div>
+                <span class="favicon">
+                  <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                    <circle cx="9" cy="9" r="9" fill="red"></circle>
+                    <path
+                      d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                      fill="orange"></path>
+                    <path
+                      d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z"
+                      fill="yellow"></path>
+                  </svg>
+                </span>
+                <em>CSS</em>
+                <span class="close">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                    <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                    <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <span class="plus" aria-label="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                <path d="M2.5 8H13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path d="M8 2.5V13.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="cont">
+            <div class="active">
+              <pre><code class="language-js">window.addEventListener("scroll", () =&gt; {
     // let scrollTop = window.pageYOffset;
     // let scrollTop = window.scrollY;
     // let scrollTop = document.documentElement.scrollTop;
@@ -673,9 +597,9 @@ document.querySelectorAll("#parallax__nav li a").forEach(li =&gt; {
 // document.querySelector(".offset8").innerText = document.getElementById("section8").offsetTop;
 // document.querySelector(".offset9").innerText = document.getElementById("section9").offsetTop;
 </code></pre>
-              </div>
-              <div>
-                <pre><code class="language-html">&lt;nav id="parallax__nav"&gt;
+            </div>
+            <div>
+              <pre><code class="language-html">&lt;nav id="parallax__nav"&gt;
     &lt;ul&gt;
         &lt;li class="active"&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
@@ -801,9 +725,9 @@ document.querySelectorAll("#parallax__nav li a").forEach(li =&gt; {
     &lt;/div&gt;
 &lt;/aside&gt;
 </code></pre>
-              </div>
-              <div>
-                <pre><code class="language-css"> /* parallax__nav */
+            </div>
+            <div>
+              <pre><code class="language-css"> /* parallax__nav */
       #parallax__nav {
         position: fixed;
         right: 20px;
@@ -985,178 +909,161 @@ document.querySelectorAll("#parallax__nav li a").forEach(li =&gt; {
         }
       }
 </code></pre>
-              </div>
             </div>
+          </div>
 
-            <div></div>
-          </div>
-          <div class="modal__close">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              aria-hidden="true"
-              focusable="false"
-            >
-              <path
-                d="M12.5 3.5L3.5 12.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-              <path
-                d="M12.5 12.5L3.5 3.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></path>
-            </svg>
-          </div>
+          <div></div>
+        </div>
+        <div class="modal__close">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+            <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
         </div>
       </div>
-    </footer>
-    <!-- //footer -->
+    </div>
+  </footer>
+  <!-- //footer -->
 
-    <script src="../assets/js/highlight.min.js"></script>
-    <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/highlight.min.js"></script>
+  <script src="../assets/js/common.js"></script>
 
-    <script>
-      hljs.highlightAll();
-    </script>
+  <script>
+    hljs.highlightAll();
+  </script>
 
-    <script>
-      window.addEventListener("scroll", () => {
-        // let scrollTop = window.pageYOffset;
-        // let scrollTop = window.scrollY;
-        // let scrollTop = document.documentElement.scrollTop;
-        let scrollTop =
-          window.pageYOffset ||
-          window.scrollY ||
-          document.documentElement.scrollTop;
+  <script>
+    window.addEventListener("scroll", () => {
+      // let scrollTop = window.pageYOffset;
+      // let scrollTop = window.scrollY;
+      // let scrollTop = document.documentElement.scrollTop;
+      let scrollTop =
+        window.pageYOffset ||
+        window.scrollY ||
+        document.documentElement.scrollTop;
 
-        // if(scrollTop >= document.getElementById("section1").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(1)").classList.add("active")
-        // }
-        // if(scrollTop >= document.getElementById("section2").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(2)").classList.add("active")
-        // }
-        // if(scrollTop >= document.getElementById("section3").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(3)").classList.add("active")
-        // }
-        // if(scrollTop >= document.getElementById("section4").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(4)").classList.add("active")
-        // }
-        // if(scrollTop >= document.getElementById("section5").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(5)").classList.add("active")
-        // }
-        // if(scrollTop >= document.getElementById("section6").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(6)").classList.add("active")
-        // }
-        // if(scrollTop >= document.getElementById("section7").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(7)").classList.add("active")
-        // }
-        // if(scrollTop >= document.getElementById("section8").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(8)").classList.add("active")
-        // }
-        // if(scrollTop >= document.getElementById("section9").offsetTop) {
-        //     document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //         li.classList.remove("active");
-        //     });
-        //     document.querySelector("#parallax__nav li:nth-child(9)").classList.add("active")
-        // }
+      // if(scrollTop >= document.getElementById("section1").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(1)").classList.add("active")
+      // }
+      // if(scrollTop >= document.getElementById("section2").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(2)").classList.add("active")
+      // }
+      // if(scrollTop >= document.getElementById("section3").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(3)").classList.add("active")
+      // }
+      // if(scrollTop >= document.getElementById("section4").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(4)").classList.add("active")
+      // }
+      // if(scrollTop >= document.getElementById("section5").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(5)").classList.add("active")
+      // }
+      // if(scrollTop >= document.getElementById("section6").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(6)").classList.add("active")
+      // }
+      // if(scrollTop >= document.getElementById("section7").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(7)").classList.add("active")
+      // }
+      // if(scrollTop >= document.getElementById("section8").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(8)").classList.add("active")
+      // }
+      // if(scrollTop >= document.getElementById("section9").offsetTop) {
+      //     document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //         li.classList.remove("active");
+      //     });
+      //     document.querySelector("#parallax__nav li:nth-child(9)").classList.add("active")
+      // }
 
-        // for문
-        // for (let i = 1; i<= 9; i++){
-        //     if(scrollTop >= document.getElementById("section" + i ).offsetTop) {
-        //         document.querySelectorAll("#parallax__nav li").forEach(li => {
-        //             li.classList.remove("active");
-        //         });
-        //     document.querySelector("#parallax__nav li:nth-child("+ i +")").classList.add("active")
-        //     };
-        // }
+      // for문
+      // for (let i = 1; i<= 9; i++){
+      //     if(scrollTop >= document.getElementById("section" + i ).offsetTop) {
+      //         document.querySelectorAll("#parallax__nav li").forEach(li => {
+      //             li.classList.remove("active");
+      //         });
+      //     document.querySelector("#parallax__nav li:nth-child("+ i +")").classList.add("active")
+      //     };
+      // }
 
-        //info 출력용
-        document.querySelector(".scroll span").innerText =
-          // parseInt(scrollTop);
-          Math.round(scrollTop);
+      //info 출력용
+      document.querySelector(".scroll span").innerText =
+        // parseInt(scrollTop);
+        Math.round(scrollTop);
 
-        // forEach문 스크롤내렸을때 버튼 active 활성화
-        document
-          .querySelectorAll(".content__item")
-          .forEach((element, index) => {
-            if (scrollTop >= element.offsetTop - 2) {
-              /*여기서 2를 빼주는 이유는 컴퓨터마다 크기가 달라 스크롤이 끝까지 안내려가서 마지막 섹션 offset값까지 도달할수 없을수도 있기에 오류 수정하기 위해서*/
-              document.querySelectorAll("#parallax__nav li").forEach((li) => {
-                li.classList.remove("active");
-              });
-              document
-                .querySelector(
-                  "#parallax__nav li:nth-child(" + (index + 1) + ")"
-                )
-                .classList.add("active");
-            }
-          });
+      // forEach문 스크롤내렸을때 버튼 active 활성화
+      document
+        .querySelectorAll(".content__item")
+        .forEach((element, index) => {
+          if (scrollTop >= element.offsetTop - 2) {
+            /*여기서 2를 빼주는 이유는 컴퓨터마다 크기가 달라 스크롤이 끝까지 안내려가서 마지막 섹션 offset값까지 도달할수 없을수도 있기에 오류 수정하기 위해서*/
+            document.querySelectorAll("#parallax__nav li").forEach((li) => {
+              li.classList.remove("active");
+            });
+            document
+              .querySelector(
+                "#parallax__nav li:nth-child(" + (index + 1) + ")"
+              )
+              .classList.add("active");
+          }
+        });
 
-        //메뉴나옴
-        if (scrollTop > 0) {
-          document.querySelector("#parallax__nav").classList.add("show");
-        } else {
-          document.querySelector("#parallax__nav").classList.remove("show");
-        }
-        //top버튼나옴
-        if (scrollTop > document.body.scrollHeight - window.outerHeight) {
-          document.querySelector("#parallax__top").classList.add("show");
-        } else {
-          document.querySelector("#parallax__top").classList.remove("show");
-        }
+      //메뉴나옴
+      if (scrollTop > 0) {
+        document.querySelector("#parallax__nav").classList.add("show");
+      } else {
+        document.querySelector("#parallax__nav").classList.remove("show");
+      }
+      //top버튼나옴
+      if (scrollTop > document.body.scrollHeight - window.outerHeight) {
+        document.querySelector("#parallax__top").classList.add("show");
+      } else {
+        document.querySelector("#parallax__top").classList.remove("show");
+      }
 
-        // offsetTop값 for문 이용해서 구하기
-        for (let i = 1; i <= 9; i++) {
-          document.querySelector(".offset" + i).innerText =
-            document.getElementById("section" + i).offsetTop;
-        }
-      });
+      // offsetTop값 for문 이용해서 구하기
+      for (let i = 1; i <= 9; i++) {
+        document.querySelector(".offset" + i).innerText =
+          document.getElementById("section" + i).offsetTop;
+      }
+    });
 
-      // top 버튼 클릭하면
-      document.querySelector("#parallax__top").addEventListener("click", () => {
-        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-      });
-      // 스크롤 이동 , 클릭하면 스무스하게 부드럽게 움직이게 설정
-      document.querySelectorAll("#parallax__nav li a").forEach((li) => {
-        li.addEventListener("click", (e) => {
-          e.preventDefault();
-          document.querySelector(li.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
+    // top 버튼 클릭하면
+    document.querySelector("#parallax__top").addEventListener("click", () => {
+      window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+    });
+    // 스크롤 이동 , 클릭하면 스무스하게 부드럽게 움직이게 설정
+    document.querySelectorAll("#parallax__nav li a").forEach((li) => {
+      li.addEventListener("click", (e) => {
+        e.preventDefault();
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
         });
       });
+    });
 
       // document.querySelector(".offset1").innerText = document.getElementById("section1").offsetTop;
       // document.querySelector(".offset2").innerText = document.getElementById("section2").offsetTop;
@@ -1196,6 +1103,7 @@ document.querySelectorAll("#parallax__nav li a").forEach(li =&gt; {
       // }
 
       // window.addEventListener("scroll", scrollProgress);
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
