@@ -536,9 +536,22 @@ footer .font1 {
   font-size: 25px;
 }
 
-/* .SITES.up a {
-  color: #fff;
-} */
+/* up */
+.study.up {
+  background: #000;
+}
+
+.site.up {
+  background: #000;
+}
+
+.design.up {
+  background: #000;
+}
+
+.javascript.up {
+  background: #000;
+}
 
 @media (max-width: 1125px) {
   .keyword>.webstandard>.modal>.desc>.right {
