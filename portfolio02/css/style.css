@@ -538,19 +538,19 @@ footer .font1 {
 
 /* up */
 .study.up {
-  background: #000;
+  color: #fff;
 }
 
 .site.up {
-  background: #000;
+  color: #fff;
 }
 
 .design.up {
-  background: #000;
+  color: #fff;
 }
 
 .javascript.up {
-  background: #000;
+  color: #fff;
 }
 
 @media (max-width: 1125px) {
