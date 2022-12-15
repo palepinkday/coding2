@@ -536,6 +536,7 @@ footer .font1 {
   font-size: 25px;
 }
 
+<<<<<<< HEAD
 .study.up {
   background: #000;
 }
@@ -544,6 +545,23 @@ footer .font1 {
 }
 .photoshop.up {
   background: #000;
+=======
+/* up */
+.study.up {
+  color: #fff;
+}
+
+.sites.up {
+  color: #fff;
+}
+
+.design.up {
+  color: #fff;
+}
+
+.javascript.up {
+  color: #fff;
+>>>>>>> 890e28791c2d0ecd0f5720fc6d9530a1e8bdf7b8
 }
 
 @media (max-width: 1125px) {
