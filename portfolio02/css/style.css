@@ -312,7 +312,7 @@ footer .font1 {
 
 /* page_design */
 .keyword .page_design .modal .desc .left {
-  width: 66%;
+  width: 50%;
   height: 500px;
   overflow: auto;
 }
